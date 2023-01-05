@@ -3,9 +3,9 @@
 	"id": "orm",
 	"version": "${version}",
 	"name": "orm",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "hi",
 	"authors": [
-		"Me!"
+		"OrigamiKing3612"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -16,10 +16,13 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.origamiking.orm.ExampleMod"
+			"net.origamiking.orm.ORMMain"
 		],
 		"fabric-datagen": [
-			"net.origamiking.orm.ExampleModDataGenerator"
+			"net.origamiking.orm.datagen.ModDataGenerator"
+		],
+		"client": [
+			"net.origamiking.orm.ORMClient"
 		]
 	},
 	"mixins": [
