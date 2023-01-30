@@ -1,0 +1,26 @@
+package net.origamiking.orm.group;
+
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
+import net.origamiking.orm.OrmMain;
+import net.origamiking.orm.armor.ArmorRegistry;
+
+public class ModGroups {
+    private static final ItemGroup OEM_GROUP = FabricItemGroup.builder(new Identifier(OrmMain.MOD_ID, "orm_group"))
+            .displayName(Text.literal("OrigamiKing's Robotics Mod"))
+            .icon(() -> new ItemStack(Items.IRON_HELMET))
+            .entries((enabledFeatures, entries, operatorEnabled) -> {
+                entries.add(ArmorRegistry.ROBOT_1_ARMOR_HELMET);
+                entries.add(ArmorRegistry.ROBOT_1_ARMOR_CHESTPLATE);
+                entries.add(ArmorRegistry.ROBOT_1_ARMOR_LEGGINGS);
+                entries.add(ArmorRegistry.ROBOT_1_ARMOR_BOOTS);
+
+            }).build();
+    public static void register() {
+        OrmMain.LOGGER.info("Registering Groups");
+    }
+}

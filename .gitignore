@@ -1,6 +1,6 @@
 # gradle
 
-.gradle/
+../../../../../../../.gradle/
 build/
 out/
 classes/
@@ -31,6 +31,10 @@ bin/
 # fabric
 
 run/
+/remappedSrc/
+/src/main/generated/.cache
+/.gradle
+/.gradle/
 
 # java
 

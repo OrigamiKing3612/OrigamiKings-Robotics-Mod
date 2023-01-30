@@ -16,13 +16,13 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.origamiking.orm.ORMMain"
+			"net.origamiking.orm.OrmMain"
 		],
 		"fabric-datagen": [
 			"net.origamiking.orm.datagen.ModDataGenerator"
 		],
 		"client": [
-			"net.origamiking.orm.ORMClient"
+			"net.origamiking.orm.OrmClient"
 		]
 	},
 	"mixins": [
