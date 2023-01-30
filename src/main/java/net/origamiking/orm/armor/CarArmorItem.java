@@ -10,7 +10,7 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.origamiking.orm.armor.renderer.Robot1ArmorRenderer;
+import net.origamiking.orm.armor.renderer.CarArmorRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
 import software.bernie.geckolib.constant.DataTickets;
@@ -26,11 +26,11 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 
-public final class Robot1ArmorItem extends ArmorItem implements GeoItem {
+public final class CarArmorItem extends ArmorItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
 
-    public Robot1ArmorItem(ArmorMaterial armorMaterial, EquipmentSlot slot, Settings properties) {
+    public CarArmorItem(ArmorMaterial armorMaterial, EquipmentSlot slot, Settings properties) {
         super(armorMaterial, slot, properties);
     }
 
@@ -39,13 +39,12 @@ public final class Robot1ArmorItem extends ArmorItem implements GeoItem {
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
             //private GeoArmorRenderer<?> renderer;
-            private Robot1ArmorRenderer renderer;
+            private CarArmorRenderer renderer;
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
                 if(this.renderer == null)
-                    this.renderer = new Robot1ArmorRenderer();
-                    //this.renderer = new GeckoArmorRenderer();
+                    this.renderer = new CarArmorRenderer();
 
                 // This prepares our GeoArmorRenderer for the current render frame.
                 // These parameters may be null however, so we don't do anything further with them
@@ -90,10 +89,10 @@ public final class Robot1ArmorItem extends ArmorItem implements GeoItem {
 
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-                    ArmorRegistry.ROBOT_1_ARMOR_HELMET,
-                    ArmorRegistry.ROBOT_1_ARMOR_CHESTPLATE,
-                    ArmorRegistry.ROBOT_1_ARMOR_LEGGINGS,
-                    ArmorRegistry.ROBOT_1_ARMOR_BOOTS));
+                    ArmorRegistry.CAR_ARMOR_HELMET,
+                    ArmorRegistry.CAR_ARMOR_CHESTPLATE,
+                    ArmorRegistry.CAR_ARMOR_LEGGINGS,
+                    ArmorRegistry.CAR_ARMOR_BOOTS));
 
             // Play the animation if the full set is being worn, otherwise stop
             return isFullSet ? PlayState.STOP : PlayState.STOP;

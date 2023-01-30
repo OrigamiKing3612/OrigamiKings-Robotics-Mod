@@ -18,6 +18,10 @@ public class ModGroups {
                 entries.add(ArmorRegistry.ROBOT_1_ARMOR_CHESTPLATE);
                 entries.add(ArmorRegistry.ROBOT_1_ARMOR_LEGGINGS);
                 entries.add(ArmorRegistry.ROBOT_1_ARMOR_BOOTS);
+                entries.add(ArmorRegistry.CAR_ARMOR_HELMET);
+                entries.add(ArmorRegistry.CAR_ARMOR_CHESTPLATE);
+                entries.add(ArmorRegistry.CAR_ARMOR_LEGGINGS);
+                entries.add(ArmorRegistry.CAR_ARMOR_BOOTS);
 
             }).build();
     public static void register() {
