@@ -89,13 +89,13 @@ public final class CarArmorItem extends ArmorItem implements GeoItem {
 
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-                    ArmorRegistry.CAR_ARMOR_HELMET,
-                    ArmorRegistry.CAR_ARMOR_CHESTPLATE,
-                    ArmorRegistry.CAR_ARMOR_LEGGINGS,
-                    ArmorRegistry.CAR_ARMOR_BOOTS));
+//                    ArmorRegistry.CAR_ARMOR_HELMET,
+                    ArmorRegistry.CAR_ARMOR_CHESTPLATE));
+//                    ArmorRegistry.CAR_ARMOR_LEGGINGS,
+//                    ArmorRegistry.CAR_ARMOR_BOOTS));
 
             // Play the animation if the full set is being worn, otherwise stop
-            return isFullSet ? PlayState.STOP : PlayState.STOP;
+            return PlayState.STOP;
         }));
     }
 

@@ -8,6 +8,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.origamiking.orm.OrmMain;
 import net.origamiking.orm.armor.ArmorRegistry;
+import net.origamiking.orm.items.custom.ItemRegistry;
 
 public class ModGroups {
     private static final ItemGroup OEM_GROUP = FabricItemGroup.builder(new Identifier(OrmMain.MOD_ID, "orm_group"))
@@ -26,6 +27,7 @@ public class ModGroups {
                 entries.add(ArmorRegistry.ROBO_1_ARMOR_CHESTPLATE);
                 entries.add(ArmorRegistry.ROBO_1_ARMOR_LEGGINGS);
                 entries.add(ArmorRegistry.ROBO_1_ARMOR_BOOTS);
+                entries.add(ItemRegistry.ROBO_ADDON_1);
 
             }).build();
     public static void register() {
