@@ -1,0 +1,6 @@
+{
+  "parent":"item/generated",
+  "textures":{
+    "layer0":"orm:item/armor/robot_1_armor_helmet"
+  }
+}

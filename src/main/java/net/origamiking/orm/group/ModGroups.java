@@ -27,6 +27,10 @@ public class ModGroups {
                 entries.add(ArmorRegistry.ROBO_1_ARMOR_CHESTPLATE);
                 entries.add(ArmorRegistry.ROBO_1_ARMOR_LEGGINGS);
                 entries.add(ArmorRegistry.ROBO_1_ARMOR_BOOTS);
+                entries.add(ArmorRegistry.ROBOT_3_ARMOR_HELMET);
+                entries.add(ArmorRegistry.ROBOT_3_ARMOR_CHESTPLATE);
+                entries.add(ArmorRegistry.ROBOT_3_ARMOR_LEGGINGS);
+                entries.add(ArmorRegistry.ROBOT_3_ARMOR_BOOTS);
                 entries.add(ItemRegistry.ROBO_ADDON_1);
 
             }).build();
