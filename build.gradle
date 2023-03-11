@@ -1,7 +1,7 @@
 plugins {
 	id 'fabric-loom' version '1.1-SNAPSHOT'
 	id 'maven-publish'
-	
+	id "com.modrinth.minotaur" version "2.+"
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -12,12 +12,19 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-	// Add repositories to retrieve artifacts from in here.
-	// You should only use this when depending on other mods because
-	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
-	// for more information about repositories.
 	maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
+			}
+		}
+		filter {
+			includeGroup "maven.modrinth"
+		}
+	}
 }
 
 loom {
@@ -60,6 +67,8 @@ dependencies {
 	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
 	modImplementation 'software.bernie.geckolib:geckolib-fabric-1.19.3:4.0.3'
 
+	modImplementation "maven.modrinth:P3sjMa3U:${origamikings_api}"
+
 }
 
 processResources {
@@ -101,5 +110,23 @@ publishing {
 		// Notice: This block does NOT have the same function as the block in the top level.
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
+
+		modrinth {
+//		debugMode = true
+			token = System.getenv("MODRINTH_TOKEN")
+			projectId = "${project_id}"
+			versionNumber = "${mod_version}"
+			versionType = "${version_type}"
+			uploadFile = remapJar // With Loom, this MUST be set to `remapJar`
+			gameVersions = ['1.19.3'] // Must be an array, even with only one version
+			dependencies {
+				// scope.type
+				// The scope can be `required`, `optional`, `incompatible`, or `embedded`
+				// The type can either be `project` or `version`
+				embedded.project "geckolib"
+				embedded.project "fabric-api"
+				embedded.project "origamikings-api"
+			}
+		}
 	}
 }
