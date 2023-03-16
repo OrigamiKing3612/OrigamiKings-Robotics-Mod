@@ -34,7 +34,6 @@ public class ModGroups {
                 entries.add(ItemRegistry.ROBO_ADDON_1);
                 entries.add(ArmorRegistry.ROBOT_4_CAR_CHESTPLATE);
                 entries.add(ArmorRegistry.ROBO_1_CAR_CHESTPLATE);
-
             }).build();
     public static void register() {
         OrmMain.LOGGER.info("Registering Groups");
