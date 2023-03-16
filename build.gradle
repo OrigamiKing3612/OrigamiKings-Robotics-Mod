@@ -65,7 +65,7 @@ dependencies {
 	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
 
 	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
-	modImplementation 'software.bernie.geckolib:geckolib-fabric-1.19.3:4.0.3'
+	modImplementation 'software.bernie.geckolib:geckolib-fabric-1.19.4:4.1.0'
 
 	modImplementation "maven.modrinth:P3sjMa3U:${origamikings_api}"
 
@@ -118,15 +118,17 @@ publishing {
 			versionNumber = "${mod_version}"
 			versionType = "${version_type}"
 			uploadFile = remapJar // With Loom, this MUST be set to `remapJar`
-			gameVersions = ['1.19.3'] // Must be an array, even with only one version
+			gameVersions = ['1.19.4'] // Must be an array, even with only one version
 			dependencies {
 				// scope.type
 				// The scope can be `required`, `optional`, `incompatible`, or `embedded`
 				// The type can either be `project` or `version`
-				required.project "geckolib"
-				required.project "fabric-api"
-				required.project "origamikings-api"
+				embedded.project "geckolib"
+				embedded.project "fabric-api"
+				embedded.project "origamikings-api"
+
 			}
+			changelog = "Update to 1.19.4"
 		}
 	}
 }

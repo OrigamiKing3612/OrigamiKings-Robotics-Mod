@@ -28,6 +28,17 @@
 	"mixins": [
 		"orm.mixins.json"
 	],
+	"jars": [
+		{
+			"file": "jars/geckolib-fabric-1.19.4-4.1.0.jar"
+		},
+		{
+			"file": "jars/fabric-api-0.76.0+1.19.4.jar"
+		},
+		{
+			"file": "origamikings-api-0.1.2-1.19.4.jar"
+		}
+	],
 	"depends": {
 		"fabricloader": ">=0.14.12",
 		"minecraft": "~1.19.3",
