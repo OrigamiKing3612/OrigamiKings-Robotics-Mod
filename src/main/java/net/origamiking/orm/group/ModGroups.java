@@ -15,10 +15,6 @@ public class ModGroups {
             .displayName(Text.literal("OrigamiKing's Robotics Mod"))
             .icon(() -> new ItemStack(Items.IRON_HELMET))
             .entries((enabledFeatures, entries, operatorEnabled) -> {
-                entries.add(ArmorRegistry.ROBOT_1_ARMOR_HELMET);
-                entries.add(ArmorRegistry.ROBOT_1_ARMOR_CHESTPLATE);
-                entries.add(ArmorRegistry.ROBOT_1_ARMOR_LEGGINGS);
-                entries.add(ArmorRegistry.ROBOT_1_ARMOR_BOOTS);
                 entries.add(ArmorRegistry.CAR_ARMOR_HELMET);
                 entries.add(ArmorRegistry.CAR_ARMOR_CHESTPLATE);
                 entries.add(ArmorRegistry.CAR_ARMOR_LEGGINGS);

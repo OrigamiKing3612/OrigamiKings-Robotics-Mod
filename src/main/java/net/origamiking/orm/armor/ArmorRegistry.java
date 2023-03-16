@@ -9,10 +9,6 @@ import net.minecraft.util.Identifier;
 import net.origamiking.orm.OrmMain;
 
 public class ArmorRegistry {
-    public static final Robot1ArmorItem ROBOT_1_ARMOR_HELMET = registerItem("robot_1_armor_helmet", new Robot1ArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.HEAD, new Item.Settings()));
-    public static final Robot1ArmorItem ROBOT_1_ARMOR_CHESTPLATE = registerItem("robot_1_armor_chestplate", new Robot1ArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.CHEST, new Item.Settings()));
-    public static final Robot1ArmorItem ROBOT_1_ARMOR_LEGGINGS = registerItem("robot_1_armor_leggings", new Robot1ArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.LEGS, new Item.Settings()));
-    public static final Robot1ArmorItem ROBOT_1_ARMOR_BOOTS = registerItem("robot_1_armor_boots", new Robot1ArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.FEET, new Item.Settings()));
     public static final CarArmorItem CAR_ARMOR_HELMET = registerItem("car_armor_helmet", new CarArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.HEAD, new Item.Settings()));
     public static final CarArmorItem CAR_ARMOR_CHESTPLATE = registerItem("car_armor_chestplate", new CarArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.CHEST, new Item.Settings()));
     public static final CarArmorItem CAR_ARMOR_LEGGINGS = registerItem("car_armor_leggings", new CarArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.LEGS, new Item.Settings()));
