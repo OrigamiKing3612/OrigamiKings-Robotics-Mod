@@ -30,7 +30,7 @@ public final class Robo_1ArmorItem extends ArmorItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
 
-    public Robo_1ArmorItem(ArmorMaterial armorMaterial, EquipmentSlot slot, Settings properties) {
+    public Robo_1ArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
         super(armorMaterial, slot, properties);
     }
 

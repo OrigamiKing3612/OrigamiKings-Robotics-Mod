@@ -31,7 +31,7 @@ public final class Robot_3ArmorItem extends ArmorItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
 
-    public Robot_3ArmorItem(ArmorMaterial armorMaterial, EquipmentSlot slot, Settings properties) {
+    public Robot_3ArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
         super(armorMaterial, slot, properties);
     }
 

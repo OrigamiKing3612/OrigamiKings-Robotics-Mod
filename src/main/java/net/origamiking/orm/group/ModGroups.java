@@ -14,7 +14,7 @@ public class ModGroups {
     private static final ItemGroup ORM_GROUP = FabricItemGroup.builder(new Identifier(OrmMain.MOD_ID, "orm_group"))
             .displayName(Text.literal("OrigamiKing's Robotics Armor Mod"))
             .icon(() -> new ItemStack(Items.IRON_HELMET))
-            .entries((enabledFeatures, entries, operatorEnabled) -> {
+            .entries((context, entries) -> {
                 entries.add(ArmorRegistry.ROBO_1_ARMOR_HELMET);
                 entries.add(ArmorRegistry.ROBO_1_ARMOR_CHESTPLATE);
                 entries.add(ArmorRegistry.ROBO_1_ARMOR_LEGGINGS);
