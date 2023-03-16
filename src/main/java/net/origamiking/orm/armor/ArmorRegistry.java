@@ -21,6 +21,10 @@ public class ArmorRegistry {
     public static final Robot_3ArmorItem ROBOT_3_ARMOR_CHESTPLATE = registerItem("robot_3_armor_chestplate", new Robot_3ArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.CHEST, new Item.Settings()));
     public static final Robot_3ArmorItem ROBOT_3_ARMOR_LEGGINGS = registerItem("robot_3_armor_leggings", new Robot_3ArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.LEGS, new Item.Settings()));
     public static final Robot_3ArmorItem ROBOT_3_ARMOR_BOOTS = registerItem("robot_3_armor_boots", new Robot_3ArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.FEET, new Item.Settings()));
+    public static final Robot_4ArmorItem ROBOT_4_ARMOR_HELMET = registerItem("robot_4_armor_helmet", new Robot_4ArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.HEAD, new Item.Settings()));
+    public static final Robot_4ArmorItem ROBOT_4_ARMOR_CHESTPLATE = registerItem("robot_4_armor_chestplate", new Robot_4ArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.CHEST, new Item.Settings()));
+    public static final Robot_4ArmorItem ROBOT_4_ARMOR_LEGGINGS = registerItem("robot_4_armor_leggings", new Robot_4ArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.LEGS, new Item.Settings()));
+    public static final Robot_4ArmorItem ROBOT_4_ARMOR_BOOTS = registerItem("robot_4_armor_boots", new Robot_4ArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.FEET, new Item.Settings()));
 
     public static <I extends Item> I registerItem(String name, I item) {
         return Registry.register(Registries.ITEM, new Identifier(OrmMain.MOD_ID, name), item);
