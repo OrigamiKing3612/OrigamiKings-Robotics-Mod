@@ -15,10 +15,10 @@ public class ModGroups {
             .displayName(Text.literal("OrigamiKing's Robotics Armor Mod"))
             .icon(() -> new ItemStack(Items.IRON_HELMET))
             .entries((enabledFeatures, entries, operatorEnabled) -> {
-                entries.add(ArmorRegistry.CAR_ARMOR_HELMET);
+//                entries.add(ArmorRegistry.CAR_ARMOR_HELMET);
                 entries.add(ArmorRegistry.CAR_ARMOR_CHESTPLATE);
-                entries.add(ArmorRegistry.CAR_ARMOR_LEGGINGS);
-                entries.add(ArmorRegistry.CAR_ARMOR_BOOTS);
+//                entries.add(ArmorRegistry.CAR_ARMOR_LEGGINGS);
+//                entries.add(ArmorRegistry.CAR_ARMOR_BOOTS);
                 entries.add(ArmorRegistry.ROBO_1_ARMOR_HELMET);
                 entries.add(ArmorRegistry.ROBO_1_ARMOR_CHESTPLATE);
                 entries.add(ArmorRegistry.ROBO_1_ARMOR_LEGGINGS);
@@ -32,6 +32,8 @@ public class ModGroups {
                 entries.add(ArmorRegistry.ROBOT_4_ARMOR_LEGGINGS);
                 entries.add(ArmorRegistry.ROBOT_4_ARMOR_BOOTS);
                 entries.add(ItemRegistry.ROBO_ADDON_1);
+                entries.add(ArmorRegistry.ROBOT_4_CAR_CHESTPLATE);
+                entries.add(ArmorRegistry.ROBO_1_CAR_CHESTPLATE);
 
             }).build();
     public static void register() {
