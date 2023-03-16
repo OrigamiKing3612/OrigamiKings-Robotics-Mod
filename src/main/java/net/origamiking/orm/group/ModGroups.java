@@ -28,9 +28,11 @@ public class ModGroups {
                 entries.add(ArmorRegistry.ROBOT_4_ARMOR_LEGGINGS);
                 entries.add(ArmorRegistry.ROBOT_4_ARMOR_BOOTS);
                 entries.add(ItemRegistry.ROBO_ADDON_1);
+                entries.add(ArmorRegistry.ROBOT_3_CAR_CHESTPLATE);
                 entries.add(ArmorRegistry.ROBOT_4_CAR_CHESTPLATE);
                 entries.add(ArmorRegistry.ROBO_1_CAR_CHESTPLATE);
                 entries.add(ArmorRegistry.CAR_ARMOR_CHESTPLATE);
+
 
             }).build();
     public static void register() {
