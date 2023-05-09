@@ -32,6 +32,11 @@ public class ModGroups {
                 entries.add(ArmorRegistry.ROBOT_4_CAR_CHESTPLATE);
                 entries.add(ArmorRegistry.ROBO_1_CAR_CHESTPLATE);
                 entries.add(ArmorRegistry.CAR_ARMOR_CHESTPLATE);
+                entries.add(ArmorRegistry.ROBOT_STARSCREAM_ARMOR_HELMET);
+                entries.add(ArmorRegistry.ROBOT_STARSCREAM_ARMOR_CHESTPLATE);
+                entries.add(ArmorRegistry.ROBOT_STARSCREAM_ARMOR_LEGGINGS);
+                entries.add(ArmorRegistry.ROBOT_STARSCREAM_ARMOR_BOOTS);
+                entries.add(ArmorRegistry.ROBOT_STARSCREAM_JET_ARMOR);
 
 
             }).build();

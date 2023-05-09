@@ -1,6 +1,5 @@
 package net.origamiking.orm.armor;
 
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterials;
 import net.minecraft.item.Item;
@@ -8,7 +7,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.origamiking.orm.OrmMain;
-import net.origamiking.orm.armor.renderer.Robot_3_CarArmorRenderer;
 
 public class ArmorRegistry {
     public static final CarArmorItem CAR_ARMOR_CHESTPLATE = registerItem("car_armor_chestplate", new CarArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
@@ -27,6 +25,11 @@ public class ArmorRegistry {
     public static final Robot_4ArmorItem ROBOT_4_ARMOR_CHESTPLATE = registerItem("robot_4_armor_chestplate", new Robot_4ArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
     public static final Robot_4ArmorItem ROBOT_4_ARMOR_LEGGINGS = registerItem("robot_4_armor_leggings", new Robot_4ArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.LEGGINGS, new Item.Settings()));
     public static final Robot_4ArmorItem ROBOT_4_ARMOR_BOOTS = registerItem("robot_4_armor_boots", new Robot_4ArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.BOOTS, new Item.Settings()));
+    public static final RobotStarscreamArmorItem ROBOT_STARSCREAM_ARMOR_HELMET = registerItem("robot_starscream_armor_helmet", new RobotStarscreamArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Settings()));
+    public static final RobotStarscreamArmorItem ROBOT_STARSCREAM_ARMOR_CHESTPLATE = registerItem("robot_starscream_armor_chestplate", new RobotStarscreamArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
+    public static final RobotStarscreamArmorItem ROBOT_STARSCREAM_ARMOR_LEGGINGS = registerItem("robot_starscream_armor_leggings", new RobotStarscreamArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.LEGGINGS, new Item.Settings()));
+    public static final RobotStarscreamArmorItem ROBOT_STARSCREAM_ARMOR_BOOTS = registerItem("robot_starscream_armor_boots", new RobotStarscreamArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.BOOTS, new Item.Settings()));
+    public static final RobotStarscreamJetArmorItem ROBOT_STARSCREAM_JET_ARMOR = registerItem("robot_starscream_jet", new RobotStarscreamJetArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.BOOTS, new Item.Settings()));
 
     public static <I extends Item> I registerItem(String name, I item) {
         return Registry.register(Registries.ITEM, new Identifier(OrmMain.MOD_ID, name), item);
