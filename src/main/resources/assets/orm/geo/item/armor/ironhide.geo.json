@@ -60,7 +60,7 @@
 					]
 				},
 				{
-					"name": "armorLeftBoot2",
+					"name": "armorLeftBoot",
 					"parent": "bipedLeftLeg",
 					"pivot": [-2, 17, 0],
 					"cubes": [
@@ -74,7 +74,7 @@
 					"pivot": [2, 17, 0]
 				},
 				{
-					"name": "armorRightLeg2",
+					"name": "armorRightLeg",
 					"parent": "bipedRightLeg",
 					"pivot": [2, 17, 0],
 					"cubes": [
@@ -82,7 +82,7 @@
 					]
 				},
 				{
-					"name": "armorRightBoot2",
+					"name": "armorRightBoot",
 					"parent": "bipedRightLeg",
 					"pivot": [2, 17, 0],
 					"cubes": [
