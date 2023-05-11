@@ -128,7 +128,7 @@ publishing {
 				embedded.project "origamikings-api"
 
 			}
-			changelog = "Update to 1.19.4"
+			changelog = "Added lots of new armors and renamed some old ones"
 		}
 	}
 }
