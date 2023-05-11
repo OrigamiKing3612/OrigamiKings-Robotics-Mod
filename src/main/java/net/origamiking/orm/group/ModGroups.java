@@ -1,6 +1,7 @@
 package net.origamiking.orm.group;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -19,16 +20,16 @@ public class ModGroups {
                 entries.add(ArmorRegistry.ROBO_1_ARMOR_CHESTPLATE);
                 entries.add(ArmorRegistry.ROBO_1_ARMOR_LEGGINGS);
                 entries.add(ArmorRegistry.ROBO_1_ARMOR_BOOTS);
-                entries.add(ArmorRegistry.ROBOT_3_ARMOR_HELMET);
-                entries.add(ArmorRegistry.ROBOT_3_ARMOR_CHESTPLATE);
-                entries.add(ArmorRegistry.ROBOT_3_ARMOR_LEGGINGS);
-                entries.add(ArmorRegistry.ROBOT_3_ARMOR_BOOTS);
-                entries.add(ArmorRegistry.ROBOT_4_ARMOR_HELMET);
-                entries.add(ArmorRegistry.ROBOT_4_ARMOR_CHESTPLATE);
-                entries.add(ArmorRegistry.ROBOT_4_ARMOR_LEGGINGS);
-                entries.add(ArmorRegistry.ROBOT_4_ARMOR_BOOTS);
                 entries.add(ItemRegistry.ROBO_ADDON_1);
-                entries.add(ArmorRegistry.ROBOT_3_CAR_CHESTPLATE);
+                entries.add(ArmorRegistry.SKYSTRIKE_ARMOR_HELMET);
+                entries.add(ArmorRegistry.SKYSTRIKE_ARMOR_CHESTPLATE);
+                entries.add(ArmorRegistry.SKYSTRIKE_ARMOR_LEGGINGS);
+                entries.add(ArmorRegistry.SKYSTRIKE_ARMOR_BOOTS);
+                entries.add(ArmorRegistry.SCORPINOK_ARMOR_HELMET);
+                entries.add(ArmorRegistry.SCORPINOK_ARMOR_CHESTPLATE);
+                entries.add(ArmorRegistry.SCORPINOK_ARMOR_LEGGINGS);
+                entries.add(ArmorRegistry.SCORPINOK_ARMOR_BOOTS);
+                entries.add(ArmorRegistry.SKYSTRIKE_CAR_CHESTPLATE);
                 entries.add(ArmorRegistry.ROBOT_4_CAR_CHESTPLATE);
                 entries.add(ArmorRegistry.ROBO_1_CAR_CHESTPLATE);
                 entries.add(ArmorRegistry.CAR_ARMOR_CHESTPLATE);
@@ -37,6 +38,28 @@ public class ModGroups {
                 entries.add(ArmorRegistry.ROBOT_STARSCREAM_ARMOR_LEGGINGS);
                 entries.add(ArmorRegistry.ROBOT_STARSCREAM_ARMOR_BOOTS);
                 entries.add(ArmorRegistry.ROBOT_STARSCREAM_JET_ARMOR);
+                entries.add(ArmorRegistry.OPTIMUS_PRIME_ARMOR_HELMET);
+                entries.add(ArmorRegistry.OPTIMUS_PRIME_ARMOR_CHESTPLATE);
+                entries.add(ArmorRegistry.OPTIMUS_PRIME_ARMOR_LEGGINGS);
+                entries.add(ArmorRegistry.OPTIMUS_PRIME_ARMOR_BOOTS);
+                entries.add(ArmorRegistry.OPTIMUS_PRIME_CAR);
+                entries.add(ArmorRegistry.ASTROTRAIN_TRAIN);
+                entries.add(ArmorRegistry.ASTROTRAIN_SHUTTLE);
+                entries.add(ArmorRegistry.ASTROTRAIN_HELMET);
+                entries.add(ArmorRegistry.ASTROTRAIN_CHESTPLATE);
+                entries.add(ArmorRegistry.ASTROTRAIN_LEGGINGS);
+                entries.add(ArmorRegistry.ASTROTRAIN_BOOTS);
+                entries.add(ArmorRegistry.BUMBLEBEE_HELMET);
+                entries.add(ArmorRegistry.BUMBLEBEE_CHESTPLATE);
+                entries.add(ArmorRegistry.BUMBLEBEE_LEGGINGS);
+                entries.add(ArmorRegistry.BUMBLEBEE_BOOTS);
+                entries.add(ArmorRegistry.BUMBLEBEE_CAR);
+                entries.add(ArmorRegistry.IRONHIDE_HELMET);
+                entries.add(ArmorRegistry.IRONHIDE_CHESTPLATE);
+                entries.add(ArmorRegistry.IRONHIDE_LEGGINGS);
+                entries.add(ArmorRegistry.IRONHIDE_BOOTS);
+                entries.add(ArmorRegistry.IRONHIDE_CAR);
+
 
 
             }).build();
