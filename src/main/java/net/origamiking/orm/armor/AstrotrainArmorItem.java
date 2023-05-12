@@ -91,10 +91,10 @@ public final class AstrotrainArmorItem extends ArmorItem implements GeoItem {
 
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-                    ArmorRegistry.SCORPINOK_ARMOR_HELMET,
-                    ArmorRegistry.SCORPINOK_ARMOR_CHESTPLATE,
-                    ArmorRegistry.SCORPINOK_ARMOR_LEGGINGS,
-                    ArmorRegistry.SCORPINOK_ARMOR_BOOTS));
+                    ArmorRegistry.ASTROTRAIN_HELMET,
+                    ArmorRegistry.ASTROTRAIN_CHESTPLATE,
+                    ArmorRegistry.ASTROTRAIN_LEGGINGS,
+                    ArmorRegistry.ASTROTRAIN_BOOTS));
 
             // Play the animation if the full set is being worn, otherwise stop
             return isFullSet ? PlayState.STOP : PlayState.STOP;
