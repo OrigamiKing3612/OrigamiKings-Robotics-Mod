@@ -7,13 +7,12 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.origamiking.orm.OrmMain;
-import net.origamiking.orm.armor.renderer.IronhideCarArmorRenderer;
 
 public class ArmorRegistry {
     public static final CarArmorItem CAR_ARMOR_CHESTPLATE = registerItem("car_armor_chestplate", new CarArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
-    public static final Scorpinok_CarArmorItem ROBOT_4_CAR_CHESTPLATE = registerItem("robot_4_car_chestplate", new Scorpinok_CarArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
-    public static final Skystrike_CarArmorItem SKYSTRIKE_CAR_CHESTPLATE = registerItem("skystrike_car_chestplate", new Skystrike_CarArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
-    public static final Robo_1_CarArmorItem ROBO_1_CAR_CHESTPLATE = registerItem("robo_1_car_chestplate", new Robo_1_CarArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
+    public static final Scorpinok_CarArmorItem SCORPINOK_CAR = registerItem("scorpinok_car", new Scorpinok_CarArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
+    public static final Skystrike_CarArmorItem SKYSTRIKE_JET = registerItem("skystrike_jet", new Skystrike_CarArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
+    public static final Robo_1_CarArmorItem ROBO_1_CAR = registerItem("robo_1_car", new Robo_1_CarArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
     public static final Robo_1ArmorItem ROBO_1_ARMOR_HELMET = registerItem("robo_1_armor_helmet", new Robo_1ArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Settings()));
     public static final Robo_1ArmorItem ROBO_1_ARMOR_CHESTPLATE = registerItem("robo_1_armor_chestplate", new Robo_1ArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
     public static final Robo_1ArmorItem ROBO_1_ARMOR_LEGGINGS = registerItem("robo_1_armor_leggings", new Robo_1ArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.LEGGINGS, new Item.Settings()));

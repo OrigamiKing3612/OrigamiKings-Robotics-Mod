@@ -1,10 +1,8 @@
 package net.origamiking.orm.group;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.origamiking.orm.OrmMain;
@@ -29,9 +27,9 @@ public class ModGroups {
                 entries.add(ArmorRegistry.SCORPINOK_ARMOR_CHESTPLATE);
                 entries.add(ArmorRegistry.SCORPINOK_ARMOR_LEGGINGS);
                 entries.add(ArmorRegistry.SCORPINOK_ARMOR_BOOTS);
-                entries.add(ArmorRegistry.SKYSTRIKE_CAR_CHESTPLATE);
-                entries.add(ArmorRegistry.ROBOT_4_CAR_CHESTPLATE);
-                entries.add(ArmorRegistry.ROBO_1_CAR_CHESTPLATE);
+                entries.add(ArmorRegistry.SKYSTRIKE_JET);
+                entries.add(ArmorRegistry.SCORPINOK_CAR);
+                entries.add(ArmorRegistry.ROBO_1_CAR);
                 entries.add(ArmorRegistry.CAR_ARMOR_CHESTPLATE);
                 entries.add(ArmorRegistry.ROBOT_STARSCREAM_ARMOR_HELMET);
                 entries.add(ArmorRegistry.ROBOT_STARSCREAM_ARMOR_CHESTPLATE);
