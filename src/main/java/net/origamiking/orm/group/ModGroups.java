@@ -62,6 +62,10 @@ public class ModGroups {
                 entries.add(ArmorRegistry.SOUNDWAVE_LEGGINGS);
                 entries.add(ArmorRegistry.SOUNDWAVE_BOOTS);
                 entries.add(ArmorRegistry.SOUNDWAVE_RECORDER);
+                entries.add(ArmorRegistry.MEGATRON_HELMET);
+                entries.add(ArmorRegistry.MEGATRON_CHESTPLATE);
+                entries.add(ArmorRegistry.MEGATRON_LEGGINGS);
+                entries.add(ArmorRegistry.MEGATRON_BOOTS);
 
 
 

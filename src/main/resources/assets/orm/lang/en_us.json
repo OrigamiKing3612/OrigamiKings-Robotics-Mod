@@ -38,6 +38,9 @@
     "item.orm.soundwave_leggings": "Soundwave Leggings",
     "item.orm.soundwave_boots": "Soundwave Boots",
     "item.orm.skystrike_jet": "Skystrike Jet",
-    "item.orm.scorpinok_car": "Scorpinok Car"
-
+    "item.orm.scorpinok_car": "Scorpinok Car",
+    "item.orm.megatron_helmet": "Megatron Helmet",
+    "item.orm.megatron_chestplate": "Megatron Chestplate",
+    "item.orm.megatron_leggings": "Megatron Leggings",
+    "item.orm.megatron_boots": "Megatron Boots"
 }
