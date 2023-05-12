@@ -14,7 +14,7 @@ import net.origamiking.orm.items.custom.ItemRegistry;
 public class ModGroups {
     private static final ItemGroup ORM_GROUP = FabricItemGroup.builder(new Identifier(OrmMain.MOD_ID, "orm_group"))
             .displayName(Text.literal("OrigamiKing's Robotics Armor Mod"))
-            .icon(() -> new ItemStack(Items.IRON_HELMET))
+            .icon(() -> new ItemStack(ArmorRegistry.OPTIMUS_PRIME_ARMOR_HELMET))
             .entries((context, entries) -> {
                 entries.add(ArmorRegistry.ROBO_1_ARMOR_HELMET);
                 entries.add(ArmorRegistry.ROBO_1_ARMOR_CHESTPLATE);
@@ -59,6 +59,11 @@ public class ModGroups {
                 entries.add(ArmorRegistry.IRONHIDE_LEGGINGS);
                 entries.add(ArmorRegistry.IRONHIDE_BOOTS);
                 entries.add(ArmorRegistry.IRONHIDE_CAR);
+                entries.add(ArmorRegistry.SOUNDWAVE_HELMET);
+                entries.add(ArmorRegistry.SOUNDWAVE_CHESTPLATE);
+                entries.add(ArmorRegistry.SOUNDWAVE_LEGGINGS);
+                entries.add(ArmorRegistry.SOUNDWAVE_BOOTS);
+                entries.add(ArmorRegistry.SOUNDWAVE_RECORDER);
 
 
 

@@ -1,6 +1,6 @@
 {
   "parent":"item/generated",
   "textures":{
-    "layer0":"orm:item/optimus_prime_car"
+    "layer0":"orm:item/soundwave_leggings"
   }
 }
