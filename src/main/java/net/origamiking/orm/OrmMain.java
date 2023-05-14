@@ -2,6 +2,7 @@ package net.origamiking.orm;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.origamiking.orm.blocks.ModBlocks;
 import net.origamiking.orm.commands.ModCommands;
 import net.origamiking.orm.entities.ModEntityTypes;
 import net.origamiking.orm.group.ModGroups;
@@ -17,6 +18,7 @@ public class OrmMain implements ModInitializer {
 	public void onInitialize() {
 		OrmMain.LOGGER.info("Starting ORM");
 		ModItems.register();
+		ModBlocks.register();
 		ModGroups.register();
 		ModEntityTypes.register();
 		ModCommands.register();

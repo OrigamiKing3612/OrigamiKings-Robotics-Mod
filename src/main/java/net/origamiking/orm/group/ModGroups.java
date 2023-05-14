@@ -1,13 +1,20 @@
 package net.origamiking.orm.group;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.data.client.Models;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.origamiking.orm.OrmMain;
 import net.origamiking.orm.armor.ArmorRegistry;
+import net.origamiking.orm.blocks.energon.EnergonBlocks;
+import net.origamiking.orm.blocks.ore13.Ore13Blocks;
+import net.origamiking.orm.blocks.transformium.TransformiumBlocks;
 import net.origamiking.orm.items.custom.ItemRegistry;
+import net.origamiking.orm.items.energon.EnergonItems;
+import net.origamiking.orm.items.ore13.Ore13Items;
+import net.origamiking.orm.items.transformium.TransformiumItems;
 
 public class ModGroups {
     private static final ItemGroup ORM_GROUP = FabricItemGroup.builder(new Identifier(OrmMain.MOD_ID, "orm_group"))
@@ -69,6 +76,21 @@ public class ModGroups {
 
 
 
+            }).build();
+    private static final ItemGroup ORE_STUFF = FabricItemGroup.builder(new Identifier(OrmMain.MOD_ID, "ore_stuff"))
+            .displayName(Text.literal("OrigamiKing's Robotics Armor Mod"))
+            .icon(() -> new ItemStack(EnergonBlocks.ENERGON_BLOCK))
+            .entries((context, entries) -> {
+                entries.add(EnergonItems.ENERGON);
+                entries.add(EnergonBlocks.ENERGON_BLOCK);
+                entries.add(EnergonBlocks.ENERGON_ORE);
+                entries.add(EnergonBlocks.DEEPSLATE_ENERGON_ORE);
+                entries.add(Ore13Items.ORE_13);
+                entries.add(Ore13Blocks.ORE_13_BLOCK);
+                entries.add(Ore13Blocks.ORE_13_ORE);
+                entries.add(Ore13Blocks.DEEPSLATE_ORE_13_ORE);
+                entries.add(TransformiumItems.TRANSFORMIUM);
+                entries.add(TransformiumBlocks.TRANSFORMIUM_BLOCK);
             }).build();
     public static void register() {
         OrmMain.LOGGER.info("Registering Groups");

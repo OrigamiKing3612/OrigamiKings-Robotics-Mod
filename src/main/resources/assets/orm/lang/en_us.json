@@ -1,4 +1,14 @@
 {
+    "item.orm.energon": "Energon",
+    "item.orm.ore_13": "Ore 13",
+    "item.orm.transformium": "Transformium",
+    "block.orm.energon_block": "Energon Block",
+    "block.orm.ore_13_block": "Ore 13 Block",
+    "block.orm.energon_ore": "Energon Ore",
+    "block.orm.ore_13_ore": "Ore 13 Ore",
+    "block.orm.energon_deepslate_ore": "Energon Deepslate Ore",
+    "block.orm.ore_13_deepslate_ore": "Ore 13 Deepslate Ore",
+
     "item.orm.skystrike_armor_helmet": "Skystrike Helmet",
     "item.orm.skystrike_armor_chestplate": "Skystrike Chestplate",
     "item.orm.skystrike_armor_leggings": "Skystrike Leggings",
