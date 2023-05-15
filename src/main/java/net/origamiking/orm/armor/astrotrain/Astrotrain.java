@@ -3,9 +3,9 @@ package net.origamiking.orm.armor.astrotrain;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterials;
 import net.minecraft.item.Item;
-import net.origamiking.orm.armor.ArmorRegistry;
+import net.origamiking.orm.utils.ArmorUtils;
 
-public class Astrotrain extends ArmorRegistry {
+public class Astrotrain extends ArmorUtils {
     public static final AstrotrainTrainArmorItem ASTROTRAIN_TRAIN = registerItem("astrotrain_train", new AstrotrainTrainArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
     public static final AstrotrainShuttleArmorItem ASTROTRAIN_SHUTTLE = registerItem("astrotrain_shuttle", new AstrotrainShuttleArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
     public static final AstrotrainArmorItem ASTROTRAIN_HELMET = registerItem("astrotrain_helmet", new AstrotrainArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Settings()));

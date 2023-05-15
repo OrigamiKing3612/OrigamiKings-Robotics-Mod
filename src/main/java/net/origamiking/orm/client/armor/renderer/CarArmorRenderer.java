@@ -2,7 +2,7 @@ package net.origamiking.orm.client.armor.renderer;
 
 import net.minecraft.util.Identifier;
 import net.origamiking.orm.OrmMain;
-import net.origamiking.orm.armor.CarArmorItem;
+import net.origamiking.orm.armor.car.CarArmorItem;
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 

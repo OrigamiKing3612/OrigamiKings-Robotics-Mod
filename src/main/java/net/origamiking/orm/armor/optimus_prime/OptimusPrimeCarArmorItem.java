@@ -10,7 +10,6 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.origamiking.orm.armor.ArmorRegistry;
 import net.origamiking.orm.client.armor.renderer.optimus_prime.OptimusPrimeCarArmorRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;

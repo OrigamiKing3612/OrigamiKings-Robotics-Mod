@@ -10,7 +10,6 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.origamiking.orm.armor.ArmorRegistry;
 import net.origamiking.orm.armor.bumblebee.Bumblebee;
 import net.origamiking.orm.client.armor.renderer.thunder_cracker.ThunderCrackerJetArmorRenderer;
 import software.bernie.geckolib.animatable.GeoItem;

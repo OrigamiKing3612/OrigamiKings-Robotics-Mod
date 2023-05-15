@@ -1,4 +1,4 @@
-package net.origamiking.orm.armor;
+package net.origamiking.orm.armor.car;
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
@@ -10,6 +10,7 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.origamiking.orm.utils.ArmorUtils;
 import net.origamiking.orm.client.armor.renderer.CarArmorRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
@@ -90,7 +91,7 @@ public final class CarArmorItem extends ArmorItem implements GeoItem {
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
 //                    ArmorRegistry.CAR_ARMOR_HELMET,
-                    ArmorRegistry.CAR_ARMOR_CHESTPLATE));
+                    ArmorUtils.CAR_ARMOR_CHESTPLATE));
 //                    ArmorRegistry.CAR_ARMOR_LEGGINGS,
 //                    ArmorRegistry.CAR_ARMOR_BOOTS));
 

@@ -1,15 +1,14 @@
 package net.origamiking.orm.group;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.data.client.Models;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.origamiking.orm.OrmMain;
-import net.origamiking.orm.armor.ArmorRegistry;
 import net.origamiking.orm.armor.astrotrain.Astrotrain;
 import net.origamiking.orm.armor.bumblebee.Bumblebee;
+import net.origamiking.orm.armor.car.Car;
 import net.origamiking.orm.armor.ironhide.Ironhide;
 import net.origamiking.orm.armor.megatron.Megatron;
 import net.origamiking.orm.armor.optimus_prime.OptimusPrime;
@@ -47,7 +46,7 @@ public class ModGroups {
                 entries.add(Scorpinok.SCORPINOK_ARMOR_LEGGINGS);
                 entries.add(Scorpinok.SCORPINOK_ARMOR_BOOTS);
                 entries.add(Scorpinok.SCORPINOK_CAR);
-                entries.add(ArmorRegistry.CAR_ARMOR_CHESTPLATE);
+                entries.add(Car.CAR_ARMOR_CHESTPLATE);
                 entries.add(RobotStarscream.ROBOT_STARSCREAM_ARMOR_HELMET);
                 entries.add(RobotStarscream.ROBOT_STARSCREAM_ARMOR_CHESTPLATE);
                 entries.add(RobotStarscream.ROBOT_STARSCREAM_ARMOR_LEGGINGS);
