@@ -2,7 +2,7 @@ package net.origamiking.orm.armor;
 
 import net.origamiking.orm.armor.astrotrain.Astrotrain;
 import net.origamiking.orm.armor.bumblebee.Bumblebee;
-import net.origamiking.orm.armor.car.Car;
+import net.origamiking.orm.armor.car.Robot_0;
 import net.origamiking.orm.armor.ironhide.Ironhide;
 import net.origamiking.orm.armor.megatron.Megatron;
 import net.origamiking.orm.armor.optimus_prime.OptimusPrime;
@@ -15,7 +15,7 @@ import net.origamiking.orm.armor.thunder_cracker.ThunderCracker;
 
 public class ModArmor {
     public static void register() {
-        Car.get();
+        Robot_0.get();
         Robo_1.get();
         Skystrike.get();
         Scorpinok.get();

@@ -10,8 +10,7 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.origamiking.orm.utils.ArmorUtils;
-import net.origamiking.orm.client.armor.renderer.car.CarArmorRenderer;
+import net.origamiking.orm.client.armor.renderer.car.Robot_0ArmorRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
 import software.bernie.geckolib.constant.DataTickets;
@@ -27,11 +26,11 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 
-public final class CarArmorItem extends ArmorItem implements GeoItem {
+public final class Robot_0ArmorItem extends ArmorItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
 
-    public CarArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
+    public Robot_0ArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
         super(armorMaterial, slot, properties);
     }
 
@@ -40,12 +39,12 @@ public final class CarArmorItem extends ArmorItem implements GeoItem {
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
             //private GeoArmorRenderer<?> renderer;
-            private CarArmorRenderer renderer;
+            private Robot_0ArmorRenderer renderer;
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
                 if(this.renderer == null)
-                    this.renderer = new CarArmorRenderer();
+                    this.renderer = new Robot_0ArmorRenderer();
 
                 // This prepares our GeoArmorRenderer for the current render frame.
                 // These parameters may be null however, so we don't do anything further with them
@@ -91,7 +90,7 @@ public final class CarArmorItem extends ArmorItem implements GeoItem {
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
 //                    Car.CAR_ARMOR_HELMET,
-                      Car.CAR_ARMOR_CHESTPLATE));
+                      Robot_0.ROBOT_0_CAR));
 //                    Car.CAR_ARMOR_LEGGINGS,
 //                    Car.CAR_ARMOR_BOOTS));
 

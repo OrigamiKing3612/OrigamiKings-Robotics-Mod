@@ -1,6 +1,6 @@
 {
   "parent":"item/generated",
   "textures":{
-    "layer0":"orm:item/armor/robo_1_car"
+    "layer0":"orm:item/robo_1_car"
   }
 }

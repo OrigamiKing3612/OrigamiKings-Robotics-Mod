@@ -8,7 +8,7 @@ import net.minecraft.util.Identifier;
 import net.origamiking.orm.OrmMain;
 import net.origamiking.orm.armor.astrotrain.Astrotrain;
 import net.origamiking.orm.armor.bumblebee.Bumblebee;
-import net.origamiking.orm.armor.car.Car;
+import net.origamiking.orm.armor.car.Robot_0;
 import net.origamiking.orm.armor.ironhide.Ironhide;
 import net.origamiking.orm.armor.megatron.Megatron;
 import net.origamiking.orm.armor.optimus_prime.OptimusPrime;
@@ -28,9 +28,10 @@ import net.origamiking.orm.items.transformium.TransformiumItems;
 
 public class ModGroups {
     private static final ItemGroup ORM_GROUP = FabricItemGroup.builder(new Identifier(OrmMain.MOD_ID, "orm_group"))
-            .displayName(Text.literal("OrigamiKing's Robotics Armor Mod"))
+            .displayName(Text.literal("ORM Armor"))
             .icon(() -> new ItemStack(OptimusPrime.OPTIMUS_PRIME_ARMOR_HELMET))
             .entries((context, entries) -> {
+                entries.add(Robot_0.ROBOT_0_CAR);
                 entries.add(Robo_1.ROBO_1_ARMOR_HELMET);
                 entries.add(Robo_1.ROBO_1_ARMOR_CHESTPLATE);
                 entries.add(Robo_1.ROBO_1_ARMOR_LEGGINGS);
@@ -46,7 +47,6 @@ public class ModGroups {
                 entries.add(Scorpinok.SCORPINOK_ARMOR_LEGGINGS);
                 entries.add(Scorpinok.SCORPINOK_ARMOR_BOOTS);
                 entries.add(Scorpinok.SCORPINOK_CAR);
-                entries.add(Car.CAR_ARMOR_CHESTPLATE);
                 entries.add(RobotStarscream.ROBOT_STARSCREAM_ARMOR_HELMET);
                 entries.add(RobotStarscream.ROBOT_STARSCREAM_ARMOR_CHESTPLATE);
                 entries.add(RobotStarscream.ROBOT_STARSCREAM_ARMOR_LEGGINGS);
@@ -91,8 +91,8 @@ public class ModGroups {
 
 
             }).build();
-    private static final ItemGroup ORE_STUFF = FabricItemGroup.builder(new Identifier(OrmMain.MOD_ID, "ore_stuff"))
-            .displayName(Text.literal("OrigamiKing's Robotics Armor Mod"))
+    private static final ItemGroup ORM_STUFF = FabricItemGroup.builder(new Identifier(OrmMain.MOD_ID, "orm_stuff"))
+            .displayName(Text.literal("ORM Blocks and Items"))
             .icon(() -> new ItemStack(EnergonBlocks.ENERGON_BLOCK))
             .entries((context, entries) -> {
                 entries.add(EnergonItems.ENERGON);
@@ -107,8 +107,8 @@ public class ModGroups {
                 entries.add(TransformiumBlocks.TRANSFORMIUM_BLOCK);
             }).build();
     private static final ItemGroup ORM_ADDONS = FabricItemGroup.builder(new Identifier(OrmMain.MOD_ID, "orm_addons"))
-            .displayName(Text.literal("OrigamiKing's Robotics Armor Mod"))
-            .icon(() -> new ItemStack(EnergonBlocks.ENERGON_BLOCK))
+            .displayName(Text.literal("ORM Armor Addons"))
+            .icon(() -> new ItemStack(ItemRegistry.ROBO_ADDON_1))
             .entries((context, entries) -> {
                 entries.add(ItemRegistry.ROBO_ADDON_1);
             }).build();

@@ -3,6 +3,7 @@
     "item.orm.ore_13": "Ore 13",
     "item.orm.transformium": "Transformium",
     "block.orm.energon_block": "Energon Block",
+    "block.orm.transformium_block": "Transformium Block",
     "block.orm.ore_13_block": "Ore 13 Block",
     "block.orm.energon_ore": "Energon Ore",
     "block.orm.ore_13_ore": "Ore 13 Ore",
@@ -52,5 +53,10 @@
     "item.orm.megatron_helmet": "Megatron Helmet",
     "item.orm.megatron_chestplate": "Megatron Chestplate",
     "item.orm.megatron_leggings": "Megatron Leggings",
-    "item.orm.megatron_boots": "Megatron Boots"
+    "item.orm.megatron_boots": "Megatron Boots",
+    "item.orm.thunder_cracker_helmet": "Thunder Cracker Helmet",
+    "item.orm.thunder_cracker_chestplate": "Thunder Cracker Chestplate",
+    "item.orm.thunder_cracker_leggings": "Thunder Cracker Leggings",
+    "item.orm.thunder_cracker_boots": "Thunder Cracker Boots",
+    "item.orm.thunder_cracker_jet": "Thunder Cracker Jet"
 }
