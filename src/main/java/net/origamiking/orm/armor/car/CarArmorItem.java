@@ -11,7 +11,7 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.origamiking.orm.utils.ArmorUtils;
-import net.origamiking.orm.client.armor.renderer.CarArmorRenderer;
+import net.origamiking.orm.client.armor.renderer.car.CarArmorRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
 import software.bernie.geckolib.constant.DataTickets;

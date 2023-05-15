@@ -1,4 +1,4 @@
-package net.origamiking.orm.client.armor.renderer;
+package net.origamiking.orm.client.armor.renderer.car;
 
 import net.minecraft.util.Identifier;
 import net.origamiking.orm.OrmMain;
