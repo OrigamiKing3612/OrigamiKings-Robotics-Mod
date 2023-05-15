@@ -1,4 +1,4 @@
-package net.origamiking.orm.armor;
+package net.origamiking.orm.armor.robo_1;
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
@@ -10,7 +10,8 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.origamiking.orm.client.armor.renderer.CarArmorRenderer;
+import net.origamiking.orm.armor.ArmorRegistry;
+import net.origamiking.orm.client.armor.renderer.robo_1.Robo_1_CarArmorRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
 import software.bernie.geckolib.constant.DataTickets;
@@ -26,11 +27,11 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 
-public final class CarArmorItem extends ArmorItem implements GeoItem {
+public final class Robo_1_CarArmorItem extends ArmorItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
 
-    public CarArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
+    public Robo_1_CarArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
         super(armorMaterial, slot, properties);
     }
 
@@ -39,12 +40,13 @@ public final class CarArmorItem extends ArmorItem implements GeoItem {
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
             //private GeoArmorRenderer<?> renderer;
-            private CarArmorRenderer renderer;
+            private Robo_1_CarArmorRenderer renderer;
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
                 if(this.renderer == null)
-                    this.renderer = new CarArmorRenderer();
+                    this.renderer = new Robo_1_CarArmorRenderer();
+                    //this.renderer = new GeckoArmorRenderer();
 
                 // This prepares our GeoArmorRenderer for the current render frame.
                 // These parameters may be null however, so we don't do anything further with them
@@ -89,13 +91,13 @@ public final class CarArmorItem extends ArmorItem implements GeoItem {
 
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-//                    ArmorRegistry.CAR_ARMOR_HELMET,
-                    ArmorRegistry.CAR_ARMOR_CHESTPLATE));
-//                    ArmorRegistry.CAR_ARMOR_LEGGINGS,
-//                    ArmorRegistry.CAR_ARMOR_BOOTS));
+                    Robo_1.ROBO_1_ARMOR_HELMET,
+                    Robo_1.ROBO_1_ARMOR_CHESTPLATE,
+                    Robo_1.ROBO_1_ARMOR_LEGGINGS,
+                    Robo_1.ROBO_1_ARMOR_BOOTS));
 
             // Play the animation if the full set is being worn, otherwise stop
-            return PlayState.STOP;
+            return isFullSet ? PlayState.STOP : PlayState.STOP;
         }));
     }
 
