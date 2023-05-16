@@ -1,22 +1,37 @@
 package net.origamiking.orm.blocks.refinery;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
+import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 import net.origamiking.mcmods.oapi.blocks.BlocksUtils;
 import net.origamiking.orm.OrmMain;
-import software.bernie.example.registry.BlockRegistry;
 
 public class ModRefineryBlock extends BlocksUtils {
     public static final RefineryBlock REFINERY_BLOCK = registerBlock("refinery_block", new RefineryBlock());
     public static final BlockEntityType<RefineryBlockEntity> REFINERY_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE,
             new Identifier(OrmMain.MOD_ID, "refinery_block_entity"),
             FabricBlockEntityTypeBuilder.create(RefineryBlockEntity::new, ModRefineryBlock.REFINERY_BLOCK).build());
+    public static final ScreenHandlerType<RefineryScreenHandler> REFINERY_BLOCK_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(new Identifier(OrmMain.MOD_ID, "refinery_block"), RefineryScreenHandler::new);
+
+
+
+
+
+
+
+
+
+
+
+
+
     public static <B extends Block> B registerBlock(String name, B block) {
         return register(block, new Identifier(OrmMain.MOD_ID, name));
     }
@@ -29,5 +44,6 @@ public class ModRefineryBlock extends BlocksUtils {
         Registry.register(Registries.ITEM, name, item);
         return block;
     }
-    public static void get() {}
+    public static void get() {
+    }
 }
