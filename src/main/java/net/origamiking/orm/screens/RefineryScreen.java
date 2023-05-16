@@ -1,20 +1,25 @@
-package net.origamiking.orm.blocks.refinery;
+package net.origamiking.orm.screens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.screen.AbstractFurnaceScreenHandler;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.origamiking.orm.OrmMain;
 
 public class RefineryScreen extends HandledScreen<RefineryScreenHandler> {
-    //A path to the gui texture. In this example we use the texture from the dispenser
-    private static final Identifier TEXTURE = new Identifier("minecraft", "textures/gui/container/furnace.png");
+    private static final Identifier TEXTURE = new Identifier(OrmMain.MOD_ID, "textures/gui/refinery_block_gui.png");
 
     public RefineryScreen(RefineryScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
+    }
+
+    @Override
+    protected void init() {
+        super.init();
+        titleX = (backgroundWidth - textRenderer.getWidth(title)) / 2;
     }
 
     @Override
@@ -25,6 +30,14 @@ public class RefineryScreen extends HandledScreen<RefineryScreenHandler> {
         int x = (width - backgroundWidth) / 2;
         int y = (height - backgroundHeight) / 2;
         drawTexture(matrices, x, y, 0, 0, backgroundWidth, backgroundHeight);
+
+        renderProgressArrow(matrices, x, y);
+    }
+
+    private void renderProgressArrow(MatrixStack matrices, int x, int y) {
+        if(handler.isCrafting()) {
+            drawTexture(matrices, x + 105, y + 33, 176, 0, 8, handler.getScaledProgress());
+        }
     }
 
     @Override
@@ -32,11 +45,5 @@ public class RefineryScreen extends HandledScreen<RefineryScreenHandler> {
         renderBackground(matrices);
         super.render(matrices, mouseX, mouseY, delta);
         drawMouseoverTooltip(matrices, mouseX, mouseY);
-    }
-
-    @Override
-    protected void init() {
-        super.init();
-        titleX = (backgroundWidth - textRenderer.getWidth(title)) / 2;
     }
 }

@@ -1,8 +1,9 @@
-package net.origamiking.orm.blocks.refinery;
+package net.origamiking.orm.blocks.refinery.client;
 
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
 import net.origamiking.orm.OrmMain;
+import net.origamiking.orm.blocks.refinery.RefineryBlockEntity;
 import software.bernie.geckolib.model.DefaultedBlockGeoModel;
 
 public class RefineryBlockModel extends DefaultedBlockGeoModel<RefineryBlockEntity> {

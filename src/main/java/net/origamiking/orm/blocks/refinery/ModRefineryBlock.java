@@ -12,26 +12,13 @@ import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 import net.origamiking.mcmods.oapi.blocks.BlocksUtils;
 import net.origamiking.orm.OrmMain;
+import net.origamiking.orm.screens.RefineryScreenHandler;
 
 public class ModRefineryBlock extends BlocksUtils {
     public static final RefineryBlock REFINERY_BLOCK = registerBlock("refinery_block", new RefineryBlock());
     public static final BlockEntityType<RefineryBlockEntity> REFINERY_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE,
             new Identifier(OrmMain.MOD_ID, "refinery_block_entity"),
             FabricBlockEntityTypeBuilder.create(RefineryBlockEntity::new, ModRefineryBlock.REFINERY_BLOCK).build());
-    public static final ScreenHandlerType<RefineryScreenHandler> REFINERY_BLOCK_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(new Identifier(OrmMain.MOD_ID, "refinery_block"), RefineryScreenHandler::new);
-
-
-
-
-
-
-
-
-
-
-
-
-
     public static <B extends Block> B registerBlock(String name, B block) {
         return register(block, new Identifier(OrmMain.MOD_ID, name));
     }

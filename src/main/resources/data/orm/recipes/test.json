@@ -1,0 +1,11 @@
+{
+  "type": "orm:refining",
+  "ingredients": [
+    {
+      "item": "orm:energon_ore"
+    }
+  ],
+  "output": {
+    "item": "orm:energon"
+  }
+}
