@@ -19,7 +19,6 @@ public class OrmMain implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		OrmMain.LOGGER.info("Starting ORM " + OrmMain.VERSION);
-		OrmMain.LOGGER.info("THIS IS A DEV VERSION");
 		ModArmor.register();
 		ModItems.register();
 		ModBlocks.register();
