@@ -17,7 +17,7 @@ public class OrmMain implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger("orm");
 	@Override
 	public void onInitialize() {
-		OrmMain.LOGGER.info("Starting ORM");
+		OrmMain.LOGGER.info("Starting ORM " + OrmMain.VERSION);
 		ModArmor.register();
 		ModItems.register();
 		ModBlocks.register();
