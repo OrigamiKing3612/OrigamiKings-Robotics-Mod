@@ -21,6 +21,17 @@ import net.origamiking.orm.armor.thunder_cracker.ThunderCracker;
 import net.origamiking.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.orm.blocks.ore13.Ore13Blocks;
 import net.origamiking.orm.blocks.transformium.TransformiumBlocks;
+import net.origamiking.orm.items.chips.astrotrain.AstrotrainChip;
+import net.origamiking.orm.items.chips.bumblebee.BumblebeeChip;
+import net.origamiking.orm.items.chips.ironhide.IronhideChip;
+import net.origamiking.orm.items.chips.megatron.MegatronChip;
+import net.origamiking.orm.items.chips.optimus_prime.OptimusPrimeChip;
+import net.origamiking.orm.items.chips.robo_1.Robo_1Chip;
+import net.origamiking.orm.items.chips.robot_starscream.RobotStarsceamChip;
+import net.origamiking.orm.items.chips.scorpinok.ScorpinokChip;
+import net.origamiking.orm.items.chips.skystrike.SkystrikeChip;
+import net.origamiking.orm.items.chips.soundwave.SoundwaveChip;
+import net.origamiking.orm.items.chips.thunder_cracker.ThunderCrackerChip;
 import net.origamiking.orm.items.custom.ItemRegistry;
 import net.origamiking.orm.items.energon.EnergonItems;
 import net.origamiking.orm.items.ore13.Ore13Items;
@@ -111,6 +122,22 @@ public class ModGroups {
             .icon(() -> new ItemStack(ItemRegistry.ROBO_ADDON_1))
             .entries((context, entries) -> {
                 entries.add(ItemRegistry.ROBO_ADDON_1);
+            }).build();
+    private static final ItemGroup ORM_CHIPS = FabricItemGroup.builder(new Identifier(OrmMain.MOD_ID, "orm_chips"))
+            .displayName(Text.literal("ORM Chips"))
+            .icon(() -> new ItemStack(OptimusPrimeChip.OPTIMUS_PRIME_CHIP))
+            .entries((context, entries) -> {
+                entries.add(AstrotrainChip.ASTROTRAIN_CHIP);
+                entries.add(BumblebeeChip.BUMBLEBEE_CHIP);
+                entries.add(IronhideChip.IRONHIDE_CHIP);
+                entries.add(MegatronChip.MEGATRON_CHIP);
+                entries.add(OptimusPrimeChip.OPTIMUS_PRIME_CHIP);
+                entries.add(Robo_1Chip.ROBO_1_CHIP);
+                entries.add(RobotStarsceamChip.ROBOT_STARSCREAM_CHIP);
+                entries.add(ScorpinokChip.SCORPINOK_CHIP);
+                entries.add(SkystrikeChip.SKYSTRIKE_CHIP);
+                entries.add(SoundwaveChip.SOUNDWAVE_CHIP);
+                entries.add(ThunderCrackerChip.THUNDER_CRACKER_CHIP);
             }).build();
     public static void register() {
         OrmMain.LOGGER.info("Registering Groups");

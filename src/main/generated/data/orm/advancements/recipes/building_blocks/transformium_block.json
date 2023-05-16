@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "orm:transformium_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_transformium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:transformium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_transformium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "orm:transformium_block"
+    ]
+  }
+}

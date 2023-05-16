@@ -1,6 +1,6 @@
 package net.origamiking.orm.items;
 
-import net.origamiking.orm.armor.ModArmor;
+import net.origamiking.orm.items.chips.ModChips;
 import net.origamiking.orm.items.custom.ItemRegistry;
 import net.origamiking.orm.items.energon.EnergonItems;
 import net.origamiking.orm.items.ore13.Ore13Items;
@@ -13,5 +13,6 @@ public class ModItems {
         TransformiumItems.get();
         EnergonItems.get();
         Ore13Items.get();
+        ModChips.register();
     }
 }
