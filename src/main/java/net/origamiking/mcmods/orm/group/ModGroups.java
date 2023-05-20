@@ -93,6 +93,7 @@ public class ModGroups {
                 entries.add(Megatron.MEGATRON_CHESTPLATE);
                 entries.add(Megatron.MEGATRON_LEGGINGS);
                 entries.add(Megatron.MEGATRON_BOOTS);
+                entries.add(ItemRegistry.MEGATRON_TRANSFORMED);
                 entries.add(ThunderCracker.THUNDER_CRACKER_HELMET);
                 entries.add(ThunderCracker.THUNDER_CRACKER_CHESTPLATE);
                 entries.add(ThunderCracker.THUNDER_CRACKER_LEGGINGS);
@@ -122,6 +123,9 @@ public class ModGroups {
             .icon(() -> new ItemStack(ItemRegistry.ROBO_ADDON_1))
             .entries((context, entries) -> {
                 entries.add(ItemRegistry.ROBO_ADDON_1);
+                entries.add(ItemRegistry.SOUNDWAVE_SHOULDER_GUN);
+                entries.add(ItemRegistry.SOUNDWAVE_RAY_GUN);
+                entries.add(ItemRegistry.OPTIMUS_PRIMES_ION_CANNON);
             }).build();
     private static final ItemGroup ORM_CHIPS = FabricItemGroup.builder(new Identifier(OrmMain.MOD_ID, "orm_chips"))
             .displayName(Text.literal("ORM Chips"))

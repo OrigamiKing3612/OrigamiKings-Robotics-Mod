@@ -1,8 +1,8 @@
-package net.origamiking.mcmods.orm.items.custom.renderer;
+package net.origamiking.mcmods.orm.client.items.renderer.robo_addon_1;
 
 import net.minecraft.util.Identifier;
 import net.origamiking.mcmods.orm.OrmMain;
-import net.origamiking.mcmods.orm.items.custom.Robo_Addon_1_Item;
+import net.origamiking.mcmods.orm.items.custom.robo_addon_1.Robo_Addon_1_Item;
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
 import software.bernie.geckolib.renderer.GeoItemRenderer;
 

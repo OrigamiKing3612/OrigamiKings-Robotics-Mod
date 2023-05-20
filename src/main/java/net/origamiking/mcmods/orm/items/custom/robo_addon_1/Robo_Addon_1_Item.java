@@ -1,9 +1,9 @@
-package net.origamiking.mcmods.orm.items.custom;
+package net.origamiking.mcmods.orm.items.custom.robo_addon_1;
 
 import net.minecraft.client.render.item.BuiltinModelItemRenderer;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
-import net.origamiking.mcmods.orm.items.custom.renderer.Robo_Addon_1_Item_Renderer;
+import net.origamiking.mcmods.orm.client.items.renderer.robo_addon_1.Robo_Addon_1_Item_Renderer;
 import software.bernie.example.registry.SoundRegistry;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.SingletonGeoAnimatable;
