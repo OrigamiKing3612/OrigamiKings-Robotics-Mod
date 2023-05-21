@@ -128,7 +128,7 @@ publishing {
 				embedded.project "origamikings-api"
 
 			}
-			changelog = "Added lots of new armors and renamed some old ones"
+			changelog = "Added lots of new armors and addons and renamed some old ones"
 		}
 	}
 }
