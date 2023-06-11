@@ -65,7 +65,8 @@ dependencies {
 	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
 
 	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
-	modImplementation 'software.bernie.geckolib:geckolib-fabric-1.19.4:4.1.1'
+
+	modImplementation "software.bernie.geckolib:geckolib-fabric-1.20:${geckolib_version}"
 
 	modImplementation "maven.modrinth:P3sjMa3U:${origamikings_api}"
 
@@ -110,25 +111,24 @@ publishing {
 		// Notice: This block does NOT have the same function as the block in the top level.
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
-
-		modrinth {
+	}
+	modrinth {
 //		debugMode = true
-			token = System.getenv("MODRINTH_TOKEN")
-			projectId = "${project_id}"
-			versionNumber = "${mod_version}"
-			versionType = "${version_type}"
-			uploadFile = remapJar // With Loom, this MUST be set to `remapJar`
-			gameVersions = ['1.19.4'] // Must be an array, even with only one version
-			dependencies {
-				// scope.type
-				// The scope can be `required`, `optional`, `incompatible`, or `embedded`
-				// The type can either be `project` or `version`
-				embedded.project "geckolib"
-				embedded.project "fabric-api"
-				embedded.project "origamikings-api"
+		token = System.getenv("MODRINTH_TOKEN")
+		projectId = "${project_id}"
+		versionNumber = "${mod_version}"
+		versionType = "${version_type}"
+		uploadFile = remapJar // With Loom, this MUST be set to `remapJar`
+		gameVersions = ['1.19.4'] // Must be an array, even with only one version
+		dependencies {
+			// scope.type
+			// The scope can be `required`, `optional`, `incompatible`, or `embedded`
+			// The type can either be `project` or `version`
+			embedded.project "geckolib"
+			embedded.project "fabric-api"
+			embedded.project "origamikings-api"
 
-			}
-			changelog = "Added lots of new armors and addons and renamed some old ones"
 		}
+		changelog = "Added lots of new armors and addons and renamed some old ones"
 	}
 }

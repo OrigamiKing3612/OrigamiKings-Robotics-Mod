@@ -69,5 +69,10 @@
     "item.orm.thunder_cracker_chestplate": "Thunder Cracker Chestplate",
     "item.orm.thunder_cracker_leggings": "Thunder Cracker Leggings",
     "item.orm.thunder_cracker_boots": "Thunder Cracker Boots",
-    "item.orm.thunder_cracker_jet": "Thunder Cracker Jet"
+    "item.orm.thunder_cracker_jet": "Thunder Cracker Jet",
+
+    "group.orm.armor": "ORM Armor",
+    "group.orm.stuff": "ORM Blocks and Items",
+    "group.orm.addons": "ORM Armor Addons",
+    "group.orm.chips": "ORM Chips"
 }
