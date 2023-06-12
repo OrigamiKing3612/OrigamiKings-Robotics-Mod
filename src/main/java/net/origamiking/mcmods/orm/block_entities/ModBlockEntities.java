@@ -5,7 +5,6 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.origamiking.mcmods.orm.OrmMain;
-import net.origamiking.mcmods.orm.blocks.refinery.RefineryBlockEntity;
 import net.origamiking.mcmods.orm.blocks.refinery.RegisterRefineryBlock;
 
 public class ModBlockEntities {

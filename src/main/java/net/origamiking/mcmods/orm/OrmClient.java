@@ -11,7 +11,7 @@ import net.origamiking.mcmods.orm.screen.RefineryBlockScreen;
 public class OrmClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        HandledScreens.register(ModScreenHandlers.GEM_INFUSING_SCREEN_HANDLER, RefineryBlockScreen::new);
+        HandledScreens.register(ModScreenHandlers.REFINERY_BLOCK_SCREEN_HANDLER, RefineryBlockScreen::new);
 
         BlockEntityRendererRegistry.register(ModBlockEntities.REFINERY_BLOCK,
                 context -> new RefineryBlockRenderer());

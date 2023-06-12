@@ -1,4 +1,4 @@
-package net.origamiking.mcmods.orm.blocks.refinery;
+package net.origamiking.mcmods.orm.block_entities;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -15,9 +15,11 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import net.origamiking.mcmods.oapi.blocks.ImplementedInventory;
-import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
+import net.origamiking.mcmods.orm.blocks.refinery.RefineryBlock;
+import net.origamiking.mcmods.orm.items.energon.EnergonItems;
 import net.origamiking.mcmods.orm.items.ore13.Ore13Items;
 import net.origamiking.mcmods.orm.items.transformium.TransformiumItems;
 import net.origamiking.mcmods.orm.screen.RefineryBlockScreenHandler;
@@ -95,6 +97,64 @@ public class RefineryBlockEntity extends BlockEntity implements NamedScreenHandl
         this.progress = 0;
     }
 
+    @Override
+    public boolean canInsert(int slot, ItemStack stack, @Nullable Direction side) {
+        Direction localDir = this.getWorld().getBlockState(this.pos).get(RefineryBlock.FACING);
+
+        if(side == Direction.UP || side == Direction.DOWN) {
+            return false;
+        }
+
+        // Top insert 1
+        // Right insert 1
+        // Left insert 0
+        return switch (localDir) {
+            default ->
+                    side.getOpposite() == Direction.NORTH && slot == 1 ||
+                            side.getOpposite() == Direction.EAST && slot == 1 ||
+                            side.getOpposite() == Direction.WEST && slot == 0;
+            case EAST ->
+                    side.rotateYClockwise() == Direction.NORTH && slot == 1 ||
+                            side.rotateYClockwise() == Direction.EAST && slot == 1 ||
+                            side.rotateYClockwise() == Direction.WEST && slot == 0;
+            case SOUTH ->
+                    side == Direction.NORTH && slot == 1 ||
+                            side == Direction.EAST && slot == 1 ||
+                            side == Direction.WEST && slot == 0;
+            case WEST ->
+                    side.rotateYCounterclockwise() == Direction.NORTH && slot == 1 ||
+                            side.rotateYCounterclockwise() == Direction.EAST && slot == 1 ||
+                            side.rotateYCounterclockwise() == Direction.WEST && slot == 0;
+        };
+    }
+
+    @Override
+    public boolean canExtract(int slot, ItemStack stack, Direction side) {
+        Direction localDir = this.getWorld().getBlockState(this.pos).get(RefineryBlock.FACING);
+
+        if(side == Direction.UP) {
+            return false;
+        }
+
+        // Down extract 2
+        if(side == Direction.DOWN) {
+            return slot == 2;
+        }
+
+        // bottom extract 2
+        // right extract 2
+        return switch (localDir) {
+            default -> side.getOpposite() == Direction.SOUTH && slot == 2 ||
+                    side.getOpposite() == Direction.EAST && slot == 2;
+            case EAST -> side.rotateYClockwise() == Direction.SOUTH && slot == 2 ||
+                    side.rotateYClockwise() == Direction.EAST && slot == 2;
+            case SOUTH -> side == Direction.SOUTH && slot == 2 ||
+                    side == Direction.EAST && slot == 2;
+            case WEST -> side.rotateYCounterclockwise() == Direction.SOUTH && slot == 2 ||
+                    side.rotateYCounterclockwise() == Direction.EAST && slot == 2;
+        };
+    }
+
     public static void tick(World world, BlockPos blockPos, BlockState state, RefineryBlockEntity entity) {
         if(world.isClient()) {
             return;
@@ -120,6 +180,7 @@ public class RefineryBlockEntity extends BlockEntity implements NamedScreenHandl
 
         if(hasRecipe(entity)) {
             entity.removeStack(1, 1);
+            entity.removeStack(0, 1);
 
             entity.setStack(2, new ItemStack(TransformiumItems.TRANSFORMIUM, // Finished product
                     entity.getStack(2).getCount() + 1));
@@ -134,12 +195,11 @@ public class RefineryBlockEntity extends BlockEntity implements NamedScreenHandl
             inventory.setStack(i, entity.getStack(i));
         }
 
-        boolean hasRawGemInFirstSlot = entity.getStack(1).getItem() == Ore13Items.ORE_13; // Start product
+        boolean hasOre13InFirstSlot = entity.getStack(1).getItem() == Ore13Items.ORE_13; // Start product
+        boolean hasEnergonInFuelSlot = entity.getStack(0).getItem() == EnergonItems.ENERGON; // Fuel
 
-        return hasRawGemInFirstSlot && canInsertAmountIntoOutputSlot(inventory)
-                && canInsertItemIntoOutputSlot(inventory, TransformiumItems.TRANSFORMIUM);// Finished product
+        return hasOre13InFirstSlot && hasEnergonInFuelSlot && canInsertAmountIntoOutputSlot(inventory) && canInsertItemIntoOutputSlot(inventory, TransformiumItems.TRANSFORMIUM/*Finished product*/);
     }
-
     private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, Item output) {
         return inventory.getStack(2).getItem() == output || inventory.getStack(2).isEmpty();
     }

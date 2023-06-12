@@ -19,7 +19,7 @@ public class RefineryBlockScreenHandler extends ScreenHandler {
     }
 
     public RefineryBlockScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate delegate) {
-        super(ModScreenHandlers.GEM_INFUSING_SCREEN_HANDLER, syncId);
+        super(ModScreenHandlers.REFINERY_BLOCK_SCREEN_HANDLER, syncId);
         checkSize(inventory, 3);
         this.inventory = inventory;
         inventory.onOpen(playerInventory.player);
