@@ -76,5 +76,6 @@
     "group.orm.addons": "ORM Armor Addons",
     "group.orm.chips": "ORM Chips",
 
-    "screen.orm.refinery_block_title": "Refinery Block"
+    "screen.orm.refinery_block_title": "Refinery Block",
+    "block.orm.refinery_block": "Refinery Block"
 }
