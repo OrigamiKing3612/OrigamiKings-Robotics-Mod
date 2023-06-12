@@ -1,7 +1,6 @@
 package net.origamiking.mcmods.orm;
 
 import net.fabricmc.api.ModInitializer;
-
 import net.origamiking.mcmods.orm.armor.ModArmor;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
 import net.origamiking.mcmods.orm.blocks.ModBlocks;
@@ -30,6 +29,5 @@ public class OrmMain implements ModInitializer {
 		ModCommands.register();
 
 		// TODO Make energon the energy source
-		// TODO try to add recipe type
 	}
 }
