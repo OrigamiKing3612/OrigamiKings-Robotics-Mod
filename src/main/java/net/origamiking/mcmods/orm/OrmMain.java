@@ -27,7 +27,5 @@ public class OrmMain implements ModInitializer {
 		ModGroups.register();
 		ModEntityTypes.register();
 		ModCommands.register();
-
-		// TODO Make energon the energy source
 	}
 }
