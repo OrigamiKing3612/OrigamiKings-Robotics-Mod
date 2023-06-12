@@ -129,7 +129,6 @@ publishing {
 			embedded.project "origamikings-api"
 
 		}
-//		changelog = "Added lots of new armors and addons and renamed some old ones"
-		changelog = "Updated to 1.20.1 and added Refinery Block and fixed bugs"
+		changelog = "Added lots of new armors and addons and renamed some old ones"
 	}
 }
