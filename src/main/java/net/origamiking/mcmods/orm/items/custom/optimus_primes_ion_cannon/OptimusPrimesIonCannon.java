@@ -1,15 +1,13 @@
 package net.origamiking.mcmods.orm.items.custom.optimus_primes_ion_cannon;
 
 import net.minecraft.client.render.item.BuiltinModelItemRenderer;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.PersistentProjectileEntity;
-import net.minecraft.item.*;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.stat.Stats;
+import net.minecraft.entity.projectile.ArrowEntity;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Vanishable;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
@@ -18,6 +16,7 @@ import net.origamiking.mcmods.orm.client.items.renderer.optimus_primes_ion_canno
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.SingletonGeoAnimatable;
 import software.bernie.geckolib.animatable.client.RenderProvider;
+import software.bernie.geckolib.constant.DefaultAnimations;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animation.AnimationController;
@@ -25,25 +24,14 @@ import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.function.Consumer;
-import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-public class OptimusPrimesIonCannon extends RangedWeaponItem implements GeoItem, Vanishable {
+public class OptimusPrimesIonCannon extends Item implements GeoItem, Vanishable {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
     public OptimusPrimesIonCannon(Settings settings) {
         super(settings);
         SingletonGeoAnimatable.registerSyncedAnimatable(this);
-    }
-
-    @Override
-    public Predicate<ItemStack> getProjectiles() {
-        return BOW_PROJECTILES;
-    }
-
-    @Override
-    public int getRange() {
-        return 15;
     }
 
     @Override
@@ -69,92 +57,56 @@ public class OptimusPrimesIonCannon extends RangedWeaponItem implements GeoItem,
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "idle", 20, state -> PlayState.STOP));
+        controllers.add(new AnimationController<>(this, "shoot_controller", state -> PlayState.CONTINUE)
+                .triggerableAnim("shoot", DefaultAnimations.ITEM_ON_USE));
+        // We've marked the "shoot" animation as being triggerable from the server
     }
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {return this.cache;}
     @Override
-    public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
-        boolean bl2;
-        int i;
-        float f;
-        if (!(user instanceof PlayerEntity)) {
-            return;
-        }
-        PlayerEntity playerEntity = (PlayerEntity)user;
-        boolean bl = playerEntity.getAbilities().creativeMode || EnchantmentHelper.getLevel(Enchantments.INFINITY, stack) > 0;
-        ItemStack itemStack = playerEntity.getProjectileType(stack);
-        if (itemStack.isEmpty() && !bl) {
-            return;
-        }
-        if (itemStack.isEmpty()) {
-            itemStack = new ItemStack(Items.ARROW);
-        }
-        if ((double)(f = BowItem.getPullProgress(i = this.getMaxUseTime(stack) - remainingUseTicks)) < 0.1) {
-            return;
-        }
-        boolean bl3 = bl2 = bl && itemStack.isOf(Items.ARROW);
-        if (!world.isClient) {
-            int k;
-            int j;
-            ArrowItem arrowItem = (ArrowItem)(itemStack.getItem() instanceof ArrowItem ? itemStack.getItem() : Items.ARROW);
-            PersistentProjectileEntity persistentProjectileEntity = arrowItem.createArrow(world, itemStack, playerEntity);
-            persistentProjectileEntity.setVelocity(playerEntity, playerEntity.getPitch(), playerEntity.getYaw(), 0.0f, f * 3.0f, 1.0f);
-            if (f == 1.0f) {
-                persistentProjectileEntity.setCritical(true);
-            }
-            if ((j = EnchantmentHelper.getLevel(Enchantments.POWER, stack)) > 0) {
-                persistentProjectileEntity.setDamage(persistentProjectileEntity.getDamage() + (double)j * 0.5 + 0.5);
-            }
-            if ((k = EnchantmentHelper.getLevel(Enchantments.PUNCH, stack)) > 0) {
-                persistentProjectileEntity.setPunch(k);
-            }
-            if (EnchantmentHelper.getLevel(Enchantments.FLAME, stack) > 0) {
-                persistentProjectileEntity.setOnFireFor(100);
-            }
-            stack.damage(1, playerEntity, p -> p.sendToolBreakStatus(playerEntity.getActiveHand()));
-            if (bl2 || playerEntity.getAbilities().creativeMode && (itemStack.isOf(Items.SPECTRAL_ARROW) || itemStack.isOf(Items.TIPPED_ARROW))) {
-                persistentProjectileEntity.pickupType = PersistentProjectileEntity.PickupPermission.CREATIVE_ONLY;
-            }
-            world.spawnEntity(persistentProjectileEntity);
-        }
-        world.playSound(null, playerEntity.getX(), playerEntity.getY(), playerEntity.getZ(), SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS, 1.0f, 1.0f / (world.getRandom().nextFloat() * 0.4f + 1.2f) + f * 0.5f);
-        if (!bl2 && !playerEntity.getAbilities().creativeMode) {
-            itemStack.decrement(1);
-            if (itemStack.isEmpty()) {
-                playerEntity.getInventory().removeOne(itemStack);
-            }
-        }
-        playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
+        player.setCurrentHand(hand);
+
+        return TypedActionResult.consume(player.getStackInHand(hand));
     }
 
-    public static float getPullProgress(int useTicks) {
-        float f = (float)useTicks / 20.0f;
-        if ((f = (f * f + f * 2.0f) / 3.0f) > 1.0f) {
-            f = 1.0f;
-        }
-        return f;
-    }
-
+    // Fire an arrow and play the animation when releasing the mouse button
     @Override
-    public int getMaxUseTime(ItemStack stack) {
-        return 72000;
+    public void onStoppedUsing(ItemStack stack, World level, LivingEntity shooter, int ticksRemaining) {
+        if (shooter instanceof PlayerEntity player) {
+            if (stack.getDamage() >= stack.getMaxDamage() - 1)
+                return;
+
+            // Add a cooldown so you can't fire rapidly
+            player.getItemCooldownManager().set(this, 5);
+
+            if (!level.isClient) {
+                ArrowEntity arrow = new ArrowEntity(level, player);
+                arrow.age = 35;
+
+                arrow.setVelocity(player, player.getPitch(), player.getYaw(), 0, 1, 1);
+                arrow.setDamage(2.5);
+                arrow.hasNoGravity();
+
+                stack.damage(1, shooter, p -> p.sendToolBreakStatus(shooter.getActiveHand()));
+                level.spawnEntity(arrow);
+
+                // Trigger our animation
+                // We could trigger this outside of the client-side check if only wanted the animation to play for the shooter
+                // But we'll fire it on the server so all nearby players can see it
+                triggerAnim(player, GeoItem.getOrAssignId(stack, (ServerWorld)level), "shoot_controller", "shoot");
+            }
+        }
     }
 
+    // Use vanilla animation to 'pull back' the pistol while charging it
     @Override
     public UseAction getUseAction(ItemStack stack) {
         return UseAction.BOW;
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        boolean bl;
-        ItemStack itemStack = user.getStackInHand(hand);
-        boolean bl2 = bl = !user.getProjectileType(itemStack).isEmpty();
-        if (user.getAbilities().creativeMode || bl) {
-            user.setCurrentHand(hand);
-            return TypedActionResult.consume(itemStack);
-        }
-        return TypedActionResult.fail(itemStack);
+    public boolean hasGlint(ItemStack stack) {
+        return false;
     }
 }

@@ -52,13 +52,14 @@ public class Robo_Addon_1_Item extends Item implements GeoItem {
         controllers.add(new AnimationController<>(this, "idle", 20, state -> PlayState.STOP)
 //                .triggerableAnim("box_open", POPUP_ANIM)
                 // We've marked the "box_open" animation as being triggerable from the server
-                .setSoundKeyframeHandler(event -> {
-                    // Use helper method to avoid client-code in common class
-                    PlayerEntity player = ClientUtils.getClientPlayer();
-
-                    if (player != null)
-                        player.playSound(SoundRegistry.JACK_MUSIC, 1, 1);
-                }));
+//                .setSoundKeyframeHandler(event -> {
+//                    // Use helper method to avoid client-code in common class
+//                    PlayerEntity player = ClientUtils.getClientPlayer();
+//
+//                    if (player != null)
+//                        player.playSound(SoundRegistry.JACK_MUSIC, 1, 1);
+//                })
+                );
     }
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {return this.cache;}

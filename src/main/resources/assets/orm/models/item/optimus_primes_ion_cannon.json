@@ -91,5 +91,13 @@
         -9.75
       ]
     }
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "pulling": 0
+      },
+      "model": "orm:item/optimus_primes_ion_cannon"
+    }
+  ]
 }
