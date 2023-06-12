@@ -21,7 +21,6 @@ public class Robo_Addon_1_Item extends Item implements GeoItem {
     public Robo_Addon_1_Item(Settings settings) {
         super(settings);
         SingletonGeoAnimatable.registerSyncedAnimatable(this);
-
     }
 
     @Override

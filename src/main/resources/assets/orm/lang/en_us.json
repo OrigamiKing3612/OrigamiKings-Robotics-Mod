@@ -71,6 +71,11 @@
     "item.orm.thunder_cracker_boots": "Thunder Cracker Boots",
     "item.orm.thunder_cracker_jet": "Thunder Cracker Jet",
 
+    "item.orm.soundwave_shoulder_gun": "Soundwave Shoulder Gun",
+    "item.orm.soundwave_ray_gun": "Soundwave Ray Gun",
+    "item.orm.optimus_primes_ion_cannon": "Optimus Primes Ion Cannon",
+    "item.orm.megatron_transformed": "Megatron Transformed",
+
     "group.orm.armor": "ORM Armor",
     "group.orm.stuff": "ORM Blocks and Items",
     "group.orm.addons": "ORM Armor Addons",

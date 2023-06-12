@@ -1,5 +1,6 @@
 {
   "credit": "Made with Blockbench",
+  "parent": "builtin/entity",
   "texture_size": [
     32,
     32
@@ -91,13 +92,5 @@
         -9.75
       ]
     }
-  },
-  "overrides": [
-    {
-      "predicate": {
-        "pulling": 0
-      },
-      "model": "orm:item/optimus_primes_ion_cannon"
-    }
-  ]
+  }
 }
