@@ -24,6 +24,7 @@ import net.origamiking.mcmods.orm.armor.soundwave.Soundwave;
 import net.origamiking.mcmods.orm.armor.thunder_cracker.ThunderCracker;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
+import net.origamiking.mcmods.orm.blocks.refinery.RegisterRefineryBlock;
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
 import net.origamiking.mcmods.orm.items.chips.astrotrain.AstrotrainChip;
 import net.origamiking.mcmods.orm.items.chips.bumblebee.BumblebeeChip;
@@ -117,6 +118,7 @@ public class ModGroups {
                 .displayName(Text.translatable("group.orm.stuff"))
                 .icon(() -> new ItemStack(EnergonBlocks.ENERGON_BLOCK))
                 .entries((context, entries) -> {
+                    entries.add(RegisterRefineryBlock.REFINERY_BLOCK);
                     entries.add(EnergonItems.ENERGON);
                     entries.add(EnergonBlocks.ENERGON_BLOCK);
                     entries.add(EnergonBlocks.ENERGON_ORE);
