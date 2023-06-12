@@ -15,8 +15,8 @@ import org.slf4j.LoggerFactory;
 
 public class OrmMain implements ModInitializer {
 	public static final String MOD_ID = "orm";
-	public static final String VERSION = "0.1.0-1.19.3";
-	public static final Logger LOGGER = LoggerFactory.getLogger("orm");
+	public static final String VERSION = "0.1.0-1.20.1";
+	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 	@Override
 	public void onInitialize() {
 		OrmMain.LOGGER.info("Starting ORM " + OrmMain.VERSION);
@@ -28,5 +28,8 @@ public class OrmMain implements ModInitializer {
 		ModGroups.register();
 		ModEntityTypes.register();
 		ModCommands.register();
+
+		// TODO Make energon the energy source
+		// TODO remove the energy bar in gui
 	}
 }
