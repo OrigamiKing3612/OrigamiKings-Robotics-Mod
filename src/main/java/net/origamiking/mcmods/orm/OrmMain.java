@@ -30,6 +30,6 @@ public class OrmMain implements ModInitializer {
 		ModCommands.register();
 
 		// TODO Make energon the energy source
-		// TODO remove the energy bar in gui
+		// TODO try to add recipe type
 	}
 }
