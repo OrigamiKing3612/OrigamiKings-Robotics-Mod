@@ -19,10 +19,10 @@ import net.origamiking.mcmods.orm.armor.megatron.Megatron;
 import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrime;
 import net.origamiking.mcmods.orm.armor.robo_1.Robo_1;
 import net.origamiking.mcmods.orm.armor.rodimus_prime.RodimusPrime;
-import net.origamiking.mcmods.orm.armor.starscream.Starscream;
 import net.origamiking.mcmods.orm.armor.scorpinok.Scorpinok;
 import net.origamiking.mcmods.orm.armor.skystrike.Skystrike;
 import net.origamiking.mcmods.orm.armor.soundwave.Soundwave;
+import net.origamiking.mcmods.orm.armor.starscream.Starscream;
 import net.origamiking.mcmods.orm.armor.thunder_cracker.ThunderCracker;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
@@ -120,8 +120,11 @@ public class ModGroups {
                     entries.add(Galvatron.LEGGINGS);
                     entries.add(Galvatron.BOOTS);
                     entries.add(Galvatron.GALVATRON_GUN);
-
-
+                    entries.add(RodimusPrime.HELMET);
+                    entries.add(RodimusPrime.CHESTPLATE);
+                    entries.add(RodimusPrime.LEGGINGS);
+                    entries.add(RodimusPrime.BOOTS);
+                    entries.add(RodimusPrime.CAR);
 
                 }).build());
         Registry.register(Registries.ITEM_GROUP, ORM_STUFF, FabricItemGroup.builder()
@@ -150,6 +153,8 @@ public class ModGroups {
                     entries.add(ItemRegistry.SOUNDWAVE_SHOULDER_GUN);
                     entries.add(ItemRegistry.SOUNDWAVE_RAY_GUN);
                     entries.add(ItemRegistry.OPTIMUS_PRIMES_ION_CANNON);
+                    entries.add(ItemRegistry.BLASTER);
+                    entries.add(ItemRegistry.PULSE_RIFLE);
                 }).build());
         Registry.register(Registries.ITEM_GROUP, ORM_CHIPS, FabricItemGroup.builder()
                 .displayName(Text.translatable("group.orm.chips"))

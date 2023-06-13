@@ -6,8 +6,10 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.origamiking.mcmods.oapi.items.OrigamiItemSettings;
 import net.origamiking.mcmods.orm.OrmMain;
+import net.origamiking.mcmods.orm.items.custom.blaster.BlasterItem;
 import net.origamiking.mcmods.orm.items.custom.megatron_transformed.MegatronTransformedItem;
 import net.origamiking.mcmods.orm.items.custom.optimus_primes_ion_cannon.OptimusPrimesIonCannon;
+import net.origamiking.mcmods.orm.items.custom.pulse_rifle.PulseRifleItem;
 import net.origamiking.mcmods.orm.items.custom.robo_addon_1.Robo_Addon_1_Item;
 import net.origamiking.mcmods.orm.items.custom.soundwave_ray_gun.SoundwaveRayGunItem;
 import net.origamiking.mcmods.orm.items.custom.soundwave_shoulder_gun.SoundwaveShoulderGunItem;
@@ -18,7 +20,8 @@ public class ItemRegistry {
     public static final SoundwaveRayGunItem SOUNDWAVE_RAY_GUN = registerItem("soundwave_ray_gun", new SoundwaveRayGunItem(new OrigamiItemSettings()));
     public static final OptimusPrimesIonCannon OPTIMUS_PRIMES_ION_CANNON = registerItem("optimus_primes_ion_cannon", new OptimusPrimesIonCannon(new OrigamiItemSettings()));
     public static final MegatronTransformedItem MEGATRON_TRANSFORMED = registerItem("megatron_transformed", new MegatronTransformedItem(new OrigamiItemSettings()));
-
+    public static final BlasterItem BLASTER = registerItem("blaster", new BlasterItem(new OrigamiItemSettings()));
+    public static final PulseRifleItem PULSE_RIFLE = registerItem("pulse_rifle", new PulseRifleItem(new OrigamiItemSettings()));
 
 
 
