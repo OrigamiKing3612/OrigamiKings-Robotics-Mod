@@ -16,9 +16,9 @@ import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 
 public class DownloadAddon {
-    public static void downloadAddon(ServerCommandSource context, String fileURL, String name_of_resource_pack) {
-        String savePath = FabricLoader.getInstance().getGameDir() + "/resourcepacks/" + name_of_resource_pack + ".zip";
-        String destinationDirectory = FabricLoader.getInstance().getGameDir() + "/resourcepacks/";
+    public static void downloadAddon(ServerCommandSource context, String fileURL, String name_of_mod) {
+        String savePath = FabricLoader.getInstance().getGameDir() + "/mods/" + name_of_mod + ".jar";
+        String destinationDirectory = FabricLoader.getInstance().getGameDir() + "/mods/";
 
         try {
             OrmMain.LOGGER.info("Your game directory: " + FabricLoader.getInstance().getGameDir());

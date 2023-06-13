@@ -6,14 +6,15 @@ import net.minecraft.text.Text;
 
 public class DownloadAddonsCommands {
     public static void register() {
-//        downloadAddonCommand("Alacrity", "https://cdn.modrinth.com/data/PUUpX2qq/versions/ZuLy4v1B/Alacrity.zip");
+        // Addons are mods
+//        downloadAddonCommand("Physics-Mod", "https://cdn.modrinth.com/data/Xy8aRQKS/versions/4xSgtf9P/physics-mod-3.0.5-mc-1.20-fabric.jar", "physics-mod-3.0.5-mc-1.20-fabric");
     }
-    public static void downloadAddonCommand(String addon_name, String url) {
+    public static void downloadAddonCommand(String addon_name, String url, String mod_name) {
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) ->
                 dispatcher.register(CommandManager.literal("orm-download-addon-" + addon_name).executes((context) -> {
                     (context.getSource()).sendMessage(Text.of("Downloading " + addon_name + " addon..."));
-                    DownloadAddon.downloadAddon(context.getSource(), url, addon_name);
-                    (context.getSource()).sendMessage(Text.of("Download Successful! Go to your Resource Packs to use!"));
+                    DownloadAddon.downloadAddon(context.getSource(), url, mod_name);
+                    (context.getSource()).sendMessage(Text.of("Download Successful! Please restart your game to use the addon."));
                     return 1;
                 })));
     }
