@@ -7,7 +7,6 @@ import net.minecraft.text.Text;
 public class DownloadAddonsCommands {
     public static void register() {
 //        downloadAddonCommand("Alacrity", "https://cdn.modrinth.com/data/PUUpX2qq/versions/ZuLy4v1B/Alacrity.zip");
-//        downloadAddonCommand("SimpleHotbar", "https://cdn.modrinth.com/data/d0w6GHbr/versions/Y0ccfZy0/SimpleHotbar.zip");
     }
     public static void downloadAddonCommand(String addon_name, String url) {
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) ->
