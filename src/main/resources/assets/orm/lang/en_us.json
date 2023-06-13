@@ -2,6 +2,8 @@
     "item.orm.energon": "Energon",
     "item.orm.ore_13": "Ore 13",
     "item.orm.transformium": "Transformium",
+    "item.orm.spark": "Spark",
+
     "block.orm.energon_block": "Energon Block",
     "block.orm.transformium_block": "Transformium Block",
     "block.orm.ore_13_block": "Ore 13 Block",
@@ -9,6 +11,7 @@
     "block.orm.ore_13_ore": "Ore 13 Ore",
     "block.orm.energon_deepslate_ore": "Energon Deepslate Ore",
     "block.orm.ore_13_deepslate_ore": "Ore 13 Deepslate Ore",
+    "block.orm.compact_energon_block": "Compact Energon Block",
 
     "item.orm.astrotrain_chip": "Astrotrain Chip",
     "item.orm.bumblebee_chip": "Bumblebee Chip",
