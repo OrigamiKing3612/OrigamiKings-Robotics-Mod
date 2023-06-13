@@ -5,3 +5,6 @@ This mod is just for adding robot armor. The robot armor is the same as diamond 
 
 ## **Disclaimer**
 **This mod does not add robots it adds armor that looks like robots**
+
+## Copyright Stuff
+**This mod has Transformers in it, Hasbro owns Transformers, not me**
