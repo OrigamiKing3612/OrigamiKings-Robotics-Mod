@@ -2,6 +2,7 @@ package net.origamiking.mcmods.orm.items.chips;
 
 import net.origamiking.mcmods.orm.items.chips.astrotrain.AstrotrainChip;
 import net.origamiking.mcmods.orm.items.chips.bumblebee.BumblebeeChip;
+import net.origamiking.mcmods.orm.items.chips.galvatron.GalvatronChip;
 import net.origamiking.mcmods.orm.items.chips.ironhide.IronhideChip;
 import net.origamiking.mcmods.orm.items.chips.megatron.MegatronChip;
 import net.origamiking.mcmods.orm.items.chips.optimus_prime.OptimusPrimeChip;
@@ -25,5 +26,6 @@ public class ModChips {
         SkystrikeChip.get();
         SoundwaveChip.get();
         ThunderCrackerChip.get();
+        GalvatronChip.get();
     }
 }

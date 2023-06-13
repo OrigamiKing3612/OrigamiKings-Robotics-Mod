@@ -13,6 +13,7 @@ import net.origamiking.mcmods.orm.OrmMain;
 import net.origamiking.mcmods.orm.armor.astrotrain.Astrotrain;
 import net.origamiking.mcmods.orm.armor.bumblebee.Bumblebee;
 import net.origamiking.mcmods.orm.armor.car.Robot_0;
+import net.origamiking.mcmods.orm.armor.galvatron.Galvatron;
 import net.origamiking.mcmods.orm.armor.ironhide.Ironhide;
 import net.origamiking.mcmods.orm.armor.megatron.Megatron;
 import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrime;
@@ -28,6 +29,7 @@ import net.origamiking.mcmods.orm.blocks.refinery.RegisterRefineryBlock;
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
 import net.origamiking.mcmods.orm.items.chips.astrotrain.AstrotrainChip;
 import net.origamiking.mcmods.orm.items.chips.bumblebee.BumblebeeChip;
+import net.origamiking.mcmods.orm.items.chips.galvatron.GalvatronChip;
 import net.origamiking.mcmods.orm.items.chips.ironhide.IronhideChip;
 import net.origamiking.mcmods.orm.items.chips.megatron.MegatronChip;
 import net.origamiking.mcmods.orm.items.chips.optimus_prime.OptimusPrimeChip;
@@ -111,6 +113,11 @@ public class ModGroups {
                     entries.add(ThunderCracker.THUNDER_CRACKER_LEGGINGS);
                     entries.add(ThunderCracker.THUNDER_CRACKER_BOOTS);
                     entries.add(ThunderCracker.THUNDER_CRACKER_JET);
+                    entries.add(Galvatron.GALVATRON_HELMET);
+                    entries.add(Galvatron.GALVATRON_CHESTPLATE);
+                    entries.add(Galvatron.GALVATRON_LEGGINGS);
+                    entries.add(Galvatron.GALVATRON_BOOTS);
+                    entries.add(Galvatron.GALVATRON_GUN);
 
 
                 }).build());
@@ -154,6 +161,7 @@ public class ModGroups {
                     entries.add(SkystrikeChip.SKYSTRIKE_CHIP);
                     entries.add(SoundwaveChip.SOUNDWAVE_CHIP);
                     entries.add(ThunderCrackerChip.THUNDER_CRACKER_CHIP);
+                    entries.add(GalvatronChip.GALVATRON_CHIP);
                 }).build());
     }
 }

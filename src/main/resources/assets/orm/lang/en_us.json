@@ -20,6 +20,8 @@
     "item.orm.skystrike_chip": "Skystrike Chip",
     "item.orm.soundwave_chip": "Soundwave Chip",
     "item.orm.thunder_cracker_chip": "Thunder Cracker Chip",
+    "item.orm.galvatron_chip": "Galvatron Chip",
+
 
     "item.orm.skystrike_armor_helmet": "Skystrike Helmet",
     "item.orm.skystrike_armor_chestplate": "Skystrike Chestplate",
@@ -70,6 +72,11 @@
     "item.orm.thunder_cracker_leggings": "Thunder Cracker Leggings",
     "item.orm.thunder_cracker_boots": "Thunder Cracker Boots",
     "item.orm.thunder_cracker_jet": "Thunder Cracker Jet",
+    "item.orm.galvatron_helmet": "Galvatron Helmet",
+    "item.orm.galvatron_chestplate": "Galvatron Chestplate",
+    "item.orm.galvatron_leggings": "Galvatron Leggings",
+    "item.orm.galvatron_boots": "Galvatron Boots",
+    "item.orm.galvatron_car": "Galvatron Gun",
 
     "item.orm.soundwave_shoulder_gun": "Soundwave Shoulder Gun",
     "item.orm.soundwave_ray_gun": "Soundwave Ray Gun",

@@ -3,6 +3,7 @@ package net.origamiking.mcmods.orm.armor;
 import net.origamiking.mcmods.orm.armor.astrotrain.Astrotrain;
 import net.origamiking.mcmods.orm.armor.bumblebee.Bumblebee;
 import net.origamiking.mcmods.orm.armor.car.Robot_0;
+import net.origamiking.mcmods.orm.armor.galvatron.Galvatron;
 import net.origamiking.mcmods.orm.armor.ironhide.Ironhide;
 import net.origamiking.mcmods.orm.armor.megatron.Megatron;
 import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrime;
@@ -27,5 +28,6 @@ public class ModArmor {
         Megatron.get();
         Soundwave.get();
         ThunderCracker.get();
+        Galvatron.get();
     }
 }
