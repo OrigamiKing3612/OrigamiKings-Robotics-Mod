@@ -21,7 +21,7 @@ import net.minecraft.world.World;
 import net.origamiking.mcmods.oapi.blocks.ImplementedInventory;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
 import net.origamiking.mcmods.orm.blocks.compacter.CompacterBlock;
-import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
+import net.origamiking.mcmods.orm.recipe.CompactingRecipe;
 import net.origamiking.mcmods.orm.screen.compacter.CompacterBlockScreenHandler;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoBlockEntity;
@@ -31,9 +31,12 @@ import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.util.Optional;
+
 public class CompacterBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory, GeoBlockEntity {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+    private static World world;
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
@@ -182,8 +185,12 @@ public class CompacterBlockEntity extends BlockEntity implements NamedScreenHand
             entity.removeStack(1, 9);
             entity.removeStack(0, 1);
 
-            entity.setStack(2, new ItemStack(EnergonBlocks.COMPACT_ENERGON_BLOCK, // Finished product
+            Optional<CompactingRecipe> recipe = entity.getWorld().getRecipeManager()
+                    .getFirstMatch(CompactingRecipe.Type.INSTANCE, inventory, entity.getWorld());
+
+            entity.setStack(2, new ItemStack(recipe.get().getOutput(world.getRegistryManager()).getItem(), // Finished product
                     entity.getStack(2).getCount() + 1));
+
 
             entity.resetProgress();
         }
@@ -195,10 +202,13 @@ public class CompacterBlockEntity extends BlockEntity implements NamedScreenHand
             inventory.setStack(i, entity.getStack(i));
         }
 
-        boolean hasEnergonInFirstSlot = entity.getStack(1).getItem() == Item.fromBlock(EnergonBlocks.ENERGON_BLOCK) && entity.getStack(1).getCount() >= 9; // Start product
+        Optional<CompactingRecipe> match = entity.getWorld().getRecipeManager()
+                .getFirstMatch(CompactingRecipe.Type.INSTANCE, inventory, entity.getWorld());
+
+        boolean hasEnergonInFirstSlot = match.isPresent() && entity.getStack(1).getCount() >= 9; // Start product
         boolean hasCoalInFuelSlot = entity.getStack(0).getItem() == Items.COAL; // Fuel
 
-        return hasEnergonInFirstSlot && hasCoalInFuelSlot && canInsertAmountIntoOutputSlot(inventory) && canInsertItemIntoOutputSlot(inventory, Item.fromBlock(EnergonBlocks.COMPACT_ENERGON_BLOCK)/*Finished product*/);
+        return hasEnergonInFirstSlot && hasCoalInFuelSlot && canInsertAmountIntoOutputSlot(inventory) && canInsertItemIntoOutputSlot(inventory, match.get().getOutput(world.getRegistryManager()).getItem()/*Finished product*/);
     }
     private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, Item output) {
         return inventory.getStack(2).getItem() == output || inventory.getStack(2).isEmpty();

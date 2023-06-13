@@ -1,0 +1,11 @@
+{
+  "type": "orm:compacting",
+  "ingredients": [
+    {
+      "item": "orm:energon"
+    }
+  ],
+  "output": {
+    "item": "orm:energon_block"
+  }
+}
