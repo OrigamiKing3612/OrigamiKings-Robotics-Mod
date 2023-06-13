@@ -90,7 +90,7 @@ public final class RobotStarscreamJetArmorItem extends ArmorItem implements GeoI
 
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-                    Starscream.ROBOT_STARSCREAM_JET_ARMOR));
+                    Starscream.JET));
 
             // Play the animation if the full set is being worn, otherwise stop
             return isFullSet ? PlayState.STOP : PlayState.STOP;

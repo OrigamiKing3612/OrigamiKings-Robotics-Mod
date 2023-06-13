@@ -10,6 +10,6 @@ public class Soundwave extends ArmorUtils {
     public static final SoundwaveArmorItem CHESTPLATE = registerItem("soundwave_chestplate", new SoundwaveArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
     public static final SoundwaveArmorItem LEGGINGS = registerItem("soundwave_leggings", new SoundwaveArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.LEGGINGS, new Item.Settings()));
     public static final SoundwaveArmorItem BOOTS = registerItem("soundwave_boots", new SoundwaveArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.BOOTS, new Item.Settings()));
-    public static final SoundwaveRecorderArmorItem SOUNDWAVE_RECORDER = registerItem("soundwave_recorder", new SoundwaveRecorderArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
+    public static final SoundwaveRecorderArmorItem RECORDER = registerItem("soundwave_recorder", new SoundwaveRecorderArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
     public static void get() {}
 }

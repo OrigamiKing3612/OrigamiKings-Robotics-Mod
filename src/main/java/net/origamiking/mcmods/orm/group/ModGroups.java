@@ -18,6 +18,7 @@ import net.origamiking.mcmods.orm.armor.ironhide.Ironhide;
 import net.origamiking.mcmods.orm.armor.megatron.Megatron;
 import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrime;
 import net.origamiking.mcmods.orm.armor.robo_1.Robo_1;
+import net.origamiking.mcmods.orm.armor.rodimus_prime.RodimusPrime;
 import net.origamiking.mcmods.orm.armor.starscream.Starscream;
 import net.origamiking.mcmods.orm.armor.scorpinok.Scorpinok;
 import net.origamiking.mcmods.orm.armor.skystrike.Skystrike;
@@ -58,33 +59,33 @@ public class ModGroups {
                 .icon(() -> new ItemStack(OptimusPrime.HELMET))
                 .entries((context, entries) -> {
                     entries.add(Robot_0.ROBOT_0_CAR);
-                    entries.add(Robo_1.ROBO_1_ARMOR_HELMET);
-                    entries.add(Robo_1.ROBO_1_ARMOR_CHESTPLATE);
-                    entries.add(Robo_1.ROBO_1_ARMOR_LEGGINGS);
-                    entries.add(Robo_1.ROBO_1_ARMOR_BOOTS);
-                    entries.add(Robo_1.ROBO_1_CAR);
+                    entries.add(Robo_1.HELMET);
+                    entries.add(Robo_1.CHESTPLATE);
+                    entries.add(Robo_1.LEGGINGS);
+                    entries.add(Robo_1.BOOTS);
+                    entries.add(Robo_1.CAR);
                     entries.add(Skystrike.HELMET);
                     entries.add(Skystrike.CHESTPLATE);
                     entries.add(Skystrike.LEGGINGS);
                     entries.add(Skystrike.BOOTS);
-                    entries.add(Skystrike.SKYSTRIKE_JET);
+                    entries.add(Skystrike.JET);
                     entries.add(Scorpinok.HELMET);
                     entries.add(Scorpinok.CHESTPLATE);
                     entries.add(Scorpinok.LEGGINGS);
                     entries.add(Scorpinok.BOOTS);
-                    entries.add(Scorpinok.SCORPINOK_CAR);
+                    entries.add(Scorpinok.CAR);
                     entries.add(Starscream.HELMET);
                     entries.add(Starscream.CHESTPLATE);
                     entries.add(Starscream.LEGGINGS);
                     entries.add(Starscream.BOOTS);
-                    entries.add(Starscream.ROBOT_STARSCREAM_JET_ARMOR);
+                    entries.add(Starscream.JET);
                     entries.add(OptimusPrime.HELMET);
                     entries.add(OptimusPrime.CHESTPLATE);
                     entries.add(OptimusPrime.LEGGINGS);
                     entries.add(OptimusPrime.BOOTS);
-                    entries.add(OptimusPrime.OPTIMUS_PRIME_CAR);
-                    entries.add(Astrotrain.ASTROTRAIN_TRAIN);
-                    entries.add(Astrotrain.ASTROTRAIN_SHUTTLE);
+                    entries.add(OptimusPrime.CAR);
+                    entries.add(Astrotrain.TRAIN);
+                    entries.add(Astrotrain.SHUTTLE);
                     entries.add(Astrotrain.HELMET);
                     entries.add(Astrotrain.CHESTPLATE);
                     entries.add(Astrotrain.LEGGINGS);
@@ -93,17 +94,17 @@ public class ModGroups {
                     entries.add(Bumblebee.CHESTPLATE);
                     entries.add(Bumblebee.LEGGINGS);
                     entries.add(Bumblebee.BOOTS);
-                    entries.add(Bumblebee.BUMBLEBEE_CAR);
+                    entries.add(Bumblebee.CAR);
                     entries.add(Ironhide.HELMET);
                     entries.add(Ironhide.CHESTPLATE);
                     entries.add(Ironhide.LEGGINGS);
                     entries.add(Ironhide.BOOTS);
-                    entries.add(Ironhide.IRONHIDE_CAR);
+                    entries.add(Ironhide.CAR);
                     entries.add(Soundwave.HELMET);
                     entries.add(Soundwave.CHESTPLATE);
                     entries.add(Soundwave.LEGGINGS);
                     entries.add(Soundwave.BOOTS);
-                    entries.add(Soundwave.SOUNDWAVE_RECORDER);
+                    entries.add(Soundwave.RECORDER);
                     entries.add(Megatron.HELMET);
                     entries.add(Megatron.CHESTPLATE);
                     entries.add(Megatron.LEGGINGS);
@@ -113,12 +114,13 @@ public class ModGroups {
                     entries.add(ThunderCracker.CHESTPLATE);
                     entries.add(ThunderCracker.LEGGINGS);
                     entries.add(ThunderCracker.BOOTS);
-                    entries.add(ThunderCracker.THUNDER_CRACKER_JET);
+                    entries.add(ThunderCracker.JET);
                     entries.add(Galvatron.HELMET);
                     entries.add(Galvatron.CHESTPLATE);
                     entries.add(Galvatron.LEGGINGS);
                     entries.add(Galvatron.BOOTS);
                     entries.add(Galvatron.GALVATRON_GUN);
+
 
 
                 }).build());

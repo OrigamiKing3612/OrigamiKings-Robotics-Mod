@@ -90,7 +90,7 @@ public final class SoundwaveRecorderArmorItem extends ArmorItem implements GeoIt
 
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-                    Soundwave.SOUNDWAVE_RECORDER));
+                    Soundwave.RECORDER));
 
             // Play the animation if the full set is being worn, otherwise stop
             return isFullSet ? PlayState.STOP : PlayState.STOP;

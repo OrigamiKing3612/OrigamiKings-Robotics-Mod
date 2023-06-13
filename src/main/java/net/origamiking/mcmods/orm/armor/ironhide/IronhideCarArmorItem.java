@@ -90,7 +90,7 @@ public final class IronhideCarArmorItem extends ArmorItem implements GeoItem {
 
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-                    Ironhide.IRONHIDE_CAR));
+                    Ironhide.CAR));
 
             // Play the animation if the full set is being worn, otherwise stop
             return isFullSet ? PlayState.STOP : PlayState.STOP;

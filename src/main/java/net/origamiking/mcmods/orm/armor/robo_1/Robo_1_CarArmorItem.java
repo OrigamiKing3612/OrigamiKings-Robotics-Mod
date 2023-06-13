@@ -90,10 +90,10 @@ public final class Robo_1_CarArmorItem extends ArmorItem implements GeoItem {
 
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-                    Robo_1.ROBO_1_ARMOR_HELMET,
-                    Robo_1.ROBO_1_ARMOR_CHESTPLATE,
-                    Robo_1.ROBO_1_ARMOR_LEGGINGS,
-                    Robo_1.ROBO_1_ARMOR_BOOTS));
+                    Robo_1.HELMET,
+                    Robo_1.CHESTPLATE,
+                    Robo_1.LEGGINGS,
+                    Robo_1.BOOTS));
 
             // Play the animation if the full set is being worn, otherwise stop
             return isFullSet ? PlayState.STOP : PlayState.STOP;

@@ -91,7 +91,7 @@ public final class ThunderCrackerJetArmorItem extends ArmorItem implements GeoIt
 
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-                    Bumblebee.BUMBLEBEE_CAR));
+                    Bumblebee.CAR));
 
             // Play the animation if the full set is being worn, otherwise stop
             return isFullSet ? PlayState.STOP : PlayState.STOP;

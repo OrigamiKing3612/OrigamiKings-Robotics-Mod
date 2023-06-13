@@ -10,7 +10,7 @@ public class Scorpinok extends ArmorUtils {
     public static final ScorpinokArmorItem CHESTPLATE = registerItem("scorpinok_chestplate", new ScorpinokArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
     public static final ScorpinokArmorItem LEGGINGS = registerItem("scorpinok_leggings", new ScorpinokArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.LEGGINGS, new Item.Settings()));
     public static final ScorpinokArmorItem BOOTS = registerItem("scorpinok_boots", new ScorpinokArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.BOOTS, new Item.Settings()));
-    public static final Scorpinok_CarArmorItem SCORPINOK_CAR = registerItem("scorpinok_car", new Scorpinok_CarArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
+    public static final Scorpinok_CarArmorItem CAR = registerItem("scorpinok_car", new Scorpinok_CarArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
 
     public static void get() {}
 }
