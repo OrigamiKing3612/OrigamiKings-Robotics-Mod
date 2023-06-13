@@ -90,10 +90,10 @@ public final class MegatronArmorItem extends ArmorItem implements GeoItem {
 
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-                    Megatron.MEGATRON_HELMET,
-                    Megatron.MEGATRON_CHESTPLATE,
-                    Megatron.MEGATRON_LEGGINGS,
-                    Megatron.MEGATRON_BOOTS));
+                    Megatron.HELMET,
+                    Megatron.CHESTPLATE,
+                    Megatron.LEGGINGS,
+                    Megatron.BOOTS));
 
             // Play the animation if the full set is being worn, otherwise stop
             return isFullSet ? PlayState.STOP : PlayState.STOP;

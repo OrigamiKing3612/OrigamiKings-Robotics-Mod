@@ -30,5 +30,6 @@
     "recipes": [
       "orm:energon_block"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

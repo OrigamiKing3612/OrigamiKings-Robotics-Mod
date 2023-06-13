@@ -5,7 +5,7 @@ import net.origamiking.mcmods.oapi.items.ItemsUtils;
 import net.origamiking.mcmods.oapi.items.OrigamiItemSettings;
 import net.origamiking.mcmods.orm.OrmMain;
 
-public class RobotStarsceamChip extends ItemsUtils {
-    public static final Item ROBOT_STARSCREAM_CHIP = registerItem(OrmMain.MOD_ID, "robot_starscream_chip", new Item(new OrigamiItemSettings()));
+public class StarsceamChip extends ItemsUtils {
+    public static final Item CHIP = registerItem(OrmMain.MOD_ID, "robot_starscream_chip", new Item(new OrigamiItemSettings()));
     public static void get() {}
 }

@@ -1,4 +1,4 @@
-package net.origamiking.mcmods.orm.armor.robot_starscream;
+package net.origamiking.mcmods.orm.armor.starscream;
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
@@ -90,10 +90,10 @@ public final class RobotStarscreamArmorItem extends ArmorItem implements GeoItem
 
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-                    RobotStarscream.ROBOT_STARSCREAM_ARMOR_HELMET,
-                    RobotStarscream.ROBOT_STARSCREAM_ARMOR_CHESTPLATE,
-                    RobotStarscream.ROBOT_STARSCREAM_ARMOR_LEGGINGS,
-                    RobotStarscream.ROBOT_STARSCREAM_ARMOR_BOOTS));
+                    Starscream.HELMET,
+                    Starscream.CHESTPLATE,
+                    Starscream.LEGGINGS,
+                    Starscream.BOOTS));
 
             // Play the animation if the full set is being worn, otherwise stop
             return isFullSet ? PlayState.STOP : PlayState.STOP;

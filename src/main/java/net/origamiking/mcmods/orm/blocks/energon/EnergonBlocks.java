@@ -11,6 +11,8 @@ public class EnergonBlocks extends BlocksUtils {
     public static final Block ENERGON_BLOCK = registerBlock(OrmMain.MOD_ID, "energon_block", new Block(OrigamiBlockSettings.copyOf(Blocks.IRON_BLOCK).luminance(4).sounds(BlockSoundGroup.METAL)));
     public static final Block ENERGON_ORE = registerBlock(OrmMain.MOD_ID, "energon_ore", new Block(OrigamiBlockSettings.copyOf(Blocks.IRON_BLOCK).luminance(2).sounds(BlockSoundGroup.STONE)));
     public static final Block DEEPSLATE_ENERGON_ORE = registerBlock(OrmMain.MOD_ID, "energon_deepslate_ore", new Block(OrigamiBlockSettings.copyOf(Blocks.IRON_BLOCK).luminance(2).sounds(BlockSoundGroup.STONE)));
+    public static final Block COMPACT_ENERGON_BLOCK = registerBlock(OrmMain.MOD_ID, "compact_energon_block", new Block(OrigamiBlockSettings.copyOf(Blocks.IRON_BLOCK).luminance(8).sounds(BlockSoundGroup.METAL)));
+
 
     public static void get() {}
 }

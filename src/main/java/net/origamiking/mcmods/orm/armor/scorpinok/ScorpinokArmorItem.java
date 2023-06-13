@@ -90,10 +90,10 @@ public final class ScorpinokArmorItem extends ArmorItem implements GeoItem {
 
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-                    Scorpinok.SCORPINOK_ARMOR_HELMET,
-                    Scorpinok.SCORPINOK_ARMOR_CHESTPLATE,
-                    Scorpinok.SCORPINOK_ARMOR_LEGGINGS,
-                    Scorpinok.SCORPINOK_ARMOR_BOOTS));
+                    Scorpinok.HELMET,
+                    Scorpinok.CHESTPLATE,
+                    Scorpinok.LEGGINGS,
+                    Scorpinok.BOOTS));
 
             // Play the animation if the full set is being worn, otherwise stop
             return isFullSet ? PlayState.STOP : PlayState.STOP;

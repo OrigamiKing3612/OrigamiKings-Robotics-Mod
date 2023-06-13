@@ -4,6 +4,7 @@ import net.origamiking.mcmods.orm.items.chips.ModChips;
 import net.origamiking.mcmods.orm.items.custom.ItemRegistry;
 import net.origamiking.mcmods.orm.items.energon.EnergonItems;
 import net.origamiking.mcmods.orm.items.ore13.Ore13Items;
+import net.origamiking.mcmods.orm.items.random.RandomItems;
 import net.origamiking.mcmods.orm.items.transformium.TransformiumItems;
 
 public class ModItems {
@@ -14,5 +15,6 @@ public class ModItems {
         EnergonItems.get();
         Ore13Items.get();
         ModChips.register();
+        RandomItems.get();
     }
 }

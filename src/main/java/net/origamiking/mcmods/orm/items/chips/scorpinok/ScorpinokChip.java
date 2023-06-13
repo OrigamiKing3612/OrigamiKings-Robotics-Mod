@@ -6,6 +6,6 @@ import net.origamiking.mcmods.oapi.items.OrigamiItemSettings;
 import net.origamiking.mcmods.orm.OrmMain;
 
 public class ScorpinokChip extends ItemsUtils {
-    public static final Item SCORPINOK_CHIP = registerItem(OrmMain.MOD_ID, "scorpinok_chip", new Item(new OrigamiItemSettings()));
+    public static final Item CHIP = registerItem(OrmMain.MOD_ID, "scorpinok_chip", new Item(new OrigamiItemSettings()));
     public static void get() {}
 }

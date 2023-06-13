@@ -18,7 +18,7 @@ import net.origamiking.mcmods.orm.armor.ironhide.Ironhide;
 import net.origamiking.mcmods.orm.armor.megatron.Megatron;
 import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrime;
 import net.origamiking.mcmods.orm.armor.robo_1.Robo_1;
-import net.origamiking.mcmods.orm.armor.robot_starscream.RobotStarscream;
+import net.origamiking.mcmods.orm.armor.starscream.Starscream;
 import net.origamiking.mcmods.orm.armor.scorpinok.Scorpinok;
 import net.origamiking.mcmods.orm.armor.skystrike.Skystrike;
 import net.origamiking.mcmods.orm.armor.soundwave.Soundwave;
@@ -34,7 +34,7 @@ import net.origamiking.mcmods.orm.items.chips.ironhide.IronhideChip;
 import net.origamiking.mcmods.orm.items.chips.megatron.MegatronChip;
 import net.origamiking.mcmods.orm.items.chips.optimus_prime.OptimusPrimeChip;
 import net.origamiking.mcmods.orm.items.chips.robo_1.Robo_1Chip;
-import net.origamiking.mcmods.orm.items.chips.robot_starscream.RobotStarsceamChip;
+import net.origamiking.mcmods.orm.items.chips.robot_starscream.StarsceamChip;
 import net.origamiking.mcmods.orm.items.chips.scorpinok.ScorpinokChip;
 import net.origamiking.mcmods.orm.items.chips.skystrike.SkystrikeChip;
 import net.origamiking.mcmods.orm.items.chips.soundwave.SoundwaveChip;
@@ -42,6 +42,7 @@ import net.origamiking.mcmods.orm.items.chips.thunder_cracker.ThunderCrackerChip
 import net.origamiking.mcmods.orm.items.custom.ItemRegistry;
 import net.origamiking.mcmods.orm.items.energon.EnergonItems;
 import net.origamiking.mcmods.orm.items.ore13.Ore13Items;
+import net.origamiking.mcmods.orm.items.random.RandomItems;
 import net.origamiking.mcmods.orm.items.transformium.TransformiumItems;
 
 public class ModGroups {
@@ -54,7 +55,7 @@ public class ModGroups {
         OrmMain.LOGGER.info("Registering Groups");
         Registry.register(Registries.ITEM_GROUP, ORM_GROUP, FabricItemGroup.builder()
                 .displayName(Text.translatable("group.orm.armor"))
-                .icon(() -> new ItemStack(OptimusPrime.OPTIMUS_PRIME_ARMOR_HELMET))
+                .icon(() -> new ItemStack(OptimusPrime.HELMET))
                 .entries((context, entries) -> {
                     entries.add(Robot_0.ROBOT_0_CAR);
                     entries.add(Robo_1.ROBO_1_ARMOR_HELMET);
@@ -62,61 +63,61 @@ public class ModGroups {
                     entries.add(Robo_1.ROBO_1_ARMOR_LEGGINGS);
                     entries.add(Robo_1.ROBO_1_ARMOR_BOOTS);
                     entries.add(Robo_1.ROBO_1_CAR);
-                    entries.add(Skystrike.SKYSTRIKE_ARMOR_HELMET);
-                    entries.add(Skystrike.SKYSTRIKE_ARMOR_CHESTPLATE);
-                    entries.add(Skystrike.SKYSTRIKE_ARMOR_LEGGINGS);
-                    entries.add(Skystrike.SKYSTRIKE_ARMOR_BOOTS);
+                    entries.add(Skystrike.HELMET);
+                    entries.add(Skystrike.CHESTPLATE);
+                    entries.add(Skystrike.LEGGINGS);
+                    entries.add(Skystrike.BOOTS);
                     entries.add(Skystrike.SKYSTRIKE_JET);
-                    entries.add(Scorpinok.SCORPINOK_ARMOR_HELMET);
-                    entries.add(Scorpinok.SCORPINOK_ARMOR_CHESTPLATE);
-                    entries.add(Scorpinok.SCORPINOK_ARMOR_LEGGINGS);
-                    entries.add(Scorpinok.SCORPINOK_ARMOR_BOOTS);
+                    entries.add(Scorpinok.HELMET);
+                    entries.add(Scorpinok.CHESTPLATE);
+                    entries.add(Scorpinok.LEGGINGS);
+                    entries.add(Scorpinok.BOOTS);
                     entries.add(Scorpinok.SCORPINOK_CAR);
-                    entries.add(RobotStarscream.ROBOT_STARSCREAM_ARMOR_HELMET);
-                    entries.add(RobotStarscream.ROBOT_STARSCREAM_ARMOR_CHESTPLATE);
-                    entries.add(RobotStarscream.ROBOT_STARSCREAM_ARMOR_LEGGINGS);
-                    entries.add(RobotStarscream.ROBOT_STARSCREAM_ARMOR_BOOTS);
-                    entries.add(RobotStarscream.ROBOT_STARSCREAM_JET_ARMOR);
-                    entries.add(OptimusPrime.OPTIMUS_PRIME_ARMOR_HELMET);
-                    entries.add(OptimusPrime.OPTIMUS_PRIME_ARMOR_CHESTPLATE);
-                    entries.add(OptimusPrime.OPTIMUS_PRIME_ARMOR_LEGGINGS);
-                    entries.add(OptimusPrime.OPTIMUS_PRIME_ARMOR_BOOTS);
+                    entries.add(Starscream.HELMET);
+                    entries.add(Starscream.CHESTPLATE);
+                    entries.add(Starscream.LEGGINGS);
+                    entries.add(Starscream.BOOTS);
+                    entries.add(Starscream.ROBOT_STARSCREAM_JET_ARMOR);
+                    entries.add(OptimusPrime.HELMET);
+                    entries.add(OptimusPrime.CHESTPLATE);
+                    entries.add(OptimusPrime.LEGGINGS);
+                    entries.add(OptimusPrime.BOOTS);
                     entries.add(OptimusPrime.OPTIMUS_PRIME_CAR);
                     entries.add(Astrotrain.ASTROTRAIN_TRAIN);
                     entries.add(Astrotrain.ASTROTRAIN_SHUTTLE);
-                    entries.add(Astrotrain.ASTROTRAIN_HELMET);
-                    entries.add(Astrotrain.ASTROTRAIN_CHESTPLATE);
-                    entries.add(Astrotrain.ASTROTRAIN_LEGGINGS);
-                    entries.add(Astrotrain.ASTROTRAIN_BOOTS);
-                    entries.add(Bumblebee.BUMBLEBEE_HELMET);
-                    entries.add(Bumblebee.BUMBLEBEE_CHESTPLATE);
-                    entries.add(Bumblebee.BUMBLEBEE_LEGGINGS);
-                    entries.add(Bumblebee.BUMBLEBEE_BOOTS);
+                    entries.add(Astrotrain.HELMET);
+                    entries.add(Astrotrain.CHESTPLATE);
+                    entries.add(Astrotrain.LEGGINGS);
+                    entries.add(Astrotrain.BOOTS);
+                    entries.add(Bumblebee.HELMET);
+                    entries.add(Bumblebee.CHESTPLATE);
+                    entries.add(Bumblebee.LEGGINGS);
+                    entries.add(Bumblebee.BOOTS);
                     entries.add(Bumblebee.BUMBLEBEE_CAR);
-                    entries.add(Ironhide.IRONHIDE_HELMET);
-                    entries.add(Ironhide.IRONHIDE_CHESTPLATE);
-                    entries.add(Ironhide.IRONHIDE_LEGGINGS);
-                    entries.add(Ironhide.IRONHIDE_BOOTS);
+                    entries.add(Ironhide.HELMET);
+                    entries.add(Ironhide.CHESTPLATE);
+                    entries.add(Ironhide.LEGGINGS);
+                    entries.add(Ironhide.BOOTS);
                     entries.add(Ironhide.IRONHIDE_CAR);
-                    entries.add(Soundwave.SOUNDWAVE_HELMET);
-                    entries.add(Soundwave.SOUNDWAVE_CHESTPLATE);
-                    entries.add(Soundwave.SOUNDWAVE_LEGGINGS);
-                    entries.add(Soundwave.SOUNDWAVE_BOOTS);
+                    entries.add(Soundwave.HELMET);
+                    entries.add(Soundwave.CHESTPLATE);
+                    entries.add(Soundwave.LEGGINGS);
+                    entries.add(Soundwave.BOOTS);
                     entries.add(Soundwave.SOUNDWAVE_RECORDER);
-                    entries.add(Megatron.MEGATRON_HELMET);
-                    entries.add(Megatron.MEGATRON_CHESTPLATE);
-                    entries.add(Megatron.MEGATRON_LEGGINGS);
-                    entries.add(Megatron.MEGATRON_BOOTS);
+                    entries.add(Megatron.HELMET);
+                    entries.add(Megatron.CHESTPLATE);
+                    entries.add(Megatron.LEGGINGS);
+                    entries.add(Megatron.BOOTS);
                     entries.add(ItemRegistry.MEGATRON_TRANSFORMED);
-                    entries.add(ThunderCracker.THUNDER_CRACKER_HELMET);
-                    entries.add(ThunderCracker.THUNDER_CRACKER_CHESTPLATE);
-                    entries.add(ThunderCracker.THUNDER_CRACKER_LEGGINGS);
-                    entries.add(ThunderCracker.THUNDER_CRACKER_BOOTS);
+                    entries.add(ThunderCracker.HELMET);
+                    entries.add(ThunderCracker.CHESTPLATE);
+                    entries.add(ThunderCracker.LEGGINGS);
+                    entries.add(ThunderCracker.BOOTS);
                     entries.add(ThunderCracker.THUNDER_CRACKER_JET);
-                    entries.add(Galvatron.GALVATRON_HELMET);
-                    entries.add(Galvatron.GALVATRON_CHESTPLATE);
-                    entries.add(Galvatron.GALVATRON_LEGGINGS);
-                    entries.add(Galvatron.GALVATRON_BOOTS);
+                    entries.add(Galvatron.HELMET);
+                    entries.add(Galvatron.CHESTPLATE);
+                    entries.add(Galvatron.LEGGINGS);
+                    entries.add(Galvatron.BOOTS);
                     entries.add(Galvatron.GALVATRON_GUN);
 
 
@@ -130,12 +131,14 @@ public class ModGroups {
                     entries.add(EnergonBlocks.ENERGON_BLOCK);
                     entries.add(EnergonBlocks.ENERGON_ORE);
                     entries.add(EnergonBlocks.DEEPSLATE_ENERGON_ORE);
+                    entries.add(EnergonBlocks.COMPACT_ENERGON_BLOCK);
                     entries.add(Ore13Items.ORE_13);
                     entries.add(Ore13Blocks.ORE_13_BLOCK);
                     entries.add(Ore13Blocks.ORE_13_ORE);
                     entries.add(Ore13Blocks.DEEPSLATE_ORE_13_ORE);
                     entries.add(TransformiumItems.TRANSFORMIUM);
                     entries.add(TransformiumBlocks.TRANSFORMIUM_BLOCK);
+                    entries.add(RandomItems.SPARK);
                 }).build());
         Registry.register(Registries.ITEM_GROUP, ORM_ADDONS, FabricItemGroup.builder()
                 .displayName(Text.translatable("group.orm.addons"))
@@ -148,20 +151,20 @@ public class ModGroups {
                 }).build());
         Registry.register(Registries.ITEM_GROUP, ORM_CHIPS, FabricItemGroup.builder()
                 .displayName(Text.translatable("group.orm.chips"))
-                .icon(() -> new ItemStack(OptimusPrimeChip.OPTIMUS_PRIME_CHIP))
+                .icon(() -> new ItemStack(OptimusPrimeChip.CHIP))
                 .entries((context, entries) -> {
-                    entries.add(AstrotrainChip.ASTROTRAIN_CHIP);
-                    entries.add(BumblebeeChip.BUMBLEBEE_CHIP);
-                    entries.add(IronhideChip.IRONHIDE_CHIP);
-                    entries.add(MegatronChip.MEGATRON_CHIP);
-                    entries.add(OptimusPrimeChip.OPTIMUS_PRIME_CHIP);
+                    entries.add(AstrotrainChip.CHIP);
+                    entries.add(BumblebeeChip.CHIP);
+                    entries.add(IronhideChip.CHIP);
+                    entries.add(MegatronChip.CHIP);
+                    entries.add(OptimusPrimeChip.CHIP);
                     entries.add(Robo_1Chip.ROBO_1_CHIP);
-                    entries.add(RobotStarsceamChip.ROBOT_STARSCREAM_CHIP);
-                    entries.add(ScorpinokChip.SCORPINOK_CHIP);
-                    entries.add(SkystrikeChip.SKYSTRIKE_CHIP);
-                    entries.add(SoundwaveChip.SOUNDWAVE_CHIP);
-                    entries.add(ThunderCrackerChip.THUNDER_CRACKER_CHIP);
-                    entries.add(GalvatronChip.GALVATRON_CHIP);
+                    entries.add(StarsceamChip.CHIP);
+                    entries.add(ScorpinokChip.CHIP);
+                    entries.add(SkystrikeChip.CHIP);
+                    entries.add(SoundwaveChip.CHIP);
+                    entries.add(ThunderCrackerChip.CHIP);
+                    entries.add(GalvatronChip.CHIP);
                 }).build());
     }
 }

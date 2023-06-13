@@ -8,7 +8,7 @@ import net.origamiking.mcmods.orm.armor.ironhide.Ironhide;
 import net.origamiking.mcmods.orm.armor.megatron.Megatron;
 import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrime;
 import net.origamiking.mcmods.orm.armor.robo_1.Robo_1;
-import net.origamiking.mcmods.orm.armor.robot_starscream.RobotStarscream;
+import net.origamiking.mcmods.orm.armor.starscream.Starscream;
 import net.origamiking.mcmods.orm.armor.scorpinok.Scorpinok;
 import net.origamiking.mcmods.orm.armor.skystrike.Skystrike;
 import net.origamiking.mcmods.orm.armor.soundwave.Soundwave;
@@ -20,7 +20,7 @@ public class ModArmor {
         Robo_1.get();
         Skystrike.get();
         Scorpinok.get();
-        RobotStarscream.get();
+        Starscream.get();
         OptimusPrime.get();
         Astrotrain.get();
         Bumblebee.get();

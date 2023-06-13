@@ -90,10 +90,10 @@ public final class SkystrikeArmorItem extends ArmorItem implements GeoItem {
 
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-                    Skystrike.SKYSTRIKE_ARMOR_HELMET,
-                    Skystrike.SKYSTRIKE_ARMOR_CHESTPLATE,
-                    Skystrike.SKYSTRIKE_ARMOR_LEGGINGS,
-                    Skystrike.SKYSTRIKE_ARMOR_BOOTS));
+                    Skystrike.HELMET,
+                    Skystrike.CHESTPLATE,
+                    Skystrike.LEGGINGS,
+                    Skystrike.BOOTS));
 
             // Play the animation if the full set is being worn, otherwise stop
             return isFullSet ? PlayState.STOP : PlayState.STOP;

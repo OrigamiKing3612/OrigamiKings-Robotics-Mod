@@ -90,10 +90,10 @@ public final class OptimusPrimeArmorItem extends ArmorItem implements GeoItem {
 
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-                    OptimusPrime.OPTIMUS_PRIME_ARMOR_HELMET,
-                    OptimusPrime.OPTIMUS_PRIME_ARMOR_CHESTPLATE,
-                    OptimusPrime.OPTIMUS_PRIME_ARMOR_LEGGINGS,
-                    OptimusPrime.OPTIMUS_PRIME_ARMOR_BOOTS));
+                    OptimusPrime.HELMET,
+                    OptimusPrime.CHESTPLATE,
+                    OptimusPrime.LEGGINGS,
+                    OptimusPrime.BOOTS));
 
             // Play the animation if the full set is being worn, otherwise stop
             return isFullSet ? PlayState.STOP : PlayState.STOP;

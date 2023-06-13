@@ -30,5 +30,6 @@
     "recipes": [
       "orm:ore_13"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

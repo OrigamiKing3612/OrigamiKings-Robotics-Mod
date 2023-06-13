@@ -26,6 +26,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(Ore13Blocks.ORE_13_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(Ore13Blocks.DEEPSLATE_ORE_13_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(TransformiumBlocks.TRANSFORMIUM_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(EnergonBlocks.COMPACT_ENERGON_BLOCK);
     }
 
     @Override

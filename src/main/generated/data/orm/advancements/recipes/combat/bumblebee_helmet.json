@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bumblebee_chip": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:bumblebee_chip"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "orm:bumblebee_helmet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_bumblebee_chip",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "orm:bumblebee_helmet"
+    ]
+  },
+  "sends_telemetry_event": false
+}

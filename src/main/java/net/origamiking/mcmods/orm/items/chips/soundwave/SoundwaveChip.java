@@ -6,6 +6,6 @@ import net.origamiking.mcmods.oapi.items.OrigamiItemSettings;
 import net.origamiking.mcmods.orm.OrmMain;
 
 public class SoundwaveChip extends ItemsUtils {
-    public static final Item SOUNDWAVE_CHIP = registerItem(OrmMain.MOD_ID, "soundwave_chip", new Item(new OrigamiItemSettings()));
+    public static final Item CHIP = registerItem(OrmMain.MOD_ID, "soundwave_chip", new Item(new OrigamiItemSettings()));
     public static void get() {}
 }

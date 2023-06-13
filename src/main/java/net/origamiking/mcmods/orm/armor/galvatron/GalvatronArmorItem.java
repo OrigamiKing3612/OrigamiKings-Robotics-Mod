@@ -90,10 +90,10 @@ public final class GalvatronArmorItem extends ArmorItem implements GeoItem {
 
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-                    Galvatron.GALVATRON_HELMET,
-                    Galvatron.GALVATRON_CHESTPLATE,
-                    Galvatron.GALVATRON_LEGGINGS,
-                    Galvatron.GALVATRON_BOOTS));
+                    Galvatron.HELMET,
+                    Galvatron.CHESTPLATE,
+                    Galvatron.LEGGINGS,
+                    Galvatron.BOOTS));
 
             // Play the animation if the full set is being worn, otherwise stop
             return isFullSet ? PlayState.STOP : PlayState.STOP;

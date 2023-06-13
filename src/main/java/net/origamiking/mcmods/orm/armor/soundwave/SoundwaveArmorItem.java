@@ -90,10 +90,10 @@ public final class SoundwaveArmorItem extends ArmorItem implements GeoItem {
 
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-                    Soundwave.SOUNDWAVE_HELMET,
-                    Soundwave.SOUNDWAVE_CHESTPLATE,
-                    Soundwave.SOUNDWAVE_LEGGINGS,
-                    Soundwave.SOUNDWAVE_BOOTS));
+                    Soundwave.HELMET,
+                    Soundwave.CHESTPLATE,
+                    Soundwave.LEGGINGS,
+                    Soundwave.BOOTS));
 
             // Play the animation if the full set is being worn, otherwise stop
             return isFullSet ? PlayState.STOP : PlayState.STOP;

@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "orm:astrotrain_chip"
+    },
+    "D": {
+      "item": "minecraft:diamond_helmet"
+    },
+    "E": {
+      "item": "orm:energon"
+    },
+    "S": {
+      "item": "orm:spark"
+    },
+    "T": {
+      "item": "orm:transformium"
+    }
+  },
+  "pattern": [
+    "TCT",
+    "ESE",
+    "TDT"
+  ],
+  "result": {
+    "count": 6,
+    "item": "orm:astrotrain_helmet"
+  },
+  "show_notification": true
+}

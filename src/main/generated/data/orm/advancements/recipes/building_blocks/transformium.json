@@ -30,5 +30,6 @@
     "recipes": [
       "orm:transformium"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }
