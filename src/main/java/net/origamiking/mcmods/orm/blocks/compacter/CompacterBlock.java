@@ -1,4 +1,4 @@
-package net.origamiking.mcmods.orm.blocks.refinery;
+package net.origamiking.mcmods.orm.blocks.compacter;
 
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
@@ -17,14 +17,14 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
-import net.origamiking.mcmods.orm.block_entities.refinery.RefineryBlockEntity;
+import net.origamiking.mcmods.orm.block_entities.compacter.CompacterBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
 @SuppressWarnings("all")
-public class RefineryBlock extends BlockWithEntity implements BlockEntityProvider {
+public class CompacterBlock extends BlockWithEntity implements BlockEntityProvider {
     public static final DirectionProperty FACING = Properties.FACING;
 
-    public RefineryBlock() {
+    public CompacterBlock() {
         super(Settings.create().nonOpaque());
     }
 
@@ -65,8 +65,8 @@ public class RefineryBlock extends BlockWithEntity implements BlockEntityProvide
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         if (state.getBlock() != newState.getBlock()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof RefineryBlockEntity) {
-                ItemScatterer.spawn(world, pos, (RefineryBlockEntity) blockEntity);
+            if (blockEntity instanceof CompacterBlockEntity) {
+                ItemScatterer.spawn(world, pos, (CompacterBlockEntity) blockEntity);
                 world.updateComparators(pos, this);
             }
             super.onStateReplaced(state, world, pos, newState, moved);
@@ -89,12 +89,12 @@ public class RefineryBlock extends BlockWithEntity implements BlockEntityProvide
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new RefineryBlockEntity(pos, state);
+        return new CompacterBlockEntity(pos, state);
     }
 
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return checkType(type, ModBlockEntities.REFINERY_BLOCK, RefineryBlockEntity::tick);
+        return checkType(type, ModBlockEntities.COMPACTER_BLOCK, CompacterBlockEntity::tick);
     }
 }

@@ -1,4 +1,4 @@
-package net.origamiking.mcmods.orm.screen;
+package net.origamiking.mcmods.orm.screen.refinery;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -9,6 +9,7 @@ import net.minecraft.screen.ArrayPropertyDelegate;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
+import net.origamiking.mcmods.orm.screen.ModScreenHandlers;
 
 public class RefineryBlockScreenHandler extends ScreenHandler {
     private final Inventory inventory;
@@ -19,7 +20,7 @@ public class RefineryBlockScreenHandler extends ScreenHandler {
     }
 
     public RefineryBlockScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate delegate) {
-        super(ModScreenHandlers.REFINERY_BLOCK_SCREEN_HANDLER, syncId);
+        super(ModScreenHandlers.COMPACTER_BLOCK_SCREEN_HANDLER, syncId);
         checkSize(inventory, 3);
         this.inventory = inventory;
         inventory.onOpen(playerInventory.player);

@@ -1,4 +1,4 @@
-package net.origamiking.mcmods.orm.screen;
+package net.origamiking.mcmods.orm.screen.compacter;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.DrawContext;
@@ -8,10 +8,10 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.origamiking.mcmods.orm.OrmMain;
 
-public class RefineryBlockScreen extends HandledScreen<RefineryBlockScreenHandler> {
+public class CompacterBlockScreen extends HandledScreen<CompacterBlockScreenHandler> {
     private static final Identifier TEXTURE = new Identifier(OrmMain.MOD_ID, "textures/gui/refinery_block_gui.png");
 
-    public RefineryBlockScreen(RefineryBlockScreenHandler handler, PlayerInventory inventory, Text title) {
+    public CompacterBlockScreen(CompacterBlockScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
     }
 

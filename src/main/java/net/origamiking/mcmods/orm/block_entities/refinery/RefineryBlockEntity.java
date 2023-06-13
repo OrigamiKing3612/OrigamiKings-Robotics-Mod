@@ -1,4 +1,4 @@
-package net.origamiking.mcmods.orm.block_entities;
+package net.origamiking.mcmods.orm.block_entities.refinery;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -18,11 +18,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import net.origamiking.mcmods.oapi.blocks.ImplementedInventory;
+import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
 import net.origamiking.mcmods.orm.blocks.refinery.RefineryBlock;
 import net.origamiking.mcmods.orm.items.energon.EnergonItems;
 import net.origamiking.mcmods.orm.items.ore13.Ore13Items;
 import net.origamiking.mcmods.orm.items.transformium.TransformiumItems;
-import net.origamiking.mcmods.orm.screen.RefineryBlockScreenHandler;
+import net.origamiking.mcmods.orm.screen.refinery.RefineryBlockScreenHandler;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoBlockEntity;
 import software.bernie.geckolib.constant.DefaultAnimations;

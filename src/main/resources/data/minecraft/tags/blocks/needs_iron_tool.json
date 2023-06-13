@@ -2,7 +2,7 @@
   "replace": false,
   "values": [
     "orm:energon_block",
-    "orm:transformium_block ",
+    "orm:transformium_block",
     "orm:ore_13_block",
     "orm:energon_ore",
     "orm:ore_13_ore",
