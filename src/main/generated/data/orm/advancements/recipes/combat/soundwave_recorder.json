@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_soundwave_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:soundwave_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_soundwave_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:soundwave_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_soundwave_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:soundwave_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_soundwave_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:soundwave_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "orm:soundwave_recorder"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_soundwave_helmet",
+      "has_soundwave_chestplate",
+      "has_soundwave_leggings",
+      "has_soundwave_boots",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "orm:soundwave_recorder"
+    ]
+  },
+  "sends_telemetry_event": false
+}

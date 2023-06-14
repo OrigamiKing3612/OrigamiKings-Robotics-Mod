@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "orm:scorpinok_boots"
+    },
+    "C": {
+      "item": "orm:scorpinok_chestplate"
+    },
+    "H": {
+      "item": "orm:scorpinok_helmet"
+    },
+    "L": {
+      "item": "orm:scorpinok_leggings"
+    },
+    "O": {
+      "item": "orm:ore_13"
+    },
+    "T": {
+      "item": "orm:transformium"
+    }
+  },
+  "pattern": [
+    "HTC",
+    "TOT",
+    "LTB"
+  ],
+  "result": {
+    "item": "orm:scorpinok_car"
+  },
+  "show_notification": true
+}

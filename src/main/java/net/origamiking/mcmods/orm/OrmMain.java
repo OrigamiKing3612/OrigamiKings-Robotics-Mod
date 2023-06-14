@@ -19,6 +19,8 @@ public class OrmMain implements ModInitializer {
 	public static final String MOD_ID = "orm";
 	public static final String VERSION = "1.0.0-1.20.1";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	//TODO make player invisible when all armor is on
+	//TODO Test recipes
 	@Override
 	public void onInitialize() {
 		OrmMain.LOGGER.info("Starting ORM " + OrmMain.VERSION);

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "orm:robot_starscream_armor_boots"
+    },
+    "C": {
+      "item": "orm:robot_starscream_armor_chestplate"
+    },
+    "H": {
+      "item": "orm:robot_starscream_armor_helmet"
+    },
+    "L": {
+      "item": "orm:robot_starscream_armor_leggings"
+    },
+    "O": {
+      "item": "orm:ore_13"
+    },
+    "T": {
+      "item": "orm:transformium"
+    }
+  },
+  "pattern": [
+    "HTC",
+    "TOT",
+    "LTB"
+  ],
+  "result": {
+    "item": "orm:robot_starscream_jet"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "orm:rodimus_prime_boots"
+    },
+    "C": {
+      "item": "orm:rodimus_prime_chestplate"
+    },
+    "H": {
+      "item": "orm:rodimus_prime_helmet"
+    },
+    "L": {
+      "item": "orm:rodimus_prime_leggings"
+    },
+    "O": {
+      "item": "orm:ore_13"
+    },
+    "T": {
+      "item": "orm:transformium"
+    }
+  },
+  "pattern": [
+    "HTC",
+    "TOT",
+    "LTB"
+  ],
+  "result": {
+    "item": "orm:rodimus_prime_car"
+  },
+  "show_notification": true
+}

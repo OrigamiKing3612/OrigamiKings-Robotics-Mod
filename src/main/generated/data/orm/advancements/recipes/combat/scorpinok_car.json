@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_scorpinok_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:scorpinok_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_scorpinok_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:scorpinok_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_scorpinok_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:scorpinok_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_scorpinok_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:scorpinok_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "orm:scorpinok_car"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_scorpinok_helmet",
+      "has_scorpinok_chestplate",
+      "has_scorpinok_leggings",
+      "has_scorpinok_boots",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "orm:scorpinok_car"
+    ]
+  },
+  "sends_telemetry_event": false
+}

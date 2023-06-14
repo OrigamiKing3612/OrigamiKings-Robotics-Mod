@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "orm:ironhide_boots"
+    },
+    "C": {
+      "item": "orm:ironhide_chestplate"
+    },
+    "H": {
+      "item": "orm:ironhide_helmet"
+    },
+    "L": {
+      "item": "orm:ironhide_leggings"
+    },
+    "O": {
+      "item": "orm:ore_13"
+    },
+    "T": {
+      "item": "orm:transformium"
+    }
+  },
+  "pattern": [
+    "HTC",
+    "TOT",
+    "LTB"
+  ],
+  "result": {
+    "item": "orm:ironhide_car"
+  },
+  "show_notification": true
+}

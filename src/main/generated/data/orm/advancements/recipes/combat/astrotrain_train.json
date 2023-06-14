@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_astrotrain_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:astrotrain_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_astrotrain_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:astrotrain_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_astrotrain_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:astrotrain_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_astrotrain_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:astrotrain_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "orm:astrotrain_train"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_astrotrain_helmet",
+      "has_astrotrain_chestplate",
+      "has_astrotrain_leggings",
+      "has_astrotrain_boots",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "orm:astrotrain_train"
+    ]
+  },
+  "sends_telemetry_event": false
+}

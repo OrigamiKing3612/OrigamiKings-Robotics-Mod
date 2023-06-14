@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bumblebee_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:bumblebee_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_bumblebee_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:bumblebee_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_bumblebee_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:bumblebee_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_bumblebee_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:bumblebee_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "orm:bumblebee_car"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_bumblebee_helmet",
+      "has_bumblebee_chestplate",
+      "has_bumblebee_leggings",
+      "has_bumblebee_boots",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "orm:bumblebee_car"
+    ]
+  },
+  "sends_telemetry_event": false
+}

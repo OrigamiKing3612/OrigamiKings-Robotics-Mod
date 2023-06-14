@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rodimus_prime_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:rodimus_prime_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_rodimus_prime_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:rodimus_prime_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_rodimus_prime_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:rodimus_prime_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_rodimus_prime_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:rodimus_prime_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "orm:rodimus_prime_car"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_rodimus_prime_helmet",
+      "has_rodimus_prime_chestplate",
+      "has_rodimus_prime_leggings",
+      "has_rodimus_prime_boots",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "orm:rodimus_prime_car"
+    ]
+  },
+  "sends_telemetry_event": false
+}

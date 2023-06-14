@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "orm:galvatron_boots"
+    },
+    "C": {
+      "item": "orm:galvatron_chestplate"
+    },
+    "H": {
+      "item": "orm:galvatron_helmet"
+    },
+    "L": {
+      "item": "orm:galvatron_leggings"
+    },
+    "O": {
+      "item": "orm:ore_13"
+    },
+    "T": {
+      "item": "orm:transformium"
+    }
+  },
+  "pattern": [
+    "HTC",
+    "TOT",
+    "LTB"
+  ],
+  "result": {
+    "item": "orm:galvatron_gun"
+  },
+  "show_notification": true
+}

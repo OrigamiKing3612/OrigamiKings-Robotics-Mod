@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_galvatron_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:galvatron_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_galvatron_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:galvatron_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_galvatron_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:galvatron_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_galvatron_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:galvatron_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "orm:galvatron_gun"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_galvatron_helmet",
+      "has_galvatron_chestplate",
+      "has_galvatron_leggings",
+      "has_galvatron_boots",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "orm:galvatron_gun"
+    ]
+  },
+  "sends_telemetry_event": false
+}

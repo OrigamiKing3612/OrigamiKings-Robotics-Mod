@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_megatron_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:megatron_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_megatron_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:megatron_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_megatron_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:megatron_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_megatron_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:megatron_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "orm:megatron_transformed"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_megatron_helmet",
+      "has_megatron_chestplate",
+      "has_megatron_leggings",
+      "has_megatron_boots",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "orm:megatron_transformed"
+    ]
+  },
+  "sends_telemetry_event": false
+}

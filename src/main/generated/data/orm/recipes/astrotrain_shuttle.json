@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "orm:astrotrain_boots"
+    },
+    "C": {
+      "item": "orm:astrotrain_chestplate"
+    },
+    "H": {
+      "item": "orm:astrotrain_helmet"
+    },
+    "L": {
+      "item": "orm:astrotrain_leggings"
+    },
+    "O": {
+      "item": "orm:ore_13"
+    },
+    "T": {
+      "item": "orm:transformium"
+    }
+  },
+  "pattern": [
+    "HTC",
+    "TOT",
+    "LTB"
+  ],
+  "result": {
+    "item": "orm:astrotrain_shuttle"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "orm:thunder_cracker_boots"
+    },
+    "C": {
+      "item": "orm:thunder_cracker_chestplate"
+    },
+    "H": {
+      "item": "orm:thunder_cracker_helmet"
+    },
+    "L": {
+      "item": "orm:thunder_cracker_leggings"
+    },
+    "O": {
+      "item": "orm:ore_13"
+    },
+    "T": {
+      "item": "orm:transformium"
+    }
+  },
+  "pattern": [
+    "HTC",
+    "TOT",
+    "LTB"
+  ],
+  "result": {
+    "item": "orm:thunder_cracker_jet"
+  },
+  "show_notification": true
+}

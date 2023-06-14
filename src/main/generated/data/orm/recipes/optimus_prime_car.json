@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "orm:optimus_prime_armor_boots"
+    },
+    "C": {
+      "item": "orm:optimus_prime_armor_chestplate"
+    },
+    "H": {
+      "item": "orm:optimus_prime_armor_helmet"
+    },
+    "L": {
+      "item": "orm:optimus_prime_armor_leggings"
+    },
+    "O": {
+      "item": "orm:ore_13"
+    },
+    "T": {
+      "item": "orm:transformium"
+    }
+  },
+  "pattern": [
+    "HTC",
+    "TOT",
+    "LTB"
+  ],
+  "result": {
+    "item": "orm:optimus_prime_car"
+  },
+  "show_notification": true
+}

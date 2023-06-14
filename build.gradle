@@ -129,6 +129,6 @@ publishing {
 			embedded.project "origamikings-api"
 
 		}
-		changelog = "Added new armors and addons added the chip refinery and the compacter. Also made recipes for everything. Made ores generate."
+		changelog = "1.0.0-1.20.1: Full Release:\n" + "\n" + "Added new armors and addons added the chip refinery and the compacter. Also made recipes for everything. Made ores generate. Added a way to download addons for this mod (None exist yet)"
 	}
 }

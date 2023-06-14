@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ironhide_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:ironhide_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ironhide_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:ironhide_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ironhide_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:ironhide_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ironhide_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:ironhide_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "orm:ironhide_car"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_ironhide_helmet",
+      "has_ironhide_chestplate",
+      "has_ironhide_leggings",
+      "has_ironhide_boots",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "orm:ironhide_car"
+    ]
+  },
+  "sends_telemetry_event": false
+}
