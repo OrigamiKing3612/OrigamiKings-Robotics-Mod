@@ -25,7 +25,7 @@ public class CompacterBlock extends BlockWithEntity implements BlockEntityProvid
     public static final DirectionProperty FACING = Properties.FACING;
 
     public CompacterBlock() {
-        super(Settings.create().nonOpaque());
+        super(Settings.create().nonOpaque().requiresTool().strength(3.5f));
     }
 
     private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 10, 16);

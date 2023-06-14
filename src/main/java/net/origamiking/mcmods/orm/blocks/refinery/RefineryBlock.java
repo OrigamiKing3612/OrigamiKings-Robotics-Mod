@@ -25,7 +25,7 @@ public class RefineryBlock extends BlockWithEntity implements BlockEntityProvide
     public static final DirectionProperty FACING = Properties.FACING;
 
     public RefineryBlock() {
-        super(Settings.create().nonOpaque());
+        super(Settings.create().nonOpaque().requiresTool().strength(3.5f));
     }
 
     private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 10, 16);

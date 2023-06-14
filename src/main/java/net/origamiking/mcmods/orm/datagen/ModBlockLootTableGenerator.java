@@ -17,11 +17,11 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         addDrop(EnergonBlocks.ENERGON_BLOCK);
-        addDrop(EnergonBlocks.ENERGON_ORE);
-        addDrop(EnergonBlocks.DEEPSLATE_ENERGON_ORE);
+//        addDrop(EnergonBlocks.ENERGON_ORE);
+//        addDrop(EnergonBlocks.DEEPSLATE_ENERGON_ORE);
         addDrop(Ore13Blocks.ORE_13_BLOCK);
-        addDrop(Ore13Blocks.ORE_13_ORE);
-        addDrop(Ore13Blocks.DEEPSLATE_ORE_13_ORE);
+//        addDrop(Ore13Blocks.ORE_13_ORE);
+//        addDrop(Ore13Blocks.DEEPSLATE_ORE_13_ORE);
         addDrop(TransformiumBlocks.TRANSFORMIUM_BLOCK);
         addDrop(EnergonBlocks.COMPACT_ENERGON_BLOCK);
         addDrop(RegisterChipRefineryBlock.CHIP_REFINERY_BLOCK);
