@@ -1,6 +1,0 @@
-{
-  "parent":"item/generated",
-  "textures":{
-    "layer0":"orm:item/chips/robo_1_chip"
-  }
-}

@@ -6,7 +6,6 @@ import net.origamiking.mcmods.orm.items.chips.galvatron.GalvatronChip;
 import net.origamiking.mcmods.orm.items.chips.ironhide.IronhideChip;
 import net.origamiking.mcmods.orm.items.chips.megatron.MegatronChip;
 import net.origamiking.mcmods.orm.items.chips.optimus_prime.OptimusPrimeChip;
-import net.origamiking.mcmods.orm.items.chips.robo_1.Robo_1Chip;
 import net.origamiking.mcmods.orm.items.chips.robot_starscream.StarsceamChip;
 import net.origamiking.mcmods.orm.items.chips.scorpinok.ScorpinokChip;
 import net.origamiking.mcmods.orm.items.chips.skystrike.SkystrikeChip;
@@ -20,7 +19,6 @@ public class ModChips {
         IronhideChip.get();
         MegatronChip.get();
         OptimusPrimeChip.get();
-        Robo_1Chip.get();
         StarsceamChip.get();
         ScorpinokChip.get();
         SkystrikeChip.get();

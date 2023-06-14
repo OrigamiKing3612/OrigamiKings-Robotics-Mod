@@ -17,7 +17,6 @@ import net.origamiking.mcmods.orm.armor.galvatron.Galvatron;
 import net.origamiking.mcmods.orm.armor.ironhide.Ironhide;
 import net.origamiking.mcmods.orm.armor.megatron.Megatron;
 import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrime;
-import net.origamiking.mcmods.orm.armor.robo_1.Robo_1;
 import net.origamiking.mcmods.orm.armor.rodimus_prime.RodimusPrime;
 import net.origamiking.mcmods.orm.armor.scorpinok.Scorpinok;
 import net.origamiking.mcmods.orm.armor.skystrike.Skystrike;
@@ -34,7 +33,6 @@ import net.origamiking.mcmods.orm.items.chips.galvatron.GalvatronChip;
 import net.origamiking.mcmods.orm.items.chips.ironhide.IronhideChip;
 import net.origamiking.mcmods.orm.items.chips.megatron.MegatronChip;
 import net.origamiking.mcmods.orm.items.chips.optimus_prime.OptimusPrimeChip;
-import net.origamiking.mcmods.orm.items.chips.robo_1.Robo_1Chip;
 import net.origamiking.mcmods.orm.items.chips.robot_starscream.StarsceamChip;
 import net.origamiking.mcmods.orm.items.chips.scorpinok.ScorpinokChip;
 import net.origamiking.mcmods.orm.items.chips.skystrike.SkystrikeChip;
@@ -59,11 +57,6 @@ public class ModGroups {
                 .icon(() -> new ItemStack(OptimusPrime.HELMET))
                 .entries((context, entries) -> {
                     entries.add(Robot_0.ROBOT_0_CAR);
-                    entries.add(Robo_1.HELMET);
-                    entries.add(Robo_1.CHESTPLATE);
-                    entries.add(Robo_1.LEGGINGS);
-                    entries.add(Robo_1.BOOTS);
-                    entries.add(Robo_1.CAR);
                     entries.add(Skystrike.HELMET);
                     entries.add(Skystrike.CHESTPLATE);
                     entries.add(Skystrike.LEGGINGS);
@@ -147,9 +140,8 @@ public class ModGroups {
                 }).build());
         Registry.register(Registries.ITEM_GROUP, ORM_ADDONS, FabricItemGroup.builder()
                 .displayName(Text.translatable("group.orm.addons"))
-                .icon(() -> new ItemStack(ItemRegistry.ROBO_ADDON_1))
+                .icon(() -> new ItemStack(ItemRegistry.OPTIMUS_PRIMES_ION_CANNON))
                 .entries((context, entries) -> {
-                    entries.add(ItemRegistry.ROBO_ADDON_1);
                     entries.add(ItemRegistry.SOUNDWAVE_SHOULDER_GUN);
                     entries.add(ItemRegistry.SOUNDWAVE_RAY_GUN);
                     entries.add(ItemRegistry.OPTIMUS_PRIMES_ION_CANNON);
@@ -165,7 +157,6 @@ public class ModGroups {
                     entries.add(IronhideChip.CHIP);
                     entries.add(MegatronChip.CHIP);
                     entries.add(OptimusPrimeChip.CHIP);
-                    entries.add(Robo_1Chip.ROBO_1_CHIP);
                     entries.add(StarsceamChip.CHIP);
                     entries.add(ScorpinokChip.CHIP);
                     entries.add(SkystrikeChip.CHIP);
