@@ -105,6 +105,6 @@
     "screen.orm.compacter_block_title": "Compacter Block",
     "block.orm.compacter_block": "Compacter Block",
 
-    "screen.orm.chip_refinery_block_title": "Chip Refinery Block",
-    "block.orm.chip_refinery_block": "Chip Refinery Block"
+    "screen.orm.chip_refinery_block_title": "Chip Refinery",
+    "block.orm.chip_refinery": "Chip Refinery"
 }
