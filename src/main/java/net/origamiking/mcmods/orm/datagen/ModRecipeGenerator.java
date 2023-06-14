@@ -181,7 +181,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
     public static void offerChipRefiningRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory category, ItemConvertible output, ItemConvertible input) {
         offerChipRefiningRecipe(exporter, category, output, input, 1);
     }
-    private static void offerChipRefiningRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory category, ItemConvertible output, ItemConvertible input, int count) {
+    public static void offerChipRefiningRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory category, ItemConvertible output, ItemConvertible input, int count) {
         createChipRefining(Ingredient.ofItems(input), category, output, count).criterion(RecipeProvider.hasItem(input), RecipeProvider.conditionsFromItem(input)).offerTo(exporter, RecipeProvider.convertBetween(output, input) + "_chip_refining");
     }
 }
