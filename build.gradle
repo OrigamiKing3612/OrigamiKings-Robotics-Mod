@@ -129,6 +129,6 @@ publishing {
 			embedded.project "origamikings-api"
 
 		}
-		changelog = "Added lots of new armors and addons and renamed some old ones"
+		changelog = "Added new armors and addons added the chip refinery and the compacter. Also made recipes for everything. Made ores generate."
 	}
 }

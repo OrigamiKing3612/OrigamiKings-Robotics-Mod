@@ -13,7 +13,7 @@ import net.origamiking.mcmods.orm.OrmMain;
 import net.origamiking.mcmods.orm.entity.vector_guard.VectorGuardEntity;
 
 public class ModEntities {
-    public static final EntityType<VectorGuardEntity> VECTOR_GUARD = registerEntity("vector_guard", VectorGuardEntity::new, 1.0f, 1.0f, SpawnGroup.MONSTER);
+    public static final EntityType<VectorGuardEntity> VECTOR_GUARD = registerEntity("vector_guard", VectorGuardEntity::new, 1.0f, 2.2f, SpawnGroup.MONSTER);
 
     public static <T extends MobEntity> EntityType<T> registerEntity(String name, EntityType.EntityFactory<T> entity, float width, float height, SpawnGroup spawnGroup) {
         return Registry.register(Registries.ENTITY_TYPE, new Identifier(OrmMain.MOD_ID, name), FabricEntityTypeBuilder.create(spawnGroup, entity).dimensions(EntityDimensions.changing(width, height)).build());

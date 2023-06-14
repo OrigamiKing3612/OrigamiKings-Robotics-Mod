@@ -24,6 +24,7 @@ import net.origamiking.mcmods.orm.armor.soundwave.Soundwave;
 import net.origamiking.mcmods.orm.armor.starscream.Starscream;
 import net.origamiking.mcmods.orm.armor.thunder_cracker.ThunderCracker;
 import net.origamiking.mcmods.orm.blocks.chip_refinery.RegisterChipRefineryBlock;
+import net.origamiking.mcmods.orm.blocks.compacter.RegisterCompacterBlock;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
 import net.origamiking.mcmods.orm.blocks.refinery.RegisterRefineryBlock;
@@ -128,6 +129,7 @@ public class ModGroups {
                 .icon(() -> new ItemStack(EnergonBlocks.ENERGON_BLOCK))
                 .entries((context, entries) -> {
                     entries.add(RegisterRefineryBlock.REFINERY_BLOCK);
+                    entries.add(RegisterCompacterBlock.COMPACTER_BLOCK);
                     entries.add(RegisterChipRefineryBlock.CHIP_REFINERY_BLOCK);
                     entries.add(EnergonItems.ENERGON);
                     entries.add(EnergonBlocks.ENERGON_BLOCK);
@@ -146,7 +148,7 @@ public class ModGroups {
                 }).build());
         Registry.register(Registries.ITEM_GROUP, ORM_ADDONS, FabricItemGroup.builder()
                 .displayName(Text.translatable("group.orm.addons"))
-                .icon(() -> new ItemStack(ItemRegistry.OPTIMUS_PRIMES_ION_CANNON))
+                .icon(() -> new ItemStack(ItemRegistry.PULSE_RIFLE))
                 .entries((context, entries) -> {
                     entries.add(ItemRegistry.SOUNDWAVE_SHOULDER_GUN);
                     entries.add(ItemRegistry.SOUNDWAVE_RAY_GUN);
