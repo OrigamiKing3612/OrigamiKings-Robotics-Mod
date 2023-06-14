@@ -12,7 +12,6 @@ import net.minecraft.util.Identifier;
 import net.origamiking.mcmods.orm.OrmMain;
 import net.origamiking.mcmods.orm.armor.astrotrain.Astrotrain;
 import net.origamiking.mcmods.orm.armor.bumblebee.Bumblebee;
-import net.origamiking.mcmods.orm.armor.car.Robot_0;
 import net.origamiking.mcmods.orm.armor.galvatron.Galvatron;
 import net.origamiking.mcmods.orm.armor.ironhide.Ironhide;
 import net.origamiking.mcmods.orm.armor.megatron.Megatron;
@@ -60,7 +59,7 @@ public class ModGroups {
                 .displayName(Text.translatable("group.orm.armor"))
                 .icon(() -> new ItemStack(OptimusPrime.HELMET))
                 .entries((context, entries) -> {
-                    entries.add(Robot_0.ROBOT_0_CAR);
+//                    entries.add(Robot_0.ROBOT_0_CAR);
                     entries.add(Skystrike.HELMET);
                     entries.add(Skystrike.CHESTPLATE);
                     entries.add(Skystrike.LEGGINGS);
