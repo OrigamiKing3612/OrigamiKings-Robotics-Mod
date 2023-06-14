@@ -1,4 +1,4 @@
-package net.origamiking.mcmods.orm.armor.scorpinok;
+package net.origamiking.mcmods.orm.armor.starscream;
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
@@ -10,7 +10,7 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.origamiking.mcmods.orm.client.armor.renderer.scorpinok.Scorpinok_CarArmorRenderer;
+import net.origamiking.mcmods.orm.client.armor.renderer.robot_starscream.RobotStarscreamArmorRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
 import software.bernie.geckolib.constant.DataTickets;
@@ -26,11 +26,11 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 
-public final class Scorpinok_CarArmorItem extends ArmorItem implements GeoItem {
+public final class StarscreamArmorItem extends ArmorItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
 
-    public Scorpinok_CarArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
+    public StarscreamArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
         super(armorMaterial, slot, properties);
     }
 
@@ -39,12 +39,12 @@ public final class Scorpinok_CarArmorItem extends ArmorItem implements GeoItem {
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
             //private GeoArmorRenderer<?> renderer;
-            private Scorpinok_CarArmorRenderer renderer;
+            private RobotStarscreamArmorRenderer renderer;
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
                 if(this.renderer == null)
-                    this.renderer = new Scorpinok_CarArmorRenderer();
+                    this.renderer = new RobotStarscreamArmorRenderer();
                     //this.renderer = new GeckoArmorRenderer();
 
                 // This prepares our GeoArmorRenderer for the current render frame.
@@ -90,7 +90,10 @@ public final class Scorpinok_CarArmorItem extends ArmorItem implements GeoItem {
 
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-                    Scorpinok.CHESTPLATE));
+                    Starscream.HELMET,
+                    Starscream.CHESTPLATE,
+                    Starscream.LEGGINGS,
+                    Starscream.BOOTS));
 
             // Play the animation if the full set is being worn, otherwise stop
             return isFullSet ? PlayState.STOP : PlayState.STOP;

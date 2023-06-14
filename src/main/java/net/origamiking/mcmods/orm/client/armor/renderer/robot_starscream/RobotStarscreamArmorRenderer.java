@@ -2,11 +2,11 @@ package net.origamiking.mcmods.orm.client.armor.renderer.robot_starscream;
 
 import net.minecraft.util.Identifier;
 import net.origamiking.mcmods.orm.OrmMain;
-import net.origamiking.mcmods.orm.armor.starscream.RobotStarscreamArmorItem;
+import net.origamiking.mcmods.orm.armor.starscream.StarscreamArmorItem;
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
-public class RobotStarscreamArmorRenderer extends GeoArmorRenderer<RobotStarscreamArmorItem>{
+public class RobotStarscreamArmorRenderer extends GeoArmorRenderer<StarscreamArmorItem>{
         public RobotStarscreamArmorRenderer() {
             super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/robot_starscream")));
 

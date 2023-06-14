@@ -29,5 +29,16 @@ public class ModArmor {
         ThunderCracker.get();
         Galvatron.get();
         RodimusPrime.get();
+//        ServerTickEvents.END_SERVER_TICK.register(server -> server.getPlayerManager().getPlayerList().forEach(player -> {
+//            if (player.getEquippedStack(EquipmentSlot.HEAD).getItem() instanceof AstrotrainArmorItem &&
+//                    player.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof AstrotrainArmorItem &&
+//                    player.getEquippedStack(EquipmentSlot.LEGS).getItem() instanceof AstrotrainArmorItem &&
+//                    player.getEquippedStack(EquipmentSlot.FEET).getItem() instanceof AstrotrainArmorItem) {
+//                player.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 2, 0, false, false));
+//            } else {
+//                player.removeStatusEffect(StatusEffects.INVISIBILITY);
+//            }
+//        }));
     }
+
 }
