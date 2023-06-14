@@ -125,18 +125,18 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerTransformerLeggings(exporter, RodimusPrime.LEGGINGS, RodimusPrimeChip.CHIP);
         offerTransformerBoots(exporter, RodimusPrime.BOOTS, RodimusPrimeChip.CHIP);
 
-        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, AstrotrainChip.CHIP, Blocks.DIAMOND_BLOCK);
-        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, BumblebeeChip.CHIP, Blocks.DIAMOND_BLOCK);
-        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, GalvatronChip.CHIP, Blocks.DIAMOND_BLOCK);
-        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, IronhideChip.CHIP, Blocks.DIAMOND_BLOCK);
-        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, MegatronChip.CHIP, Blocks.DIAMOND_BLOCK);
-        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, OptimusPrimeChip.CHIP, Blocks.DIAMOND_BLOCK);
-        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, StarsceamChip.CHIP, Blocks.DIAMOND_BLOCK);
-        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, RodimusPrimeChip.CHIP, Blocks.DIAMOND_BLOCK);
-        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, ScorpinokChip.CHIP, Blocks.DIAMOND_BLOCK);
-        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, SkystrikeChip.CHIP, Blocks.DIAMOND_BLOCK);
-        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, SoundwaveChip.CHIP, Blocks.DIAMOND_BLOCK);
-        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, ThunderCrackerChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.MISC, AstrotrainChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.MISC, BumblebeeChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.MISC, GalvatronChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.MISC, IronhideChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.MISC, MegatronChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.MISC, OptimusPrimeChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.MISC, StarsceamChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.MISC, RodimusPrimeChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.MISC, ScorpinokChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.MISC, SkystrikeChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.MISC, SoundwaveChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.MISC, ThunderCrackerChip.CHIP, Blocks.DIAMOND_BLOCK);
     }
 
 
