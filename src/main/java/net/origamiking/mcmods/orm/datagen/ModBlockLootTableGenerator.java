@@ -2,8 +2,11 @@ package net.origamiking.mcmods.orm.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.origamiking.mcmods.orm.blocks.chip_refinery.RegisterChipRefineryBlock;
+import net.origamiking.mcmods.orm.blocks.compacter.RegisterCompacterBlock;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
+import net.origamiking.mcmods.orm.blocks.refinery.RegisterRefineryBlock;
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
 
 public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
@@ -21,5 +24,8 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(Ore13Blocks.DEEPSLATE_ORE_13_ORE);
         addDrop(TransformiumBlocks.TRANSFORMIUM_BLOCK);
         addDrop(EnergonBlocks.COMPACT_ENERGON_BLOCK);
+        addDrop(RegisterChipRefineryBlock.CHIP_REFINERY_BLOCK);
+        addDrop(RegisterCompacterBlock.COMPACTER_BLOCK);
+        addDrop(RegisterRefineryBlock.REFINERY_BLOCK);
     }
 }

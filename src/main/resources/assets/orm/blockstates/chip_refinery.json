@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "orm:block/chip_refinery",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "orm:block/chip_refinery"
+    },
+    "facing=south": {
+      "model": "orm:block/chip_refinery",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "orm:block/chip_refinery",
+      "y": 270
+    }
+  }
+}

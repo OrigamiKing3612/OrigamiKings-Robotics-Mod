@@ -8,6 +8,9 @@
     "orm:ore_13_ore",
     "orm:energon_deepslate_ore",
     "orm:ore_13_deepslate_ore",
-    "orm:compact_energon_block"
+    "orm:compact_energon_block",
+    "orm:refinery_block",
+    "orm:compacter_block",
+    "orm:chip_refinery_block"
   ]
 }

@@ -2,10 +2,8 @@ package net.origamiking.mcmods.orm.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.server.recipe.CraftingRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
-import net.minecraft.data.server.recipe.RecipeProvider;
-import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.block.Blocks;
+import net.minecraft.data.server.recipe.*;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
@@ -42,6 +40,7 @@ import net.origamiking.mcmods.orm.items.energon.EnergonItems;
 import net.origamiking.mcmods.orm.items.ore13.Ore13Items;
 import net.origamiking.mcmods.orm.items.random.RandomItems;
 import net.origamiking.mcmods.orm.items.transformium.TransformiumItems;
+import net.origamiking.mcmods.orm.recipe.ChipRefineryRecipe;
 
 import java.util.function.Consumer;
 
@@ -114,6 +113,19 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerTransformerChestplate(exporter, RodimusPrime.CHESTPLATE, RodimusPrimeChip.CHIP);
         offerTransformerLeggings(exporter, RodimusPrime.LEGGINGS, RodimusPrimeChip.CHIP);
         offerTransformerBoots(exporter, RodimusPrime.BOOTS, RodimusPrimeChip.CHIP);
+
+        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, AstrotrainChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, BumblebeeChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, GalvatronChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, IronhideChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, MegatronChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, OptimusPrimeChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, StarsceamChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, RodimusPrimeChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, ScorpinokChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, SkystrikeChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, SoundwaveChip.CHIP, Blocks.DIAMOND_BLOCK);
+        offerChipRefiningRecipe(exporter, RecipeCategory.TOOLS, ThunderCrackerChip.CHIP, Blocks.DIAMOND_BLOCK);
     }
 
 
@@ -150,5 +162,15 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
     private static CraftingRecipeJsonBuilder createTransformerBoots(ItemConvertible output, Ingredient chip) {
         return ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output).input('T', TransformiumItems.TRANSFORMIUM).input('E', EnergonItems.ENERGON).input('C', chip).input('S', RandomItems.SPARK).input('D', Items.DIAMOND_BOOTS).pattern("TCT").pattern("ESE").pattern("TDT");
+    }
+
+    private static SingleItemRecipeJsonBuilder createChipRefining(Ingredient input, RecipeCategory category, ItemConvertible output, int count) {
+        return new SingleItemRecipeJsonBuilder(category, ChipRefineryRecipe.Serializer.INSTANCE, input, output, count);
+    }
+    public static void offerChipRefiningRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory category, ItemConvertible output, ItemConvertible input) {
+        offerChipRefiningRecipe(exporter, category, output, input, 1);
+    }
+    private static void offerChipRefiningRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory category, ItemConvertible output, ItemConvertible input, int count) {
+        createChipRefining(Ingredient.ofItems(input), category, output, count).criterion(RecipeProvider.hasItem(input), RecipeProvider.conditionsFromItem(input)).offerTo(exporter, RecipeProvider.convertBetween(output, input) + "_chip_refining");
     }
 }

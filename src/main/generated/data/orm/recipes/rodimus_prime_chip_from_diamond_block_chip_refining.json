@@ -1,0 +1,8 @@
+{
+  "type": "orm:chip_refining",
+  "count": 1,
+  "ingredient": {
+    "item": "minecraft:diamond_block"
+  },
+  "result": "orm:rodimus_prime_chip"
+}

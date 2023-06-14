@@ -1,5 +1,6 @@
 package net.origamiking.mcmods.orm.blocks;
 
+import net.origamiking.mcmods.orm.blocks.chip_refinery.RegisterChipRefineryBlock;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
 import net.origamiking.mcmods.orm.blocks.refinery.RegisterRefineryBlock;
@@ -11,5 +12,6 @@ public class ModBlocks {
         Ore13Blocks.get();
         TransformiumBlocks.get();
         RegisterRefineryBlock.get();
+        RegisterChipRefineryBlock.get();
     }
 }
