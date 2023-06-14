@@ -28,8 +28,10 @@ public class VectorGuardEntity extends HostileEntity implements GeoEntity {
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 40.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 10.0f)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 2.0f)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 1.0f);
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 1.0f)
+                .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 10.0f);
     }
+
     @Override
     protected void initGoals() {
         this.goalSelector.add(1, new SwimGoal(this));
