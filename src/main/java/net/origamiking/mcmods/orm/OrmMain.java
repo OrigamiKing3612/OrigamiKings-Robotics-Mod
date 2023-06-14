@@ -9,6 +9,7 @@ import net.origamiking.mcmods.orm.entities.ModEntityTypes;
 import net.origamiking.mcmods.orm.group.ModGroups;
 import net.origamiking.mcmods.orm.items.ModItems;
 import net.origamiking.mcmods.orm.screen.ModScreenHandlers;
+import net.origamiking.mcmods.orm.world.ModWorld;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,5 +28,6 @@ public class OrmMain implements ModInitializer {
 		ModGroups.register();
 		ModEntityTypes.register();
 		ModCommands.register();
+		ModWorld.register();
 	}
 }
