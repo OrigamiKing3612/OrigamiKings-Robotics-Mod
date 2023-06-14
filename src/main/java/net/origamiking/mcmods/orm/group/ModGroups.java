@@ -44,6 +44,7 @@ import net.origamiking.mcmods.orm.items.custom.ItemRegistry;
 import net.origamiking.mcmods.orm.items.energon.EnergonItems;
 import net.origamiking.mcmods.orm.items.ore13.Ore13Items;
 import net.origamiking.mcmods.orm.items.random.RandomItems;
+import net.origamiking.mcmods.orm.items.spawnegg.ModSpawnEggs;
 import net.origamiking.mcmods.orm.items.transformium.TransformiumItems;
 
 public class ModGroups {
@@ -141,6 +142,7 @@ public class ModGroups {
                     entries.add(TransformiumBlocks.TRANSFORMIUM_BLOCK);
                     entries.add(RandomItems.SPARK);
                     entries.add(RandomItems.ENERGY_CONDUCTOR);
+                    entries.add(ModSpawnEggs.VECTOR_GUARD_SPAWN_EGG);
                 }).build());
         Registry.register(Registries.ITEM_GROUP, ORM_ADDONS, FabricItemGroup.builder()
                 .displayName(Text.translatable("group.orm.addons"))

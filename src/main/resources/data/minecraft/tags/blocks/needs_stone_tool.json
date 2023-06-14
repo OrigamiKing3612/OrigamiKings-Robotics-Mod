@@ -3,6 +3,6 @@
   "values": [
     "orm:refinery_block",
     "orm:compacter_block",
-    "orm:chip_refinery_block"
+    "orm:chip_refinery"
   ]
 }
