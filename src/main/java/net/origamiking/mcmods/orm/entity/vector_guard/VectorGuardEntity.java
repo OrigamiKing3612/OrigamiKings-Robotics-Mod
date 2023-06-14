@@ -16,8 +16,6 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 public class VectorGuardEntity extends HostileEntity implements GeoEntity {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
-//    private boolean isWalking = false;
-
     public VectorGuardEntity(EntityType<? extends HostileEntity> type, World world) {
         super(type, world);
         this.setHealth(20);
@@ -38,34 +36,13 @@ public class VectorGuardEntity extends HostileEntity implements GeoEntity {
         this.goalSelector.add(4, new MeleeAttackGoal(this, 1.1, false));
         this.goalSelector.add(5, new WanderAroundFarGoal(this, 0.8D));
         this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
-        this.goalSelector.add(6, new LookAroundGoal(this));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
+        this.goalSelector.add(2, new LookAroundGoal(this));
+        this.targetSelector.add(6, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
         super.initGoals();
     }
 
-    // Adds a right-click toggle that turns on/off its animating pose
-//    @Override
-//    public ActionResult interactAt(PlayerEntity player, Vec3d hitPos, Hand hand) {
-////        if (hand == Hand.MAIN_HAND)
-////            this.isFlying = !this.isFlying;
-//
-//        return super.interactAt(player, hitPos, hand);
-//    }
-
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-//        controllers.add(
-//                new AnimationController<>(this, 10, state -> state.setAndContinue(this.isWalking ? DefaultAnimations.WALK : DefaultAnimations.IDLE))
-//                        // Handle the custom instruction keyframe that is part of our animation json
-//                        .setCustomInstructionKeyframeHandler(state -> {
-//                            PlayerEntity player = ClientUtils.getClientPlayer();
-//
-//                            if (player != null)
-//                                player.sendMessage(Text.literal("KeyFraming"), true);
-//                        }),
-//                // Add our generic living animation controller
-//                DefaultAnimations.genericLivingController(this)
-//        );
         controllers.add(DefaultAnimations.genericWalkIdleController(this));
         controllers.add(DefaultAnimations.genericAttackAnimation(this, DefaultAnimations.ATTACK_STRIKE));
     }
