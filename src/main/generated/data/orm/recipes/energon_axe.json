@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "E": {
+      "item": "orm:energy_conductor"
+    },
+    "G": {
+      "item": "orm:energon"
+    }
+  },
+  "pattern": [
+    " GG",
+    " EG",
+    "E  "
+  ],
+  "result": {
+    "item": "orm:energon_axe"
+  },
+  "show_notification": true
+}

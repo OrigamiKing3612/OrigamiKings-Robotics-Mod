@@ -8,6 +8,7 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.util.Identifier;
 import net.origamiking.mcmods.oapi.recipes.ModRecipeProvider;
 import net.origamiking.mcmods.orm.armor.astrotrain.Astrotrain;
 import net.origamiking.mcmods.orm.armor.bumblebee.Bumblebee;
@@ -36,6 +37,7 @@ import net.origamiking.mcmods.orm.items.chips.scorpinok.ScorpinokChip;
 import net.origamiking.mcmods.orm.items.chips.skystrike.SkystrikeChip;
 import net.origamiking.mcmods.orm.items.chips.soundwave.SoundwaveChip;
 import net.origamiking.mcmods.orm.items.chips.thunder_cracker.ThunderCrackerChip;
+import net.origamiking.mcmods.orm.items.custom.ItemRegistry;
 import net.origamiking.mcmods.orm.items.energon.EnergonItems;
 import net.origamiking.mcmods.orm.items.ore13.Ore13Items;
 import net.origamiking.mcmods.orm.items.random.RandomItems;
@@ -51,6 +53,15 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ItemRegistry.ENERGON_AXE, 1)
+                .pattern(" GG").pattern(" EG").pattern("E  ")
+                .input('E', RandomItems.ENERGY_CONDUCTOR)
+                .input('G', EnergonItems.ENERGON)
+                .criterion(RecipeProvider.hasItem(RandomItems.ENERGY_CONDUCTOR), RecipeProvider.conditionsFromItem(RandomItems.ENERGY_CONDUCTOR))
+                .criterion(RecipeProvider.hasItem(EnergonItems.ENERGON), RecipeProvider.conditionsFromItem(EnergonItems.ENERGON))
+                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(ItemRegistry.ENERGON_AXE)));
+
+
         ModRecipeProvider.offer3x3CommpressandUncommpress(exporter, RecipeCategory.BUILDING_BLOCKS, EnergonBlocks.ENERGON_BLOCK, EnergonItems.ENERGON);
         ModRecipeProvider.offer3x3CommpressandUncommpress(exporter, RecipeCategory.BUILDING_BLOCKS, Ore13Blocks.ORE_13_BLOCK, Ore13Items.ORE_13);
         ModRecipeProvider.offer3x3CommpressandUncommpress(exporter, RecipeCategory.BUILDING_BLOCKS, TransformiumBlocks.TRANSFORMIUM_BLOCK, TransformiumItems.TRANSFORMIUM);

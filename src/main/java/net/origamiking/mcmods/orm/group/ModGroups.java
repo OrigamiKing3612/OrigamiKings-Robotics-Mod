@@ -140,6 +140,7 @@ public class ModGroups {
                     entries.add(TransformiumItems.TRANSFORMIUM);
                     entries.add(TransformiumBlocks.TRANSFORMIUM_BLOCK);
                     entries.add(RandomItems.SPARK);
+                    entries.add(RandomItems.ENERGY_CONDUCTOR);
                 }).build());
         Registry.register(Registries.ITEM_GROUP, ORM_ADDONS, FabricItemGroup.builder()
                 .displayName(Text.translatable("group.orm.addons"))
@@ -150,6 +151,7 @@ public class ModGroups {
                     entries.add(ItemRegistry.OPTIMUS_PRIMES_ION_CANNON);
                     entries.add(ItemRegistry.BLASTER);
                     entries.add(ItemRegistry.PULSE_RIFLE);
+                    entries.add(ItemRegistry.ENERGON_AXE);
                 }).build());
         Registry.register(Registries.ITEM_GROUP, ORM_CHIPS, FabricItemGroup.builder()
                 .displayName(Text.translatable("group.orm.chips"))

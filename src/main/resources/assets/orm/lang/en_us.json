@@ -3,6 +3,7 @@
     "item.orm.ore_13": "Ore 13",
     "item.orm.transformium": "Transformium",
     "item.orm.spark": "Spark",
+    "item.orm.energy_conductor": "Energy Conductor",
 
     "block.orm.energon_block": "Energon Block",
     "block.orm.transformium_block": "Transformium Block",
@@ -93,6 +94,7 @@
     "item.orm.megatron_transformed": "Megatron Transformed",
     "item.orm.blaster": "Blaster",
     "item.orm.pulse_rifle": "Pulse Rifle",
+    "item.orm.energon_axe": "Energon Axe",
 
     "group.orm.armor": "ORM Armor",
     "group.orm.stuff": "ORM Blocks and Items",
