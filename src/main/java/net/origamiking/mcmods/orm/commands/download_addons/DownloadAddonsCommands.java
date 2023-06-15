@@ -7,6 +7,7 @@ import net.minecraft.text.Text;
 public class DownloadAddonsCommands {
     public static void register() {
         // Addons are mods
+        //example
 //        downloadAddonCommand("Physics-Mod", "https://cdn.modrinth.com/data/Xy8aRQKS/versions/4xSgtf9P/physics-mod-3.0.5-mc-1.20-fabric.jar", "physics-mod-3.0.5-mc-1.20-fabric");
     }
     public static void downloadAddonCommand(String addon_name, String url, String mod_name) {
