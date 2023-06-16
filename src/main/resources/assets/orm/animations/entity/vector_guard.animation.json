@@ -65,7 +65,7 @@
 				}
 			}
 		},
-		"attack.swing": {
+		"aattack.strike": {
 			"loop": true,
 			"animation_length": 1.08333,
 			"bones": {

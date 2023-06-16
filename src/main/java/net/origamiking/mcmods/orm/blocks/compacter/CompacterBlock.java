@@ -7,6 +7,7 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
@@ -25,7 +26,7 @@ public class CompacterBlock extends BlockWithEntity implements BlockEntityProvid
     public static final DirectionProperty FACING = Properties.FACING;
 
     public CompacterBlock() {
-        super(Settings.create().nonOpaque().requiresTool().strength(3.5f));
+        super(Settings.create().nonOpaque().requiresTool().strength(3.5f).sounds(BlockSoundGroup.METAL));
     }
 
     private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 10, 16);
