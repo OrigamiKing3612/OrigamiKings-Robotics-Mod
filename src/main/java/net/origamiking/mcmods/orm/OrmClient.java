@@ -8,9 +8,10 @@ import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
 import net.origamiking.mcmods.orm.blocks.chip_refinery.RegisterChipRefineryBlock;
-import net.origamiking.mcmods.orm.client.blocks.model.entity.VectorGuardEntityRenderer;
 import net.origamiking.mcmods.orm.client.blocks.renderer.block.CompacterBlockRenderer;
 import net.origamiking.mcmods.orm.client.blocks.renderer.block.RefineryBlockRenderer;
+import net.origamiking.mcmods.orm.client.entity.renderer.entity.PhotonEntityRenderer;
+import net.origamiking.mcmods.orm.client.entity.renderer.entity.VectorGuardEntityRenderer;
 import net.origamiking.mcmods.orm.entity.ModEntities;
 import net.origamiking.mcmods.orm.screen.ModScreenHandlers;
 import net.origamiking.mcmods.orm.screen.chip_refinery.ChipRefineryScreen;
@@ -35,5 +36,8 @@ public class OrmClient implements ClientModInitializer {
 
         EntityRendererRegistry.register(ModEntities.VECTOR_GUARD, VectorGuardEntityRenderer::new);
 
+//        EntityRendererRegistry.register(ModEntities.PhotonEntityType, (context) ->
+//                new FlyingItemEntityRenderer<PhotonEntity>(context));
+        EntityRendererRegistry.register(ModEntities.PhotonEntityType, PhotonEntityRenderer::new);
     }
 }

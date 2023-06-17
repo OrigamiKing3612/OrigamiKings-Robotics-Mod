@@ -5,6 +5,7 @@
     "item.orm.spark": "Spark",
     "item.orm.energy_conductor": "Energy Conductor",
     "item.orm.vector_guard_spawn_egg": "Vector Guard Spawn Egg",
+    "item.orm.photon_item": "Photon",
 
     "block.orm.energon_block": "Energon Block",
     "block.orm.transformium_block": "Transformium Block",
@@ -103,6 +104,7 @@
     "group.orm.chips": "ORM Chips",
 
     "entity.orm.vector_guard": "Vector Guard",
+    "entity.orm.photon": "Photon",
 
     "screen.orm.refinery_block_title": "Refinery Block",
     "block.orm.refinery_block": "Refinery Block",

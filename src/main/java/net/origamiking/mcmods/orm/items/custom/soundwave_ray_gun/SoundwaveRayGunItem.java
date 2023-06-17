@@ -6,15 +6,19 @@ import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
-import net.minecraft.item.*;
+import net.minecraft.item.BowItem;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.RangedWeaponItem;
+import net.minecraft.item.Vanishable;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 import net.origamiking.mcmods.orm.client.items.renderer.soundwave_ray_gun.SoundwaveRayGunRenderer;
+import net.origamiking.mcmods.orm.items.custom.ItemRegistry;
+import net.origamiking.mcmods.orm.items.custom.photon.PhotonItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.SingletonGeoAnimatable;
 import software.bernie.geckolib.animatable.client.RenderProvider;
@@ -30,6 +34,8 @@ import java.util.function.Supplier;
 
 public class SoundwaveRayGunItem extends RangedWeaponItem implements GeoItem, Vanishable {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+    public static final Predicate<ItemStack> ORM_PROJECTILES = stack -> stack.isOf(ItemRegistry.PHOTON_ITEM);
+
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
     public SoundwaveRayGunItem(Settings settings) {
         super(settings);
@@ -39,7 +45,7 @@ public class SoundwaveRayGunItem extends RangedWeaponItem implements GeoItem, Va
 
     @Override
     public Predicate<ItemStack> getProjectiles() {
-        return BOW_PROJECTILES;
+        return ORM_PROJECTILES;
     }
 
     @Override
@@ -88,32 +94,23 @@ public class SoundwaveRayGunItem extends RangedWeaponItem implements GeoItem, Va
             return;
         }
         if (itemStack.isEmpty()) {
-            itemStack = new ItemStack(Items.ARROW);
+            itemStack = new ItemStack(ItemRegistry.PHOTON_ITEM);
         }
         if ((double)(f = BowItem.getPullProgress(i = this.getMaxUseTime(stack) - remainingUseTicks)) < 0.1) {
             return;
         }
-        boolean bl3 = bl2 = bl && itemStack.isOf(Items.ARROW);
+        boolean bl3 = bl2 = bl && itemStack.isOf(ItemRegistry.PHOTON_ITEM);
         if (!world.isClient) {
             int k;
             int j;
-            ArrowItem arrowItem = (ArrowItem)(itemStack.getItem() instanceof ArrowItem ? itemStack.getItem() : Items.ARROW);
-            PersistentProjectileEntity persistentProjectileEntity = arrowItem.createArrow(world, itemStack, playerEntity);
+            PhotonItem photonItem = (PhotonItem)(itemStack.getItem() instanceof PhotonItem ? itemStack.getItem() : ItemRegistry.PHOTON_ITEM);
+            PersistentProjectileEntity persistentProjectileEntity = photonItem.createPhoton(world, itemStack, playerEntity);
             persistentProjectileEntity.setVelocity(playerEntity, playerEntity.getPitch(), playerEntity.getYaw(), 0.0f, f * 3.0f, 1.0f);
             if (f == 1.0f) {
                 persistentProjectileEntity.setCritical(true);
             }
-            if ((j = EnchantmentHelper.getLevel(Enchantments.POWER, stack)) > 0) {
-                persistentProjectileEntity.setDamage(persistentProjectileEntity.getDamage() + (double)j * 0.5 + 0.5);
-            }
-            if ((k = EnchantmentHelper.getLevel(Enchantments.PUNCH, stack)) > 0) {
-                persistentProjectileEntity.setPunch(k);
-            }
-            if (EnchantmentHelper.getLevel(Enchantments.FLAME, stack) > 0) {
-                persistentProjectileEntity.setOnFireFor(100);
-            }
             stack.damage(1, playerEntity, p -> p.sendToolBreakStatus(playerEntity.getActiveHand()));
-            if (bl2 || playerEntity.getAbilities().creativeMode && (itemStack.isOf(Items.SPECTRAL_ARROW) || itemStack.isOf(Items.TIPPED_ARROW))) {
+            if (bl2 || playerEntity.getAbilities().creativeMode) {
                 persistentProjectileEntity.pickupType = PersistentProjectileEntity.PickupPermission.CREATIVE_ONLY;
             }
             world.spawnEntity(persistentProjectileEntity);
@@ -125,7 +122,6 @@ public class SoundwaveRayGunItem extends RangedWeaponItem implements GeoItem, Va
                 playerEntity.getInventory().removeOne(itemStack);
             }
         }
-        playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
     }
 
     public static float getPullProgress(int useTicks) {

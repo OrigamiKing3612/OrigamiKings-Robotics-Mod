@@ -144,6 +144,7 @@ public class ModGroups {
                     entries.add(RandomItems.SPARK);
                     entries.add(RandomItems.ENERGY_CONDUCTOR);
                     entries.add(ModSpawnEggs.VECTOR_GUARD_SPAWN_EGG);
+                    entries.add(ItemRegistry.PHOTON_ITEM);
                 }).build());
         Registry.register(Registries.ITEM_GROUP, ORM_ADDONS, FabricItemGroup.builder()
                 .displayName(Text.translatable("group.orm.addons"))

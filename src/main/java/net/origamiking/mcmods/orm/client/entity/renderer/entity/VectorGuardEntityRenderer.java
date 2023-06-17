@@ -1,7 +1,7 @@
-package net.origamiking.mcmods.orm.client.blocks.model.entity;
+package net.origamiking.mcmods.orm.client.entity.renderer.entity;
 
 import net.minecraft.client.render.entity.EntityRendererFactory;
-import net.origamiking.mcmods.orm.client.blocks.renderer.entity.VectorGuardEntityModel;
+import net.origamiking.mcmods.orm.client.entity.model.entity.VectorGuardEntityModel;
 import net.origamiking.mcmods.orm.entity.vector_guard.VectorGuardEntity;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 

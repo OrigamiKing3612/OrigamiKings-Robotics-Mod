@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "O": {
+      "item": "orm:ore_13"
+    }
+  },
+  "pattern": [
+    "O",
+    "O",
+    "O"
+  ],
+  "result": {
+    "count": 6,
+    "item": "orm:photon_item"
+  },
+  "show_notification": true
+}

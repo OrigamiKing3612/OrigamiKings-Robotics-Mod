@@ -65,6 +65,12 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(RecipeProvider.hasItem(EnergonBlocks.COMPACT_ENERGON_BLOCK), RecipeProvider.conditionsFromItem(EnergonBlocks.COMPACT_ENERGON_BLOCK)).criterion(RecipeProvider.hasItem(Ore13Items.ORE_13), RecipeProvider.conditionsFromItem(Ore13Items.ORE_13)).criterion(RecipeProvider.hasItem(Blocks.DIAMOND_BLOCK), RecipeProvider.conditionsFromItem(Blocks.DIAMOND_BLOCK))
                 .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(RandomItems.SPARK)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ItemRegistry.PHOTON_ITEM, 6)
+                .pattern("O").pattern("O").pattern("O")
+                .input('O', Ore13Items.ORE_13)
+                .criterion(RecipeProvider.hasItem(Ore13Items.ORE_13), RecipeProvider.conditionsFromItem(Ore13Items.ORE_13))
+                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(ItemRegistry.PHOTON_ITEM)));
+
 
         ModRecipeProvider.offer3x3CommpressandUncommpress(exporter, RecipeCategory.BUILDING_BLOCKS, EnergonBlocks.ENERGON_BLOCK, EnergonItems.ENERGON);
         ModRecipeProvider.offer3x3CommpressandUncommpress(exporter, RecipeCategory.BUILDING_BLOCKS, Ore13Blocks.ORE_13_BLOCK, Ore13Items.ORE_13);
