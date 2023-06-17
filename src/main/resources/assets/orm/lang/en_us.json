@@ -112,5 +112,8 @@
     "block.orm.compacter_block": "Compacter Block",
 
     "screen.orm.chip_refinery_block_title": "Chip Refinery",
-    "block.orm.chip_refinery": "Chip Refinery"
+    "block.orm.chip_refinery": "Chip Refinery",
+
+    "orm.download_addon.error": "There was an error while downloading addon; check your game log.",
+    "orm.download_addon.successful": "Download Successful! Please restart your game to use the addon."
 }

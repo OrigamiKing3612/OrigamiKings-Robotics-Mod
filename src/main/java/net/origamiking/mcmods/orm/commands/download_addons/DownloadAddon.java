@@ -27,7 +27,7 @@ public class DownloadAddon {
             OrmMain.LOGGER.info("File downloaded and moved successfully!");
         } catch (IOException e) {
             OrmMain.LOGGER.error(String.valueOf(e));
-            context.sendMessage(Text.of("There was an error; check your game log."));
+            context.sendMessage(Text.translatable("orm.download_addon.error"));
         }
     }
     private static void downloadFile(String fileURL, String savePath) throws IOException {

@@ -70,6 +70,8 @@ dependencies {
 
 	modImplementation "maven.modrinth:P3sjMa3U:${origamikings_api}"
 
+	implementation 'org.json:json:20210307'
+
 }
 
 processResources {
