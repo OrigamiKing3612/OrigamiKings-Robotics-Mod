@@ -50,7 +50,7 @@ public class VectorGuardEntity extends HostileEntity implements GeoEntity {
 
     @Override
     public EntityGroup getGroup() {
-        return ModEntityGroup.DECEPTIONS;
+        return ModEntityGroup.ORM-NONE;
     }
 
     @Override
