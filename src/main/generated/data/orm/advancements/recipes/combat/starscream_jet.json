@@ -1,48 +1,48 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_robot_starscream_armor_boots": {
+    "has_starscream_boots": {
       "conditions": {
         "items": [
           {
             "items": [
-              "orm:robot_starscream_armor_boots"
+              "orm:starscream_boots"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_robot_starscream_armor_chestplate": {
+    "has_starscream_chestplate": {
       "conditions": {
         "items": [
           {
             "items": [
-              "orm:robot_starscream_armor_chestplate"
+              "orm:starscream_chestplate"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_robot_starscream_armor_helmet": {
+    "has_starscream_helmet": {
       "conditions": {
         "items": [
           {
             "items": [
-              "orm:robot_starscream_armor_helmet"
+              "orm:starscream_helmet"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_robot_starscream_armor_leggings": {
+    "has_starscream_leggings": {
       "conditions": {
         "items": [
           {
             "items": [
-              "orm:robot_starscream_armor_leggings"
+              "orm:starscream_leggings"
             ]
           }
         ]
@@ -51,23 +51,23 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "orm:robot_starscream_jet"
+        "recipe": "orm:starscream_jet"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_robot_starscream_armor_helmet",
-      "has_robot_starscream_armor_chestplate",
-      "has_robot_starscream_armor_leggings",
-      "has_robot_starscream_armor_boots",
+      "has_starscream_helmet",
+      "has_starscream_chestplate",
+      "has_starscream_leggings",
+      "has_starscream_boots",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "orm:robot_starscream_jet"
+      "orm:starscream_jet"
     ]
   },
   "sends_telemetry_event": false

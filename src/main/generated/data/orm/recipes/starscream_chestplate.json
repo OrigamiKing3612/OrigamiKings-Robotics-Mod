@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "C": {
-      "item": "orm:robot_starscream_chip"
+      "item": "orm:starscream_chip"
     },
     "D": {
       "item": "minecraft:diamond_chestplate"
@@ -24,7 +24,7 @@
     "TDT"
   ],
   "result": {
-    "item": "orm:robot_starscream_armor_chestplate"
+    "item": "orm:starscream_chestplate"
   },
   "show_notification": true
 }

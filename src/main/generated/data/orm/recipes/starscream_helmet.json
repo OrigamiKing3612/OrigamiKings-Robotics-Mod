@@ -3,10 +3,10 @@
   "category": "equipment",
   "key": {
     "C": {
-      "item": "orm:robot_starscream_chip"
+      "item": "orm:starscream_chip"
     },
     "D": {
-      "item": "minecraft:diamond_boots"
+      "item": "minecraft:diamond_helmet"
     },
     "E": {
       "item": "orm:energon"
@@ -24,7 +24,7 @@
     "TDT"
   ],
   "result": {
-    "item": "orm:robot_starscream_armor_boots"
+    "item": "orm:starscream_helmet"
   },
   "show_notification": true
 }

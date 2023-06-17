@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_diamond_block": {
+    "has_starscream_chip": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:diamond_block"
+              "orm:starscream_chip"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:robot_starscream_chip_from_diamond_block_chip_refining"
+        "recipe": "orm:starscream_chestplate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_diamond_block",
+      "has_starscream_chip",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:robot_starscream_chip_from_diamond_block_chip_refining"
+      "orm:starscream_chestplate"
     ]
   },
   "sends_telemetry_event": false

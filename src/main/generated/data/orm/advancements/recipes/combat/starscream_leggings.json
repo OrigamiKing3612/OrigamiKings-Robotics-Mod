@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_robot_starscream_chip": {
+    "has_starscream_chip": {
       "conditions": {
         "items": [
           {
             "items": [
-              "orm:robot_starscream_chip"
+              "orm:starscream_chip"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "orm:robot_starscream_armor_helmet"
+        "recipe": "orm:starscream_leggings"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_robot_starscream_chip",
+      "has_starscream_chip",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "orm:robot_starscream_armor_helmet"
+      "orm:starscream_leggings"
     ]
   },
   "sends_telemetry_event": false
