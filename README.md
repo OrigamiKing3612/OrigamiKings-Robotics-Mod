@@ -1,3 +1,4 @@
+![ORM_Banner](https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod/assets/115757805/73427454-be1f-4200-bec0-7258ab027659)
 # **OrigamiKings Robotics Mod**
 
 **The download is on [Modrinth](https://modrinth.com/mod/origamikings-robotics-armor-mod)**
