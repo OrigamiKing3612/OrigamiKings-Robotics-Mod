@@ -1,4 +1,4 @@
-package net.origamiking.mcmods.orm.client.renderer.entity;
+package net.origamiking.mcmods.orm.client.blocks.renderer.entity;
 
 import net.minecraft.util.Identifier;
 import net.origamiking.mcmods.orm.OrmMain;

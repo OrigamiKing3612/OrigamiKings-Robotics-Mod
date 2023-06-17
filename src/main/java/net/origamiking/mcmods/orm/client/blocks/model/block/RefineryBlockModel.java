@@ -1,4 +1,4 @@
-package net.origamiking.mcmods.orm.client.model.block;
+package net.origamiking.mcmods.orm.client.blocks.model.block;
 
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
