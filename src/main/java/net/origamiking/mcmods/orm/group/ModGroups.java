@@ -135,6 +135,10 @@ public class ModGroups {
                     entries.add(EnergonBlocks.ENERGON_ORE);
                     entries.add(EnergonBlocks.DEEPSLATE_ENERGON_ORE);
                     entries.add(EnergonBlocks.COMPACT_ENERGON_BLOCK);
+                    entries.add(EnergonItems.DARK_ENERGON);
+                    entries.add(EnergonBlocks.DARK_ENERGON_BLOCK);
+                    entries.add(EnergonBlocks.DARK_ENERGON_ORE);
+                    entries.add(EnergonBlocks.DEEPSLATE_DARK_ENERGON_ORE);
                     entries.add(Ore13Items.ORE_13);
                     entries.add(Ore13Blocks.ORE_13_BLOCK);
                     entries.add(Ore13Blocks.ORE_13_ORE);
