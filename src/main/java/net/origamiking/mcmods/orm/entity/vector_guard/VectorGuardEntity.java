@@ -20,7 +20,6 @@ public class VectorGuardEntity extends HostileEntity implements GeoEntity {
 
     public VectorGuardEntity(EntityType<? extends HostileEntity> type, World world) {
         super(type, world);
-        this.setHealth(20);
     }
 
     public static DefaultAttributeContainer.Builder setAttributes() {
@@ -52,6 +51,16 @@ public class VectorGuardEntity extends HostileEntity implements GeoEntity {
     public EntityGroup getGroup() {
         return ModEntityGroup.ORM_NONE;
     }
+
+//    @Override
+//    public ItemStack getProjectileType(ItemStack stack) {
+//        if (stack.getItem() instanceof RangedWeaponItem) {
+//            Predicate<ItemStack> predicate = ((RangedWeaponItem)stack.getItem()).getHeldProjectiles();
+//            ItemStack itemStack = RangedWeaponItem.getHeldProjectile(this, predicate);
+//            return itemStack.isEmpty() ? new ItemStack(Items.ARROW) : itemStack;
+//        }
+//        return ItemStack.EMPTY;
+//    }
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
