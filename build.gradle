@@ -114,25 +114,25 @@ publishing {
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
 	}
-	modrinth {
+}
+modrinth {
 //		debugMode = true
-		token = System.getenv("MODRINTH_TOKEN")
-		projectId = "${project_id}"
-		versionNumber = "${mod_version}"
-		versionType = "${version_type}"
-		uploadFile = remapJar // With Loom, this MUST be set to `remapJar`
-		gameVersions = ['1.20.1'] // Must be an array, even with only one version
-		dependencies {
-			// scope.type
-			// The scope can be `required`, `optional`, `incompatible`, or `embedded`
-			// The type can either be `project` or `version`
-			embedded.project "geckolib"
-			embedded.project "fabric-api"
-			embedded.project "origamikings-api"
+	token = System.getenv("MODRINTH_TOKEN")
+	projectId = "${project_id}"
+	versionNumber = "${mod_version}"
+	versionType = "${version_type}"
+	uploadFile = remapJar // With Loom, this MUST be set to `remapJar`
+	gameVersions = ['1.20.1'] // Must be an array, even with only one version
+	dependencies {
+		// scope.type
+		// The scope can be `required`, `optional`, `incompatible`, or `embedded`
+		// The type can either be `project` or `version`
+		embedded.project "geckolib"
+		embedded.project "fabric-api"
+		embedded.project "origamikings-api"
 
-		}
-		changelog = "1.1.0-1.20.1: The \"Should have been full release\" Version:\n" + "\n" +
-				"Updated the Addon downloader (There is one addon so far), add pirate speak language, fixed some addons and added the photon, reorganized groups, added a wiki command, added Dark Energon, and gave the armors their own armor Matrial!" + "\n" + "\n" +
-				"Please report any bugs [here](https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod/issues)"
 	}
+	changelog = "1.1.0-1.20.1: The \"Should have been full release\" Version:\n" + "\n" +
+			"Updated the Addon downloader (There is one addon so far), add pirate speak language, fixed some addons and added the photon, reorganized groups, added a wiki command, added Dark Energon, and gave the armors their own armor Matrial!" + "\n" + "\n" +
+			"Please report any bugs [here](https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod/issues)"
 }
