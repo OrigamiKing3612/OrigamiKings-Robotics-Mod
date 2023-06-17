@@ -8,6 +8,14 @@
     "orm:ore_13_ore",
     "orm:energon_deepslate_ore",
     "orm:ore_13_deepslate_ore",
-    "orm:compact_energon_block"
+    "orm:compact_energon_block",
+    "orm:energon_stairs",
+    "orm:energon_slab",
+    "orm:dark_energon_stairs",
+    "orm:dark_energon_slab",
+    "orm:ore_13_stairs",
+    "orm:ore_13_slab",
+    "orm:transformium_stairs",
+    "orm:transformium_slab"
   ]
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "orm:block/energon_slab"
+    },
+    "type=double": {
+      "model": "orm:block/energon_block"
+    },
+    "type=top": {
+      "model": "orm:block/energon_slab_top"
+    }
+  }
+}

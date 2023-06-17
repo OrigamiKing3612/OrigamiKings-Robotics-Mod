@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "orm:block/ore_13_slab"
+    },
+    "type=double": {
+      "model": "orm:block/ore_13_block"
+    },
+    "type=top": {
+      "model": "orm:block/ore_13_slab_top"
+    }
+  }
+}

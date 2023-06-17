@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "orm:dark_energon_block"
+  },
+  "result": "orm:dark_energon_stairs"
+}

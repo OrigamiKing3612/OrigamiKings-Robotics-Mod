@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "orm:block/transformium_slab"
+    },
+    "type=double": {
+      "model": "orm:block/transformium_block"
+    },
+    "type=top": {
+      "model": "orm:block/transformium_slab_top"
+    }
+  }
+}

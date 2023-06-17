@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "orm:block/energon_block",
+    "side": "orm:block/energon_block",
+    "top": "orm:block/energon_block"
+  }
+}
