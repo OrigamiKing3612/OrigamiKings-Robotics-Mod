@@ -10,7 +10,7 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.origamiking.mcmods.orm.client.armor.renderer.robot_starscream.RobotStarscreamArmorRenderer;
+import net.origamiking.mcmods.orm.client.armor.renderer.starscream.StarscreamArmorRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
 import software.bernie.geckolib.constant.DataTickets;
@@ -39,12 +39,12 @@ public final class StarscreamArmorItem extends ArmorItem implements GeoItem {
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
             //private GeoArmorRenderer<?> renderer;
-            private RobotStarscreamArmorRenderer renderer;
+            private StarscreamArmorRenderer renderer;
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
                 if(this.renderer == null)
-                    this.renderer = new RobotStarscreamArmorRenderer();
+                    this.renderer = new StarscreamArmorRenderer();
                     //this.renderer = new GeckoArmorRenderer();
 
                 // This prepares our GeoArmorRenderer for the current render frame.

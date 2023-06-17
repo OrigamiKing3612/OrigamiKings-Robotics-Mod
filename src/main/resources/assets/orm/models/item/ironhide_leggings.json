@@ -1,6 +1,6 @@
 {
   "parent":"item/generated",
   "textures":{
-    "layer0":"orm:item/ironhide_leggings"
+    "layer0":"orm:item/ironhide/ironhide_leggings"
   }
 }

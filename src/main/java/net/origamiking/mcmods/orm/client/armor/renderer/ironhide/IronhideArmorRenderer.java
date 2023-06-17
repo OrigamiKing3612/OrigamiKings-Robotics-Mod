@@ -8,7 +8,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 public class IronhideArmorRenderer extends GeoArmorRenderer<IronhideArmorItem>{
         public IronhideArmorRenderer() {
-            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/ironhide")));
+            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/ironhide/ironhide")));
 
             //addRenderLayer(new AutoGlowingGeoLayer<>(this));
         }

@@ -1,6 +1,6 @@
 {
   "parent":"item/generated",
   "textures":{
-    "layer0":"orm:item/rodimus_prime_helmet"
+    "layer0":"orm:item/rodimus_prime/rodimus_prime_helmet"
   }
 }

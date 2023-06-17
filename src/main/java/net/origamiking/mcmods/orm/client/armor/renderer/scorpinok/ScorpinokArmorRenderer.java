@@ -8,7 +8,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 public class ScorpinokArmorRenderer extends GeoArmorRenderer<ScorpinokArmorItem>{
         public ScorpinokArmorRenderer() {
-            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/scorpinok")));
+            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/scorpinok/scorpinok")));
 
             //addRenderLayer(new AutoGlowingGeoLayer<>(this));
         }

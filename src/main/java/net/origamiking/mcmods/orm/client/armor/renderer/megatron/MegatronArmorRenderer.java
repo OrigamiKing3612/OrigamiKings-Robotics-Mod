@@ -8,7 +8,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 public class MegatronArmorRenderer extends GeoArmorRenderer<MegatronArmorItem>{
         public MegatronArmorRenderer() {
-            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/megatron")));
+            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/megatron/megatron")));
 
             //addRenderLayer(new AutoGlowingGeoLayer<>(this));
         }

@@ -8,7 +8,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 public class GalvatronArmorRenderer extends GeoArmorRenderer<IronhideArmorItem>{
         public GalvatronArmorRenderer() {
-            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/galvatron")));
+            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/galvatron/galvatron")));
 
             //addRenderLayer(new AutoGlowingGeoLayer<>(this));
         }

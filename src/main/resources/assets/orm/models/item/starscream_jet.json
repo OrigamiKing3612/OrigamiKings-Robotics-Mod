@@ -1,6 +1,6 @@
 {
   "parent":"item/generated",
   "textures":{
-    "layer0":"orm:item/robot_starscream_helmet"
+    "layer0":"orm:item/starscream/starscream_jet"
   }
 }

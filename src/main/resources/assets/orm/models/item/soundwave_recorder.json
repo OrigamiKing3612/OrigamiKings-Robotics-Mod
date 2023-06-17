@@ -1,6 +1,6 @@
 {
   "parent":"item/generated",
   "textures":{
-    "layer0":"orm:item/soundwave_recorder"
+    "layer0":"orm:item/soundwave/soundwave_recorder"
   }
 }

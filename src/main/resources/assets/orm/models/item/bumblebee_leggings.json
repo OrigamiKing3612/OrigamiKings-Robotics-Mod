@@ -1,6 +1,6 @@
 {
   "parent":"item/generated",
   "textures":{
-    "layer0":"orm:item/bumblebee_leggings"
+    "layer0":"orm:item/bumblebee/bumblebee_leggings"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent":"item/generated",
   "textures":{
-    "layer0":"orm:item/thunder_cracker_helmet"
+    "layer0":"orm:item/thunder_cracker/thunder_cracker_helmet"
   }
 }

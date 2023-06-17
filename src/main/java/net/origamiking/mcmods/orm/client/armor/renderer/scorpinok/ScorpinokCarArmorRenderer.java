@@ -6,9 +6,9 @@ import net.origamiking.mcmods.orm.armor.scorpinok.ScorpinokCarArmorItem;
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
-public class Scorpinok_CarArmorRenderer extends GeoArmorRenderer<ScorpinokCarArmorItem> {
-    public Scorpinok_CarArmorRenderer() {
-        super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/scorpinok_car")));
+public class ScorpinokCarArmorRenderer extends GeoArmorRenderer<ScorpinokCarArmorItem> {
+    public ScorpinokCarArmorRenderer() {
+        super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/scorpinok/scorpinok_car")));
 
         //addRenderLayer(new AutoGlowingGeoLayer<>(this));
     }

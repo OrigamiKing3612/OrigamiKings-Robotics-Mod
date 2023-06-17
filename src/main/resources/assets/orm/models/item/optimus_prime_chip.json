@@ -1,6 +1,6 @@
 {
   "parent":"item/generated",
   "textures":{
-    "layer0":"orm:item/chips/optimus_prime_chip"
+    "layer0":"orm:item/chips/optimus_prime/optimus_prime_chip"
   }
 }

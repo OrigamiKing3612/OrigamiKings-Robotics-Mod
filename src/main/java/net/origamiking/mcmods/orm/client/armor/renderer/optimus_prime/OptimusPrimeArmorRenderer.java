@@ -8,7 +8,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 public class OptimusPrimeArmorRenderer extends GeoArmorRenderer<StarscreamArmorItem>{
         public OptimusPrimeArmorRenderer() {
-            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/optimus_prime")));
+            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/optimus_prime/optimus_prime")));
 
             //addRenderLayer(new AutoGlowingGeoLayer<>(this));
         }

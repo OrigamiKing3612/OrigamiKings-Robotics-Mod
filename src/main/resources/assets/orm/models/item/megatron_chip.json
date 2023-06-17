@@ -1,6 +1,6 @@
 {
   "parent":"item/generated",
   "textures":{
-    "layer0":"orm:item/chips/megatron_chip"
+    "layer0":"orm:item/chips/megatron/megatron_chip"
   }
 }

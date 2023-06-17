@@ -8,7 +8,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 public class BumblebeeArmorRenderer extends GeoArmorRenderer<BumblebeeArmorItem>{
         public BumblebeeArmorRenderer() {
-            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/bumblebee")));
+            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/bumblebee/bumblebee")));
 
             //addRenderLayer(new AutoGlowingGeoLayer<>(this));
         }

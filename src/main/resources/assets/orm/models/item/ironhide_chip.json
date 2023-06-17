@@ -1,6 +1,6 @@
 {
   "parent":"item/generated",
   "textures":{
-    "layer0":"orm:item/chips/ironhide_chip"
+    "layer0":"orm:item/chips/ironhide/ironhide_chip"
   }
 }

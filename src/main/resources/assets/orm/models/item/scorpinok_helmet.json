@@ -1,6 +1,6 @@
 {
   "parent":"item/generated",
   "textures":{
-    "layer0":"orm:item/scorpinok_helmet"
+    "layer0":"orm:item/scorpinok/scorpinok_helmet"
   }
 }

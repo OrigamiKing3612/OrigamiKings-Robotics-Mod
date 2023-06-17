@@ -1,6 +1,6 @@
 {
   "parent":"item/generated",
   "textures":{
-    "layer0":"orm:item/chips/galvatron_chip"
+    "layer0":"orm:item/chips/galvatron/galvatron_chip"
   }
 }

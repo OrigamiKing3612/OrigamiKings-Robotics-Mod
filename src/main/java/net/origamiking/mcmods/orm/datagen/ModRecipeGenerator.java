@@ -31,7 +31,7 @@ import net.origamiking.mcmods.orm.items.chips.galvatron.GalvatronChip;
 import net.origamiking.mcmods.orm.items.chips.ironhide.IronhideChip;
 import net.origamiking.mcmods.orm.items.chips.megatron.MegatronChip;
 import net.origamiking.mcmods.orm.items.chips.optimus_prime.OptimusPrimeChip;
-import net.origamiking.mcmods.orm.items.chips.robot_starscream.StarsceamChip;
+import net.origamiking.mcmods.orm.items.chips.starscream.StarscreamChip;
 import net.origamiking.mcmods.orm.items.chips.rodimus_prime.RodimusPrimeChip;
 import net.origamiking.mcmods.orm.items.chips.scorpinok.ScorpinokChip;
 import net.origamiking.mcmods.orm.items.chips.skystrike.SkystrikeChip;
@@ -132,10 +132,10 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerTransformerCar(exporter, Soundwave.RECORDER, Soundwave.HELMET, Soundwave.CHESTPLATE, Soundwave.LEGGINGS, Soundwave.BOOTS);
 
 
-        offerTransformerHelmet(exporter, Starscream.HELMET, StarsceamChip.CHIP);
-        offerTransformerChestplate(exporter, Starscream.CHESTPLATE, StarsceamChip.CHIP);
-        offerTransformerLeggings(exporter, Starscream.LEGGINGS, StarsceamChip.CHIP);
-        offerTransformerBoots(exporter, Starscream.BOOTS, StarsceamChip.CHIP);
+        offerTransformerHelmet(exporter, Starscream.HELMET, StarscreamChip.CHIP);
+        offerTransformerChestplate(exporter, Starscream.CHESTPLATE, StarscreamChip.CHIP);
+        offerTransformerLeggings(exporter, Starscream.LEGGINGS, StarscreamChip.CHIP);
+        offerTransformerBoots(exporter, Starscream.BOOTS, StarscreamChip.CHIP);
         offerTransformerCar(exporter, Starscream.JET, Starscream.HELMET, Starscream.CHESTPLATE, Starscream.LEGGINGS, Starscream.BOOTS);
 
 
@@ -159,7 +159,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerChipRefiningRecipe(exporter, RecipeCategory.MISC, IronhideChip.CHIP);
         offerChipRefiningRecipe(exporter, RecipeCategory.MISC, MegatronChip.CHIP);
         offerChipRefiningRecipe(exporter, RecipeCategory.MISC, OptimusPrimeChip.CHIP);
-        offerChipRefiningRecipe(exporter, RecipeCategory.MISC, StarsceamChip.CHIP);
+        offerChipRefiningRecipe(exporter, RecipeCategory.MISC, StarscreamChip.CHIP);
         offerChipRefiningRecipe(exporter, RecipeCategory.MISC, RodimusPrimeChip.CHIP);
         offerChipRefiningRecipe(exporter, RecipeCategory.MISC, ScorpinokChip.CHIP);
         offerChipRefiningRecipe(exporter, RecipeCategory.MISC, SkystrikeChip.CHIP);

@@ -1,6 +1,6 @@
 {
   "parent":"item/generated",
   "textures":{
-    "layer0":"orm:item/ironhide_boots"
+    "layer0":"orm:item/ironhide/ironhide_boots"
   }
 }

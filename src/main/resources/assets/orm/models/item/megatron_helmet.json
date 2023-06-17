@@ -1,6 +1,6 @@
 {
   "parent":"item/generated",
   "textures":{
-    "layer0":"orm:item/megatron_helmet"
+    "layer0":"orm:item/megatron/megatron_helmet"
   }
 }

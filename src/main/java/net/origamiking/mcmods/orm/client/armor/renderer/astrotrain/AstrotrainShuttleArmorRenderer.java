@@ -8,7 +8,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 public class AstrotrainShuttleArmorRenderer extends GeoArmorRenderer<AstrotrainArmorItem>{
         public AstrotrainShuttleArmorRenderer() {
-            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/astrotrain_shuttle")));
+            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/astrotrain/astrotrain_shuttle")));
 
             //addRenderLayer(new AutoGlowingGeoLayer<>(this));
         }

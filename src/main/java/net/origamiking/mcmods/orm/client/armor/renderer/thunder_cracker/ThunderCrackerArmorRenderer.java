@@ -8,7 +8,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 public class ThunderCrackerArmorRenderer extends GeoArmorRenderer<ThunderCrackerArmorItem>{
         public ThunderCrackerArmorRenderer() {
-            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/thunder_cracker")));
+            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/thunder_cracker/thunder_cracker")));
 
             //addRenderLayer(new AutoGlowingGeoLayer<>(this));
         }

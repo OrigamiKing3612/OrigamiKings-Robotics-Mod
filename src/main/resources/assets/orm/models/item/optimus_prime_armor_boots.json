@@ -1,6 +1,6 @@
 {
   "parent":"item/generated",
   "textures":{
-    "layer0":"orm:item/optimus_prime_boots"
+    "layer0":"orm:item/optimus_prime/optimus_prime_boots"
   }
 }

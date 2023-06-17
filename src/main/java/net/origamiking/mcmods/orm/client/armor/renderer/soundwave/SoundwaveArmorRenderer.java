@@ -8,7 +8,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 public class SoundwaveArmorRenderer extends GeoArmorRenderer<SoundwaveArmorItem>{
         public SoundwaveArmorRenderer() {
-            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/soundwave")));
+            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/soundwave/soundwave")));
 
             //addRenderLayer(new AutoGlowingGeoLayer<>(this));
         }

@@ -8,7 +8,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 public class RodimusPrimeCarArmorRenderer extends GeoArmorRenderer<RodimusPrimeCarArmorItem>{
         public RodimusPrimeCarArmorRenderer() {
-            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/rodimus_prime_car")));
+            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/rodimus_prime/rodimus_prime_car")));
 
             //addRenderLayer(new AutoGlowingGeoLayer<>(this));
         }
