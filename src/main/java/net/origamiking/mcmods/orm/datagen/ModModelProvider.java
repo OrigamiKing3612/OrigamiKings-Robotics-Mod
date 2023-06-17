@@ -22,6 +22,9 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(EnergonBlocks.ENERGON_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(EnergonBlocks.ENERGON_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(EnergonBlocks.DEEPSLATE_ENERGON_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(EnergonBlocks.DARK_ENERGON_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(EnergonBlocks.DARK_ENERGON_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(EnergonBlocks.DARK_DEEPSLATE_ENERGON_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(Ore13Blocks.ORE_13_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(Ore13Blocks.ORE_13_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(Ore13Blocks.DEEPSLATE_ORE_13_ORE);
@@ -32,6 +35,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(EnergonItems.ENERGON, Models.GENERATED);
+        itemModelGenerator.register(EnergonItems.DARK_ENERGON, Models.GENERATED);
         itemModelGenerator.register(Ore13Items.ORE_13, Models.GENERATED);
         itemModelGenerator.register(TransformiumItems.TRANSFORMIUM, Models.GENERATED);
     }

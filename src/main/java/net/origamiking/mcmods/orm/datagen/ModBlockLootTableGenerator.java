@@ -27,5 +27,6 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(RegisterChipRefineryBlock.CHIP_REFINERY_BLOCK);
         addDrop(RegisterCompacterBlock.COMPACTER_BLOCK);
         addDrop(RegisterRefineryBlock.REFINERY_BLOCK);
+        addDrop(EnergonBlocks.DARK_ENERGON_BLOCK);
     }
 }
