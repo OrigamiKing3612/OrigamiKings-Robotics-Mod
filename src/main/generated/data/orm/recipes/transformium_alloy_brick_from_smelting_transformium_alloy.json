@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "transformium_alloy_smelting",
+  "ingredient": {
+    "item": "orm:transformium_alloy"
+  },
+  "result": "orm:transformium_alloy_brick"
+}

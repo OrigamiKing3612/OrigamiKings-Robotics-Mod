@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "orm:block/transformium_alloy_block"
+    }
+  }
+}

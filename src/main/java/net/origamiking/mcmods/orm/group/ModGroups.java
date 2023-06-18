@@ -28,6 +28,7 @@ import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
 import net.origamiking.mcmods.orm.blocks.refinery.RegisterRefineryBlock;
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
+import net.origamiking.mcmods.orm.blocks.transformium_alloy.TransformiumAlloyBlocks;
 import net.origamiking.mcmods.orm.items.chips.astrotrain.AstrotrainChip;
 import net.origamiking.mcmods.orm.items.chips.bumblebee.BumblebeeChip;
 import net.origamiking.mcmods.orm.items.chips.galvatron.GalvatronChip;
@@ -46,6 +47,7 @@ import net.origamiking.mcmods.orm.items.ore13.Ore13Items;
 import net.origamiking.mcmods.orm.items.random.RandomItems;
 import net.origamiking.mcmods.orm.items.spawnegg.ModSpawnEggs;
 import net.origamiking.mcmods.orm.items.transformium.TransformiumItems;
+import net.origamiking.mcmods.orm.items.transformium_alloy.TransformiumAlloyItems;
 
 public class ModGroups {
     public static final RegistryKey<ItemGroup> ORM_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(OrmMain.MOD_ID, "orm_group"));
@@ -139,6 +141,8 @@ public class ModGroups {
                     entries.add(EnergonItems.DARK_ENERGON);
                     entries.add(Ore13Items.ORE_13);
                     entries.add(TransformiumItems.TRANSFORMIUM);
+                    entries.add(TransformiumAlloyItems.TRANSFORMIUM_ALLOY);
+                    entries.add(TransformiumAlloyItems.TRANSFORMIUM_ALLOY_BRICK);
                     entries.add(RandomItems.SPARK);
                     entries.add(RandomItems.ENERGY_CONDUCTOR);
                     entries.add(ModSpawnEggs.VECTOR_GUARD_SPAWN_EGG);
@@ -159,6 +163,12 @@ public class ModGroups {
                     entries.add(EnergonBlocks.DARK_ENERGON_SLAB);
                     entries.add(EnergonBlocks.DARK_ENERGON_ORE);
                     entries.add(EnergonBlocks.DEEPSLATE_DARK_ENERGON_ORE);
+                    entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BLOCK);
+                    entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_STAIRS);
+                    entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_SLAB);
+                    entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_BLOCK);
+                    entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_STAIRS);
+                    entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_SLAB);
                     entries.add(Ore13Blocks.ORE_13_ORE);
                     entries.add(Ore13Blocks.DEEPSLATE_ORE_13_ORE);
                     entries.add(EnergonBlocks.COMPACT_ENERGON_BLOCK);

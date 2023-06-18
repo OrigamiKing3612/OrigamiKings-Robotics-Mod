@@ -5,6 +5,7 @@ import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
 import net.origamiking.mcmods.orm.blocks.refinery.RegisterRefineryBlock;
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
+import net.origamiking.mcmods.orm.blocks.transformium_alloy.TransformiumAlloyBlocks;
 
 public class ModBlocks {
     public static void register() {
@@ -13,5 +14,6 @@ public class ModBlocks {
         TransformiumBlocks.get();
         RegisterRefineryBlock.get();
         RegisterChipRefineryBlock.get();
+        TransformiumAlloyBlocks.get();
     }
 }

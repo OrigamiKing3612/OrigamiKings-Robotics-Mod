@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "orm:transformium_alloy_bricks_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_transformium_alloy_brick": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:transformium_alloy_brick"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_transformium_alloy_brick",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "orm:transformium_alloy_bricks_block"
+    ]
+  },
+  "sends_telemetry_event": false
+}

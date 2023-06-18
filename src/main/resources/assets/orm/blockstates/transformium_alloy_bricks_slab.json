@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "orm:block/transformium_alloy_bricks_slab"
+    },
+    "type=double": {
+      "model": "orm:block/transformium_alloy_bricks_block"
+    },
+    "type=top": {
+      "model": "orm:block/transformium_alloy_bricks_slab_top"
+    }
+  }
+}
