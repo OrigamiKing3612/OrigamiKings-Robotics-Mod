@@ -1,0 +1,24 @@
+{
+  "temperature": 0.1,
+  "downfall": 0.4,
+  "has_precipitation": false,
+  "effects": {
+    "sky_color": 0,
+    "fog_color": 9605778,
+    "water_color": 0,
+    "water_fog_color": 0
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "orm:vector_guard",
+        "weight": 0,
+        "minCount": 10,
+        "maxCount": 20
+      }
+    ]
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": []
+}
