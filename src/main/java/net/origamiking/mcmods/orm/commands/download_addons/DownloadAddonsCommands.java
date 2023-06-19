@@ -35,7 +35,7 @@ public class DownloadAddonsCommands {
 
     @NotNull
     private static JSONObject getJsonObject() throws IOException {
-        String urlString = "https://wiki.origamiking.net/orm/addons.json";
+        String urlString = "https://wiki.origamiking.net/orm/1.20.1/addons.json";
         URL url = new URL(urlString);
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
