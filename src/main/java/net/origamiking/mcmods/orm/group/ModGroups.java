@@ -3,10 +3,6 @@ package net.origamiking.mcmods.orm.group;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.origamiking.mcmods.orm.OrmMain;
@@ -48,24 +44,11 @@ import net.origamiking.mcmods.orm.items.spawnegg.ModSpawnEggs;
 import net.origamiking.mcmods.orm.items.transformium.TransformiumItems;
 
 public class ModGroups {
-    public static final RegistryKey<ItemGroup> ORM_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(OrmMain.MOD_ID, "orm_group"));
-    public static final RegistryKey<ItemGroup> ORM_STUFF = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(OrmMain.MOD_ID, "orm_stuff"));
-    public static final RegistryKey<ItemGroup> ORM_ADDONS = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(OrmMain.MOD_ID, "orm_addons"));
-    public static final RegistryKey<ItemGroup> ORM_CHIPS = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(OrmMain.MOD_ID, "orm_chips"));
-
-    public static void register() {
-        armor();
-        stuff();
-        addons();
-        chips();
-    }
-
-    public static void armor() {
-        OrmMain.LOGGER.info("Registering Groups");
-        Registry.register(Registries.ITEM_GROUP, ORM_GROUP, FabricItemGroup.builder()
-                .displayName(Text.translatable("group.orm.armor"))
-                .icon(() -> new ItemStack(OptimusPrime.HELMET))
-                .entries((context, entries) -> {
+    public static void register() {}
+    private static final ItemGroup ORM_GROUP = FabricItemGroup.builder(new Identifier(OrmMain.MOD_ID, "orm_group"))
+            .displayName(Text.translatable("group.orm.armor"))
+            .icon(() -> new ItemStack(OptimusPrime.HELMET))
+            .entries((context, entries) -> {
                     entries.add(OptimusPrime.HELMET);
                     entries.add(OptimusPrime.CHESTPLATE);
                     entries.add(OptimusPrime.LEGGINGS);
@@ -127,14 +110,12 @@ public class ModGroups {
                     entries.add(Scorpinok.LEGGINGS);
                     entries.add(Scorpinok.BOOTS);
                     entries.add(Scorpinok.CAR);
-                }).build());
-    }
+                }).build();
 
-    public static void stuff() {
-        Registry.register(Registries.ITEM_GROUP, ORM_STUFF, FabricItemGroup.builder()
-                .displayName(Text.translatable("group.orm.stuff"))
-                .icon(() -> new ItemStack(EnergonItems.ENERGON))
-                .entries((context, entries) -> {
+    private static final ItemGroup ORM_STUFF = FabricItemGroup.builder(new Identifier(OrmMain.MOD_ID, "orm_stuff"))
+            .displayName(Text.translatable("group.orm.stuff"))
+            .icon(() -> new ItemStack(EnergonBlocks.ENERGON_BLOCK))
+            .entries((context, entries) -> {
                     entries.add(EnergonItems.ENERGON);
                     entries.add(EnergonItems.DARK_ENERGON);
                     entries.add(Ore13Items.ORE_13);
@@ -165,28 +146,24 @@ public class ModGroups {
                     entries.add(RegisterRefineryBlock.REFINERY_BLOCK);
                     entries.add(RegisterCompacterBlock.COMPACTER_BLOCK);
                     entries.add(RegisterChipRefineryBlock.CHIP_REFINERY_BLOCK);
-                }).build());
-    }
+                }).build();
 
-    public static void addons() {
-        Registry.register(Registries.ITEM_GROUP, ORM_ADDONS, FabricItemGroup.builder()
-                .displayName(Text.translatable("group.orm.addons"))
-                .icon(() -> new ItemStack(ItemRegistry.OPTIMUS_PRIMES_ION_CANNON))
-                .entries((context, entries) -> {
+    private static final ItemGroup ORM_ADDONS = FabricItemGroup.builder(new Identifier(OrmMain.MOD_ID, "orm_addons"))
+            .displayName(Text.translatable("group.orm.addons"))
+            .icon(() -> new ItemStack(ItemRegistry.OPTIMUS_PRIMES_ION_CANNON))
+            .entries((context, entries) -> {
                     entries.add(ItemRegistry.OPTIMUS_PRIMES_ION_CANNON);
                     entries.add(ItemRegistry.ENERGON_AXE);
                     entries.add(ItemRegistry.BLASTER);
                     entries.add(ItemRegistry.PULSE_RIFLE);
                     entries.add(ItemRegistry.SOUNDWAVE_SHOULDER_GUN);
                     entries.add(ItemRegistry.SOUNDWAVE_RAY_GUN);
-                }).build());
-    }
+                }).build();
 
-    public static void chips() {
-        Registry.register(Registries.ITEM_GROUP, ORM_CHIPS, FabricItemGroup.builder()
-                .displayName(Text.translatable("group.orm.chips"))
-                .icon(() -> new ItemStack(OptimusPrimeChip.CHIP))
-                .entries((context, entries) -> {
+    private static final ItemGroup ORM_CHIPS = FabricItemGroup.builder(new Identifier(OrmMain.MOD_ID, "orm_chips"))
+            .displayName(Text.translatable("group.orm.chips"))
+            .icon(() -> new ItemStack(OptimusPrimeChip.CHIP))
+            .entries((context, entries) -> {
                     entries.add(OptimusPrimeChip.CHIP);
                     entries.add(MegatronChip.CHIP);
                     entries.add(RodimusPrimeChip.CHIP);
@@ -200,6 +177,6 @@ public class ModGroups {
                     entries.add(ThunderCrackerChip.CHIP);
                     entries.add(ScorpinokChip.CHIP);
 
-                }).build());
-    }
+                }).build();
+
 }

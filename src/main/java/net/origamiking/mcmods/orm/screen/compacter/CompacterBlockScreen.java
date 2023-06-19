@@ -1,8 +1,8 @@
 package net.origamiking.mcmods.orm.screen.compacter;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
+import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
@@ -16,15 +16,15 @@ public class CompacterBlockScreen extends HandledScreen<CompacterBlockScreenHand
     }
 
     @Override
-    protected void drawBackground(DrawContext context, float delta, int mouseX, int mouseY) {
+    protected void drawBackground(MatrixStack matrices, float delta, int mouseX, int mouseY) {
 //        RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         RenderSystem.setShaderTexture(0, TEXTURE);
         int x = (width - backgroundWidth) / 2;
         int y = (height - backgroundHeight) / 2;
-        context.drawTexture(TEXTURE, x, y, 0, 0, backgroundWidth, backgroundHeight);
+        drawTexture(matrices, x, y, 0, 0, backgroundWidth, backgroundHeight);
 
-        renderProgressArrow(context, x, y);
+        renderProgressArrow(matrices, x, y);
     }
 
     @Override
@@ -33,16 +33,16 @@ public class CompacterBlockScreen extends HandledScreen<CompacterBlockScreenHand
         titleX = (backgroundWidth - textRenderer.getWidth(title)) / 2;
     }
 
-    private void renderProgressArrow(DrawContext context, int x, int y) {
+    private void renderProgressArrow(MatrixStack matrices, int x, int y) {
         if(handler.isCrafting()) {
-            context.drawTexture(TEXTURE, x + 105, y + 33, 176, 0, 8, handler.getScaledProgress());
+            drawTexture(matrices, x + 105, y + 33, 176, 0, 8, handler.getScaledProgress());
         }
     }
 
     @Override
-    public void render(DrawContext context, int mouseX, int mouseY, float delta) {
-        renderBackground(context);
-        super.render(context, mouseX, mouseY, delta);
-        drawMouseoverTooltip(context, mouseX, mouseY);
+    public void render(MatrixStack matrices, int mouseX, int mouseY, float delta) {
+        renderBackground(matrices);
+        super.render(matrices, mouseX, mouseY, delta);
+        drawMouseoverTooltip(matrices, mouseX, mouseY);
     }
 }

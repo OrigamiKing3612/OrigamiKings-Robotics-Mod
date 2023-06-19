@@ -17,7 +17,7 @@ import net.origamiking.mcmods.orm.blocks.chip_refinery.RegisterChipRefineryBlock
 
 public class ChipRefineryRecipe extends CuttingRecipe {
     public ChipRefineryRecipe(Identifier id, String group, Ingredient input, ItemStack output) {
-        super(new Type(), new ChipRefineryRecipe.Serializer(), id, group, input, output);
+        super(new Type(), new Serializer(), id, group, input, output);
     }
 
     public boolean matches(Inventory inventory, World world) {
@@ -30,7 +30,7 @@ public class ChipRefineryRecipe extends CuttingRecipe {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return ChipRefineryRecipe.Serializer.INSTANCE;
+        return Serializer.INSTANCE;
     }
 
     @Override
@@ -45,7 +45,7 @@ public class ChipRefineryRecipe extends CuttingRecipe {
     }
 
     public static class Serializer implements RecipeSerializer<ChipRefineryRecipe> {
-        public static final ChipRefineryRecipe.Serializer INSTANCE = new ChipRefineryRecipe.Serializer();
+        public static final Serializer INSTANCE = new Serializer();
         public static final String ID = "chip_refining";
 
         @Override

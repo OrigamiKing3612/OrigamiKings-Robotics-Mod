@@ -38,7 +38,7 @@ public class ChipRefineryScreenHandler extends ScreenHandler {
     long lastTakeTime;
     final Slot inputSlot;
     final Slot outputSlot;
-    public  List<ItemStack> ingredients;
+    public  List<PlayerEntity> ingredients;
     Runnable contentsChangedListener = () -> {};
     public final Inventory input = new SimpleInventory(1){
 
@@ -71,7 +71,7 @@ public class ChipRefineryScreenHandler extends ScreenHandler {
             @Override
             public void onTakeItem(PlayerEntity player, ItemStack stack) {
                 stack.onCraft(player.getWorld(), player, stack.getCount());
-                ChipRefineryScreenHandler.this.output.unlockLastRecipe(player, ingredients);
+                ChipRefineryScreenHandler.this.output.unlockLastRecipe(player);
                 ItemStack itemStack = ChipRefineryScreenHandler.this.inputSlot.takeStack(1);
                 if (!itemStack.isEmpty()) {
                     ChipRefineryScreenHandler.this.populateResult();

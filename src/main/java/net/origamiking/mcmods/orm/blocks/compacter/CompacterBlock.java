@@ -26,7 +26,7 @@ public class CompacterBlock extends BlockWithEntity implements BlockEntityProvid
     public static final DirectionProperty FACING = Properties.FACING;
 
     public CompacterBlock() {
-        super(Settings.create().nonOpaque().requiresTool().strength(3.5f).sounds(BlockSoundGroup.METAL));
+        super(Settings.of(Material.STONE).nonOpaque().requiresTool().strength(3.5f).sounds(BlockSoundGroup.METAL));
     }
 
     private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 10, 16);
@@ -64,12 +64,12 @@ public class CompacterBlock extends BlockWithEntity implements BlockEntityProvid
 
     @Override
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
-        if (state.getBlock() != newState.getBlock()) {
+        if (!state.isOf(newState.getBlock())) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof CompacterBlockEntity) {
-                ItemScatterer.spawn(world, pos, (CompacterBlockEntity) blockEntity);
-                world.updateComparators(pos, this);
+                ItemScatterer.spawn(world, pos, (CompacterBlockEntity)blockEntity);
             }
+
             super.onStateReplaced(state, world, pos, newState, moved);
         }
     }
