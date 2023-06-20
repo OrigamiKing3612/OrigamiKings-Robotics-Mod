@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:transformium_slab_from_transformium_block_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

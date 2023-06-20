@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:dark_energon_slab_from_dark_energon_block_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

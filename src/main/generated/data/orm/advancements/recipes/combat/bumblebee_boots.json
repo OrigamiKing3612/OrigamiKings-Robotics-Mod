@@ -30,6 +30,5 @@
     "recipes": [
       "orm:bumblebee_boots"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

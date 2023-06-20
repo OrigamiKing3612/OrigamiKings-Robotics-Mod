@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:ore_13_slab_from_ore_13_block_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

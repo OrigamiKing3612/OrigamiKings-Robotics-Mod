@@ -30,6 +30,5 @@
     "recipes": [
       "orm:thunder_cracker_leggings"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

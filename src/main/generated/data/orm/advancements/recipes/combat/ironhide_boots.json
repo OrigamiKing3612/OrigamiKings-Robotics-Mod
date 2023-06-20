@@ -30,6 +30,5 @@
     "recipes": [
       "orm:ironhide_boots"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

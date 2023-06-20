@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:energon_slab_from_energon_block_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

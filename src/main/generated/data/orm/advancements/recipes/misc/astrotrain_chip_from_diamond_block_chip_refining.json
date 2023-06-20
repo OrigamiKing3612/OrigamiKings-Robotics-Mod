@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:astrotrain_chip_from_diamond_block_chip_refining"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

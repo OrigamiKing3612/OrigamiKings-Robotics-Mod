@@ -69,6 +69,5 @@
     "recipes": [
       "orm:starscream_jet"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "E": {
+      "item": "orm:energon"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "O": {
+      "item": "orm:ore_13"
+    },
+    "T": {
+      "item": "orm:transformium"
+    }
+  },
+  "pattern": [
+    "TT ",
+    "IEO",
+    "TTT"
+  ],
+  "result": {
+    "item": "orm:optimus_primes_ion_cannon"
+  },
+  "show_notification": true
+}

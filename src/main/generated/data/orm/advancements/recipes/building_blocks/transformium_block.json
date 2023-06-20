@@ -30,6 +30,5 @@
     "recipes": [
       "orm:transformium_block"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

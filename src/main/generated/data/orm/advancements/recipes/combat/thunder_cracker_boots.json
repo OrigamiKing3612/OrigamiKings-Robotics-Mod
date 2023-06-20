@@ -30,6 +30,5 @@
     "recipes": [
       "orm:thunder_cracker_boots"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

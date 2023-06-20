@@ -30,6 +30,5 @@
     "recipes": [
       "orm:energon_slab"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

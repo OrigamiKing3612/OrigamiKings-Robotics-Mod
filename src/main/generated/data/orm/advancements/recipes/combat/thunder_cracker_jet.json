@@ -69,6 +69,5 @@
     "recipes": [
       "orm:thunder_cracker_jet"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

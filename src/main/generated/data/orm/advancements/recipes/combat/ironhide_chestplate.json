@@ -30,6 +30,5 @@
     "recipes": [
       "orm:ironhide_chestplate"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

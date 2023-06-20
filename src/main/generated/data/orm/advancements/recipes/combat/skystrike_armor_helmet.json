@@ -30,6 +30,5 @@
     "recipes": [
       "orm:skystrike_armor_helmet"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

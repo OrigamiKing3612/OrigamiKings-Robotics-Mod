@@ -30,6 +30,5 @@
     "recipes": [
       "orm:galvatron_boots"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

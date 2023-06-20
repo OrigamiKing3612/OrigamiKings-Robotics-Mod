@@ -30,6 +30,5 @@
     "recipes": [
       "orm:starscream_boots"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

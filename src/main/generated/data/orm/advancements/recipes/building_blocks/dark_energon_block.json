@@ -30,6 +30,5 @@
     "recipes": [
       "orm:dark_energon_block"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

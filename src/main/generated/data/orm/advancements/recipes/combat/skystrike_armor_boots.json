@@ -30,6 +30,5 @@
     "recipes": [
       "orm:skystrike_armor_boots"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

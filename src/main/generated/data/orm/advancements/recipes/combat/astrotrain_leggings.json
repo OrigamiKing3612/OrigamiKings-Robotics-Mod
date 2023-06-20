@@ -30,6 +30,5 @@
     "recipes": [
       "orm:astrotrain_leggings"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }
