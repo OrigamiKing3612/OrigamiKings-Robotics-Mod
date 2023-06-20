@@ -124,7 +124,7 @@ modrinth {
 		embedded.project "origamikings-api"
 
 	}
-	changelog = "1.1.1-1.19.4: The \"Should have been full release\" Version:\n" + "\n" +
+	changelog = "1.0.1-1.19.4: The \"Should have been full release\" Version:\n" + "\n" +
 			"Added missing recipes" + "\n" + "\n" +
 			"Please report any bugs [here](https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod/issues)"
 }
