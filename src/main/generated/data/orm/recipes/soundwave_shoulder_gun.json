@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": {
+      "item": "minecraft:blue_concrete"
+    },
+    "O": {
+      "item": "orm:ore_13"
+    },
+    "T": {
+      "item": "orm:transformium"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BOT",
+    "BBB"
+  ],
+  "result": {
+    "item": "orm:soundwave_shoulder_gun"
+  },
+  "show_notification": true
+}

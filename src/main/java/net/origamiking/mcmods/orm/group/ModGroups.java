@@ -61,7 +61,6 @@ public class ModGroups {
     }
 
     public static void armor() {
-        OrmMain.LOGGER.info("Registering Groups");
         Registry.register(Registries.ITEM_GROUP, ORM_GROUP, FabricItemGroup.builder()
                 .displayName(Text.translatable("group.orm.armor"))
                 .icon(() -> new ItemStack(OptimusPrime.HELMET))

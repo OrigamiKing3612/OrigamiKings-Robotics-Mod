@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": {
+      "item": "minecraft:blue_concrete"
+    },
+    "D": {
+      "item": "orm:dark_energon"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BDI",
+    "BBB"
+  ],
+  "result": {
+    "item": "orm:soundwave_ray_gun"
+  },
+  "show_notification": true
+}
