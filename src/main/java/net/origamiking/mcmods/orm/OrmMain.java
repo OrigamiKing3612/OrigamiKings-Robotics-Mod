@@ -17,7 +17,7 @@ import org.slf4j.LoggerFactory;
 
 public class OrmMain implements ModInitializer {
 	public static final String MOD_ID = "orm";
-	public static final String VERSION = "1.0.1-1.20.1";
+	public static final String VERSION = "1.1.1-1.20.1";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 	@Override
 	public void onInitialize() {
