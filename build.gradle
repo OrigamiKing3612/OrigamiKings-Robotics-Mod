@@ -74,7 +74,8 @@ dependencies {
 	modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
 	modLocalRuntime "dev.emi:emi-fabric:${emi_version}"
 
-	implementation 'org.json:json:20210307'
+	modImplementation 'org.json:json:20230227'
+	include 'org.json:json:20230227'
 
 }
 
@@ -132,7 +133,7 @@ modrinth {
 		embedded.project "origamikings-api"
 
 	}
-	changelog = "1.1.1-1.20.1: The \"Should have been full release\" Version:\n" + "\n" +
+	changelog = "1.1.2-1.20.1: The \"Should have been full release\" Version:\n" + "\n" +
 			"Addon missing recipes" + "\n" + "\n" +
 			"Please report any bugs [here](https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod/issues)"
 }
