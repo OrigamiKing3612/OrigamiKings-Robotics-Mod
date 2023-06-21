@@ -9,6 +9,6 @@ public class ModCommands {
     public static void register() {
         CommandsUtil.makeVersionCommand(OrmMain.MOD_ID, OrmMain.VERSION);
         CommandsUtil.linkReturnCommand(OrmMain.MOD_ID + "-wiki", "https://wiki.origamiking.net/orm/ORM.html", "To the ORM wiki!!");
-//        DownloadAddonsCommands.register();
+        DownloadAddonsCommands.register();
     }
 }
