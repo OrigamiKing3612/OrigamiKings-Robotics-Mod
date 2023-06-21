@@ -1,7 +1,7 @@
 plugins {
-	id 'fabric-loom' version '1.2-SNAPSHOT'
-	id 'maven-publish'
-	id "com.modrinth.minotaur" version "2.+"
+    id 'fabric-loom' version '1.2-SNAPSHOT'
+    id 'maven-publish'
+    id "com.modrinth.minotaur" version "2.+"
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -12,24 +12,16 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-	maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
 
-	maven {
-		name = "TerraformersMC"
-		url = "https://maven.terraformersmc.com/"
-	}
-
-	exclusiveContent {
-		forRepository {
-			maven {
-				name = "Modrinth"
-				url = "https://api.modrinth.com/maven"
-			}
-		}
-		filter {
-			includeGroup "maven.modrinth"
-		}
-	}
+    maven {
+        name = "TerraformersMC"
+        url = "https://maven.terraformersmc.com/"
+    }
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+    }
 }
 
 loom {
@@ -40,7 +32,7 @@ loom {
             vmArg "-Dfabric-api.datagen"
             vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
             vmArg "-Dfabric-api.datagen.modid=orm"
- 
+
             runDir "build/datagen"
         }
     }
@@ -56,84 +48,83 @@ sourceSets {
     }
 }
 dependencies {
-	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	// Fabric API. This is technically optional, but you probably want it anyway.
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	
-	// Uncomment the following line to enable the deprecated Fabric API modules. 
-	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
-	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
+    // Fabric API. This is technically optional, but you probably want it anyway.
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	modImplementation "software.bernie.geckolib:geckolib-fabric-1.20:${geckolib_version}"
+    // Uncomment the following line to enable the deprecated Fabric API modules.
+    // These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
+    // modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
 
-	modImplementation "maven.modrinth:P3sjMa3U:${origamikings_api}"
+    modImplementation "software.bernie.geckolib:geckolib-fabric-1.20:${geckolib_version}"
 
-	modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
-	modLocalRuntime "dev.emi:emi-fabric:${emi_version}"
+    modImplementation "maven.modrinth:P3sjMa3U:${origamikings_api}"
 
-	modImplementation 'org.json:json:20230227'
-	include 'org.json:json:20230227'
+    modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
+    modLocalRuntime "dev.emi:emi-fabric:${emi_version}"
+
+    implementation 'org.json:json:20230227'
 
 }
 
 processResources {
-	inputs.property "version", project.version
+    inputs.property "version", project.version
 
-	filesMatching("fabric.mod.json") {
-		expand "version": project.version
-	}
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.release = 17
+    it.options.release = 17
 }
 
 java {
-	withSourcesJar()
+    withSourcesJar()
 }
 
 jar {
-	from("LICENSE") {
-		rename { "${it}_${project.archivesBaseName}"}
-	}
+    from("LICENSE") {
+        rename { "${it}_${project.archivesBaseName}" }
+    }
 }
 
 publishing {
-	publications {
-		mavenJava(MavenPublication) {
-			from components.java
-		}
-	}
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
 
-	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-	repositories {
-		// Add repositories to publish to here.
-		// Notice: This block does NOT have the same function as the block in the top level.
-		// The repositories here will be used for publishing your artifact, not for
-		// retrieving dependencies.
-	}
+    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
+    repositories {
+        // Add repositories to publish to here.
+        // Notice: This block does NOT have the same function as the block in the top level.
+        // The repositories here will be used for publishing your artifact, not for
+        // retrieving dependencies.
+    }
 }
 modrinth {
 //		debugMode = true
-	token = System.getenv("MODRINTH_TOKEN")
-	projectId = "${project_id}"
-	versionNumber = "${mod_version}"
-	versionType = "${version_type}"
-	uploadFile = remapJar // With Loom, this MUST be set to `remapJar`
-	gameVersions = ['1.20.1'] // Must be an array, even with only one version
-	dependencies {
-		// scope.type
-		// The scope can be `required`, `optional`, `incompatible`, or `embedded`
-		// The type can either be `project` or `version`
-		embedded.project "geckolib"
-		embedded.project "fabric-api"
-		embedded.project "origamikings-api"
+    token = System.getenv("MODRINTH_TOKEN")
+    projectId = "${project_id}"
+    versionNumber = "${mod_version}"
+    versionType = "${version_type}"
+    uploadFile = remapJar // With Loom, this MUST be set to `remapJar`
+    gameVersions = ['1.20.1'] // Must be an array, even with only one version
+    dependencies {
+        // scope.type
+        // The scope can be `required`, `optional`, `incompatible`, or `embedded`
+        // The type can either be `project` or `version`
+        embedded.project "geckolib"
+        embedded.project "fabric-api"
+        embedded.project "origamikings-api"
 
-	}
-	changelog = "1.1.2-1.20.1: The \"Should have been full release\" Version:\n" + "\n" +
-			"Addon missing recipes" + "\n" + "\n" +
-			"Please report any bugs [here](https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod/issues)"
+    }
+    changelog = "1.1.2-1.20.1: The \"Should have been full release\" Version:\n" + "\n" +
+            "Addon missing recipes" + "\n" + "\n" +
+            "Please report any bugs [here](https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod/issues)"
 }
