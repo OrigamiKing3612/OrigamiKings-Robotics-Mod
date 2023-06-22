@@ -127,7 +127,7 @@ modrinth {
 		embedded.project "origamikings-api"
 
 	}
-	changelog = "1.1.0-1.20.1: The \"Cybertron Update\" Version:\n" + "\n" +
+	changelog = "1.2.0-1.20.1: The \"Cybertron Update\" Version:\n" + "\n" +
 			"Added Transformium Alloy and Transformium Alloy Bricks, added Cybertron Dimension" + "\n" + "\n" +
 			"Please report any bugs [here](https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod/issues)"
 }
