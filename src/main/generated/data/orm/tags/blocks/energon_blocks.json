@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "orm:energon_block",
+    "orm:energon_ore",
+    "orm:energon_deepslate_ore",
+    "orm:compact_energon_block",
+    "orm:dark_energon_block",
+    "orm:dark_energon_ore",
+    "orm:dark_energon_deepslate_ore",
+    "orm:energon_stairs",
+    "orm:energon_slab",
+    "orm:dark_energon_stairs",
+    "orm:dark_energon_slab"
+  ]
+}

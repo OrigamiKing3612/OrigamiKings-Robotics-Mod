@@ -150,7 +150,7 @@ public class ModGroups {
                     entries.add(EnergonBlocks.ENERGON_STAIRS);
                     entries.add(EnergonBlocks.ENERGON_SLAB);
                     entries.add(Ore13Blocks.ORE_13_BLOCK);
-                    entries.add(Ore13Blocks.ORE_13_STAIR);
+                    entries.add(Ore13Blocks.ORE_13_STAIRS);
                     entries.add(Ore13Blocks.ORE_13_SLAB);
                     entries.add(TransformiumBlocks.TRANSFORMIUM_BLOCK);
                     entries.add(TransformiumBlocks.TRANSFORMIUM_STAIRS);

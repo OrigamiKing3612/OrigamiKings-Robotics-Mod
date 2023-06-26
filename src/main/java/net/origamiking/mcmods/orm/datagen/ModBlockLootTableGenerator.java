@@ -35,6 +35,6 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(TransformiumBlocks.TRANSFORMIUM_SLAB);
         addDrop(TransformiumBlocks.TRANSFORMIUM_STAIRS);
         addDrop(Ore13Blocks.ORE_13_SLAB);
-        addDrop(Ore13Blocks.ORE_13_STAIR);
+        addDrop(Ore13Blocks.ORE_13_STAIRS);
     }
 }

@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "orm:transformium_block",
+    "orm:transformium_stairs",
+    "orm:transformium_alloy_slab",
+    "orm:transformium_alloy_block",
+    "orm:transformium_alloy_stairs",
+    "orm:transformium_alloy_slab",
+    "orm:transformium_alloy_bricks_block",
+    "orm:transformium_alloy_bricks_stairs",
+    "orm:transformium_alloy_bricks_slab"
+  ]
+}
