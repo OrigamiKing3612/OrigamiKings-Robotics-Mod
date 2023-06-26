@@ -1,7 +1,7 @@
 plugins {
-	id 'fabric-loom' version '1.2-SNAPSHOT'
-	id 'maven-publish'
-	id "com.modrinth.minotaur" version "2.+"
+    id 'fabric-loom' version '1.2-SNAPSHOT'
+    id 'maven-publish'
+    id "com.modrinth.minotaur" version "2.+"
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -15,6 +15,10 @@ repositories {
 	maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
 	maven { url 'https://maven.kyrptonaught.dev' }
 	maven { url 'https://dl.cloudsmith.io/public/origamiking3612/origamikings-api/maven/' }
+  maven {
+      name = "TerraformersMC"
+      url = "https://maven.terraformersmc.com/"
+  }
 }
 
 loom {
@@ -25,7 +29,7 @@ loom {
             vmArg "-Dfabric-api.datagen"
             vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
             vmArg "-Dfabric-api.datagen.modid=orm"
- 
+
             runDir "build/datagen"
         }
     }
@@ -41,22 +45,24 @@ sourceSets {
     }
 }
 dependencies {
-	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	// Fabric API. This is technically optional, but you probably want it anyway.
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	
-	// Uncomment the following line to enable the deprecated Fabric API modules. 
-	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
-	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
+    // Fabric API. This is technically optional, but you probably want it anyway.
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	modImplementation "software.bernie.geckolib:geckolib-fabric-1.20:${geckolib_version}"
+    // Uncomment the following line to enable the deprecated Fabric API modules.
+    // These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
+    // modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
 
-	modImplementation "net.origamiking.mcmods.oapi:Origamikings-API:${origamikings_api}"
+	  modImplementation "net.origamiking.mcmods.oapi:Origamikings-API:${origamikings_api}"
+    modImplementation "software.bernie.geckolib:geckolib-fabric-1.20:${geckolib_version}"
 
-	implementation 'org.json:json:20210307'
+    modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
+    modLocalRuntime "dev.emi:emi-fabric:${emi_version}"
+
+    implementation 'org.json:json:20230227' // To update JSON; change version, reload gradle, then overwrite the files in the src/main/java/org/json
 
 	modImplementation "net.kyrptonaught:customportalapi:${portal_api_version}"
 	include "net.kyrptonaught:customportalapi:${portal_api_version}"
@@ -64,25 +70,25 @@ dependencies {
 }
 
 processResources {
-	inputs.property "version", project.version
+    inputs.property "version", project.version
 
-	filesMatching("fabric.mod.json") {
-		expand "version": project.version
-	}
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.release = 17
+    it.options.release = 17
 }
 
 java {
-	withSourcesJar()
+    withSourcesJar()
 }
 
 jar {
-	from("LICENSE") {
-		rename { "${it}_${project.archivesBaseName}"}
-	}
+    from("LICENSE") {
+        rename { "${it}_${project.archivesBaseName}" }
+    }
 }
 
 publishing {

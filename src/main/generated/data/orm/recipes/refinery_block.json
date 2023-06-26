@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "O": {
+      "item": "orm:ore_13"
+    },
+    "S": {
+      "item": "minecraft:smooth_stone"
+    }
+  },
+  "pattern": [
+    "OIO",
+    "SSS"
+  ],
+  "result": {
+    "item": "orm:refinery_block"
+  },
+  "show_notification": true
+}
