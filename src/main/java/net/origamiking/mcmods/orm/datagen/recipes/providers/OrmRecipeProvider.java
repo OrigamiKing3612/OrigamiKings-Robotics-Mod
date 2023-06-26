@@ -76,4 +76,10 @@ public class OrmRecipeProvider {
                 .input('I', input)
                 .pattern("III");
     }
+    private static CraftingRecipeJsonBuilder createCommpress2x2(ItemConvertible output, Ingredient input) {
+        return ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 1).input('#', input).pattern("##").pattern("##");
+    }
+    public static void offer2x2Commpress(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible input) {
+        createCommpress2x2(output, Ingredient.ofItems(new ItemConvertible[]{input})).criterion(RecipeProvider.hasItem(input), RecipeProvider.conditionsFromItem(input)).offerTo(exporter);
+    }
 }
