@@ -12,13 +12,17 @@
     "monster": [
       {
         "type": "orm:vector_guard",
-        "weight": 0,
+        "weight": 10,
         "minCount": 10,
         "maxCount": 20
       }
     ]
   },
   "spawn_costs": {},
-  "carvers": {},
+  "carvers": {
+    "air": [
+      "minecraft:canyon"
+    ]
+  },
   "features": []
 }
