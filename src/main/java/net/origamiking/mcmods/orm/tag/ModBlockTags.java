@@ -10,6 +10,9 @@ public class ModBlockTags {
     public static final TagKey<Block> ENERGON_BLOCKS = ModBlockTags.of("energon_blocks");
     public static final TagKey<Block> ORE_13_BLOCKS = ModBlockTags.of("ore_13_blocks");
     public static final TagKey<Block> TRANSFORMIUM_BLOCKS = ModBlockTags.of("transformium_blocks");
+
+    public static final TagKey<Block> ENERGON_ORES = ModBlockTags.of("energon_ores");
+    public static final TagKey<Block> ORE_13_ORES = ModBlockTags.of("ore_13_ores");
     public static void get() {
 
     }

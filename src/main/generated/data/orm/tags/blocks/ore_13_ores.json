@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "orm:ore_13_ore",
+    "orm:ore_13_deepslate_ore"
+  ]
+}

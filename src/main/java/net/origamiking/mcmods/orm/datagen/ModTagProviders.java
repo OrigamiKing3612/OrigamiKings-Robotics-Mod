@@ -74,6 +74,8 @@ public class ModTagProviders {
                     Ore13Blocks.ORE_13_SLAB,
                     Ore13Blocks.ORE_13_STAIRS
             );
+            getOrCreateTagBuilder(ModBlockTags.ENERGON_ORES).add(EnergonBlocks.ENERGON_ORE, EnergonBlocks.DEEPSLATE_ENERGON_ORE, EnergonBlocks.DARK_ENERGON_ORE, EnergonBlocks.DEEPSLATE_DARK_ENERGON_ORE);
+            getOrCreateTagBuilder(ModBlockTags.ORE_13_ORES).add(Ore13Blocks.ORE_13_ORE, Ore13Blocks.DEEPSLATE_ORE_13_ORE);
         }
     }
 
