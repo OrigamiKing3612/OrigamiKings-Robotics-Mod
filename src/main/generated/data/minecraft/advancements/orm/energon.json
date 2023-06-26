@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:orm/welcome",
+  "criteria": {
+    "get_energon": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:energon"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.orm.energon.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "orm:energon"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.orm.energon.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_energon"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

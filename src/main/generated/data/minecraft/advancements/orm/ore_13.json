@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:orm/energon",
+  "criteria": {
+    "get_ore_13": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:ore_13"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.orm.ore_13.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "orm:ore_13"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.orm.ore_13.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_ore_13"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

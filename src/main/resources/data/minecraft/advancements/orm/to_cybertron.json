@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:orm/transformium",
+  "criteria": {
+    "to_cybertron": {
+      "conditions": {
+        "to": "orm:cybertron"
+      },
+      "trigger": "minecraft:changed_dimension"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.orm.to_cybertron.description"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "orm:compact_energon_block"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.orm.to_cybertron.title"
+    }
+  },
+  "requirements": [
+    [
+      "to_cybertron"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
