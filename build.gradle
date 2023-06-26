@@ -12,13 +12,13 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-	maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
-	maven { url 'https://maven.kyrptonaught.dev' }
-	maven { url 'https://dl.cloudsmith.io/public/origamiking3612/origamikings-api/maven/' }
-  maven {
-      name = "TerraformersMC"
-      url = "https://maven.terraformersmc.com/"
-  }
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+    maven { url 'https://maven.kyrptonaught.dev' }
+    maven { url 'https://dl.cloudsmith.io/public/origamiking3612/origamikings-api/maven/' }
+    maven {
+        name = "TerraformersMC"
+        url = "https://maven.terraformersmc.com/"
+    }
 }
 
 loom {
@@ -56,16 +56,17 @@ dependencies {
     // These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
     // modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
 
-	  modImplementation "net.origamiking.mcmods.oapi:Origamikings-API:${origamikings_api}"
+    modImplementation "net.origamiking.mcmods.oapi:Origamikings-API:${origamikings_api}"
     modImplementation "software.bernie.geckolib:geckolib-fabric-1.20:${geckolib_version}"
 
     modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
     modLocalRuntime "dev.emi:emi-fabric:${emi_version}"
 
-    implementation 'org.json:json:20230227' // To update JSON; change version, reload gradle, then overwrite the files in the src/main/java/org/json
+    implementation 'org.json:json:20230227'
+    // To update JSON; change version, reload gradle, then overwrite the files in the src/main/java/org/json
 
-	modImplementation "net.kyrptonaught:customportalapi:${portal_api_version}"
-	include "net.kyrptonaught:customportalapi:${portal_api_version}"
+    modImplementation "net.kyrptonaught:customportalapi:${portal_api_version}"
+    include "net.kyrptonaught:customportalapi:${portal_api_version}"
 
 }
 
@@ -92,41 +93,41 @@ jar {
 }
 
 publishing {
-	publications {
-		mavenJava(MavenPublication) {
-			from components.java
-		}
-	}
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
 
-	repositories {
-		maven {
-			name = "cloudsmith"
-			url = "https://maven.cloudsmith.io/origamiking3612/origamikings-robotics-mod/"
-			credentials {
-				username = System.getenv("CLOUDSMITH_USERNAME")
-				password = System.getenv("CLOUDSMITH_PASSWORD")
-			}
-		}
-	}
+    repositories {
+        maven {
+            name = "cloudsmith"
+            url = "https://maven.cloudsmith.io/origamiking3612/origamikings-robotics-mod/"
+            credentials {
+                username = System.getenv("CLOUDSMITH_USERNAME")
+                password = System.getenv("CLOUDSMITH_PASSWORD")
+            }
+        }
+    }
 }
 modrinth {
 //		debugMode = true
-	token = System.getenv("MODRINTH_TOKEN")
-	projectId = "${project_id}"
-	versionNumber = "${mod_version}"
-	versionType = "${version_type}"
-	uploadFile = remapJar // With Loom, this MUST be set to `remapJar`
-	gameVersions = ['1.20.1'] // Must be an array, even with only one version
-	dependencies {
-		// scope.type
-		// The scope can be `required`, `optional`, `incompatible`, or `embedded`
-		// The type can either be `project` or `version`
-		embedded.project "geckolib"
-		embedded.project "fabric-api"
-		embedded.project "origamikings-api"
+    token = System.getenv("MODRINTH_TOKEN")
+    projectId = "${project_id}"
+    versionNumber = "${mod_version}"
+    versionType = "${version_type}"
+    uploadFile = remapJar // With Loom, this MUST be set to `remapJar`
+    gameVersions = ['1.20.1'] // Must be an array, even with only one version
+    dependencies {
+        // scope.type
+        // The scope can be `required`, `optional`, `incompatible`, or `embedded`
+        // The type can either be `project` or `version`
+        embedded.project "geckolib"
+        embedded.project "fabric-api"
+        embedded.project "origamikings-api"
 
-	}
-	changelog = "1.2.0-1.20.1: The \"Cybertron Update\" Version:\n" + "\n" +
-			"Added Transformium Alloy and Transformium Alloy Bricks, added Cybertron Dimension" + "\n" + "\n" +
-			"Please report any bugs [here](https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod/issues)"
+    }
+    changelog = "1.2.0-1.20.1: The \"Cybertron Update\" Version:\n" + "\n" +
+            "Added Transformium Alloy and Transformium Alloy Bricks, added Cybertron Dimension" + "\n" + "\n" +
+            "Please report any bugs [here](https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod/issues)"
 }
