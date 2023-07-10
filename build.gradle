@@ -62,9 +62,6 @@ dependencies {
     modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
     modLocalRuntime "dev.emi:emi-fabric:${emi_version}"
 
-    implementation 'org.json:json:20230227'
-    // To update JSON; change version, reload gradle, then overwrite the files in the src/main/java/org/json
-
     modImplementation "net.kyrptonaught:customportalapi:${portal_api_version}"
     include "net.kyrptonaught:customportalapi:${portal_api_version}"
 
