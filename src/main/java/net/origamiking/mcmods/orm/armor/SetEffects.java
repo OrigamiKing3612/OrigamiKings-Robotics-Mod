@@ -31,18 +31,6 @@ import net.origamiking.mcmods.orm.armor.thunder_cracker.ThunderCrackerJetArmorIt
 
 public class SetEffects {
     public static void setEffects() {
-//        astrotrain();
-//        bumblebee();
-//        galvatron();
-//        ironhide();
-//        megatron();
-//        optimusprime();
-//        rodimusprime();
-//        scorpinok();
-//        skystrike();
-//        soundwave();
-//        starscream();
-//        thundercracker();
         chestplates();
     }
 
