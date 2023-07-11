@@ -36,8 +36,7 @@ public class SetEffects {
 
     private static void chestplates() {
         ServerTickEvents.END_SERVER_TICK.register(server -> server.getPlayerManager().getPlayerList().forEach(player -> {
-            if (
-                    player.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof AstrotrainArmorItem ||
+            if (player.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof AstrotrainArmorItem ||
                             player.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof AstrotrainTrainArmorItem ||
                             player.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof AstrotrainShuttleArmorItem ||
                             player.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof BumblebeeArmorItem ||

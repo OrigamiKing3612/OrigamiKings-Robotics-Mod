@@ -1,8 +1,6 @@
 package net.origamiking.mcmods.orm;
 
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.world.ClientWorld;
 import net.origamiking.mcmods.orm.advancements.ModAdvancements;
 import net.origamiking.mcmods.orm.armor.ModArmor;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
@@ -40,16 +38,5 @@ public class OrmMain implements ModInitializer {
 		ModWorld.register();
 		ModRecipeType.register();
 		ModEntities.register();
-	}
-	//TODO use oapi
-	public static String getCurrentDimension() {
-		MinecraftClient minecraftClient = MinecraftClient.getInstance();
-
-		if (minecraftClient != null && minecraftClient.world != null && minecraftClient.player != null) {
-			ClientWorld clientWorld = minecraftClient.world;
-			return clientWorld.getDimension().toString();
-		}
-
-		return null;
 	}
 }

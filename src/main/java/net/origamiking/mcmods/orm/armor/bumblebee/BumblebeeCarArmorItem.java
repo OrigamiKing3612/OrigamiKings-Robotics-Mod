@@ -10,7 +10,7 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.origamiking.mcmods.orm.OrmMain;
+import net.origamiking.mcmods.oapi.dimension.DimensionUtils;
 import net.origamiking.mcmods.orm.client.armor.renderer.bumblebee.BumblebeeCarArmorRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
@@ -46,7 +46,7 @@ public final class BumblebeeCarArmorItem extends ArmorItem implements GeoItem {
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
                 if(this.renderer == null) {
                     //TODO cybertron mode
-                    if (Objects.equals(OrmMain.getCurrentDimension(), "cybertron")) {
+                    if (Objects.equals(DimensionUtils.getCurrentDimension(), "cybertron")) {
                         this.renderer = new BumblebeeCarArmorRenderer();
                     } else {
                         this.renderer = new BumblebeeCarArmorRenderer();
