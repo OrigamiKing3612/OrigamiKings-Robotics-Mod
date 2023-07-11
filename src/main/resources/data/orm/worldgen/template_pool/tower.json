@@ -1,12 +1,12 @@
 {
-  "name": "orm:test",
+  "name": "orm:tower",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "orm:cybertron/test",
+        "location": "orm:cybertron/tower",
         "projection": "rigid",
         "processors": "minecraft:empty"
       }
