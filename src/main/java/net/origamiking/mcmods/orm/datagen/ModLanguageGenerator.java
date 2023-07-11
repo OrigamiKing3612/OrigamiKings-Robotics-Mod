@@ -12,7 +12,7 @@ public class ModLanguageGenerator extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
-
+        translationBuilder.add("biome.orm.cybertron", "Cybertron");
 
 
 
