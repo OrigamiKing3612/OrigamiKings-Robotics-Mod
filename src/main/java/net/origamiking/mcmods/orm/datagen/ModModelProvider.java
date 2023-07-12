@@ -7,6 +7,7 @@ import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
+import net.origamiking.mcmods.orm.blocks.random.RandomBlocks;
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
 import net.origamiking.mcmods.orm.blocks.transformium_alloy.TransformiumAlloyBlocks;
 import net.origamiking.mcmods.orm.items.energon.EnergonItems;
@@ -34,6 +35,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(EnergonBlocks.COMPACT_ENERGON_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(RandomBlocks.FORCE_FIELD_BLOCK);
     }
 
     @Override

@@ -26,6 +26,7 @@ import net.origamiking.mcmods.orm.blocks.chip_refinery.RegisterChipRefineryBlock
 import net.origamiking.mcmods.orm.blocks.compacter.RegisterCompacterBlock;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
+import net.origamiking.mcmods.orm.blocks.random.RandomBlocks;
 import net.origamiking.mcmods.orm.blocks.refinery.RegisterRefineryBlock;
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
 import net.origamiking.mcmods.orm.blocks.transformium_alloy.TransformiumAlloyBlocks;
@@ -174,6 +175,7 @@ public class ModGroups {
                     entries.add(RegisterRefineryBlock.REFINERY_BLOCK);
                     entries.add(RegisterCompacterBlock.COMPACTER_BLOCK);
                     entries.add(RegisterChipRefineryBlock.CHIP_REFINERY_BLOCK);
+                    entries.add(RandomBlocks.FORCE_FIELD_BLOCK);
                 }).build());
     }
 

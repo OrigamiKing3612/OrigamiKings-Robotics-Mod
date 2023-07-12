@@ -8,6 +8,7 @@ import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
 import net.origamiking.mcmods.orm.blocks.chip_refinery.RegisterChipRefineryBlock;
+import net.origamiking.mcmods.orm.blocks.random.RandomBlocks;
 import net.origamiking.mcmods.orm.client.blocks.renderer.block.CompacterBlockRenderer;
 import net.origamiking.mcmods.orm.client.blocks.renderer.block.RefineryBlockRenderer;
 import net.origamiking.mcmods.orm.client.entity.renderer.entity.PhotonEntityRenderer;
@@ -17,6 +18,8 @@ import net.origamiking.mcmods.orm.screen.ModScreenHandlers;
 import net.origamiking.mcmods.orm.screen.chip_refinery.ChipRefineryScreen;
 import net.origamiking.mcmods.orm.screen.compacter.CompacterBlockScreen;
 import net.origamiking.mcmods.orm.screen.refinery.RefineryBlockScreen;
+
+import static net.origamiking.mcmods.oapi.client.ClientUtils.getTranslucent;
 
 public class OrmClient implements ClientModInitializer {
     @Override
@@ -39,5 +42,6 @@ public class OrmClient implements ClientModInitializer {
 //        EntityRendererRegistry.register(ModEntities.PhotonEntityType, (context) ->
 //                new FlyingItemEntityRenderer<PhotonEntity>(context));
         EntityRendererRegistry.register(ModEntities.PhotonEntityType, PhotonEntityRenderer::new);
+        getTranslucent(RandomBlocks.FORCE_FIELD_BLOCK);
     }
 }
