@@ -1,0 +1,35 @@
+{
+  "structures": [
+    {
+      "structure": "orm:archive",
+      "weight": 1
+    },
+    {
+      "structure": "orm:energy_refinery",
+      "weight": 1
+    },
+    {
+      "structure": "orm:factory",
+      "weight": 1
+    },
+    {
+      "structure": "orm:forge",
+      "weight": 1
+    },
+    {
+      "structure": "orm:square_tower",
+      "weight": 1
+    },
+    {
+      "structure": "orm:tower",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 623017270,
+    "frequency": 1,
+    "spacing": 2,
+    "separation": 1
+  }
+}
