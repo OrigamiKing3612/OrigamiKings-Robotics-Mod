@@ -14,6 +14,8 @@ public class ModLanguageGenerator extends FabricLanguageProvider {
     public void generateTranslations(TranslationBuilder translationBuilder) {
 //        translationBuilder.add("biome.orm.cybertron", "Cybertron");
 //        translationBuilder.add(RandomBlocks.FORCE_FIELD_BLOCK, "Force Field Block");
+        translationBuilder.add("key.category.orm.main", "OrigamiKings Robotics Mod");
+        translationBuilder.add("key.orm.transform", "Transform");
 
 
 

@@ -8,6 +8,7 @@ import net.origamiking.mcmods.orm.blocks.ModBlocks;
 import net.origamiking.mcmods.orm.commands.ModCommands;
 import net.origamiking.mcmods.orm.entities.ModEntityTypes;
 import net.origamiking.mcmods.orm.entity.ModEntities;
+import net.origamiking.mcmods.orm.event.TransformKey;
 import net.origamiking.mcmods.orm.group.ModGroups;
 import net.origamiking.mcmods.orm.items.ModItems;
 import net.origamiking.mcmods.orm.recipe.ModRecipeType;
@@ -38,5 +39,6 @@ public class OrmMain implements ModInitializer {
 		ModWorld.register();
 		ModRecipeType.register();
 		ModEntities.register();
+		TransformKey.register();
 	}
 }
