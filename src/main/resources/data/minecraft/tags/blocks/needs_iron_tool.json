@@ -11,6 +11,7 @@
     "orm:compact_energon_block",
     "orm:energon_stairs",
     "orm:energon_slab",
+    "orm:dark_energon_block",
     "orm:dark_energon_stairs",
     "orm:dark_energon_slab",
     "orm:ore_13_stairs",
