@@ -1,27 +1,27 @@
 {
   "structures": [
     {
-      "structure": "orm:archive",
+      "structure": "orm:cybertron/archive",
       "weight": 1
     },
     {
-      "structure": "orm:energy_refinery",
+      "structure": "orm:cybertron/energy_refinery",
       "weight": 1
     },
     {
-      "structure": "orm:factory",
+      "structure": "orm:cybertron/factory",
       "weight": 1
     },
     {
-      "structure": "orm:forge",
+      "structure": "orm:cybertron/forge",
       "weight": 1
     },
     {
-      "structure": "orm:square_tower",
+      "structure": "orm:cybertron/square_tower",
       "weight": 1
     },
     {
-      "structure": "orm:tower",
+      "structure": "orm:cybertron/tower",
       "weight": 1
     }
   ],
