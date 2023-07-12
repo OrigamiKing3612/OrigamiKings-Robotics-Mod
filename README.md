@@ -3,7 +3,7 @@
 
 **The download is on [Modrinth](https://modrinth.com/mod/origamikings-robotics-armor-mod)**
 
-This mod is just for adding robot armor. The robot armor is the same as diamond armor. 
+This mod is just for adding robot armor.
 
  **If you would like to help make a pull request or issue on my [Github page](https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod).**
 
