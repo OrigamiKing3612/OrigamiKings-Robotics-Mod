@@ -12,6 +12,7 @@ import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrime;
 import net.origamiking.mcmods.orm.armor.rodimus_prime.RodimusPrime;
 import net.origamiking.mcmods.orm.armor.scorpinok.Scorpinok;
 import net.origamiking.mcmods.orm.armor.skystrike.Skystrike;
+import net.origamiking.mcmods.orm.armor.skywarp.Skywarp;
 import net.origamiking.mcmods.orm.armor.soundwave.Soundwave;
 import net.origamiking.mcmods.orm.armor.starscream.Starscream;
 import net.origamiking.mcmods.orm.armor.thunder_cracker.ThunderCracker;
@@ -24,6 +25,7 @@ import net.origamiking.mcmods.orm.items.chips.optimus_prime.OptimusPrimeChip;
 import net.origamiking.mcmods.orm.items.chips.rodimus_prime.RodimusPrimeChip;
 import net.origamiking.mcmods.orm.items.chips.scorpinok.ScorpinokChip;
 import net.origamiking.mcmods.orm.items.chips.skystrike.SkystrikeChip;
+import net.origamiking.mcmods.orm.items.chips.skywarp.SkywarpChip;
 import net.origamiking.mcmods.orm.items.chips.soundwave.SoundwaveChip;
 import net.origamiking.mcmods.orm.items.chips.starscream.StarscreamChip;
 import net.origamiking.mcmods.orm.items.chips.thunder_cracker.ThunderCrackerChip;
@@ -103,6 +105,7 @@ public class ArmorRecipes {
         offerTransformerCar(exporter, ThunderCracker.JET, ThunderCracker.HELMET, ThunderCracker.CHESTPLATE, ThunderCracker.LEGGINGS, ThunderCracker.BOOTS);
 
         transformerRecipes(exporter, RodimusPrime.HELMET, RodimusPrime.CHESTPLATE, RodimusPrime.LEGGINGS, RodimusPrime.BOOTS, RodimusPrime.CAR, RodimusPrimeChip.CHIP);
+        transformerRecipes(exporter, Skywarp.HELMET, Skywarp.CHESTPLATE, Skywarp.LEGGINGS, Skywarp.BOOTS, Skywarp.JET, SkywarpChip.CHIP);
 
         offerChipRefiningRecipe(exporter, RecipeCategory.MISC, AstrotrainChip.CHIP);
         offerChipRefiningRecipe(exporter, RecipeCategory.MISC, BumblebeeChip.CHIP);

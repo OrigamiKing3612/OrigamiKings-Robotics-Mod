@@ -19,6 +19,7 @@ import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrime;
 import net.origamiking.mcmods.orm.armor.rodimus_prime.RodimusPrime;
 import net.origamiking.mcmods.orm.armor.scorpinok.Scorpinok;
 import net.origamiking.mcmods.orm.armor.skystrike.Skystrike;
+import net.origamiking.mcmods.orm.armor.skywarp.Skywarp;
 import net.origamiking.mcmods.orm.armor.soundwave.Soundwave;
 import net.origamiking.mcmods.orm.armor.starscream.Starscream;
 import net.origamiking.mcmods.orm.armor.thunder_cracker.ThunderCracker;
@@ -39,6 +40,7 @@ import net.origamiking.mcmods.orm.items.chips.optimus_prime.OptimusPrimeChip;
 import net.origamiking.mcmods.orm.items.chips.rodimus_prime.RodimusPrimeChip;
 import net.origamiking.mcmods.orm.items.chips.scorpinok.ScorpinokChip;
 import net.origamiking.mcmods.orm.items.chips.skystrike.SkystrikeChip;
+import net.origamiking.mcmods.orm.items.chips.skywarp.SkywarpChip;
 import net.origamiking.mcmods.orm.items.chips.soundwave.SoundwaveChip;
 import net.origamiking.mcmods.orm.items.chips.starscream.StarscreamChip;
 import net.origamiking.mcmods.orm.items.chips.thunder_cracker.ThunderCrackerChip;
@@ -124,6 +126,11 @@ public class ModGroups {
                     entries.add(ThunderCracker.LEGGINGS);
                     entries.add(ThunderCracker.BOOTS);
                     entries.add(ThunderCracker.JET);
+                    entries.add(Skywarp.HELMET);
+                    entries.add(Skywarp.CHESTPLATE);
+                    entries.add(Skywarp.LEGGINGS);
+                    entries.add(Skywarp.BOOTS);
+                    entries.add(Skywarp.JET);
                     entries.add(Scorpinok.HELMET);
                     entries.add(Scorpinok.CHESTPLATE);
                     entries.add(Scorpinok.LEGGINGS);
@@ -210,7 +217,7 @@ public class ModGroups {
                     entries.add(SoundwaveChip.CHIP);
                     entries.add(ThunderCrackerChip.CHIP);
                     entries.add(ScorpinokChip.CHIP);
-
+                    entries.add(SkywarpChip.CHIP);
                 }).build());
     }
 }

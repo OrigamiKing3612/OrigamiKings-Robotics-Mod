@@ -12,9 +12,6 @@ public class ModLanguageGenerator extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
-//        translationBuilder.add("biome.orm.cybertron", "Cybertron");
-//        translationBuilder.add(RandomBlocks.FORCE_FIELD_BLOCK, "Force Field Block");
-
 
 
         try {

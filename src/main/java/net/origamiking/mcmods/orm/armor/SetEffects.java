@@ -22,6 +22,8 @@ import net.origamiking.mcmods.orm.armor.scorpinok.ScorpinokArmorItem;
 import net.origamiking.mcmods.orm.armor.scorpinok.ScorpinokCarArmorItem;
 import net.origamiking.mcmods.orm.armor.skystrike.SkystrikeArmorItem;
 import net.origamiking.mcmods.orm.armor.skystrike.SkystrikeCarArmorItem;
+import net.origamiking.mcmods.orm.armor.skywarp.SkywarpArmorItem;
+import net.origamiking.mcmods.orm.armor.skywarp.SkywarpJetArmorItem;
 import net.origamiking.mcmods.orm.armor.soundwave.SoundwaveArmorItem;
 import net.origamiking.mcmods.orm.armor.soundwave.SoundwaveRecorderArmorItem;
 import net.origamiking.mcmods.orm.armor.starscream.StarscreamArmorItem;
@@ -59,7 +61,9 @@ public class SetEffects {
                             player.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof StarscreamArmorItem ||
                             player.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof StarscreamJetArmorItem ||
                             player.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof ThunderCrackerArmorItem ||
-                            player.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof ThunderCrackerJetArmorItem
+                            player.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof ThunderCrackerJetArmorItem ||
+                            player.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof SkywarpArmorItem ||
+                            player.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof SkywarpJetArmorItem
             ) {
                 player.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 2, 0, false, false));
             } else {
