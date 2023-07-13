@@ -38,9 +38,7 @@ loom {
 sourceSets {
     main {
         resources {
-            srcDirs += [
-                    'src/main/generated'
-            ]
+            srcDirs += ['src/main/generated']
         }
     }
 }
