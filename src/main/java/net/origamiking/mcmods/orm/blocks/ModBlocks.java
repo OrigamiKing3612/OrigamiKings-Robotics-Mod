@@ -1,6 +1,7 @@
 package net.origamiking.mcmods.orm.blocks;
 
 import net.origamiking.mcmods.orm.blocks.chip_refinery.RegisterChipRefineryBlock;
+import net.origamiking.mcmods.orm.blocks.compacter.RegisterCompacterBlock;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
 import net.origamiking.mcmods.orm.blocks.random.RandomBlocks;
@@ -15,6 +16,7 @@ public class ModBlocks {
         TransformiumBlocks.get();
         RegisterRefineryBlock.get();
         RegisterChipRefineryBlock.get();
+        RegisterCompacterBlock.get();
         TransformiumAlloyBlocks.get();
         RandomBlocks.get();
     }

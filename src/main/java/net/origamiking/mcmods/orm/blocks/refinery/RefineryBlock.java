@@ -17,6 +17,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.origamiking.mcmods.oapi.blocks.OrigamiBlockSettings;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
 import net.origamiking.mcmods.orm.block_entities.refinery.RefineryBlockEntity;
 import org.jetbrains.annotations.Nullable;
@@ -26,7 +27,7 @@ public class RefineryBlock extends BlockWithEntity implements BlockEntityProvide
     public static final DirectionProperty FACING = Properties.FACING;
 
     public RefineryBlock() {
-        super(Settings.create().nonOpaque().requiresTool().strength(3.5f).sounds(BlockSoundGroup.METAL));
+        super(OrigamiBlockSettings.create().nonOpaque().requiresTool().strength(3.5f).sounds(BlockSoundGroup.METAL));
     }
 
     private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 10, 16);
