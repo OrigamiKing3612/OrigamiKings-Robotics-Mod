@@ -16,19 +16,19 @@ import java.util.function.Consumer;
 
 public class OrmRecipeProvider {
     public static void offerTransformerHelmet(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible chip) {
-        createTransformerHelmet(output, Ingredient.ofItems(new ItemConvertible[]{chip})).criterion(RecipeProvider.hasItem(chip), RecipeProvider.conditionsFromItem(chip)).offerTo(exporter);
+        createTransformerHelmet(output, Ingredient.ofItems(chip)).criterion(RecipeProvider.hasItem(chip), RecipeProvider.conditionsFromItem(chip)).offerTo(exporter);
     }
     public static void offerTransformerChestplate(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible chip) {
-        createTransformerChestplate(output, Ingredient.ofItems(new ItemConvertible[]{chip})).criterion(RecipeProvider.hasItem(chip), RecipeProvider.conditionsFromItem(chip)).offerTo(exporter);
+        createTransformerChestplate(output, Ingredient.ofItems(chip)).criterion(RecipeProvider.hasItem(chip), RecipeProvider.conditionsFromItem(chip)).offerTo(exporter);
     }
     public static void offerTransformerLeggings(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible chip) {
-        createTransformerLeggings(output, Ingredient.ofItems(new ItemConvertible[]{chip})).criterion(RecipeProvider.hasItem(chip), RecipeProvider.conditionsFromItem(chip)).offerTo(exporter);
+        createTransformerLeggings(output, Ingredient.ofItems(chip)).criterion(RecipeProvider.hasItem(chip), RecipeProvider.conditionsFromItem(chip)).offerTo(exporter);
     }
     public static void offerTransformerBoots(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible chip) {
-        createTransformerBoots(output, Ingredient.ofItems(new ItemConvertible[]{chip})).criterion(RecipeProvider.hasItem(chip), RecipeProvider.conditionsFromItem(chip)).offerTo(exporter);
+        createTransformerBoots(output, Ingredient.ofItems(chip)).criterion(RecipeProvider.hasItem(chip), RecipeProvider.conditionsFromItem(chip)).offerTo(exporter);
     }
     public static void offerTransformerCar(Consumer<RecipeJsonProvider> exporter, ItemConvertible car, ItemConvertible helmet, ItemConvertible chestplate, ItemConvertible leggings, ItemConvertible boots) {
-        createTransformerCar(car, Ingredient.ofItems(new ItemConvertible[]{helmet}), Ingredient.ofItems(new ItemConvertible[]{chestplate}), Ingredient.ofItems(new ItemConvertible[]{leggings}), Ingredient.ofItems(new ItemConvertible[]{boots})).criterion(RecipeProvider.hasItem(helmet), RecipeProvider.conditionsFromItem(helmet)).criterion(RecipeProvider.hasItem(chestplate), RecipeProvider.conditionsFromItem(chestplate)).criterion(RecipeProvider.hasItem(leggings), RecipeProvider.conditionsFromItem(leggings)).criterion(RecipeProvider.hasItem(boots), RecipeProvider.conditionsFromItem(boots)).offerTo(exporter);
+        createTransformerCar(car, Ingredient.ofItems(helmet), Ingredient.ofItems(chestplate), Ingredient.ofItems(leggings), Ingredient.ofItems(boots)).criterion(RecipeProvider.hasItem(helmet), RecipeProvider.conditionsFromItem(helmet)).criterion(RecipeProvider.hasItem(chestplate), RecipeProvider.conditionsFromItem(chestplate)).criterion(RecipeProvider.hasItem(leggings), RecipeProvider.conditionsFromItem(leggings)).criterion(RecipeProvider.hasItem(boots), RecipeProvider.conditionsFromItem(boots)).offerTo(exporter);
     }
     private static CraftingRecipeJsonBuilder createTransformerHelmet(ItemConvertible output, Ingredient chip) {
         return ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output).input('T', TransformiumItems.TRANSFORMIUM).input('E', EnergonItems.ENERGON).input('C', chip).input('S', RandomItems.SPARK).input('D', Items.DIAMOND_HELMET).pattern("TCT").pattern("ESE").pattern("TDT");
@@ -55,12 +55,12 @@ public class OrmRecipeProvider {
         createChipRefining(Ingredient.ofItems(Blocks.DIAMOND_BLOCK), category, output, count).criterion(RecipeProvider.hasItem(Blocks.DIAMOND_BLOCK), RecipeProvider.conditionsFromItem(Blocks.DIAMOND_BLOCK)).offerTo(exporter, RecipeProvider.convertBetween(output, Blocks.DIAMOND_BLOCK) + "_chip_refining");
     }
     public static void offerStair(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible input) {
-        createStair(output, Ingredient.ofItems(new ItemConvertible[]{input}))
+        createStair(output, Ingredient.ofItems(input))
                 .criterion(RecipeProvider.hasItem(input), RecipeProvider.conditionsFromItem(input))
                 .offerTo(exporter);
     }
     public static void offerSlab(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible input) {
-        createSlab(output, Ingredient.ofItems(new ItemConvertible[]{input}))
+        createSlab(output, Ingredient.ofItems(input))
                 .criterion(RecipeProvider.hasItem(input), RecipeProvider.conditionsFromItem(input))
                 .offerTo(exporter);
     }
@@ -80,6 +80,14 @@ public class OrmRecipeProvider {
         return ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 1).input('#', input).pattern("##").pattern("##");
     }
     public static void offer2x2Commpress(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible input) {
-        createCommpress2x2(output, Ingredient.ofItems(new ItemConvertible[]{input})).criterion(RecipeProvider.hasItem(input), RecipeProvider.conditionsFromItem(input)).offerTo(exporter);
+        createCommpress2x2(output, Ingredient.ofItems(input)).criterion(RecipeProvider.hasItem(input), RecipeProvider.conditionsFromItem(input)).offerTo(exporter);
+    }
+    public static void transformerRecipes(Consumer<RecipeJsonProvider> exporter, ItemConvertible helmet, ItemConvertible chestplate, ItemConvertible leggings, ItemConvertible boots, ItemConvertible car, ItemConvertible chip) {
+        offerTransformerHelmet(exporter, helmet, chip);
+        offerTransformerChestplate(exporter, chestplate, chip);
+        offerTransformerLeggings(exporter, leggings, chip);
+        offerTransformerBoots(exporter, boots, chip);
+        offerTransformerCar(exporter, car, helmet, chestplate, leggings, boots);
+        offerChipRefiningRecipe(exporter, RecipeCategory.MISC, chip);
     }
 }
