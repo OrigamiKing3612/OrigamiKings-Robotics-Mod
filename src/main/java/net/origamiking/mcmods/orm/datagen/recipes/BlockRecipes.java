@@ -16,7 +16,7 @@ import net.origamiking.mcmods.orm.items.transformium_alloy.TransformiumAlloyItem
 import java.util.List;
 import java.util.function.Consumer;
 
-import static net.origamiking.mcmods.orm.datagen.recipes.providers.OrmRecipeProvider.*;
+import static net.origamiking.mcmods.oapi.recipes.ModRecipeProvider.*;
 
 public class BlockRecipes {
     public static void get(Consumer<RecipeJsonProvider> exporter) {

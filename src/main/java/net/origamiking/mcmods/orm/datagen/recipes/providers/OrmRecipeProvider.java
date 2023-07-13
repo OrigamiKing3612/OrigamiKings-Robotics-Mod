@@ -54,34 +54,6 @@ public class OrmRecipeProvider {
     public static void offerChipRefiningRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory category, ItemConvertible output, int count) {
         createChipRefining(Ingredient.ofItems(Blocks.DIAMOND_BLOCK), category, output, count).criterion(RecipeProvider.hasItem(Blocks.DIAMOND_BLOCK), RecipeProvider.conditionsFromItem(Blocks.DIAMOND_BLOCK)).offerTo(exporter, RecipeProvider.convertBetween(output, Blocks.DIAMOND_BLOCK) + "_chip_refining");
     }
-    public static void offerStair(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible input) {
-        createStair(output, Ingredient.ofItems(input))
-                .criterion(RecipeProvider.hasItem(input), RecipeProvider.conditionsFromItem(input))
-                .offerTo(exporter);
-    }
-    public static void offerSlab(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible input) {
-        createSlab(output, Ingredient.ofItems(input))
-                .criterion(RecipeProvider.hasItem(input), RecipeProvider.conditionsFromItem(input))
-                .offerTo(exporter);
-    }
-    private static CraftingRecipeJsonBuilder createStair(ItemConvertible output, Ingredient input) {
-        return ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 4)
-                .input('I', input)
-                .pattern("I  ")
-                .pattern("II ")
-                .pattern("III");
-    }
-    private static CraftingRecipeJsonBuilder createSlab(ItemConvertible output, Ingredient input) {
-        return ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 6)
-                .input('I', input)
-                .pattern("III");
-    }
-    private static CraftingRecipeJsonBuilder createCommpress2x2(ItemConvertible output, Ingredient input) {
-        return ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 1).input('#', input).pattern("##").pattern("##");
-    }
-    public static void offer2x2Commpress(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible input) {
-        createCommpress2x2(output, Ingredient.ofItems(input)).criterion(RecipeProvider.hasItem(input), RecipeProvider.conditionsFromItem(input)).offerTo(exporter);
-    }
     public static void transformerRecipes(Consumer<RecipeJsonProvider> exporter, ItemConvertible helmet, ItemConvertible chestplate, ItemConvertible leggings, ItemConvertible boots, ItemConvertible car, ItemConvertible chip) {
         offerTransformerHelmet(exporter, helmet, chip);
         offerTransformerChestplate(exporter, chestplate, chip);
