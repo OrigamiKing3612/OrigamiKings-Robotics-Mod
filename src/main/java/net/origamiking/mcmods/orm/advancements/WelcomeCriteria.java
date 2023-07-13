@@ -17,9 +17,7 @@ public class WelcomeCriteria extends AbstractCriterion<WelcomeCriteria.Condition
     }
 
     public void trigger(ServerPlayerEntity player) {
-        trigger(player, condition -> {
-            return true;
-        });
+        trigger(player, condition -> true);
     }
 
     @Override
