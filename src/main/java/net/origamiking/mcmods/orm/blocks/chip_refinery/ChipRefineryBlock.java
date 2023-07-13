@@ -31,12 +31,13 @@ public class ChipRefineryBlock extends Block {
 
     public ChipRefineryBlock(AbstractBlock.Settings settings) {
         super(settings);
-        this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH));
+        this.setDefaultState((BlockState) ((BlockState) this.stateManager.getDefaultState()).with(FACING, Direction.NORTH));
 
     }
+
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return (BlockState)this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
+        return (BlockState) this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
     }
 
     @Override
@@ -72,7 +73,7 @@ public class ChipRefineryBlock extends Block {
 
     @Override
     public BlockState rotate(BlockState state, BlockRotation rotation) {
-        return (BlockState)state.with(FACING, rotation.rotate(state.get(FACING)));
+        return (BlockState) state.with(FACING, rotation.rotate(state.get(FACING)));
     }
 
     @Override

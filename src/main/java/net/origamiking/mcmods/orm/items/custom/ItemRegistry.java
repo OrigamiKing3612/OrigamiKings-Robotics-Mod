@@ -26,10 +26,11 @@ public class ItemRegistry {
     public static final EnergonAxeItem ENERGON_AXE = registerItem("energon_axe", new EnergonAxeItem(new OrigamiItemSettings().maxCount(1)));
 
 
-
     public static <I extends Item> I registerItem(String name, I item) {
         return Registry.register(Registries.ITEM, new Identifier(OrmMain.MOD_ID, name), item);
     }
-    public static void register() {}
+
+    public static void register() {
+    }
 
 }

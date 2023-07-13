@@ -24,5 +24,6 @@ public class EnergonBlocks extends BlocksUtils {
     public static final Block DARK_ENERGON_STAIRS = registerBlock(OrmMain.MOD_ID, "dark_energon_stairs", new StairsBlock(EnergonBlocks.ENERGON_BLOCK.getDefaultState(), OrigamiBlockSettings.copyOf(EnergonBlocks.DARK_ENERGON_BLOCK).luminance(4).sounds(BlockSoundGroup.METAL)));
     public static final Block DARK_ENERGON_SLAB = registerBlock(OrmMain.MOD_ID, "dark_energon_slab", new SlabBlock(OrigamiBlockSettings.copyOf(EnergonBlocks.DARK_ENERGON_BLOCK).luminance(4).sounds(BlockSoundGroup.METAL)));
 
-    public static void get() {}
+    public static void get() {
+    }
 }

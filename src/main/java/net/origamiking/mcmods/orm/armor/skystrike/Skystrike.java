@@ -13,5 +13,6 @@ public class Skystrike extends ArmorUtils {
     public static final SkystrikeArmorItem BOOTS = registerArmor(OrmMain.MOD_ID, "skystrike_armor_boots", new SkystrikeArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.BOOTS, new Item.Settings()));
     public static final SkystrikeCarArmorItem JET = registerArmor(OrmMain.MOD_ID, "skystrike_jet", new SkystrikeCarArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
 
-    public static void get() {}
+    public static void get() {
+    }
 }

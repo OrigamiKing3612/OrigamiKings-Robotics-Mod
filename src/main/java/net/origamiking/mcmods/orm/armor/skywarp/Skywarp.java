@@ -13,5 +13,6 @@ public class Skywarp extends ArmorUtils {
     public static final SkywarpArmorItem BOOTS = registerArmor(OrmMain.MOD_ID, "skywarp_boots", new SkywarpArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.BOOTS, new OrigamiItemSettings()));
     public static final SkywarpJetArmorItem JET = registerArmor(OrmMain.MOD_ID, "skywarp_jet", new SkywarpJetArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.CHESTPLATE, new OrigamiItemSettings()));
 
-    public static void get() {}
+    public static void get() {
+    }
 }

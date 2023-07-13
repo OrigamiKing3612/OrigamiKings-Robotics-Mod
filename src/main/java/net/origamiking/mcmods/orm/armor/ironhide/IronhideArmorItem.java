@@ -43,9 +43,9 @@ public final class IronhideArmorItem extends ArmorItem implements GeoItem {
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
-                if(this.renderer == null)
+                if (this.renderer == null)
                     this.renderer = new IronhideArmorRenderer();
-                    //this.renderer = new GeckoArmorRenderer();
+                //this.renderer = new GeckoArmorRenderer();
 
                 // This prepares our GeoArmorRenderer for the current render frame.
                 // These parameters may be null however, so we don't do anything further with them

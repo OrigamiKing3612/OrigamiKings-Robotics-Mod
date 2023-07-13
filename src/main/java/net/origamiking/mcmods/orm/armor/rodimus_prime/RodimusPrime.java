@@ -12,5 +12,7 @@ public class RodimusPrime extends ArmorUtils {
     public static final RodimusPrimeArmorItem LEGGINGS = registerArmor(OrmMain.MOD_ID, "rodimus_prime_leggings", new RodimusPrimeArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.LEGGINGS, new Item.Settings()));
     public static final RodimusPrimeArmorItem BOOTS = registerArmor(OrmMain.MOD_ID, "rodimus_prime_boots", new RodimusPrimeArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.BOOTS, new Item.Settings()));
     public static final RodimusPrimeCarArmorItem CAR = registerArmor(OrmMain.MOD_ID, "rodimus_prime_car", new RodimusPrimeCarArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
-    public static void get() {}
+
+    public static void get() {
+    }
 }

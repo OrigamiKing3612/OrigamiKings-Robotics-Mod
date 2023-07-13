@@ -44,7 +44,7 @@ public final class BumblebeeCarArmorItem extends ArmorItem implements GeoItem {
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
-                if(this.renderer == null) {
+                if (this.renderer == null) {
                     //TODO cybertron mode
                     if (Objects.equals(DimensionUtils.getCurrentDimension(), "cybertron")) {
                         this.renderer = new BumblebeeCarArmorRenderer();

@@ -18,6 +18,7 @@ public class TransformiumAlloyBlocks extends BlocksUtils {
     public static final Block TRANSFORMIUM_ALLOY_BRICK_BLOCK = registerBlock(OrmMain.MOD_ID, "transformium_alloy_bricks_block", new Block(OrigamiBlockSettings.copyOf(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BLOCK).sounds(BlockSoundGroup.METAL)));
     public static final Block TRANSFORMIUM_ALLOY_BRICK_STAIRS = registerBlock(OrmMain.MOD_ID, "transformium_alloy_bricks_stairs", new StairsBlock(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BLOCK.getDefaultState(), OrigamiBlockSettings.copyOf(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BLOCK).sounds(BlockSoundGroup.METAL)));
     public static final Block TRANSFORMIUM_ALLOY_BRICK_SLAB = registerBlock(OrmMain.MOD_ID, "transformium_alloy_bricks_slab", new SlabBlock(OrigamiBlockSettings.copyOf(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BLOCK).sounds(BlockSoundGroup.METAL)));
+
     public static void get() {
 
     }

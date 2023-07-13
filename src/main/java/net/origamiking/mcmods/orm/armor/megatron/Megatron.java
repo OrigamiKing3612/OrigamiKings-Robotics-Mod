@@ -11,5 +11,7 @@ public class Megatron extends ArmorUtils {
     public static final MegatronArmorItem CHESTPLATE = registerArmor(OrmMain.MOD_ID, "megatron_chestplate", new MegatronArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
     public static final MegatronArmorItem LEGGINGS = registerArmor(OrmMain.MOD_ID, "megatron_leggings", new MegatronArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.LEGGINGS, new Item.Settings()));
     public static final MegatronArmorItem BOOTS = registerArmor(OrmMain.MOD_ID, "megatron_boots", new MegatronArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.BOOTS, new Item.Settings()));
-    public static void get() {}
+
+    public static void get() {
+    }
 }

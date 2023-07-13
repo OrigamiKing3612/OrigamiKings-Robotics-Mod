@@ -31,22 +31,27 @@ import java.util.function.Supplier;
 public class MegatronTransformedItem extends RangedWeaponItem implements GeoItem, Vanishable {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
+
     public MegatronTransformedItem(Settings settings) {
         super(settings);
         SingletonGeoAnimatable.registerSyncedAnimatable(this);
     }
+
     @Override
     public Predicate<ItemStack> getProjectiles() {
         return BOW_PROJECTILES;
     }
+
     @Override
     public int getRange() {
         return 15;
     }
+
     @Override
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
             private MegatronTransformedRenderer renderer;
+
             @Override
             public BuiltinModelItemRenderer getCustomRenderer() {
                 if (this.renderer == null)
@@ -55,16 +60,22 @@ public class MegatronTransformedItem extends RangedWeaponItem implements GeoItem
             }
         });
     }
+
     @Override
     public Supplier<Object> getRenderProvider() {
         return this.renderProvider;
     }
+
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         controllers.add(new AnimationController<>(this, "idle", 20, state -> PlayState.STOP));
     }
+
     @Override
-    public AnimatableInstanceCache getAnimatableInstanceCache() {return this.cache;}
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return this.cache;
+    }
+
     @Override
     public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
         boolean bl2;
@@ -81,21 +92,21 @@ public class MegatronTransformedItem extends RangedWeaponItem implements GeoItem
         if (itemStack.isEmpty()) {
             itemStack = new ItemStack(Items.ARROW);
         }
-        if ((double)(f = BowItem.getPullProgress(i = this.getMaxUseTime(stack) - remainingUseTicks)) < 0.1) {
+        if ((double) (f = BowItem.getPullProgress(i = this.getMaxUseTime(stack) - remainingUseTicks)) < 0.1) {
             return;
         }
         boolean bl3 = bl2 = bl && itemStack.isOf(Items.ARROW);
         if (!world.isClient) {
             int k;
             int j;
-            ArrowItem arrowItem = (ArrowItem)(itemStack.getItem() instanceof ArrowItem ? itemStack.getItem() : Items.ARROW);
+            ArrowItem arrowItem = (ArrowItem) (itemStack.getItem() instanceof ArrowItem ? itemStack.getItem() : Items.ARROW);
             PersistentProjectileEntity persistentProjectileEntity = arrowItem.createArrow(world, itemStack, playerEntity);
             persistentProjectileEntity.setVelocity(playerEntity, playerEntity.getPitch(), playerEntity.getYaw(), 0.0f, f * 3.0f, 1.0f);
             if (f == 1.0f) {
                 persistentProjectileEntity.setCritical(true);
             }
             if ((j = EnchantmentHelper.getLevel(Enchantments.POWER, stack)) > 0) {
-                persistentProjectileEntity.setDamage(persistentProjectileEntity.getDamage() + (double)j * 0.5 + 0.5);
+                persistentProjectileEntity.setDamage(persistentProjectileEntity.getDamage() + (double) j * 0.5 + 0.5);
             }
             if ((k = EnchantmentHelper.getLevel(Enchantments.PUNCH, stack)) > 0) {
                 persistentProjectileEntity.setPunch(k);
@@ -118,21 +129,25 @@ public class MegatronTransformedItem extends RangedWeaponItem implements GeoItem
         }
         playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
     }
+
     public static float getPullProgress(int useTicks) {
-        float f = (float)useTicks / 20.0f;
+        float f = (float) useTicks / 20.0f;
         if ((f = (f * f + f * 2.0f) / 3.0f) > 1.0f) {
             f = 1.0f;
         }
         return f;
     }
+
     @Override
     public int getMaxUseTime(ItemStack stack) {
         return 72000;
     }
+
     @Override
     public UseAction getUseAction(ItemStack stack) {
         return UseAction.BOW;
     }
+
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         boolean bl;

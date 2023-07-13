@@ -32,9 +32,11 @@ public class OrmAdvancements implements Consumer<Consumer<Advancement>> {
         AutobotAdvancements.get(advancementConsumer, spark);
         DecepticonsAdvancements.get(advancementConsumer, spark);
     }
+
     public static String translatableTitle(String advancementName) {
-        return "advancement." + OrmMain.MOD_ID + "." + advancementName.toLowerCase()+ ".title";
+        return "advancement." + OrmMain.MOD_ID + "." + advancementName.toLowerCase() + ".title";
     }
+
     public static String translatableDescription(String advancementName) {
         return "advancement." + OrmMain.MOD_ID + "." + advancementName.toLowerCase() + ".description";
     }

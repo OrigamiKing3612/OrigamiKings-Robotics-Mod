@@ -5,7 +5,7 @@ import net.origamiking.mcmods.orm.client.blocks.model.block.CompacterBlockModel;
 import software.bernie.geckolib.renderer.GeoBlockRenderer;
 
 public class CompacterBlockRenderer extends GeoBlockRenderer<CompacterBlockEntity> {
-	public CompacterBlockRenderer() {
-		super(new CompacterBlockModel());
-	}
+    public CompacterBlockRenderer() {
+        super(new CompacterBlockModel());
+    }
 }

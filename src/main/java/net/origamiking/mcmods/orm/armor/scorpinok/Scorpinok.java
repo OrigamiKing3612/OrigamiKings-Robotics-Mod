@@ -13,5 +13,6 @@ public class Scorpinok extends ArmorUtils {
     public static final ScorpinokArmorItem BOOTS = registerArmor(OrmMain.MOD_ID, "scorpinok_boots", new ScorpinokArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.BOOTS, new Item.Settings()));
     public static final ScorpinokCarArmorItem CAR = registerArmor(OrmMain.MOD_ID, "scorpinok_car", new ScorpinokCarArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
 
-    public static void get() {}
+    public static void get() {
+    }
 }

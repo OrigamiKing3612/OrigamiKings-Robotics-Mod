@@ -42,6 +42,7 @@ public class VectorGuardEntity extends HostileEntity implements GeoEntity {
         this.targetSelector.add(6, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
         super.initGoals();
     }
+
     @Override
     public int getXpToDrop() {
         return super.getXpToDrop();

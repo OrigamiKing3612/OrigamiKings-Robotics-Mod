@@ -10,6 +10,7 @@ public class CybertronDimension {
     public static void get() {
         registerPortal();
     }
+
     private static void registerPortal() {
         CustomPortalBuilder.beginPortal()
                 .frameBlock(EnergonBlocks.COMPACT_ENERGON_BLOCK)

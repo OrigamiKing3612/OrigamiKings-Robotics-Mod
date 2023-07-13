@@ -19,9 +19,11 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 public class PhotonEntity extends PersistentProjectileEntity implements GeoEntity {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+
     public PhotonEntity(EntityType<? extends PersistentProjectileEntity> entityType, World world) {
         super(entityType, world);
     }
+
     public PhotonEntity(World world, LivingEntity owner) {
         super(ModEntities.PhotonEntityType, owner, world);
     }
@@ -69,6 +71,7 @@ public class PhotonEntity extends PersistentProjectileEntity implements GeoEntit
     public Direction getMovementDirection() {
         return super.getMovementDirection();
     }
+
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
 

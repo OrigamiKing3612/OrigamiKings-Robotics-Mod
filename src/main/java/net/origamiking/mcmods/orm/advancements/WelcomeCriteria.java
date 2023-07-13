@@ -11,6 +11,7 @@ import net.origamiking.mcmods.orm.OrmMain;
 
 public class WelcomeCriteria extends AbstractCriterion<WelcomeCriteria.Condition> {
     public static final Identifier ID = new Identifier(OrmMain.MOD_ID, "welcome");
+
     @Override
     public Identifier getId() {
         return ID;

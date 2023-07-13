@@ -12,5 +12,7 @@ public class OptimusPrime extends ArmorUtils {
     public static final OptimusPrimeArmorItem LEGGINGS = registerArmor(OrmMain.MOD_ID, "optimus_prime_armor_leggings", new OptimusPrimeArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.LEGGINGS, new Item.Settings()));
     public static final OptimusPrimeArmorItem BOOTS = registerArmor(OrmMain.MOD_ID, "optimus_prime_armor_boots", new OptimusPrimeArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.BOOTS, new Item.Settings()));
     public static final OptimusPrimeCarArmorItem CAR = registerArmor(OrmMain.MOD_ID, "optimus_prime_car", new OptimusPrimeCarArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
-    public static void get() {}
+
+    public static void get() {
+    }
 }

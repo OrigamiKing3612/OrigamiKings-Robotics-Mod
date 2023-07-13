@@ -6,12 +6,12 @@ import net.origamiking.mcmods.orm.armor.skystrike.SkystrikeArmorItem;
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
-public class SkystrikeArmorRenderer extends GeoArmorRenderer<SkystrikeArmorItem>{
-        public SkystrikeArmorRenderer() {
-            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/skystrike/skystrike")));
+public class SkystrikeArmorRenderer extends GeoArmorRenderer<SkystrikeArmorItem> {
+    public SkystrikeArmorRenderer() {
+        super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/skystrike/skystrike")));
 
-            //addRenderLayer(new AutoGlowingGeoLayer<>(this));
-        }
+        //addRenderLayer(new AutoGlowingGeoLayer<>(this));
     }
+}
 
 

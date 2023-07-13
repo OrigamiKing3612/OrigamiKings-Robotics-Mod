@@ -43,12 +43,12 @@ public class BlockRecipes {
         offerStair(exporter, EnergonBlocks.ENERGON_STAIRS, EnergonBlocks.ENERGON_BLOCK);
 
         RecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EnergonBlocks.DARK_ENERGON_STAIRS, EnergonBlocks.DARK_ENERGON_BLOCK);
-        RecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EnergonBlocks.DARK_ENERGON_SLAB, EnergonBlocks.DARK_ENERGON_BLOCK,2 );
+        RecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EnergonBlocks.DARK_ENERGON_SLAB, EnergonBlocks.DARK_ENERGON_BLOCK, 2);
         offerSlab(exporter, EnergonBlocks.DARK_ENERGON_SLAB, EnergonBlocks.DARK_ENERGON_BLOCK);
         offerStair(exporter, EnergonBlocks.DARK_ENERGON_STAIRS, EnergonBlocks.DARK_ENERGON_BLOCK);
 
         RecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Ore13Blocks.ORE_13_STAIRS, Ore13Blocks.ORE_13_BLOCK);
-        RecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Ore13Blocks.ORE_13_SLAB, Ore13Blocks.ORE_13_BLOCK,2);
+        RecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Ore13Blocks.ORE_13_SLAB, Ore13Blocks.ORE_13_BLOCK, 2);
         offerSlab(exporter, Ore13Blocks.ORE_13_SLAB, Ore13Blocks.ORE_13_BLOCK);
         offerStair(exporter, Ore13Blocks.ORE_13_STAIRS, Ore13Blocks.ORE_13_BLOCK);
 

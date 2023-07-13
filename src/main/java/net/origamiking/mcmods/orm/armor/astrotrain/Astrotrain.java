@@ -13,5 +13,7 @@ public class Astrotrain extends ArmorUtils {
     public static final AstrotrainArmorItem CHESTPLATE = registerArmor(OrmMain.MOD_ID, "astrotrain_chestplate", new AstrotrainArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
     public static final AstrotrainArmorItem LEGGINGS = registerArmor(OrmMain.MOD_ID, "astrotrain_leggings", new AstrotrainArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.LEGGINGS, new Item.Settings()));
     public static final AstrotrainArmorItem BOOTS = registerArmor(OrmMain.MOD_ID, "astrotrain_boots", new AstrotrainArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.BOOTS, new Item.Settings()));
-    public static void get() {}
+
+    public static void get() {
+    }
 }

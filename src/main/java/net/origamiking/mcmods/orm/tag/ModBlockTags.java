@@ -13,9 +13,11 @@ public class ModBlockTags {
 
     public static final TagKey<Block> ENERGON_ORES = ModBlockTags.of("energon_ores");
     public static final TagKey<Block> ORE_13_ORES = ModBlockTags.of("ore_13_ores");
+
     public static void get() {
 
     }
+
     private static TagKey<Block> of(String id) {
         return TagKey.of(RegistryKeys.BLOCK, new Identifier(OrmMain.MOD_ID, id));
     }

@@ -12,5 +12,7 @@ public class Galvatron extends ArmorUtils {
     public static final GalvatronArmorItem LEGGINGS = registerArmor(OrmMain.MOD_ID, "galvatron_leggings", new GalvatronArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.LEGGINGS, new Item.Settings()));
     public static final GalvatronArmorItem BOOTS = registerArmor(OrmMain.MOD_ID, "galvatron_boots", new GalvatronArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.BOOTS, new Item.Settings()));
     public static final GalvatronGunArmorItem GALVATRON_GUN = registerArmor(OrmMain.MOD_ID, "galvatron_gun", new GalvatronGunArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
-    public static void get() {}
+
+    public static void get() {
+    }
 }

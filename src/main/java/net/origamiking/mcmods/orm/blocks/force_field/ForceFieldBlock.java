@@ -7,6 +7,7 @@ public class ForceFieldBlock extends Block {
     public ForceFieldBlock(Settings settings) {
         super(settings);
     }
+
     @Override
     public boolean canMobSpawnInside(BlockState state) {
         return false;

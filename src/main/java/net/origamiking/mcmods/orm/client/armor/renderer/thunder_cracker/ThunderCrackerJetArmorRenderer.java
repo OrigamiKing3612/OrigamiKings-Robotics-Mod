@@ -6,12 +6,12 @@ import net.origamiking.mcmods.orm.armor.thunder_cracker.ThunderCrackerJetArmorIt
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
-public class ThunderCrackerJetArmorRenderer extends GeoArmorRenderer<ThunderCrackerJetArmorItem>{
-        public ThunderCrackerJetArmorRenderer() {
-            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/thunder_cracker/thunder_cracker_jet")));
+public class ThunderCrackerJetArmorRenderer extends GeoArmorRenderer<ThunderCrackerJetArmorItem> {
+    public ThunderCrackerJetArmorRenderer() {
+        super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/thunder_cracker/thunder_cracker_jet")));
 
-            //addRenderLayer(new AutoGlowingGeoLayer<>(this));
-        }
+        //addRenderLayer(new AutoGlowingGeoLayer<>(this));
     }
+}
 
 

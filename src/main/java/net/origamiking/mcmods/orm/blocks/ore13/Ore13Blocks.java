@@ -16,5 +16,6 @@ public class Ore13Blocks extends BlocksUtils {
     public static final Block ORE_13_STAIRS = registerBlock(OrmMain.MOD_ID, "ore_13_stairs", new StairsBlock(ORE_13_BLOCK.getDefaultState(), OrigamiBlockSettings.copyOf(Ore13Blocks.ORE_13_BLOCK).sounds(BlockSoundGroup.METAL)));
     public static final Block ORE_13_SLAB = registerBlock(OrmMain.MOD_ID, "ore_13_slab", new SlabBlock(OrigamiBlockSettings.copyOf(Ore13Blocks.ORE_13_BLOCK).sounds(BlockSoundGroup.METAL)));
 
-    public static void get() {}
+    public static void get() {
+    }
 }

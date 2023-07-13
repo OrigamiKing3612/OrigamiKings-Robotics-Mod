@@ -16,7 +16,8 @@ import net.origamiking.mcmods.orm.armor.thunder_cracker.ThunderCracker;
 
 import java.util.function.Consumer;
 
-import static net.origamiking.mcmods.orm.datagen.advancements.OrmAdvancements.*;
+import static net.origamiking.mcmods.orm.datagen.advancements.OrmAdvancements.translatableDescription;
+import static net.origamiking.mcmods.orm.datagen.advancements.OrmAdvancements.translatableTitle;
 
 public class DecepticonsAdvancements {
     public static void get(Consumer<Advancement> advancementConsumer, Advancement mainParent) {

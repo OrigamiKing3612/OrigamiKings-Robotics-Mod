@@ -6,7 +6,7 @@ import net.minecraft.util.Identifier;
 import net.origamiking.mcmods.orm.OrmMain;
 
 public class ModRecipeType {
-    public static void register(){
+    public static void register() {
         Registry.register(Registries.RECIPE_SERIALIZER, new Identifier(OrmMain.MOD_ID, ChipRefineryRecipe.Serializer.ID),
                 ChipRefineryRecipe.Serializer.INSTANCE);
         Registry.register(Registries.RECIPE_TYPE, new Identifier(OrmMain.MOD_ID, ChipRefineryRecipe.Type.ID),
