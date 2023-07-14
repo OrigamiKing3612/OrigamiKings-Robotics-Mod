@@ -172,6 +172,9 @@
   "item.orm.vector_guard_spawn_egg": "Vector Guard Spawn Egg",
   "orm.download_addon.error": "There was an error while downloading addon; check your game log.",
   "orm.download_addon.successful": "Download Successful! Please restart your game to use the addon.",
+  "stat.orm.interact_with_chip_refinery": "Interactions with Chip Refinery",
+  "stat.orm.interact_with_compacter": "Interactions with Compacter",
+  "stat.orm.interact_with_refinery": "Interactions with Refinery",
   "screen.orm.chip_refinery_block_title": "Chip Refinery",
   "screen.orm.compacter_block_title": "Compacter Block",
   "screen.orm.refinery_block_title": "Refinery Block"

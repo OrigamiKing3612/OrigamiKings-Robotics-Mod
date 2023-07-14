@@ -20,6 +20,7 @@ import net.minecraft.world.World;
 import net.origamiking.mcmods.oapi.blocks.OrigamiBlockSettings;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
 import net.origamiking.mcmods.orm.block_entities.compacter.CompacterBlockEntity;
+import net.origamiking.mcmods.orm.stats.ModStats;
 import org.jetbrains.annotations.Nullable;
 
 @SuppressWarnings("all")
@@ -84,7 +85,7 @@ public class CompacterBlock extends BlockWithEntity implements BlockEntityProvid
                 player.openHandledScreen(screenHandlerFactory);
             }
         }
-
+        player.incrementStat(ModStats.INTERACT_WITH_COMPACTER);
         return ActionResult.SUCCESS;
     }
 

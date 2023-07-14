@@ -7,7 +7,6 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.SimpleNamedScreenHandlerFactory;
-import net.minecraft.stat.Stats;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.text.Text;
@@ -22,6 +21,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.origamiking.mcmods.orm.screen.chip_refinery.ChipRefineryScreenHandler;
+import net.origamiking.mcmods.orm.stats.ModStats;
 import org.jetbrains.annotations.Nullable;
 
 public class ChipRefineryBlock extends Block {
@@ -46,7 +46,7 @@ public class ChipRefineryBlock extends Block {
             return ActionResult.SUCCESS;
         }
         player.openHandledScreen(state.createScreenHandlerFactory(world, pos));
-        player.incrementStat(Stats.INTERACT_WITH_STONECUTTER);
+        player.incrementStat(ModStats.INTERACT_WITH_CHIP_REFINERY);
         return ActionResult.CONSUME;
     }
 
