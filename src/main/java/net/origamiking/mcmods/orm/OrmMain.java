@@ -22,7 +22,7 @@ public class OrmMain implements ModInitializer {
     public static final String MOD_ID = "orm";
     public static final String VERSION = "1.2.0-1.20.1";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-    //TODO cybertron characters (look in BumblebeeCarArmorItem line: 50)
+    //TODO cybertron characters (look in BumblebeeCarArmorItem line: 50) Update 1.3.0
 
     @Override
     public void onInitialize() {
