@@ -13,6 +13,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
     public ModRecipeGenerator(FabricDataOutput output) {
         super(output);
     }
+
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         ShapedRecipes.get(exporter);

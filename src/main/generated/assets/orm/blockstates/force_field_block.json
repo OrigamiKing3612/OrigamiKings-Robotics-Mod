@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "orm:block/force_field_block"
+    }
+  }
+}

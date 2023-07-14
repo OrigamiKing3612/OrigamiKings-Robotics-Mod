@@ -12,21 +12,21 @@
 			},
 			"bones": [
 				{
-					"name": "bipedHead2",
+					"name": "bipedHead",
 					"pivot": [0, 24, 0]
 				},
 				{
-					"name": "armorHead2",
-					"parent": "bipedHead2",
+					"name": "armorHead",
+					"parent": "bipedHead",
 					"pivot": [0, 24, 0]
 				},
 				{
-					"name": "bipedBody2",
+					"name": "bipedBody",
 					"pivot": [0, 24, 0]
 				},
 				{
-					"name": "armorBody2",
-					"parent": "bipedBody2",
+					"name": "armorBody",
+					"parent": "bipedBody",
 					"pivot": [0, 74, 0],
 					"cubes": [
 						{"origin": [-2, 51, -6], "size": [4, 1, 8], "uv": [0, 0]},
@@ -48,49 +48,49 @@
 					]
 				},
 				{
-					"name": "bipedRightArm2",
+					"name": "bipedRightArm",
 					"pivot": [-4, 22, 0]
 				},
 				{
-					"name": "armorRightArm2",
-					"parent": "bipedRightArm2",
+					"name": "armorRightArm",
+					"parent": "bipedRightArm",
 					"pivot": [-4, 22, 0]
 				},
 				{
-					"name": "bipedLeftArm2",
+					"name": "bipedLeftArm",
 					"pivot": [4, 22, 0]
 				},
 				{
-					"name": "armorLeftArm2",
-					"parent": "bipedLeftArm2",
+					"name": "armorLeftArm",
+					"parent": "bipedLeftArm",
 					"pivot": [4, 22, 0]
 				},
 				{
-					"name": "bipedLeftLeg2",
+					"name": "bipedLeftLeg",
 					"pivot": [-2, 12, 0]
 				},
 				{
-					"name": "armorLeftLeg2",
-					"parent": "bipedLeftLeg2",
+					"name": "armorLeftLeg",
+					"parent": "bipedLeftLeg",
 					"pivot": [-2, 12, 0]
 				},
 				{
-					"name": "armorLeftBoot2",
-					"parent": "bipedLeftLeg2",
+					"name": "armorLeftBoot",
+					"parent": "bipedLeftLeg",
 					"pivot": [-2, 12, 0]
 				},
 				{
-					"name": "bipedRightLeg2",
+					"name": "bipedRightLeg",
 					"pivot": [2, 12, 0]
 				},
 				{
-					"name": "armorRightLeg2",
-					"parent": "bipedRightLeg2",
+					"name": "armorRightLeg",
+					"parent": "bipedRightLeg",
 					"pivot": [2, 12, 0]
 				},
 				{
-					"name": "armorRightBoot2",
-					"parent": "bipedRightLeg2",
+					"name": "armorRightBoot",
+					"parent": "bipedRightLeg",
 					"pivot": [2, 12, 0]
 				}
 			]

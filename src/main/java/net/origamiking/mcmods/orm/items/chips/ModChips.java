@@ -6,6 +6,8 @@ import net.origamiking.mcmods.orm.items.chips.galvatron.GalvatronChip;
 import net.origamiking.mcmods.orm.items.chips.ironhide.IronhideChip;
 import net.origamiking.mcmods.orm.items.chips.megatron.MegatronChip;
 import net.origamiking.mcmods.orm.items.chips.optimus_prime.OptimusPrimeChip;
+import net.origamiking.mcmods.orm.items.chips.shockwave.ShockwaveChip;
+import net.origamiking.mcmods.orm.items.chips.skywarp.SkywarpChip;
 import net.origamiking.mcmods.orm.items.chips.starscream.StarscreamChip;
 import net.origamiking.mcmods.orm.items.chips.rodimus_prime.RodimusPrimeChip;
 import net.origamiking.mcmods.orm.items.chips.scorpinok.ScorpinokChip;
@@ -27,5 +29,7 @@ public class ModChips {
         ThunderCrackerChip.get();
         GalvatronChip.get();
         RodimusPrimeChip.get();
+        SkywarpChip.get();
+        ShockwaveChip.get();
     }
 }

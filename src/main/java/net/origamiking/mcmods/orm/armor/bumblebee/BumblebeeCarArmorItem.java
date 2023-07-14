@@ -10,6 +10,7 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.origamiking.mcmods.oapi.dimension.DimensionUtils;
 import net.origamiking.mcmods.orm.client.armor.renderer.bumblebee.BumblebeeCarArmorRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
@@ -21,6 +22,7 @@ import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.util.Objects;
 import java.util.Set;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
@@ -34,7 +36,6 @@ public final class BumblebeeCarArmorItem extends ArmorItem implements GeoItem {
         super(armorMaterial, slot, properties);
     }
 
-    // Create our armor model/renderer for Fabric and return it
     @Override
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
@@ -43,9 +44,14 @@ public final class BumblebeeCarArmorItem extends ArmorItem implements GeoItem {
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
-                if(this.renderer == null)
-                    this.renderer = new BumblebeeCarArmorRenderer();
-                    //this.renderer = new GeckoArmorRenderer();
+                if (this.renderer == null) {
+                    //TODO cybertron mode
+                    if (Objects.equals(DimensionUtils.getCurrentDimension(), "cybertron")) {
+                        this.renderer = new BumblebeeCarArmorRenderer();
+                    } else {
+                        this.renderer = new BumblebeeCarArmorRenderer();
+                    }
+                }
 
                 // This prepares our GeoArmorRenderer for the current render frame.
                 // These parameters may be null however, so we don't do anything further with them
@@ -93,7 +99,7 @@ public final class BumblebeeCarArmorItem extends ArmorItem implements GeoItem {
                     Bumblebee.CAR));
 
             // Play the animation if the full set is being worn, otherwise stop
-            return isFullSet ? PlayState.STOP : PlayState.STOP;
+            return PlayState.STOP;
         }));
     }
 

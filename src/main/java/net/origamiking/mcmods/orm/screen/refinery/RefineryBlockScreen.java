@@ -34,7 +34,7 @@ public class RefineryBlockScreen extends HandledScreen<RefineryBlockScreenHandle
     }
 
     private void renderProgressArrow(DrawContext context, int x, int y) {
-        if(handler.isCrafting()) {
+        if (handler.isCrafting()) {
             context.drawTexture(TEXTURE, x + 105, y + 33, 176, 0, 8, handler.getScaledProgress());
         }
     }

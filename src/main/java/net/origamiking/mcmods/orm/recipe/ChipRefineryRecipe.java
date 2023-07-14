@@ -39,7 +39,9 @@ public class ChipRefineryRecipe extends CuttingRecipe {
     }
 
     public static class Type implements RecipeType<ChipRefineryRecipe> {
-        public Type() { }
+        public Type() {
+        }
+
         public static final Type INSTANCE = new Type();
         public static final String ID = "chip_refining";
     }
@@ -49,7 +51,7 @@ public class ChipRefineryRecipe extends CuttingRecipe {
         public static final String ID = "chip_refining";
 
         @Override
-        public ChipRefineryRecipe read(Identifier id, JsonObject json){
+        public ChipRefineryRecipe read(Identifier id, JsonObject json) {
             String string = JsonHelper.getString(json, "group", "");
             Ingredient ingredient;
             if (JsonHelper.hasArray(json, "ingredient")) {
@@ -65,7 +67,7 @@ public class ChipRefineryRecipe extends CuttingRecipe {
         }
 
         @Override
-        public ChipRefineryRecipe read(Identifier id, PacketByteBuf buf){
+        public ChipRefineryRecipe read(Identifier id, PacketByteBuf buf) {
             String string = buf.readString();
             Ingredient ingredient = Ingredient.fromPacket(buf);
             ItemStack itemStack = buf.readItemStack();
@@ -73,7 +75,7 @@ public class ChipRefineryRecipe extends CuttingRecipe {
         }
 
         @Override
-        public void write(PacketByteBuf buf, ChipRefineryRecipe recipe){
+        public void write(PacketByteBuf buf, ChipRefineryRecipe recipe) {
             buf.writeString(recipe.group);
             recipe.input.write(buf);
             buf.writeItemStack(recipe.output);

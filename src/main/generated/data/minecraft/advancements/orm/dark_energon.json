@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:orm/energon",
+  "criteria": {
+    "get_dark_energon": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:dark_energon"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.orm.dark_energon.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "orm:dark_energon"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.orm.dark_energon.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_dark_energon"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

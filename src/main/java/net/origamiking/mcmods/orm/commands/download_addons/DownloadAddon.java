@@ -30,6 +30,7 @@ public class DownloadAddon {
             context.sendMessage(Text.translatable("orm.download_addon.error"));
         }
     }
+
     private static void downloadFile(String fileURL, String savePath) throws IOException {
         URL url = new URL(fileURL);
         URLConnection connection = url.openConnection();

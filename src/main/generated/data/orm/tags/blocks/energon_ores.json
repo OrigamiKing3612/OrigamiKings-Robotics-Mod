@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "orm:energon_ore",
+    "orm:energon_deepslate_ore",
+    "orm:dark_energon_ore",
+    "orm:dark_energon_deepslate_ore"
+  ]
+}

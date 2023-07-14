@@ -24,12 +24,6 @@ import net.origamiking.mcmods.orm.screen.ModScreenHandlers;
 import java.util.List;
 
 public class ChipRefineryScreenHandler extends ScreenHandler {
-    public static final int field_30842 = 0;
-    public static final int field_30843 = 1;
-    private static final int field_30844 = 2;
-    private static final int field_30845 = 29;
-    private static final int field_30846 = 29;
-    private static final int field_30847 = 38;
     private final ScreenHandlerContext context;
     private final Property selectedRecipe = Property.create();
     private final World world;
@@ -38,9 +32,10 @@ public class ChipRefineryScreenHandler extends ScreenHandler {
     long lastTakeTime;
     final Slot inputSlot;
     final Slot outputSlot;
-    public  List<ItemStack> ingredients;
-    Runnable contentsChangedListener = () -> {};
-    public final Inventory input = new SimpleInventory(1){
+    public List<ItemStack> ingredients;
+    Runnable contentsChangedListener = () -> {
+    };
+    public final Inventory input = new SimpleInventory(1) {
 
         @Override
         public void markDirty() {
@@ -61,7 +56,7 @@ public class ChipRefineryScreenHandler extends ScreenHandler {
         this.context = context;
         this.world = playerInventory.player.getWorld();
         this.inputSlot = this.addSlot(new Slot(this.input, 0, 20, 33));
-        this.outputSlot = this.addSlot(new Slot(this.output, 1, 143, 33){
+        this.outputSlot = this.addSlot(new Slot(this.output, 1, 143, 33) {
 
             @Override
             public boolean canInsert(ItemStack stack) {
@@ -79,7 +74,7 @@ public class ChipRefineryScreenHandler extends ScreenHandler {
                 context.run((world, pos) -> {
                     long l = world.getTime();
                     if (ChipRefineryScreenHandler.this.lastTakeTime != l) {
-                        world.playSound(null, (BlockPos)pos, SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                        world.playSound(null, (BlockPos) pos, SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundCategory.BLOCKS, 1.0f, 1.0f);
                         ChipRefineryScreenHandler.this.lastTakeTime = l;
                     }
                 });
@@ -182,7 +177,7 @@ public class ChipRefineryScreenHandler extends ScreenHandler {
     @Override
     public ItemStack quickMove(PlayerEntity player, int slot) {
         ItemStack itemStack = ItemStack.EMPTY;
-        Slot slot2 = (Slot)this.slots.get(slot);
+        Slot slot2 = (Slot) this.slots.get(slot);
         if (slot2 != null && slot2.hasStack()) {
             ItemStack itemStack2 = slot2.getStack();
             Item item = itemStack2.getItem();

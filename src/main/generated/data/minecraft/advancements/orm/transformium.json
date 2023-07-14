@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:orm/ore_13",
+  "criteria": {
+    "get_transformium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:transformium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.orm.transformium.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "orm:transformium"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.orm.transformium.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_transformium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

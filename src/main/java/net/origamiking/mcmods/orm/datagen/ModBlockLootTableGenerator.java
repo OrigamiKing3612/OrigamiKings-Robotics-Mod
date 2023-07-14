@@ -6,6 +6,7 @@ import net.origamiking.mcmods.orm.blocks.chip_refinery.RegisterChipRefineryBlock
 import net.origamiking.mcmods.orm.blocks.compacter.RegisterCompacterBlock;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
+import net.origamiking.mcmods.orm.blocks.random.RandomBlocks;
 import net.origamiking.mcmods.orm.blocks.refinery.RegisterRefineryBlock;
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
 
@@ -35,6 +36,7 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(TransformiumBlocks.TRANSFORMIUM_SLAB);
         addDrop(TransformiumBlocks.TRANSFORMIUM_STAIRS);
         addDrop(Ore13Blocks.ORE_13_SLAB);
-        addDrop(Ore13Blocks.ORE_13_STAIR);
+        addDrop(Ore13Blocks.ORE_13_STAIRS);
+        addDrop(RandomBlocks.FORCE_FIELD_BLOCK);
     }
 }

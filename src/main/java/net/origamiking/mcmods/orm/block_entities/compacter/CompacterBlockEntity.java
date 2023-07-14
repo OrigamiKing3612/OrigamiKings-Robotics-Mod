@@ -101,7 +101,7 @@ public class CompacterBlockEntity extends BlockEntity implements NamedScreenHand
     public boolean canInsert(int slot, ItemStack stack, @Nullable Direction side) {
         Direction localDir = this.getWorld().getBlockState(this.pos).get(CompacterBlock.FACING);
 
-        if(side == Direction.UP || side == Direction.DOWN) {
+        if (side == Direction.UP || side == Direction.DOWN) {
             return false;
         }
 
@@ -109,22 +109,18 @@ public class CompacterBlockEntity extends BlockEntity implements NamedScreenHand
         // Right insert 1
         // Left insert 0
         return switch (localDir) {
-            default ->
-                    side.getOpposite() == Direction.NORTH && slot == 1 ||
-                            side.getOpposite() == Direction.EAST && slot == 1 ||
-                            side.getOpposite() == Direction.WEST && slot == 0;
-            case EAST ->
-                    side.rotateYClockwise() == Direction.NORTH && slot == 1 ||
-                            side.rotateYClockwise() == Direction.EAST && slot == 1 ||
-                            side.rotateYClockwise() == Direction.WEST && slot == 0;
-            case SOUTH ->
-                    side == Direction.NORTH && slot == 1 ||
-                            side == Direction.EAST && slot == 1 ||
-                            side == Direction.WEST && slot == 0;
-            case WEST ->
-                    side.rotateYCounterclockwise() == Direction.NORTH && slot == 1 ||
-                            side.rotateYCounterclockwise() == Direction.EAST && slot == 1 ||
-                            side.rotateYCounterclockwise() == Direction.WEST && slot == 0;
+            default -> side.getOpposite() == Direction.NORTH && slot == 1 ||
+                    side.getOpposite() == Direction.EAST && slot == 1 ||
+                    side.getOpposite() == Direction.WEST && slot == 0;
+            case EAST -> side.rotateYClockwise() == Direction.NORTH && slot == 1 ||
+                    side.rotateYClockwise() == Direction.EAST && slot == 1 ||
+                    side.rotateYClockwise() == Direction.WEST && slot == 0;
+            case SOUTH -> side == Direction.NORTH && slot == 1 ||
+                    side == Direction.EAST && slot == 1 ||
+                    side == Direction.WEST && slot == 0;
+            case WEST -> side.rotateYCounterclockwise() == Direction.NORTH && slot == 1 ||
+                    side.rotateYCounterclockwise() == Direction.EAST && slot == 1 ||
+                    side.rotateYCounterclockwise() == Direction.WEST && slot == 0;
         };
     }
 
@@ -132,12 +128,12 @@ public class CompacterBlockEntity extends BlockEntity implements NamedScreenHand
     public boolean canExtract(int slot, ItemStack stack, Direction side) {
         Direction localDir = this.getWorld().getBlockState(this.pos).get(CompacterBlock.FACING);
 
-        if(side == Direction.UP) {
+        if (side == Direction.UP) {
             return false;
         }
 
         // Down extract 2
-        if(side == Direction.DOWN) {
+        if (side == Direction.DOWN) {
             return slot == 2;
         }
 
@@ -156,14 +152,14 @@ public class CompacterBlockEntity extends BlockEntity implements NamedScreenHand
     }
 
     public static void tick(World world, BlockPos blockPos, BlockState state, CompacterBlockEntity entity) {
-        if(world.isClient()) {
+        if (world.isClient()) {
             return;
         }
 
-        if(hasRecipe(entity)) {
+        if (hasRecipe(entity)) {
             entity.progress++;
             markDirty(world, blockPos, state);
-            if(entity.progress >= entity.maxProgress) {
+            if (entity.progress >= entity.maxProgress) {
                 craftItem(entity);
             }
         } else {
@@ -178,7 +174,7 @@ public class CompacterBlockEntity extends BlockEntity implements NamedScreenHand
             inventory.setStack(i, entity.getStack(i));
         }
 
-        if(hasRecipe(entity)) {
+        if (hasRecipe(entity)) {
             entity.removeStack(1, 9);
             entity.removeStack(0, 1);
 
@@ -200,6 +196,7 @@ public class CompacterBlockEntity extends BlockEntity implements NamedScreenHand
 
         return hasEnergonInFirstSlot && hasCoalInFuelSlot && canInsertAmountIntoOutputSlot(inventory) && canInsertItemIntoOutputSlot(inventory, Item.fromBlock(EnergonBlocks.COMPACT_ENERGON_BLOCK)/*Finished product*/);
     }
+
     private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, Item output) {
         return inventory.getStack(2).getItem() == output || inventory.getStack(2).isEmpty();
     }

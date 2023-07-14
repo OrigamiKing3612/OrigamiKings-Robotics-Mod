@@ -6,12 +6,12 @@ import net.origamiking.mcmods.orm.armor.astrotrain.AstrotrainArmorItem;
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
-public class AstrotrainArmorRenderer extends GeoArmorRenderer<AstrotrainArmorItem>{
-        public AstrotrainArmorRenderer() {
-            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/astrotrain/astrotrain")));
+public class AstrotrainArmorRenderer extends GeoArmorRenderer<AstrotrainArmorItem> {
+    public AstrotrainArmorRenderer() {
+        super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/astrotrain/astrotrain")));
 
-            //addRenderLayer(new AutoGlowingGeoLayer<>(this));
-        }
+        //addRenderLayer(new AutoGlowingGeoLayer<>(this));
     }
+}
 
 

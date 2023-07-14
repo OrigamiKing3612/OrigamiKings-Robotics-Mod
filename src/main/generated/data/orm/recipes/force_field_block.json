@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "E": {
+      "item": "orm:energon"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    }
+  },
+  "pattern": [
+    "EEE",
+    "EGE",
+    "EEE"
+  ],
+  "result": {
+    "item": "orm:force_field_block"
+  },
+  "show_notification": true
+}

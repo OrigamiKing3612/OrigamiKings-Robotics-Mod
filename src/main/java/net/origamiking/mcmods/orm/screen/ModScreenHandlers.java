@@ -16,7 +16,6 @@ public class ModScreenHandlers {
     public static ScreenHandlerType<ChipRefineryScreenHandler> CHIP_REFINERY_SCREEN_HANDLER = new ScreenHandlerType<>(ChipRefineryScreenHandler::new, FeatureFlags.VANILLA_FEATURES);
 
 
-
     public static void register() {
         REFINERY_BLOCK_SCREEN_HANDLER = new ScreenHandlerType<>(RefineryBlockScreenHandler::new, FeatureFlags.VANILLA_FEATURES);
         COMPACTER_BLOCK_SCREEN_HANDLER = new ScreenHandlerType<>(CompacterBlockScreenHandler::new, FeatureFlags.VANILLA_FEATURES);

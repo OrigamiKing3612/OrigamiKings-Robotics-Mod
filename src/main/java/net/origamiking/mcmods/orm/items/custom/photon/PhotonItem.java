@@ -12,6 +12,7 @@ public class PhotonItem extends Item {
     public PhotonItem(Settings settings) {
         super(settings);
     }
+
     public PersistentProjectileEntity createPhoton(World world, ItemStack stack, LivingEntity shooter) {
         return new PhotonEntity(world, shooter);
     }

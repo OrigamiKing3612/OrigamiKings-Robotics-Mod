@@ -7,7 +7,6 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.SimpleNamedScreenHandlerFactory;
-import net.minecraft.stat.Stats;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.text.Text;
@@ -22,6 +21,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.origamiking.mcmods.orm.screen.chip_refinery.ChipRefineryScreenHandler;
+import net.origamiking.mcmods.orm.stats.ModStats;
 import org.jetbrains.annotations.Nullable;
 
 public class ChipRefineryBlock extends Block {
@@ -31,12 +31,13 @@ public class ChipRefineryBlock extends Block {
 
     public ChipRefineryBlock(AbstractBlock.Settings settings) {
         super(settings);
-        this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH));
+        this.setDefaultState((BlockState) ((BlockState) this.stateManager.getDefaultState()).with(FACING, Direction.NORTH));
 
     }
+
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return (BlockState)this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
+        return (BlockState) this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
     }
 
     @Override
@@ -45,7 +46,7 @@ public class ChipRefineryBlock extends Block {
             return ActionResult.SUCCESS;
         }
         player.openHandledScreen(state.createScreenHandlerFactory(world, pos));
-        player.incrementStat(Stats.INTERACT_WITH_STONECUTTER);
+        player.incrementStat(ModStats.INTERACT_WITH_CHIP_REFINERY);
         return ActionResult.CONSUME;
     }
 
@@ -72,7 +73,7 @@ public class ChipRefineryBlock extends Block {
 
     @Override
     public BlockState rotate(BlockState state, BlockRotation rotation) {
-        return (BlockState)state.with(FACING, rotation.rotate(state.get(FACING)));
+        return (BlockState) state.with(FACING, rotation.rotate(state.get(FACING)));
     }
 
     @Override

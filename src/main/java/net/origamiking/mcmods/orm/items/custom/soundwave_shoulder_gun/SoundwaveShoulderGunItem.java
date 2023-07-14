@@ -36,6 +36,7 @@ public class SoundwaveShoulderGunItem extends RangedWeaponItem implements GeoIte
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     public static final Predicate<ItemStack> ORM_PROJECTILES = stack -> stack.isOf(ItemRegistry.PHOTON_ITEM);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
+
     public SoundwaveShoulderGunItem(Settings settings) {
         super(settings);
         SingletonGeoAnimatable.registerSyncedAnimatable(this);
@@ -77,8 +78,12 @@ public class SoundwaveShoulderGunItem extends RangedWeaponItem implements GeoIte
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         controllers.add(new AnimationController<>(this, "idle", 20, state -> PlayState.STOP));
     }
+
     @Override
-    public AnimatableInstanceCache getAnimatableInstanceCache() {return this.cache;}
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return this.cache;
+    }
+
     @Override
     public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
         boolean bl2;
@@ -95,14 +100,14 @@ public class SoundwaveShoulderGunItem extends RangedWeaponItem implements GeoIte
         if (itemStack.isEmpty()) {
             itemStack = new ItemStack(ItemRegistry.PHOTON_ITEM);
         }
-        if ((double)(f = BowItem.getPullProgress(i = this.getMaxUseTime(stack) - remainingUseTicks)) < 0.1) {
+        if ((double) (f = BowItem.getPullProgress(i = this.getMaxUseTime(stack) - remainingUseTicks)) < 0.1) {
             return;
         }
         boolean bl3 = bl2 = bl && itemStack.isOf(ItemRegistry.PHOTON_ITEM);
         if (!world.isClient) {
             int k;
             int j;
-            PhotonItem photonItem = (PhotonItem)(itemStack.getItem() instanceof PhotonItem ? itemStack.getItem() : ItemRegistry.PHOTON_ITEM);
+            PhotonItem photonItem = (PhotonItem) (itemStack.getItem() instanceof PhotonItem ? itemStack.getItem() : ItemRegistry.PHOTON_ITEM);
             PersistentProjectileEntity persistentProjectileEntity = photonItem.createPhoton(world, itemStack, playerEntity);
             persistentProjectileEntity.setVelocity(playerEntity, playerEntity.getPitch(), playerEntity.getYaw(), 0.0f, f * 3.0f, 1.0f);
             if (f == 1.0f) {
@@ -124,7 +129,7 @@ public class SoundwaveShoulderGunItem extends RangedWeaponItem implements GeoIte
     }
 
     public static float getPullProgress(int useTicks) {
-        float f = (float)useTicks / 20.0f;
+        float f = (float) useTicks / 20.0f;
         if ((f = (f * f + f * 2.0f) / 3.0f) > 1.0f) {
             f = 1.0f;
         }

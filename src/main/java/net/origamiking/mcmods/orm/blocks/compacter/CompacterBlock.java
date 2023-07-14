@@ -17,8 +17,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.origamiking.mcmods.oapi.blocks.OrigamiBlockSettings;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
 import net.origamiking.mcmods.orm.block_entities.compacter.CompacterBlockEntity;
+import net.origamiking.mcmods.orm.stats.ModStats;
 import org.jetbrains.annotations.Nullable;
 
 @SuppressWarnings("all")
@@ -26,7 +28,7 @@ public class CompacterBlock extends BlockWithEntity implements BlockEntityProvid
     public static final DirectionProperty FACING = Properties.FACING;
 
     public CompacterBlock() {
-        super(Settings.create().nonOpaque().requiresTool().strength(3.5f).sounds(BlockSoundGroup.METAL));
+        super(OrigamiBlockSettings.create().nonOpaque().requiresTool().strength(3.5f).sounds(BlockSoundGroup.METAL));
     }
 
     private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 10, 16);
@@ -83,7 +85,7 @@ public class CompacterBlock extends BlockWithEntity implements BlockEntityProvid
                 player.openHandledScreen(screenHandlerFactory);
             }
         }
-
+        player.incrementStat(ModStats.INTERACT_WITH_COMPACTER);
         return ActionResult.SUCCESS;
     }
 

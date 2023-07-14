@@ -1,0 +1,84 @@
+{
+  "parent": "minecraft:orm/decepticons/megatron",
+  "criteria": {
+    "get_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:scorpinok_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:scorpinok_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:scorpinok_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:scorpinok_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.orm.scorpinok.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "orm:scorpinok_helmet",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.orm.scorpinok.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_helmet"
+    ],
+    [
+      "get_chestplate"
+    ],
+    [
+      "get_leggings"
+    ],
+    [
+      "get_boots"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

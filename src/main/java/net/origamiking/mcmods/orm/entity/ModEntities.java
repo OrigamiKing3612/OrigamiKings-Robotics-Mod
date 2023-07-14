@@ -28,6 +28,7 @@ public class ModEntities {
     public static <T extends MobEntity> EntityType<T> registerEntity(String name, EntityType.EntityFactory<T> entity, float width, float height, SpawnGroup spawnGroup) {
         return Registry.register(Registries.ENTITY_TYPE, new Identifier(OrmMain.MOD_ID, name), FabricEntityTypeBuilder.create(spawnGroup, entity).dimensions(EntityDimensions.changing(width, height)).build());
     }
+
     public static void register() {
         FabricDefaultAttributeRegistry.register(ModEntities.VECTOR_GUARD, VectorGuardEntity.setAttributes());
     }

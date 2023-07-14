@@ -7,9 +7,10 @@ import net.origamiking.mcmods.orm.items.ore13.Ore13Items;
 import net.origamiking.mcmods.orm.items.random.RandomItems;
 import net.origamiking.mcmods.orm.items.spawnegg.ModSpawnEggs;
 import net.origamiking.mcmods.orm.items.transformium.TransformiumItems;
+import net.origamiking.mcmods.orm.items.transformium_alloy.TransformiumAlloyItems;
 
 public class ModItems {
-//    public static final Item NEW_ARMOR_STAND = new SpawnEggItem(, 0xc4c4c4, 0xadadad, new FabricItemSettings()));
+    //    public static final Item NEW_ARMOR_STAND = new SpawnEggItem(, 0xc4c4c4, 0xadadad, new FabricItemSettings()));
     public static void register() {
         ItemRegistry.register();
         TransformiumItems.get();
@@ -18,5 +19,6 @@ public class ModItems {
         ModChips.register();
         RandomItems.get();
         ModSpawnEggs.get();
+        TransformiumAlloyItems.get();
     }
 }

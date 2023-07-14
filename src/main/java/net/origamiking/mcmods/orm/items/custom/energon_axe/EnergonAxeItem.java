@@ -18,6 +18,7 @@ import java.util.function.Supplier;
 public class EnergonAxeItem extends Item implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
+
     public EnergonAxeItem(Settings settings) {
         super(settings);
         SingletonGeoAnimatable.registerSyncedAnimatable(this);
@@ -47,8 +48,11 @@ public class EnergonAxeItem extends Item implements GeoItem {
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         controllers.add(new AnimationController<>(this, "idle", 20, state -> PlayState.STOP)
-                );
+        );
     }
+
     @Override
-    public AnimatableInstanceCache getAnimatableInstanceCache() {return this.cache;}
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return this.cache;
+    }
 }

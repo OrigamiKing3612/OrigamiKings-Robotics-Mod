@@ -17,5 +17,7 @@ public class ModBlockEntities {
     public static final BlockEntityType<CompacterBlockEntity> COMPACTER_BLOCK = Registry.register(Registries.BLOCK_ENTITY_TYPE,
             OrmMain.MOD_ID + ":compacter_block",
             FabricBlockEntityTypeBuilder.create(CompacterBlockEntity::new, RegisterCompacterBlock.COMPACTER_BLOCK).build(null));
-    public static void register() {}
+
+    public static void register() {
+    }
 }

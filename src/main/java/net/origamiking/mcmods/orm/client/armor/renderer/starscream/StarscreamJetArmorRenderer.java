@@ -6,12 +6,12 @@ import net.origamiking.mcmods.orm.armor.starscream.StarscreamJetArmorItem;
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
-public class StarscreamJetArmorRenderer extends GeoArmorRenderer<StarscreamJetArmorItem>{
-        public StarscreamJetArmorRenderer() {
-            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/starscream/starscream_jet")));
+public class StarscreamJetArmorRenderer extends GeoArmorRenderer<StarscreamJetArmorItem> {
+    public StarscreamJetArmorRenderer() {
+        super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/starscream/starscream_jet")));
 
-            //addRenderLayer(new AutoGlowingGeoLayer<>(this));
-        }
+        //addRenderLayer(new AutoGlowingGeoLayer<>(this));
     }
+}
 
 

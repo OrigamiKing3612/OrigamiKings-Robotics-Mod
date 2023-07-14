@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "orm:shockwave_chip"
+    },
+    "D": {
+      "item": "minecraft:diamond_boots"
+    },
+    "E": {
+      "item": "orm:energon"
+    },
+    "S": {
+      "item": "orm:spark"
+    },
+    "T": {
+      "item": "orm:transformium"
+    }
+  },
+  "pattern": [
+    "TCT",
+    "ESE",
+    "TDT"
+  ],
+  "result": {
+    "item": "orm:shockwave_boots"
+  },
+  "show_notification": true
+}

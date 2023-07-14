@@ -7,12 +7,12 @@ import net.origamiking.mcmods.orm.block_entities.compacter.CompacterBlockEntity;
 import software.bernie.geckolib.model.DefaultedBlockGeoModel;
 
 public class CompacterBlockModel extends DefaultedBlockGeoModel<CompacterBlockEntity> {
-	public CompacterBlockModel() {
-		super(new Identifier(OrmMain.MOD_ID, "compacter_block"));
-	}
+    public CompacterBlockModel() {
+        super(new Identifier(OrmMain.MOD_ID, "compacter_block"));
+    }
 
-	@Override
-	public RenderLayer getRenderType(CompacterBlockEntity animatable, Identifier texture) {
-		return RenderLayer.getEntityTranslucent(getTextureResource(animatable));
-	}
+    @Override
+    public RenderLayer getRenderType(CompacterBlockEntity animatable, Identifier texture) {
+        return RenderLayer.getEntityTranslucent(getTextureResource(animatable));
+    }
 }

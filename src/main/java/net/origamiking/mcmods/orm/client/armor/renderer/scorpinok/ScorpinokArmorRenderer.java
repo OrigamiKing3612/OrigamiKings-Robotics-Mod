@@ -6,12 +6,12 @@ import net.origamiking.mcmods.orm.armor.scorpinok.ScorpinokArmorItem;
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
-public class ScorpinokArmorRenderer extends GeoArmorRenderer<ScorpinokArmorItem>{
-        public ScorpinokArmorRenderer() {
-            super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/scorpinok/scorpinok")));
+public class ScorpinokArmorRenderer extends GeoArmorRenderer<ScorpinokArmorItem> {
+    public ScorpinokArmorRenderer() {
+        super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "armor/scorpinok/scorpinok")));
 
-            //addRenderLayer(new AutoGlowingGeoLayer<>(this));
-        }
+        //addRenderLayer(new AutoGlowingGeoLayer<>(this));
     }
+}
 
 

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "orm:shockwave_boots"
+    },
+    "C": {
+      "item": "orm:shockwave_chestplate"
+    },
+    "H": {
+      "item": "orm:shockwave_helmet"
+    },
+    "L": {
+      "item": "orm:shockwave_leggings"
+    },
+    "O": {
+      "item": "orm:ore_13"
+    },
+    "T": {
+      "item": "orm:transformium"
+    }
+  },
+  "pattern": [
+    "HTC",
+    "TOT",
+    "LTB"
+  ],
+  "result": {
+    "item": "orm:shockwave_transformed"
+  },
+  "show_notification": true
+}

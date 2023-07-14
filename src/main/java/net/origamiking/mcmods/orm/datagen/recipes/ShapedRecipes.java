@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 import net.origamiking.mcmods.orm.blocks.chip_refinery.RegisterChipRefineryBlock;
 import net.origamiking.mcmods.orm.blocks.compacter.RegisterCompacterBlock;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
+import net.origamiking.mcmods.orm.blocks.random.RandomBlocks;
 import net.origamiking.mcmods.orm.blocks.refinery.RegisterRefineryBlock;
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
 import net.origamiking.mcmods.orm.items.custom.ItemRegistry;
@@ -105,5 +106,15 @@ public class ShapedRecipes {
                 .criterion(RecipeProvider.hasItem(EnergonItems.ENERGON), RecipeProvider.conditionsFromItem(EnergonItems.ENERGON))
                 .criterion(RecipeProvider.hasItem(Items.IRON_INGOT), RecipeProvider.conditionsFromItem(Items.IRON_INGOT))
                 .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(ItemRegistry.SOUNDWAVE_RAY_GUN)));
+        //force field
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, RandomBlocks.FORCE_FIELD_BLOCK, 1)
+                .pattern("EEE")
+                .pattern("EGE")
+                .pattern("EEE")
+                .input('G', Blocks.GLASS)
+                .input('E', EnergonItems.ENERGON)
+                .criterion(RecipeProvider.hasItem(Blocks.GLASS), RecipeProvider.conditionsFromItem(Blocks.GLASS))
+                .criterion(RecipeProvider.hasItem(EnergonItems.ENERGON), RecipeProvider.conditionsFromItem(EnergonItems.ENERGON))
+                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(RandomBlocks.FORCE_FIELD_BLOCK)));
     }
 }

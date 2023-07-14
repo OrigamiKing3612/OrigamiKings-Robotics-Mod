@@ -1,0 +1,21 @@
+{
+  "type": "orm:cybertron",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "orm:cybertron",
+      "lakes": false,
+      "features": true,
+      "layers": [
+        {
+          "block": "minecraft:bedrock",
+          "height": 2
+        },
+        {
+          "block": "orm:transformium_block",
+          "height": 32
+        }
+      ]
+    }
+  }
+}

@@ -18,7 +18,9 @@ import net.origamiking.mcmods.orm.armor.megatron.Megatron;
 import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrime;
 import net.origamiking.mcmods.orm.armor.rodimus_prime.RodimusPrime;
 import net.origamiking.mcmods.orm.armor.scorpinok.Scorpinok;
+import net.origamiking.mcmods.orm.armor.shockwave.Shockwave;
 import net.origamiking.mcmods.orm.armor.skystrike.Skystrike;
+import net.origamiking.mcmods.orm.armor.skywarp.Skywarp;
 import net.origamiking.mcmods.orm.armor.soundwave.Soundwave;
 import net.origamiking.mcmods.orm.armor.starscream.Starscream;
 import net.origamiking.mcmods.orm.armor.thunder_cracker.ThunderCracker;
@@ -26,8 +28,10 @@ import net.origamiking.mcmods.orm.blocks.chip_refinery.RegisterChipRefineryBlock
 import net.origamiking.mcmods.orm.blocks.compacter.RegisterCompacterBlock;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
+import net.origamiking.mcmods.orm.blocks.random.RandomBlocks;
 import net.origamiking.mcmods.orm.blocks.refinery.RegisterRefineryBlock;
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
+import net.origamiking.mcmods.orm.blocks.transformium_alloy.TransformiumAlloyBlocks;
 import net.origamiking.mcmods.orm.items.chips.astrotrain.AstrotrainChip;
 import net.origamiking.mcmods.orm.items.chips.bumblebee.BumblebeeChip;
 import net.origamiking.mcmods.orm.items.chips.galvatron.GalvatronChip;
@@ -36,7 +40,9 @@ import net.origamiking.mcmods.orm.items.chips.megatron.MegatronChip;
 import net.origamiking.mcmods.orm.items.chips.optimus_prime.OptimusPrimeChip;
 import net.origamiking.mcmods.orm.items.chips.rodimus_prime.RodimusPrimeChip;
 import net.origamiking.mcmods.orm.items.chips.scorpinok.ScorpinokChip;
+import net.origamiking.mcmods.orm.items.chips.shockwave.ShockwaveChip;
 import net.origamiking.mcmods.orm.items.chips.skystrike.SkystrikeChip;
+import net.origamiking.mcmods.orm.items.chips.skywarp.SkywarpChip;
 import net.origamiking.mcmods.orm.items.chips.soundwave.SoundwaveChip;
 import net.origamiking.mcmods.orm.items.chips.starscream.StarscreamChip;
 import net.origamiking.mcmods.orm.items.chips.thunder_cracker.ThunderCrackerChip;
@@ -46,6 +52,7 @@ import net.origamiking.mcmods.orm.items.ore13.Ore13Items;
 import net.origamiking.mcmods.orm.items.random.RandomItems;
 import net.origamiking.mcmods.orm.items.spawnegg.ModSpawnEggs;
 import net.origamiking.mcmods.orm.items.transformium.TransformiumItems;
+import net.origamiking.mcmods.orm.items.transformium_alloy.TransformiumAlloyItems;
 
 public class ModGroups {
     public static final RegistryKey<ItemGroup> ORM_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(OrmMain.MOD_ID, "orm_group"));
@@ -121,11 +128,21 @@ public class ModGroups {
                     entries.add(ThunderCracker.LEGGINGS);
                     entries.add(ThunderCracker.BOOTS);
                     entries.add(ThunderCracker.JET);
+                    entries.add(Skywarp.HELMET);
+                    entries.add(Skywarp.CHESTPLATE);
+                    entries.add(Skywarp.LEGGINGS);
+                    entries.add(Skywarp.BOOTS);
+                    entries.add(Skywarp.JET);
                     entries.add(Scorpinok.HELMET);
                     entries.add(Scorpinok.CHESTPLATE);
                     entries.add(Scorpinok.LEGGINGS);
                     entries.add(Scorpinok.BOOTS);
                     entries.add(Scorpinok.CAR);
+                    entries.add(Shockwave.HELMET);
+                    entries.add(Shockwave.CHESTPLATE);
+                    entries.add(Shockwave.LEGGINGS);
+                    entries.add(Shockwave.BOOTS);
+                    entries.add(ItemRegistry.SHOCKWAVE_TRANSFORMED);
                 }).build());
     }
 
@@ -138,6 +155,8 @@ public class ModGroups {
                     entries.add(EnergonItems.DARK_ENERGON);
                     entries.add(Ore13Items.ORE_13);
                     entries.add(TransformiumItems.TRANSFORMIUM);
+                    entries.add(TransformiumAlloyItems.TRANSFORMIUM_ALLOY);
+                    entries.add(TransformiumAlloyItems.TRANSFORMIUM_ALLOY_BRICK);
                     entries.add(RandomItems.SPARK);
                     entries.add(RandomItems.ENERGY_CONDUCTOR);
                     entries.add(ModSpawnEggs.VECTOR_GUARD_SPAWN_EGG);
@@ -146,7 +165,7 @@ public class ModGroups {
                     entries.add(EnergonBlocks.ENERGON_STAIRS);
                     entries.add(EnergonBlocks.ENERGON_SLAB);
                     entries.add(Ore13Blocks.ORE_13_BLOCK);
-                    entries.add(Ore13Blocks.ORE_13_STAIR);
+                    entries.add(Ore13Blocks.ORE_13_STAIRS);
                     entries.add(Ore13Blocks.ORE_13_SLAB);
                     entries.add(TransformiumBlocks.TRANSFORMIUM_BLOCK);
                     entries.add(TransformiumBlocks.TRANSFORMIUM_STAIRS);
@@ -158,12 +177,19 @@ public class ModGroups {
                     entries.add(EnergonBlocks.DARK_ENERGON_SLAB);
                     entries.add(EnergonBlocks.DARK_ENERGON_ORE);
                     entries.add(EnergonBlocks.DEEPSLATE_DARK_ENERGON_ORE);
+                    entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BLOCK);
+                    entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_STAIRS);
+                    entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_SLAB);
+                    entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_BLOCK);
+                    entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_STAIRS);
+                    entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_SLAB);
                     entries.add(Ore13Blocks.ORE_13_ORE);
                     entries.add(Ore13Blocks.DEEPSLATE_ORE_13_ORE);
                     entries.add(EnergonBlocks.COMPACT_ENERGON_BLOCK);
                     entries.add(RegisterRefineryBlock.REFINERY_BLOCK);
                     entries.add(RegisterCompacterBlock.COMPACTER_BLOCK);
                     entries.add(RegisterChipRefineryBlock.CHIP_REFINERY_BLOCK);
+                    entries.add(RandomBlocks.FORCE_FIELD_BLOCK);
                 }).build());
     }
 
@@ -198,7 +224,8 @@ public class ModGroups {
                     entries.add(SoundwaveChip.CHIP);
                     entries.add(ThunderCrackerChip.CHIP);
                     entries.add(ScorpinokChip.CHIP);
-
+                    entries.add(SkywarpChip.CHIP);
+                    entries.add(ShockwaveChip.CHIP);
                 }).build());
     }
 }
