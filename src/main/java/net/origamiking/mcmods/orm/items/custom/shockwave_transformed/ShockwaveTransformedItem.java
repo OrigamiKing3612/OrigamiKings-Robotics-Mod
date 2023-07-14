@@ -1,4 +1,4 @@
-package net.origamiking.mcmods.orm.items.custom.megatron_transformed;
+package net.origamiking.mcmods.orm.items.custom.shockwave_transformed;
 
 import net.minecraft.client.render.item.BuiltinModelItemRenderer;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -6,10 +6,7 @@ import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
-import net.minecraft.item.BowItem;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.RangedWeaponItem;
-import net.minecraft.item.Vanishable;
+import net.minecraft.item.*;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
@@ -17,7 +14,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
-import net.origamiking.mcmods.orm.client.items.renderer.megatron_transformed.MegatronTransformedRenderer;
+import net.origamiking.mcmods.orm.client.items.renderer.shockwave_transformed.ShockwaveTransformedRenderer;
 import net.origamiking.mcmods.orm.items.custom.ItemRegistry;
 import net.origamiking.mcmods.orm.items.custom.photon.PhotonItem;
 import software.bernie.geckolib.animatable.GeoItem;
@@ -33,11 +30,11 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-public class MegatronTransformedItem extends RangedWeaponItem implements GeoItem, Vanishable {
+public class ShockwaveTransformedItem extends RangedWeaponItem implements GeoItem, Vanishable {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
 
-    public MegatronTransformedItem(Settings settings) {
+    public ShockwaveTransformedItem(Settings settings) {
         super(settings);
         SingletonGeoAnimatable.registerSyncedAnimatable(this);
     }
@@ -55,12 +52,12 @@ public class MegatronTransformedItem extends RangedWeaponItem implements GeoItem
     @Override
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
-            private MegatronTransformedRenderer renderer;
+            private ShockwaveTransformedRenderer renderer;
 
             @Override
             public BuiltinModelItemRenderer getCustomRenderer() {
                 if (this.renderer == null)
-                    this.renderer = new MegatronTransformedRenderer();
+                    this.renderer = new ShockwaveTransformedRenderer();
                 return this.renderer;
             }
         });

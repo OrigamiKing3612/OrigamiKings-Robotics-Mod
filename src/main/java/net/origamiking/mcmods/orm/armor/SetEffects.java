@@ -20,6 +20,7 @@ import net.origamiking.mcmods.orm.armor.rodimus_prime.RodimusPrimeArmorItem;
 import net.origamiking.mcmods.orm.armor.rodimus_prime.RodimusPrimeCarArmorItem;
 import net.origamiking.mcmods.orm.armor.scorpinok.ScorpinokArmorItem;
 import net.origamiking.mcmods.orm.armor.scorpinok.ScorpinokCarArmorItem;
+import net.origamiking.mcmods.orm.armor.shockwave.ShockwaveArmorItem;
 import net.origamiking.mcmods.orm.armor.skystrike.SkystrikeArmorItem;
 import net.origamiking.mcmods.orm.armor.skystrike.SkystrikeCarArmorItem;
 import net.origamiking.mcmods.orm.armor.skywarp.SkywarpArmorItem;
@@ -142,6 +143,11 @@ public class SetEffects {
                     player.getEquippedStack(EquipmentSlot.FEET).getItem() instanceof SkywarpArmorItem) {
                 player.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 2, 0, false, false));
             } else if (player.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof SkywarpJetArmorItem) {
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 2, 0, false, false));
+            } else if (player.getEquippedStack(EquipmentSlot.HEAD).getItem() instanceof ShockwaveArmorItem &&
+                    player.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof ShockwaveArmorItem &&
+                    player.getEquippedStack(EquipmentSlot.LEGS).getItem() instanceof ShockwaveArmorItem &&
+                    player.getEquippedStack(EquipmentSlot.FEET).getItem() instanceof ShockwaveArmorItem) {
                 player.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 2, 0, false, false));
             } else {
                 player.removeStatusEffect(StatusEffects.INVISIBILITY);

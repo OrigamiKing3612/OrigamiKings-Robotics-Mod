@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_shockwave_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:shockwave_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_shockwave_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:shockwave_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_shockwave_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:shockwave_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_shockwave_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:shockwave_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "orm:shockwave_transformed"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_shockwave_helmet",
+      "has_shockwave_chestplate",
+      "has_shockwave_leggings",
+      "has_shockwave_boots",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "orm:shockwave_transformed"
+    ]
+  },
+  "sends_telemetry_event": false
+}

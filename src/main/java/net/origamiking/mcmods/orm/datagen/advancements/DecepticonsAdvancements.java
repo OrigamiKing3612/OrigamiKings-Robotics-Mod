@@ -9,6 +9,7 @@ import net.origamiking.mcmods.orm.armor.astrotrain.Astrotrain;
 import net.origamiking.mcmods.orm.armor.galvatron.Galvatron;
 import net.origamiking.mcmods.orm.armor.megatron.Megatron;
 import net.origamiking.mcmods.orm.armor.scorpinok.Scorpinok;
+import net.origamiking.mcmods.orm.armor.shockwave.Shockwave;
 import net.origamiking.mcmods.orm.armor.skywarp.Skywarp;
 import net.origamiking.mcmods.orm.armor.soundwave.Soundwave;
 import net.origamiking.mcmods.orm.armor.starscream.Starscream;
@@ -156,6 +157,23 @@ public class DecepticonsAdvancements {
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Skywarp.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Skywarp.BOOTS))
                 .build(advancementConsumer, OrmMain.MOD_ID + "/decepticons/skywarp");
+
+        Advancement shockwave = Advancement.Builder.create().parent(megatron)
+                .display(
+                        Shockwave.HELMET, // icon
+                        Text.translatable(translatableTitle("shockwave")), // title
+                        Text.translatable(translatableDescription("shockwave")), // description
+                        null,
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .criterion("get_helmet", InventoryChangedCriterion.Conditions.items(Shockwave.HELMET))
+                .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Shockwave.CHESTPLATE))
+                .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Shockwave.LEGGINGS))
+                .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Shockwave.BOOTS))
+                .build(advancementConsumer, OrmMain.MOD_ID + "/decepticons/shockwave");
 
     }
 }
