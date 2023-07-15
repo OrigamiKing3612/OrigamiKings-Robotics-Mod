@@ -11,7 +11,9 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.oapi.dimension.DimensionUtils;
+import net.origamiking.mcmods.orm.armor.TransformVariables;
 import net.origamiking.mcmods.orm.client.armor.renderer.bumblebee.BumblebeeCarArmorRenderer;
+import net.origamiking.mcmods.orm.client.armor.renderer.ironhide.IronhideCarArmorRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
 import software.bernie.geckolib.constant.DataTickets;
@@ -20,6 +22,7 @@ import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache
 import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.core.object.PlayState;
+import software.bernie.geckolib.renderer.GeoArmorRenderer;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.Objects;
@@ -40,14 +43,14 @@ public final class BumblebeeCarArmorItem extends ArmorItem implements GeoItem {
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
             //private GeoArmorRenderer<?> renderer;
-            private BumblebeeCarArmorRenderer renderer;
+            private GeoArmorRenderer<?> renderer;
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
                 if (this.renderer == null) {
                     //TODO cybertron mode
-                    if (Objects.equals(DimensionUtils.getCurrentDimension(), "cybertron")) {
-                        this.renderer = new BumblebeeCarArmorRenderer();
+                    if (Objects.equals(DimensionUtils.getCurrentDimension(), "cybertron") && TransformVariables.BUMBLEBEE) {
+                        this.renderer = new IronhideCarArmorRenderer();
                     } else {
                         this.renderer = new BumblebeeCarArmorRenderer();
                     }
