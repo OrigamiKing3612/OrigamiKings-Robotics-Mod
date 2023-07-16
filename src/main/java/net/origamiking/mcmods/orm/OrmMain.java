@@ -6,7 +6,6 @@ import net.origamiking.mcmods.orm.armor.ModArmor;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
 import net.origamiking.mcmods.orm.blocks.ModBlocks;
 import net.origamiking.mcmods.orm.commands.ModCommands;
-import net.origamiking.mcmods.orm.entities.ModEntityTypes;
 import net.origamiking.mcmods.orm.entity.ModEntities;
 import net.origamiking.mcmods.orm.group.ModGroups;
 import net.origamiking.mcmods.orm.items.ModItems;
@@ -35,7 +34,6 @@ public class OrmMain implements ModInitializer {
         ModBlockEntities.register();
         ModScreenHandlers.register();
         ModGroups.register();
-        ModEntityTypes.register();
         ModCommands.register();
         ModWorld.register();
         ModRecipeType.register();

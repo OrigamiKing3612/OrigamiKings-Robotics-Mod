@@ -16,8 +16,8 @@ repositories {
     maven { url 'https://maven.kyrptonaught.dev' }
     maven { url 'https://dl.cloudsmith.io/public/origamiking3612/origamikings-api/maven/' }
     maven {
-        name = "TerraformersMC"
-        url = "https://maven.terraformersmc.com/"
+        name 'TerraformersMC'
+        url 'https://maven.terraformersmc.com/'
     }
 }
 
@@ -47,7 +47,6 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-    // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     // Uncomment the following line to enable the deprecated Fabric API modules.
@@ -111,7 +110,7 @@ modrinth {
     projectId = "${project_id}"
     versionNumber = "${mod_version}"
     versionType = "${version_type}"
-    uploadFile = remapJar // With Loom, this MUST be set to `remapJar`
+    uploadFile = remapJar
     gameVersions = ['1.20.1'] // Must be an array, even with only one version
     dependencies {
         // scope.type
