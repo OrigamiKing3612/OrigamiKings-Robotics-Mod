@@ -17,6 +17,7 @@
    1. Make Advancement
    2. Lang
    3. Recipes
+   4. Tags
 5. Added resources
    - assets/orm
      - animations/item/armor/character_name

@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "orm:optimus_prime_chip",
+    "orm:megatron_chip",
+    "orm:rodimus_prime_chip",
+    "orm:galvatron_chip",
+    "orm:bumblebee_chip",
+    "orm:ironhide_chip",
+    "orm:astrotrain_chip",
+    "orm:skystrike_chip",
+    "orm:starscream_chip",
+    "orm:soundwave_chip",
+    "orm:thunder_cracker_chip",
+    "orm:scorpinok_chip",
+    "orm:skywarp_chip",
+    "orm:shockwave_chip",
+    "orm:ratchet_chip"
+  ]
+}

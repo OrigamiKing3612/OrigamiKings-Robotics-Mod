@@ -12,8 +12,24 @@ import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
 import net.origamiking.mcmods.orm.blocks.transformium_alloy.TransformiumAlloyBlocks;
 import net.origamiking.mcmods.orm.entity.ModEntities;
+import net.origamiking.mcmods.orm.items.chips.astrotrain.AstrotrainChip;
+import net.origamiking.mcmods.orm.items.chips.bumblebee.BumblebeeChip;
+import net.origamiking.mcmods.orm.items.chips.galvatron.GalvatronChip;
+import net.origamiking.mcmods.orm.items.chips.ironhide.IronhideChip;
+import net.origamiking.mcmods.orm.items.chips.megatron.MegatronChip;
+import net.origamiking.mcmods.orm.items.chips.optimus_prime.OptimusPrimeChip;
+import net.origamiking.mcmods.orm.items.chips.ratchet.RatchetChip;
+import net.origamiking.mcmods.orm.items.chips.rodimus_prime.RodimusPrimeChip;
+import net.origamiking.mcmods.orm.items.chips.scorpinok.ScorpinokChip;
+import net.origamiking.mcmods.orm.items.chips.shockwave.ShockwaveChip;
+import net.origamiking.mcmods.orm.items.chips.skystrike.SkystrikeChip;
+import net.origamiking.mcmods.orm.items.chips.skywarp.SkywarpChip;
+import net.origamiking.mcmods.orm.items.chips.soundwave.SoundwaveChip;
+import net.origamiking.mcmods.orm.items.chips.starscream.StarscreamChip;
+import net.origamiking.mcmods.orm.items.chips.thunder_cracker.ThunderCrackerChip;
 import net.origamiking.mcmods.orm.items.custom.ItemRegistry;
 import net.origamiking.mcmods.orm.tag.ModBlockTags;
+import net.origamiking.mcmods.orm.tag.ModItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -87,11 +103,26 @@ public class ModTagProviders {
         @Override
         protected void configure(RegistryWrapper.WrapperLookup registries) {
             getOrCreateTagBuilder(ItemTags.ARROWS).add(ItemRegistry.PHOTON_ITEM);
+            getOrCreateTagBuilder(ModItemTags.CHIPS)
+                    .add(OptimusPrimeChip.CHIP)
+                    .add(MegatronChip.CHIP)
+                    .add(RodimusPrimeChip.CHIP)
+                    .add(GalvatronChip.CHIP)
+                    .add(BumblebeeChip.CHIP)
+                    .add(IronhideChip.CHIP)
+                    .add(AstrotrainChip.CHIP)
+                    .add(SkystrikeChip.CHIP)
+                    .add(StarscreamChip.CHIP)
+                    .add(SoundwaveChip.CHIP)
+                    .add(ThunderCrackerChip.CHIP)
+                    .add(ScorpinokChip.CHIP)
+                    .add(SkywarpChip.CHIP)
+                    .add(ShockwaveChip.CHIP)
+                    .add(RatchetChip.CHIP);
         }
     }
 
     static class EntityType extends FabricTagProvider.EntityTypeTagProvider {
-
         public EntityType(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
             super(output, completableFuture);
         }
