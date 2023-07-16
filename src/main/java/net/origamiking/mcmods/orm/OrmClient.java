@@ -14,7 +14,6 @@ import net.origamiking.mcmods.orm.client.blocks.renderer.block.RefineryBlockRend
 import net.origamiking.mcmods.orm.client.entity.renderer.entity.PhotonEntityRenderer;
 import net.origamiking.mcmods.orm.client.entity.renderer.entity.VectorGuardEntityRenderer;
 import net.origamiking.mcmods.orm.entity.ModEntities;
-import net.origamiking.mcmods.orm.event.TransformKey;
 import net.origamiking.mcmods.orm.screen.ModScreenHandlers;
 import net.origamiking.mcmods.orm.screen.chip_refinery.ChipRefineryScreen;
 import net.origamiking.mcmods.orm.screen.compacter.CompacterBlockScreen;
@@ -44,6 +43,5 @@ public class OrmClient implements ClientModInitializer {
 //                new FlyingItemEntityRenderer<PhotonEntity>(context));
         EntityRendererRegistry.register(ModEntities.PhotonEntityType, PhotonEntityRenderer::new);
         getTranslucent(RandomBlocks.FORCE_FIELD_BLOCK);
-        TransformKey.register();
     }
 }
