@@ -6,6 +6,7 @@ import net.origamiking.mcmods.orm.armor.galvatron.Galvatron;
 import net.origamiking.mcmods.orm.armor.ironhide.Ironhide;
 import net.origamiking.mcmods.orm.armor.megatron.Megatron;
 import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrime;
+import net.origamiking.mcmods.orm.armor.ratchet.Ratchet;
 import net.origamiking.mcmods.orm.armor.rodimus_prime.RodimusPrime;
 import net.origamiking.mcmods.orm.armor.scorpinok.Scorpinok;
 import net.origamiking.mcmods.orm.armor.shockwave.Shockwave;
@@ -31,6 +32,7 @@ public class ModArmor {
         RodimusPrime.get();
         Skywarp.get();
         Shockwave.get();
+        Ratchet.get();
 
         SetEffects.setEffects();
     }

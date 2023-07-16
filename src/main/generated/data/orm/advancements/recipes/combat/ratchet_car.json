@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ratchet_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:ratchet_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ratchet_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:ratchet_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ratchet_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:ratchet_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ratchet_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:ratchet_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "orm:ratchet_car"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_ratchet_helmet",
+      "has_ratchet_chestplate",
+      "has_ratchet_leggings",
+      "has_ratchet_boots",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "orm:ratchet_car"
+    ]
+  },
+  "sends_telemetry_event": false
+}
