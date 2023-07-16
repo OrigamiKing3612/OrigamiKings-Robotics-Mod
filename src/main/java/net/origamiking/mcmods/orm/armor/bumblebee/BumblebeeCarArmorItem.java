@@ -64,34 +64,22 @@ public final class BumblebeeCarArmorItem extends ArmorItem implements GeoItem {
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         controllers.add(new AnimationController<>(this, 20, state -> {
-            // Apply our generic idle animation.
-            // Whether it plays or not is decided down below.
             state.getController().setAnimation(DefaultAnimations.IDLE);
 
-            // Let's gather some data from the state to use below
-            // This is the entity that is currently wearing/holding the item
             Entity entity = state.getData(DataTickets.ENTITY);
 
-//            if (entity instanceof ArmorStandEntity)
-//                return PlayState.STOP;
-
-            // For this example, we only want the animation to play if the entity is wearing all pieces of the armor
-            // Let's collect the armor pieces the entity is currently wearing
             Set<Item> wornArmor = new ObjectOpenHashSet<>();
 
             for (ItemStack stack : entity.getArmorItems()) {
-                // We can stop immediately if any of the slots are empty
                 if (stack.isEmpty())
                     return PlayState.STOP;
 
                 wornArmor.add(stack.getItem());
             }
 
-            // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
                     Bumblebee.CAR));
 
-            // Play the animation if the full set is being worn, otherwise stop
             return PlayState.STOP;
         }));
     }
