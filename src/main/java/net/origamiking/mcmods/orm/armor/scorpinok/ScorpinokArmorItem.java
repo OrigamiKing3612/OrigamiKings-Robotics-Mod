@@ -96,7 +96,7 @@ public final class ScorpinokArmorItem extends ArmorItem implements GeoItem {
                     Scorpinok.BOOTS));
 
             // Play the animation if the full set is being worn, otherwise stop
-            return isFullSet ? PlayState.STOP : PlayState.STOP;
+            return PlayState.STOP;
         }));
     }
 

@@ -96,7 +96,7 @@ public final class GalvatronArmorItem extends ArmorItem implements GeoItem {
                     Galvatron.BOOTS));
 
             // Play the animation if the full set is being worn, otherwise stop
-            return isFullSet ? PlayState.STOP : PlayState.STOP;
+            return PlayState.STOP;
         }));
     }
 

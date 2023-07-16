@@ -97,7 +97,7 @@ public final class ThunderCrackerArmorItem extends ArmorItem implements GeoItem 
                     Bumblebee.BOOTS));
 
             // Play the animation if the full set is being worn, otherwise stop
-            return isFullSet ? PlayState.STOP : PlayState.STOP;
+            return PlayState.STOP;
         }));
     }
 

@@ -93,7 +93,7 @@ public final class StarscreamJetArmorItem extends ArmorItem implements GeoItem {
                     Starscream.JET));
 
             // Play the animation if the full set is being worn, otherwise stop
-            return isFullSet ? PlayState.STOP : PlayState.STOP;
+            return PlayState.STOP;
         }));
     }
 

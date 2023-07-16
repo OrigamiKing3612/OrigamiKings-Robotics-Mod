@@ -93,7 +93,7 @@ public final class ScorpinokCarArmorItem extends ArmorItem implements GeoItem {
                     Scorpinok.CHESTPLATE));
 
             // Play the animation if the full set is being worn, otherwise stop
-            return isFullSet ? PlayState.STOP : PlayState.STOP;
+            return PlayState.STOP;
         }));
     }
 

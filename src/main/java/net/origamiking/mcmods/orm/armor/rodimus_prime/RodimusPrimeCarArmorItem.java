@@ -93,7 +93,7 @@ public final class RodimusPrimeCarArmorItem extends ArmorItem implements GeoItem
                     RodimusPrime.CAR));
 
             // Play the animation if the full set is being worn, otherwise stop
-            return isFullSet ? PlayState.STOP : PlayState.STOP;
+            return PlayState.STOP;
         }));
     }
 

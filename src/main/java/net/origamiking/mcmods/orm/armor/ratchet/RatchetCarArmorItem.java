@@ -90,7 +90,7 @@ public final class RatchetCarArmorItem extends ArmorItem implements GeoItem {
                     Ratchet.CAR));
 
             // Play the animation if the full set is being worn, otherwise stop
-            return isFullSet ? PlayState.STOP : PlayState.STOP;
+            return PlayState.STOP;
         }));
     }
 

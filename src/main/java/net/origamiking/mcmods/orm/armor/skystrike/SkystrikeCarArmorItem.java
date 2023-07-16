@@ -93,7 +93,7 @@ public final class SkystrikeCarArmorItem extends ArmorItem implements GeoItem {
                     Skystrike.JET));
 
             // Play the animation if the full set is being worn, otherwise stop
-            return isFullSet ? PlayState.STOP : PlayState.STOP;
+            return PlayState.STOP;
         }));
     }
 
