@@ -2,7 +2,7 @@ package net.origamiking.mcmods.orm.items.custom.energon_axe;
 
 import net.minecraft.client.render.item.BuiltinModelItemRenderer;
 import net.minecraft.item.Item;
-import net.origamiking.mcmods.orm.client.items.renderer.energon_axe.EnergonAxeItemRenderer;
+import net.origamiking.mcmods.orm.items.custom.energon_axe.renderer.EnergonAxeItemRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.SingletonGeoAnimatable;
 import software.bernie.geckolib.animatable.client.RenderProvider;

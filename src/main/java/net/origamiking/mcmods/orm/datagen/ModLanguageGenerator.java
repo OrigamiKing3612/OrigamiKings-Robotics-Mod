@@ -2,8 +2,6 @@ package net.origamiking.mcmods.orm.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-import net.origamiking.mcmods.orm.armor.ratchet.Ratchet;
-import net.origamiking.mcmods.orm.items.chips.ratchet.RatchetChip;
 
 import java.nio.file.Path;
 
@@ -14,14 +12,14 @@ public class ModLanguageGenerator extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
-        translationBuilder.add("advancement.orm.ratchet.description", "Get the Ratchet Armor set");
-        translationBuilder.add("advancement.orm.ratchet.title", "Ratchet");
-        translationBuilder.add(Ratchet.HELMET, "Ratchet Helmet");
-        translationBuilder.add(Ratchet.CHESTPLATE, "Ratchet Chestplate");
-        translationBuilder.add(Ratchet.LEGGINGS, "Ratchet Leggings");
-        translationBuilder.add(Ratchet.BOOTS, "Ratchet Boots");
-        translationBuilder.add(Ratchet.CAR, "Ratchet Transformed");
-        translationBuilder.add(RatchetChip.CHIP, "Ratchet Chip");
+//        translationBuilder.add("advancement.orm.ratchet.description", "Get the Ratchet Armor set");
+//        translationBuilder.add("advancement.orm.ratchet.title", "Ratchet");
+//        translationBuilder.add(Ratchet.HELMET, "Ratchet Helmet");
+//        translationBuilder.add(Ratchet.CHESTPLATE, "Ratchet Chestplate");
+//        translationBuilder.add(Ratchet.LEGGINGS, "Ratchet Leggings");
+//        translationBuilder.add(Ratchet.BOOTS, "Ratchet Boots");
+//        translationBuilder.add(Ratchet.CAR, "Ratchet Transformed");
+//        translationBuilder.add(RatchetChip.CHIP, "Ratchet Chip");
 
 
         try {

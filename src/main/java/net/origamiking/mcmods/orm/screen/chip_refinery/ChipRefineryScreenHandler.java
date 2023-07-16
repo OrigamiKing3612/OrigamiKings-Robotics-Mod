@@ -17,8 +17,8 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.origamiking.mcmods.orm.blocks.chip_refinery.RegisterChipRefineryBlock;
-import net.origamiking.mcmods.orm.recipe.ChipRefineryRecipe;
+import net.origamiking.mcmods.orm.blocks.custom.BlockRegistry;
+import net.origamiking.mcmods.orm.recipe.chip_refining.ChipRefineryRecipe;
 import net.origamiking.mcmods.orm.screen.ModScreenHandlers;
 
 import java.util.List;
@@ -110,7 +110,7 @@ public class ChipRefineryScreenHandler extends ScreenHandler {
 
     @Override
     public boolean canUse(PlayerEntity player) {
-        return ChipRefineryScreenHandler.canUse(this.context, player, RegisterChipRefineryBlock.CHIP_REFINERY_BLOCK);
+        return ChipRefineryScreenHandler.canUse(this.context, player, BlockRegistry.CHIP_REFINERY_BLOCK);
     }
 
     @Override

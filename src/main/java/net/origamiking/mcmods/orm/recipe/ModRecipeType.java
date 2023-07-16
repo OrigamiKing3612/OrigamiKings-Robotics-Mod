@@ -4,6 +4,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.origamiking.mcmods.orm.OrmMain;
+import net.origamiking.mcmods.orm.recipe.chip_refining.ChipRefineryRecipe;
 
 public class ModRecipeType {
     public static void register() {

@@ -20,7 +20,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import net.origamiking.mcmods.oapi.blocks.ImplementedInventory;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
-import net.origamiking.mcmods.orm.blocks.compacter.CompacterBlock;
+import net.origamiking.mcmods.orm.blocks.custom.compacter.CompacterBlock;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.screen.compacter.CompacterBlockScreenHandler;
 import org.jetbrains.annotations.Nullable;

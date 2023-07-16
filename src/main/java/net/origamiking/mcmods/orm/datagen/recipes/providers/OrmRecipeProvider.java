@@ -10,7 +10,7 @@ import net.origamiking.mcmods.orm.items.energon.EnergonItems;
 import net.origamiking.mcmods.orm.items.ore13.Ore13Items;
 import net.origamiking.mcmods.orm.items.random.RandomItems;
 import net.origamiking.mcmods.orm.items.transformium.TransformiumItems;
-import net.origamiking.mcmods.orm.recipe.ChipRefineryRecipe;
+import net.origamiking.mcmods.orm.recipe.chip_refining.ChipRefineryRecipe;
 
 import java.util.function.Consumer;
 

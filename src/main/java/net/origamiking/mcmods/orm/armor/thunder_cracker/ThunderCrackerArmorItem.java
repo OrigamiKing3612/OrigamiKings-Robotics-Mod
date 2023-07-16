@@ -11,7 +11,7 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.bumblebee.Bumblebee;
-import net.origamiking.mcmods.orm.client.armor.renderer.thunder_cracker.ThunderCrackerArmorRenderer;
+import net.origamiking.mcmods.orm.armor.thunder_cracker.renderer.ThunderCrackerArmorRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
 import software.bernie.geckolib.constant.DataTickets;

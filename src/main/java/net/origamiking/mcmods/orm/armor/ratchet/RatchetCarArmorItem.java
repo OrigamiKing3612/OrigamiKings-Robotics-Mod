@@ -10,7 +10,7 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.origamiking.mcmods.orm.client.armor.renderer.ratchet.RatchetCarArmorRenderer;
+import net.origamiking.mcmods.orm.armor.ratchet.renderer.RatchetCarArmorRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
 import software.bernie.geckolib.constant.DataTickets;

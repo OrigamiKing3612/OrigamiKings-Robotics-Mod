@@ -25,12 +25,9 @@ import net.origamiking.mcmods.orm.armor.skywarp.Skywarp;
 import net.origamiking.mcmods.orm.armor.soundwave.Soundwave;
 import net.origamiking.mcmods.orm.armor.starscream.Starscream;
 import net.origamiking.mcmods.orm.armor.thunder_cracker.ThunderCracker;
-import net.origamiking.mcmods.orm.blocks.chip_refinery.RegisterChipRefineryBlock;
-import net.origamiking.mcmods.orm.blocks.compacter.RegisterCompacterBlock;
+import net.origamiking.mcmods.orm.blocks.custom.BlockRegistry;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
-import net.origamiking.mcmods.orm.blocks.random.RandomBlocks;
-import net.origamiking.mcmods.orm.blocks.refinery.RegisterRefineryBlock;
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
 import net.origamiking.mcmods.orm.blocks.transformium_alloy.TransformiumAlloyBlocks;
 import net.origamiking.mcmods.orm.items.chips.astrotrain.AstrotrainChip;
@@ -193,10 +190,10 @@ public class ModGroups {
                     entries.add(Ore13Blocks.ORE_13_ORE);
                     entries.add(Ore13Blocks.DEEPSLATE_ORE_13_ORE);
                     entries.add(EnergonBlocks.COMPACT_ENERGON_BLOCK);
-                    entries.add(RegisterRefineryBlock.REFINERY_BLOCK);
-                    entries.add(RegisterCompacterBlock.COMPACTER_BLOCK);
-                    entries.add(RegisterChipRefineryBlock.CHIP_REFINERY_BLOCK);
-                    entries.add(RandomBlocks.FORCE_FIELD_BLOCK);
+                    entries.add(BlockRegistry.REFINERY_BLOCK);
+                    entries.add(BlockRegistry.COMPACTER_BLOCK);
+                    entries.add(BlockRegistry.CHIP_REFINERY_BLOCK);
+                    entries.add(BlockRegistry.FORCE_FIELD_BLOCK);
                 }).build());
     }
 

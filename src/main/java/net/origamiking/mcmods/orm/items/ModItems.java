@@ -10,7 +10,6 @@ import net.origamiking.mcmods.orm.items.transformium.TransformiumItems;
 import net.origamiking.mcmods.orm.items.transformium_alloy.TransformiumAlloyItems;
 
 public class ModItems {
-    //    public static final Item NEW_ARMOR_STAND = new SpawnEggItem(, 0xc4c4c4, 0xadadad, new FabricItemSettings()));
     public static void register() {
         ItemRegistry.register();
         TransformiumItems.get();

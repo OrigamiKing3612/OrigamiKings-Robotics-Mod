@@ -7,16 +7,15 @@ import net.minecraft.registry.Registry;
 import net.origamiking.mcmods.orm.OrmMain;
 import net.origamiking.mcmods.orm.block_entities.compacter.CompacterBlockEntity;
 import net.origamiking.mcmods.orm.block_entities.refinery.RefineryBlockEntity;
-import net.origamiking.mcmods.orm.blocks.compacter.RegisterCompacterBlock;
-import net.origamiking.mcmods.orm.blocks.refinery.RegisterRefineryBlock;
+import net.origamiking.mcmods.orm.blocks.custom.BlockRegistry;
 
 public class ModBlockEntities {
     public static final BlockEntityType<RefineryBlockEntity> REFINERY_BLOCK = Registry.register(Registries.BLOCK_ENTITY_TYPE,
             OrmMain.MOD_ID + ":refinery_block",
-            FabricBlockEntityTypeBuilder.create(RefineryBlockEntity::new, RegisterRefineryBlock.REFINERY_BLOCK).build(null));
+            FabricBlockEntityTypeBuilder.create(RefineryBlockEntity::new, BlockRegistry.REFINERY_BLOCK).build(null));
     public static final BlockEntityType<CompacterBlockEntity> COMPACTER_BLOCK = Registry.register(Registries.BLOCK_ENTITY_TYPE,
             OrmMain.MOD_ID + ":compacter_block",
-            FabricBlockEntityTypeBuilder.create(CompacterBlockEntity::new, RegisterCompacterBlock.COMPACTER_BLOCK).build(null));
+            FabricBlockEntityTypeBuilder.create(CompacterBlockEntity::new, BlockRegistry.COMPACTER_BLOCK).build(null));
 
     public static void register() {
     }

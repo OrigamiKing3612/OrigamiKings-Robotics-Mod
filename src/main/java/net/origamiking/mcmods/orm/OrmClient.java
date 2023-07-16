@@ -7,13 +7,12 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
-import net.origamiking.mcmods.orm.blocks.chip_refinery.RegisterChipRefineryBlock;
-import net.origamiking.mcmods.orm.blocks.random.RandomBlocks;
-import net.origamiking.mcmods.orm.client.blocks.renderer.block.CompacterBlockRenderer;
-import net.origamiking.mcmods.orm.client.blocks.renderer.block.RefineryBlockRenderer;
-import net.origamiking.mcmods.orm.client.entity.renderer.entity.PhotonEntityRenderer;
-import net.origamiking.mcmods.orm.client.entity.renderer.entity.VectorGuardEntityRenderer;
+import net.origamiking.mcmods.orm.blocks.custom.BlockRegistry;
+import net.origamiking.mcmods.orm.blocks.custom.compacter.renderer.CompacterBlockRenderer;
+import net.origamiking.mcmods.orm.blocks.custom.refinery.renderer.RefineryBlockRenderer;
 import net.origamiking.mcmods.orm.entity.ModEntities;
+import net.origamiking.mcmods.orm.entity.photon.renderer.PhotonEntityRenderer;
+import net.origamiking.mcmods.orm.entity.vector_guard.renderer.VectorGuardEntityRenderer;
 import net.origamiking.mcmods.orm.screen.ModScreenHandlers;
 import net.origamiking.mcmods.orm.screen.chip_refinery.ChipRefineryScreen;
 import net.origamiking.mcmods.orm.screen.compacter.CompacterBlockScreen;
@@ -35,13 +34,13 @@ public class OrmClient implements ClientModInitializer {
                 context -> new CompacterBlockRenderer());
 
         HandledScreens.register(ModScreenHandlers.CHIP_REFINERY_SCREEN_HANDLER, ChipRefineryScreen::new);
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterChipRefineryBlock.CHIP_REFINERY_BLOCK, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.CHIP_REFINERY_BLOCK, RenderLayer.getCutout());
 
         EntityRendererRegistry.register(ModEntities.VECTOR_GUARD, VectorGuardEntityRenderer::new);
 
 //        EntityRendererRegistry.register(ModEntities.PhotonEntityType, (context) ->
 //                new FlyingItemEntityRenderer<PhotonEntity>(context));
         EntityRendererRegistry.register(ModEntities.PhotonEntityType, PhotonEntityRenderer::new);
-        getTranslucent(RandomBlocks.FORCE_FIELD_BLOCK);
+        getTranslucent(BlockRegistry.FORCE_FIELD_BLOCK);
     }
 }
