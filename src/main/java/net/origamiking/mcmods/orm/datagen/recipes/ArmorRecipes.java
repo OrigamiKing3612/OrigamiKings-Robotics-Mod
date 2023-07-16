@@ -8,6 +8,7 @@ import net.origamiking.mcmods.orm.armor.galvatron.Galvatron;
 import net.origamiking.mcmods.orm.armor.ironhide.Ironhide;
 import net.origamiking.mcmods.orm.armor.megatron.Megatron;
 import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrime;
+import net.origamiking.mcmods.orm.armor.ratchet.Ratchet;
 import net.origamiking.mcmods.orm.armor.rodimus_prime.RodimusPrime;
 import net.origamiking.mcmods.orm.armor.scorpinok.Scorpinok;
 import net.origamiking.mcmods.orm.armor.shockwave.Shockwave;
@@ -22,6 +23,7 @@ import net.origamiking.mcmods.orm.items.chips.galvatron.GalvatronChip;
 import net.origamiking.mcmods.orm.items.chips.ironhide.IronhideChip;
 import net.origamiking.mcmods.orm.items.chips.megatron.MegatronChip;
 import net.origamiking.mcmods.orm.items.chips.optimus_prime.OptimusPrimeChip;
+import net.origamiking.mcmods.orm.items.chips.ratchet.RatchetChip;
 import net.origamiking.mcmods.orm.items.chips.rodimus_prime.RodimusPrimeChip;
 import net.origamiking.mcmods.orm.items.chips.scorpinok.ScorpinokChip;
 import net.origamiking.mcmods.orm.items.chips.shockwave.ShockwaveChip;
@@ -59,6 +61,7 @@ public class ArmorRecipes {
         transformerRecipes(exporter, RodimusPrime.HELMET, RodimusPrime.CHESTPLATE, RodimusPrime.LEGGINGS, RodimusPrime.BOOTS, RodimusPrime.CAR, RodimusPrimeChip.CHIP);
         transformerRecipes(exporter, Skywarp.HELMET, Skywarp.CHESTPLATE, Skywarp.LEGGINGS, Skywarp.BOOTS, Skywarp.JET, SkywarpChip.CHIP);
         transformerRecipes(exporter, Shockwave.HELMET, Shockwave.CHESTPLATE, Shockwave.LEGGINGS, Shockwave.BOOTS, ItemRegistry.SHOCKWAVE_TRANSFORMED, ShockwaveChip.CHIP);
+        transformerRecipes(exporter, Ratchet.HELMET, Ratchet.CHESTPLATE, Ratchet.LEGGINGS, Ratchet.BOOTS, Ratchet.CAR, RatchetChip.CHIP);
 
     }
 }

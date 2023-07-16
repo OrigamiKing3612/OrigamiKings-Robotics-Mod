@@ -16,6 +16,7 @@ import net.origamiking.mcmods.orm.armor.galvatron.Galvatron;
 import net.origamiking.mcmods.orm.armor.ironhide.Ironhide;
 import net.origamiking.mcmods.orm.armor.megatron.Megatron;
 import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrime;
+import net.origamiking.mcmods.orm.armor.ratchet.Ratchet;
 import net.origamiking.mcmods.orm.armor.rodimus_prime.RodimusPrime;
 import net.origamiking.mcmods.orm.armor.scorpinok.Scorpinok;
 import net.origamiking.mcmods.orm.armor.shockwave.Shockwave;
@@ -38,6 +39,7 @@ import net.origamiking.mcmods.orm.items.chips.galvatron.GalvatronChip;
 import net.origamiking.mcmods.orm.items.chips.ironhide.IronhideChip;
 import net.origamiking.mcmods.orm.items.chips.megatron.MegatronChip;
 import net.origamiking.mcmods.orm.items.chips.optimus_prime.OptimusPrimeChip;
+import net.origamiking.mcmods.orm.items.chips.ratchet.RatchetChip;
 import net.origamiking.mcmods.orm.items.chips.rodimus_prime.RodimusPrimeChip;
 import net.origamiking.mcmods.orm.items.chips.scorpinok.ScorpinokChip;
 import net.origamiking.mcmods.orm.items.chips.shockwave.ShockwaveChip;
@@ -102,6 +104,11 @@ public class ModGroups {
                     entries.add(Ironhide.LEGGINGS);
                     entries.add(Ironhide.BOOTS);
                     entries.add(Ironhide.CAR);
+                    entries.add(Ratchet.HELMET);
+                    entries.add(Ratchet.CHESTPLATE);
+                    entries.add(Ratchet.LEGGINGS);
+                    entries.add(Ratchet.BOOTS);
+                    entries.add(Ratchet.CAR);
                     entries.add(Astrotrain.TRAIN);
                     entries.add(Astrotrain.SHUTTLE);
                     entries.add(Astrotrain.HELMET);
@@ -226,6 +233,7 @@ public class ModGroups {
                     entries.add(ScorpinokChip.CHIP);
                     entries.add(SkywarpChip.CHIP);
                     entries.add(ShockwaveChip.CHIP);
+                    entries.add(RatchetChip.CHIP);
                 }).build());
     }
 }

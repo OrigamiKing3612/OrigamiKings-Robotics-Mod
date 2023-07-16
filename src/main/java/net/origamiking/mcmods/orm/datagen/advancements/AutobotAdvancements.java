@@ -8,6 +8,7 @@ import net.origamiking.mcmods.orm.OrmMain;
 import net.origamiking.mcmods.orm.armor.bumblebee.Bumblebee;
 import net.origamiking.mcmods.orm.armor.ironhide.Ironhide;
 import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrime;
+import net.origamiking.mcmods.orm.armor.ratchet.Ratchet;
 import net.origamiking.mcmods.orm.armor.rodimus_prime.RodimusPrime;
 import net.origamiking.mcmods.orm.armor.skystrike.Skystrike;
 
@@ -102,5 +103,22 @@ public class AutobotAdvancements {
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Skystrike.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Skystrike.BOOTS))
                 .build(advancementConsumer, OrmMain.MOD_ID + "/autobots/skystrike");
+
+        Advancement ratchet = Advancement.Builder.create().parent(optimus_prime)
+                .display(
+                        Ratchet.HELMET, // icon
+                        Text.translatable(translatableTitle("ratchet")), // title
+                        Text.translatable(translatableDescription("ratchet")), // description
+                        null,
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .criterion("get_helmet", InventoryChangedCriterion.Conditions.items(Ratchet.HELMET))
+                .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Ratchet.CHESTPLATE))
+                .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Ratchet.LEGGINGS))
+                .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Ratchet.BOOTS))
+                .build(advancementConsumer, OrmMain.MOD_ID + "/autobots/ratchet");
     }
 }

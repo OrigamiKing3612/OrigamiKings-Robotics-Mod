@@ -1,4 +1,4 @@
-package net.origamiking.mcmods.orm.armor.bumblebee;
+package net.origamiking.mcmods.orm.armor.ratchet;
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
@@ -10,7 +10,7 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.origamiking.mcmods.orm.client.armor.renderer.bumblebee.BumblebeeCarArmorRenderer;
+import net.origamiking.mcmods.orm.client.armor.renderer.ratchet.RatchetArmorRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
 import software.bernie.geckolib.constant.DataTickets;
@@ -27,11 +27,11 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 
-public final class BumblebeeCarArmorItem extends ArmorItem implements GeoItem {
+public final class RatchetArmorItem extends ArmorItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
 
-    public BumblebeeCarArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
+    public RatchetArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
         super(armorMaterial, slot, properties);
     }
 
@@ -43,24 +43,20 @@ public final class BumblebeeCarArmorItem extends ArmorItem implements GeoItem {
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
                 if (this.renderer == null)
-                    renderer = new BumblebeeCarArmorRenderer();
+                    this.renderer = new RatchetArmorRenderer();
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
 
                 return this.renderer;
             }
         });
-
     }
-
-
 
     @Override
     public Supplier<Object> getRenderProvider() {
         return this.renderProvider;
     }
 
-    // Let's add our animation controller
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         controllers.add(new AnimationController<>(this, 20, state -> {
@@ -89,10 +85,13 @@ public final class BumblebeeCarArmorItem extends ArmorItem implements GeoItem {
 
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-                    Bumblebee.CAR));
+                    Ratchet.HELMET,
+                    Ratchet.CHESTPLATE,
+                    Ratchet.LEGGINGS,
+                    Ratchet.BOOTS));
 
             // Play the animation if the full set is being worn, otherwise stop
-            return PlayState.STOP;
+            return isFullSet ? PlayState.STOP : PlayState.STOP;
         }));
     }
 
