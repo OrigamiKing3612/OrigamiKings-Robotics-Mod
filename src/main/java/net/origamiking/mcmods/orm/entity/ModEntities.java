@@ -24,7 +24,7 @@ public class ModEntities {
                     .trackRangeBlocks(4).trackedUpdateRate(10)
                     .build()
     );
-
+    //TODO move to oapi
     public static <T extends MobEntity> EntityType<T> registerEntity(String name, EntityType.EntityFactory<T> entity, float width, float height, SpawnGroup spawnGroup) {
         return Registry.register(Registries.ENTITY_TYPE, new Identifier(OrmMain.MOD_ID, name), FabricEntityTypeBuilder.create(spawnGroup, entity).dimensions(EntityDimensions.changing(width, height)).build());
     }
