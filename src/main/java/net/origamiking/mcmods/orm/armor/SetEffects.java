@@ -16,6 +16,8 @@ import net.origamiking.mcmods.orm.armor.ironhide.IronhideCarArmorItem;
 import net.origamiking.mcmods.orm.armor.megatron.MegatronArmorItem;
 import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrimeArmorItem;
 import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrimeCarArmorItem;
+import net.origamiking.mcmods.orm.armor.ratchet.RatchetArmorItem;
+import net.origamiking.mcmods.orm.armor.ratchet.RatchetCarArmorItem;
 import net.origamiking.mcmods.orm.armor.rodimus_prime.RodimusPrimeArmorItem;
 import net.origamiking.mcmods.orm.armor.rodimus_prime.RodimusPrimeCarArmorItem;
 import net.origamiking.mcmods.orm.armor.scorpinok.ScorpinokArmorItem;
@@ -148,6 +150,13 @@ public class SetEffects {
                     player.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof ShockwaveArmorItem &&
                     player.getEquippedStack(EquipmentSlot.LEGS).getItem() instanceof ShockwaveArmorItem &&
                     player.getEquippedStack(EquipmentSlot.FEET).getItem() instanceof ShockwaveArmorItem) {
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 2, 0, false, false));
+            } else if (player.getEquippedStack(EquipmentSlot.HEAD).getItem() instanceof RatchetArmorItem &&
+                    player.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof RatchetArmorItem &&
+                    player.getEquippedStack(EquipmentSlot.LEGS).getItem() instanceof RatchetArmorItem &&
+                    player.getEquippedStack(EquipmentSlot.FEET).getItem() instanceof RatchetArmorItem) {
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 2, 0, false, false));
+            } else if (player.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof RatchetCarArmorItem) {
                 player.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 2, 0, false, false));
             } else {
                 player.removeStatusEffect(StatusEffects.INVISIBILITY);
