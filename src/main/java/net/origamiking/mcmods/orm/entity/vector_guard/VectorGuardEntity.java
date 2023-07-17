@@ -12,7 +12,8 @@ import net.origamiking.mcmods.orm.entity.group.ModEntityGroup;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.constant.DefaultAnimations;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.core.animation.*;
+import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 public class VectorGuardEntity extends HostileEntity implements GeoEntity {
@@ -53,7 +54,7 @@ public class VectorGuardEntity extends HostileEntity implements GeoEntity {
         return ModEntityGroup.ORM_NONE;
     }
 
-//    @Override
+    //    @Override
 //    public ItemStack getProjectileType(ItemStack stack) {
 //        if (stack.getItem() instanceof RangedWeaponItem) {
 //            Predicate<ItemStack> predicate = ((RangedWeaponItem)stack.getItem()).getHeldProjectiles();
@@ -62,11 +63,21 @@ public class VectorGuardEntity extends HostileEntity implements GeoEntity {
 //        }
 //        return ItemStack.EMPTY;
 //    }
+    private PlayState attackPredicate(AnimationState state) {
+        if (this.handSwinging && state.getController().getAnimationState().equals(AnimationController.State.STOPPED)) {
+            state.getController().forceAnimationReset();
+            state.getController().setAnimation(RawAnimation.begin().then("animation.vector_guard.attack", Animation.LoopType.PLAY_ONCE));
+            this.handSwinging = false;
+        }
+        return PlayState.CONTINUE;
+    }
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         controllers.add(DefaultAnimations.genericWalkIdleController(this));
-        controllers.add(DefaultAnimations.genericAttackAnimation(this, DefaultAnimations.ATTACK_STRIKE));
+//        controllers.add(DefaultAnimations.genericAttackAnimation(this, DefaultAnimations.ATTACK_STRIKE));
+        controllers.add(new AnimationController<>(this, "attackController",
+                0, this::attackPredicate));
     }
 
     @Override

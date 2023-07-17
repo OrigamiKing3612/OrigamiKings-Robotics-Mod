@@ -65,7 +65,7 @@
 				}
 			}
 		},
-		"aattack.strike": {
+		"animation.vector_guard.attack": {
 			"loop": true,
 			"animation_length": 1.08333,
 			"bones": {
