@@ -21,8 +21,7 @@ import net.origamiking.mcmods.oapi.blocks.ImplementedInventory;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
 import net.origamiking.mcmods.orm.blocks.custom.refinery.RefineryBlock;
 import net.origamiking.mcmods.orm.items.energon.EnergonItems;
-import net.origamiking.mcmods.orm.items.ore13.Ore13Items;
-import net.origamiking.mcmods.orm.items.transformium.TransformiumItems;
+import net.origamiking.mcmods.orm.recipe.refining.RefineryRecipe;
 import net.origamiking.mcmods.orm.screen.refinery.RefineryBlockScreenHandler;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoBlockEntity;
@@ -31,6 +30,8 @@ import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache
 import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.util.GeckoLibUtil;
+
+import java.util.Optional;
 
 public class RefineryBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory, GeoBlockEntity {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
@@ -175,13 +176,14 @@ public class RefineryBlockEntity extends BlockEntity implements NamedScreenHandl
             inventory.setStack(i, entity.getStack(i));
         }
 
+        Optional<RefineryRecipe> recipe = entity.getWorld().getRecipeManager()
+                .getFirstMatch(RefineryRecipe.Type.INSTANCE, inventory, entity.getWorld());
+
         if (hasRecipe(entity)) {
             entity.removeStack(1, 1);
             entity.removeStack(0, 1);
 
-            entity.setStack(2, new ItemStack(TransformiumItems.TRANSFORMIUM, // Finished product
-                    entity.getStack(2).getCount() + 1));
-
+            entity.setStack(2, new ItemStack(recipe.get().output.copy().getItem(), entity.getStack(2).getCount() + 1));
             entity.resetProgress();
         }
     }
@@ -192,10 +194,14 @@ public class RefineryBlockEntity extends BlockEntity implements NamedScreenHandl
             inventory.setStack(i, entity.getStack(i));
         }
 
-        boolean hasOre13InFirstSlot = entity.getStack(1).getItem() == Ore13Items.ORE_13; // Start product
+//        boolean hasOre13InFirstSlot = entity.getStack(1).getItem() == Ore13Items.ORE_13; // Start product
+
+        Optional<RefineryRecipe> match = entity.getWorld().getRecipeManager()
+                .getFirstMatch(RefineryRecipe.Type.INSTANCE, inventory, entity.getWorld());
+
         boolean hasEnergonInFuelSlot = entity.getStack(0).getItem() == EnergonItems.ENERGON; // Fuel
 
-        return hasOre13InFirstSlot && hasEnergonInFuelSlot && canInsertAmountIntoOutputSlot(inventory) && canInsertItemIntoOutputSlot(inventory, TransformiumItems.TRANSFORMIUM/*Finished product*/);
+        return match.isPresent() && hasEnergonInFuelSlot && canInsertAmountIntoOutputSlot(inventory) && canInsertItemIntoOutputSlot(inventory, match.get().output.copy().getItem()/*Finished product*/);
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, Item output) {
