@@ -21,10 +21,11 @@ import net.origamiking.mcmods.orm.screen.refinery.RefineryBlockScreen;
 import static net.origamiking.mcmods.oapi.client.ClientUtils.getTranslucent;
 
 public class OrmClient implements ClientModInitializer {
+
+    @SuppressWarnings("deprecation")
     @Override
     public void onInitializeClient() {
         HandledScreens.register(ModScreenHandlers.REFINERY_BLOCK_SCREEN_HANDLER, RefineryBlockScreen::new);
-
         BlockEntityRendererRegistry.register(ModBlockEntities.REFINERY_BLOCK,
                 context -> new RefineryBlockRenderer());
 
