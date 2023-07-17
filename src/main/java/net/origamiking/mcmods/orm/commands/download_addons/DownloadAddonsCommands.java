@@ -7,6 +7,7 @@ import com.google.gson.JsonObject;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.text.Text;
+import net.origamiking.mcmods.orm.OrmMain;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.BufferedReader;
@@ -31,7 +32,7 @@ public class DownloadAddonsCommands {
                 downloadAddonCommand(addonKey, addonName, addonUrl, addonModName);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            OrmMain.LOGGER.error(String.valueOf(e));
         }
     }
 
@@ -50,18 +51,19 @@ public class DownloadAddonsCommands {
 
         String jsonData = jsonBuilder.toString();
         Gson gson = new Gson();
-        JsonObject jsonObject = gson.fromJson(jsonData, JsonObject.class);
-        return jsonObject;
+        return gson.fromJson(jsonData, JsonObject.class);
     }
 
     public static void downloadAddonCommand(String addonKey, String addonName, String url, String modName) {
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) ->
-                dispatcher.register(CommandManager.literal("orm-download-addon-" + addonKey).executes((context) -> {
-                    (context.getSource()).sendMessage(Text.of("Downloading " + addonName + " addon..."));
-                    DownloadAddon.downloadAddon(context.getSource(), url, modName);
-                    (context.getSource()).sendMessage(Text.translatable("orm.download_addon.successful"));
-                    return 1;
-                }))
+                dispatcher.register(CommandManager.literal("orm-download-addon-" + addonKey)
+                        .requires(source -> source.hasPermissionLevel(2))
+                        .executes((context) -> {
+                            (context.getSource()).sendMessage(Text.of("Downloading " + addonName + " addon..."));
+                            DownloadAddon.downloadAddon(context.getSource(), url, modName);
+                            (context.getSource()).sendMessage(Text.translatable("orm.download_addon.successful"));
+                            return 1;
+                        }))
         );
     }
 }
