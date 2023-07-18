@@ -194,8 +194,6 @@ public class RefineryBlockEntity extends BlockEntity implements NamedScreenHandl
             inventory.setStack(i, entity.getStack(i));
         }
 
-//        boolean hasOre13InFirstSlot = entity.getStack(1).getItem() == Ore13Items.ORE_13; // Start product
-
         Optional<RefineryRecipe> match = entity.getWorld().getRecipeManager()
                 .getFirstMatch(RefineryRecipe.Type.INSTANCE, inventory, entity.getWorld());
 

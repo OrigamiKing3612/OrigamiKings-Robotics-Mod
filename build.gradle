@@ -15,10 +15,11 @@ repositories {
     maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
     maven { url 'https://maven.kyrptonaught.dev' }
     maven { url 'https://dl.cloudsmith.io/public/origamiking3612/origamikings-api/maven/' }
-    maven {
-        name 'TerraformersMC'
-        url 'https://maven.terraformersmc.com/'
-    }
+//    maven {
+//        name 'TerraformersMC'
+//        url 'https://maven.terraformersmc.com/'
+//    }
+    maven { url "https://maven.shedaniel.me" }
 }
 
 loom {
@@ -56,8 +57,8 @@ dependencies {
     modImplementation "net.origamiking:Origamikings-API:${origamikings_api}"
     modImplementation "software.bernie.geckolib:geckolib-fabric-1.20:${geckolib_version}"
 
-    modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
-    modLocalRuntime "dev.emi:emi-fabric:${emi_version}"
+    modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:12.0.625"
+    modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:12.0.625"
 
     modImplementation "net.kyrptonaught:customportalapi:${portal_api_version}"
     include "net.kyrptonaught:customportalapi:${portal_api_version}"
