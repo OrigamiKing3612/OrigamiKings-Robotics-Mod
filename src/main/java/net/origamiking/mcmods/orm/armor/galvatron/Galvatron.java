@@ -4,7 +4,7 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.origamiking.mcmods.oapi.armor.ArmorUtils;
 import net.origamiking.mcmods.orm.OrmMain;
-import net.origamiking.mcmods.orm.armor.TransformerArmorMaterial;
+import net.origamiking.mcmods.orm.utils.TransformerArmorMaterial;
 
 public class Galvatron extends ArmorUtils {
     public static final GalvatronArmorItem HELMET = registerArmor(OrmMain.MOD_ID, "galvatron_helmet", new GalvatronArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.HELMET, new Item.Settings()));

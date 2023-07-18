@@ -1,36 +1,20 @@
 package net.origamiking.mcmods.orm.armor.bumblebee;
 
-import it.unimi.dsi.fastutil.objects.ObjectArrayList;
-import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.bumblebee.renderer.BumblebeeCarArmorRenderer;
+import net.origamiking.mcmods.orm.utils.TransformerArmorItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
-import software.bernie.geckolib.constant.DataTickets;
-import software.bernie.geckolib.constant.DefaultAnimations;
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.core.animation.AnimationController;
-import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
-import software.bernie.geckolib.util.GeckoLibUtil;
 
-import java.util.Set;
 import java.util.function.Consumer;
-import java.util.function.Supplier;
 
 
-public final class BumblebeeCarArmorItem extends ArmorItem implements GeoItem {
-    private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-    private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
-
+public final class BumblebeeCarArmorItem extends TransformerArmorItem implements GeoItem {
     public BumblebeeCarArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
         super(armorMaterial, slot, properties);
     }
@@ -50,42 +34,27 @@ public final class BumblebeeCarArmorItem extends ArmorItem implements GeoItem {
                 return this.renderer;
             }
         });
-
     }
-
-
-
-    @Override
-    public Supplier<Object> getRenderProvider() {
-        return this.renderProvider;
-    }
-
-    // Let's add our animation controller
-    @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, 20, state -> {
-            state.getController().setAnimation(DefaultAnimations.IDLE);
-
-            Entity entity = state.getData(DataTickets.ENTITY);
-
-            Set<Item> wornArmor = new ObjectOpenHashSet<>();
-
-            for (ItemStack stack : entity.getArmorItems()) {
-                if (stack.isEmpty())
-                    return PlayState.STOP;
-
-                wornArmor.add(stack.getItem());
-            }
-
-            boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-                    Bumblebee.CAR));
-
-            return PlayState.STOP;
-        }));
-    }
-
-    @Override
-    public AnimatableInstanceCache getAnimatableInstanceCache() {
-        return this.cache;
-    }
+//    @Override
+//    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+//        controllers.add(new AnimationController<>(this, 20, state -> {
+//            state.getController().setAnimation(DefaultAnimations.IDLE);
+//
+//            Entity entity = state.getData(DataTickets.ENTITY);
+//
+//            Set<Item> wornArmor = new ObjectOpenHashSet<>();
+//
+//            for (ItemStack stack : entity.getArmorItems()) {
+//                if (stack.isEmpty())
+//                    return PlayState.STOP;
+//
+//                wornArmor.add(stack.getItem());
+//            }
+//
+//            boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
+//                    Bumblebee.CAR));
+//
+//            return PlayState.STOP;
+//        }));
+//    }
 }

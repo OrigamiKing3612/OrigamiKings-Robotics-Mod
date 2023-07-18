@@ -4,7 +4,7 @@ import net.minecraft.item.ArmorItem;
 import net.origamiking.mcmods.oapi.armor.ArmorUtils;
 import net.origamiking.mcmods.oapi.items.OrigamiItemSettings;
 import net.origamiking.mcmods.orm.OrmMain;
-import net.origamiking.mcmods.orm.armor.TransformerArmorMaterial;
+import net.origamiking.mcmods.orm.utils.TransformerArmorMaterial;
 
 public class OptimusPrime extends ArmorUtils {
     public static final OptimusPrimeArmorItem HELMET = registerArmor(OrmMain.MOD_ID, "optimus_prime_armor_helmet", new OptimusPrimeArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.HELMET, new OrigamiItemSettings()));

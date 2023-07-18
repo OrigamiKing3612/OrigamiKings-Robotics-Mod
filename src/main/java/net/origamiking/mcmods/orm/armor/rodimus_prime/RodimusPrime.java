@@ -4,7 +4,7 @@ import net.minecraft.item.ArmorItem;
 import net.origamiking.mcmods.oapi.armor.ArmorUtils;
 import net.origamiking.mcmods.oapi.items.OrigamiItemSettings;
 import net.origamiking.mcmods.orm.OrmMain;
-import net.origamiking.mcmods.orm.armor.TransformerArmorMaterial;
+import net.origamiking.mcmods.orm.utils.TransformerArmorMaterial;
 
 public class RodimusPrime extends ArmorUtils {
     public static final RodimusPrimeArmorItem HELMET = registerArmor(OrmMain.MOD_ID, "rodimus_prime_helmet", new RodimusPrimeArmorItem(TransformerArmorMaterial.TRANSFORMER, ArmorItem.Type.HELMET, new OrigamiItemSettings()));

@@ -1,4 +1,4 @@
-package net.origamiking.mcmods.orm.armor;
+package net.origamiking.mcmods.orm.utils;
 
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
