@@ -38,7 +38,7 @@ public class ShapedRecipes {
                 .input('O', Ore13Items.ORE_13)
                 .criterion(RecipeProvider.hasItem(Ore13Items.ORE_13), RecipeProvider.conditionsFromItem(Ore13Items.ORE_13))
                 .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(ItemRegistry.PHOTON_ITEM)));
-        //compacter
+        //compacter.json
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.COMPACTER_BLOCK, 1)
                 .pattern("TRT").pattern("TIT").pattern("SES")
                 .input('I', Blocks.IRON_BLOCK).input('S', Blocks.SMOOTH_STONE).input('E', EnergonItems.ENERGON).input('R', Items.REDSTONE).input('T', TransformiumItems.TRANSFORMIUM)
