@@ -1,4 +1,4 @@
-package net.origamiking.mcmods.orm.compact;
+package net.origamiking.mcmods.orm.compact.rei;
 
 import me.shedaniel.math.Rectangle;
 import me.shedaniel.rei.api.client.plugins.REIClientPlugin;
@@ -7,12 +7,12 @@ import me.shedaniel.rei.api.client.registry.display.DisplayRegistry;
 import me.shedaniel.rei.api.client.registry.screen.ScreenRegistry;
 import me.shedaniel.rei.api.common.util.EntryStacks;
 import net.origamiking.mcmods.orm.blocks.custom.BlockRegistry;
-import net.origamiking.mcmods.orm.compact.chip_refinery.ChipRefineryCategory;
-import net.origamiking.mcmods.orm.compact.chip_refinery.ChipRefineryDisplay;
-import net.origamiking.mcmods.orm.compact.compacter.CompacterCategory;
-import net.origamiking.mcmods.orm.compact.compacter.CompacterDisplay;
-import net.origamiking.mcmods.orm.compact.refinery.RefineryCategory;
-import net.origamiking.mcmods.orm.compact.refinery.RefineryDisplay;
+import net.origamiking.mcmods.orm.compact.rei.chip_refinery.ChipRefineryCategory;
+import net.origamiking.mcmods.orm.compact.rei.chip_refinery.ChipRefineryDisplay;
+import net.origamiking.mcmods.orm.compact.rei.compacter.CompacterCategory;
+import net.origamiking.mcmods.orm.compact.rei.compacter.CompacterDisplay;
+import net.origamiking.mcmods.orm.compact.rei.refinery.RefineryCategory;
+import net.origamiking.mcmods.orm.compact.rei.refinery.RefineryDisplay;
 import net.origamiking.mcmods.orm.recipe.chip_refining.ChipRefineryRecipe;
 import net.origamiking.mcmods.orm.recipe.compacter.CompacterRecipe;
 import net.origamiking.mcmods.orm.recipe.refining.RefineryRecipe;

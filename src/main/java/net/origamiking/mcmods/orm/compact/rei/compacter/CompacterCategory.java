@@ -1,4 +1,4 @@
-package net.origamiking.mcmods.orm.compact.compacter;
+package net.origamiking.mcmods.orm.compact.rei.compacter;
 
 import me.shedaniel.math.Point;
 import me.shedaniel.math.Rectangle;

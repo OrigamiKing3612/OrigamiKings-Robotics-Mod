@@ -1,4 +1,4 @@
-package net.origamiking.mcmods.orm.compact.chip_refinery;
+package net.origamiking.mcmods.orm.compact.rei.chip_refinery;
 
 import me.shedaniel.rei.api.common.category.CategoryIdentifier;
 import me.shedaniel.rei.api.common.display.basic.BasicDisplay;
