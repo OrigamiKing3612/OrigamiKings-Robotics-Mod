@@ -31,7 +31,7 @@ public class CompacterBlock extends BlockWithEntity implements BlockEntityProvid
         super(OrigamiBlockSettings.create().nonOpaque().requiresTool().strength(3.5f).sounds(BlockSoundGroup.METAL));
     }
 
-    private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 16+7, 16);
+    private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 16+9, 16);
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {

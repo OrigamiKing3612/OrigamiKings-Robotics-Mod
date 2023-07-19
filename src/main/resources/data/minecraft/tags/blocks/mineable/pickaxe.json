@@ -20,6 +20,16 @@
     "orm:ore_13_stairs",
     "orm:ore_13_slab",
     "orm:transformium_stairs",
-    "orm:transformium_slab"
+    "orm:transformium_slab",
+    "orm:dark_energon_ore",
+    "orm:dark_energon_deepslate_ore",
+    "orm:transformium_alloy_block",
+    "orm:transformium_alloy_stairs",
+    "orm:transformium_alloy_slab",
+    "orm:transformium_alloy_bricks_block",
+    "orm:transformium_alloy_bricks_stairs",
+    "orm:transformium_alloy_bricks_slab",
+    "orm:force_field_block"
+
   ]
 }
