@@ -116,6 +116,7 @@ modrinth {
         embedded.project "geckolib"
         embedded.project "fabric-api"
         embedded.project "origamikings-api"
+        optional.project "rei"
 
     }
     changelog = "1.2.1-1.20.1: The \"Cybertron Update\" Version:\n" + "\n" +
