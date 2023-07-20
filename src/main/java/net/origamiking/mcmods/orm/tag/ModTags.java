@@ -4,5 +4,6 @@ public class ModTags {
     public static void register() {
         ModBlockTags.get();
         ModItemTags.get();
+        ModFluidTags.get();
     }
 }

@@ -45,5 +45,7 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_BLOCK);
         addDrop(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_STAIRS);
         addDrop(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_SLAB);
+        addDrop(EnergonBlocks.RAW_ENERGON_BLOCK);
+        addDrop(EnergonBlocks.RAW_DARK_ENERGON_BLOCK);
     }
 }

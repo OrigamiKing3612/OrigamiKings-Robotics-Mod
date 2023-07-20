@@ -12,6 +12,7 @@ import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
 import net.origamiking.mcmods.orm.blocks.transformium_alloy.TransformiumAlloyBlocks;
 import net.origamiking.mcmods.orm.entity.ModEntities;
+import net.origamiking.mcmods.orm.fluid.ModFluids;
 import net.origamiking.mcmods.orm.items.chips.astrotrain.AstrotrainChip;
 import net.origamiking.mcmods.orm.items.chips.bumblebee.BumblebeeChip;
 import net.origamiking.mcmods.orm.items.chips.galvatron.GalvatronChip;
@@ -29,6 +30,7 @@ import net.origamiking.mcmods.orm.items.chips.starscream.StarscreamChip;
 import net.origamiking.mcmods.orm.items.chips.thunder_cracker.ThunderCrackerChip;
 import net.origamiking.mcmods.orm.items.custom.ItemRegistry;
 import net.origamiking.mcmods.orm.tag.ModBlockTags;
+import net.origamiking.mcmods.orm.tag.ModFluidTags;
 import net.origamiking.mcmods.orm.tag.ModItemTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -38,6 +40,7 @@ public class ModTagProviders {
         pack.addProvider(Blocks::new);
         pack.addProvider(Items::new);
         pack.addProvider(EntityType::new);
+        pack.addProvider(Fluid::new);
     }
 
     static class Blocks extends FabricTagProvider.BlockTagProvider {
@@ -83,7 +86,12 @@ public class ModTagProviders {
                     EnergonBlocks.ENERGON_STAIRS,
                     EnergonBlocks.ENERGON_SLAB,
                     EnergonBlocks.DARK_ENERGON_STAIRS,
-                    EnergonBlocks.DARK_ENERGON_SLAB
+                    EnergonBlocks.DARK_ENERGON_SLAB,
+                    EnergonBlocks.RAW_ENERGON_BLOCK,
+                    EnergonBlocks.RAW_DARK_ENERGON_BLOCK
+
+
+
             );
             getOrCreateTagBuilder(ModBlockTags.ORE_13_BLOCKS).add(
                     Ore13Blocks.ORE_13_BLOCK,
@@ -131,6 +139,27 @@ public class ModTagProviders {
         protected void configure(RegistryWrapper.WrapperLookup arg) {
             getOrCreateTagBuilder(EntityTypeTags.ARROWS)
                     .add(ModEntities.PhotonEntityType);
+        }
+    }
+    static class Fluid extends FabricTagProvider.FluidTagProvider {
+
+        public Fluid(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
+            super(output, completableFuture);
+        }
+
+        @Override
+        protected void configure(RegistryWrapper.WrapperLookup arg) {
+            getOrCreateTagBuilder(ModFluidTags.OIL)
+                    .add(ModFluids.STILL_OIL)
+                    .add(ModFluids.FLOWING_OIL);
+
+            getOrCreateTagBuilder(ModFluidTags.RAW_ENERGON)
+                    .add(ModFluids.STILL_RAW_ENERGON)
+                    .add(ModFluids.FLOWING_RAW_ENERGON);
+
+            getOrCreateTagBuilder(ModFluidTags.RAW_DARK_ENERGON)
+                    .add(ModFluids.STILL_RAW_DARK_ENERGON)
+                    .add(ModFluids.FLOWING_RAW_DARK_ENERGON);
         }
     }
 }

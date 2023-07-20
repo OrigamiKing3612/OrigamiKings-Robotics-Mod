@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "orm:block/raw_energon_block"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "orm:still_raw_energon",
+    "orm:flowing_raw_energon"
+  ]
+}

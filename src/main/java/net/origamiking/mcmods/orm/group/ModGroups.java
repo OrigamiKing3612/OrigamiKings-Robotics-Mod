@@ -30,6 +30,7 @@ import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
 import net.origamiking.mcmods.orm.blocks.transformium_alloy.TransformiumAlloyBlocks;
+import net.origamiking.mcmods.orm.fluid.ModFluids;
 import net.origamiking.mcmods.orm.items.chips.astrotrain.AstrotrainChip;
 import net.origamiking.mcmods.orm.items.chips.bumblebee.BumblebeeChip;
 import net.origamiking.mcmods.orm.items.chips.galvatron.GalvatronChip;
@@ -165,12 +166,14 @@ public class ModGroups {
                     entries.add(RandomItems.ENERGY_CONDUCTOR);
                     entries.add(ModSpawnEggs.VECTOR_GUARD_SPAWN_EGG);
                     entries.add(ItemRegistry.PHOTON_ITEM);
+                    entries.add(EnergonBlocks.RAW_ENERGON_BLOCK);
                     entries.add(EnergonBlocks.ENERGON_BLOCK);
                     entries.add(EnergonBlocks.ENERGON_STAIRS);
                     entries.add(EnergonBlocks.ENERGON_SLAB);
                     entries.add(EnergonBlocks.ENERGON_ORE);
                     entries.add(EnergonBlocks.DEEPSLATE_ENERGON_ORE);
                     entries.add(EnergonBlocks.COMPACT_ENERGON_BLOCK);
+                    entries.add(EnergonBlocks.RAW_DARK_ENERGON_BLOCK);
                     entries.add(EnergonBlocks.DARK_ENERGON_BLOCK);
                     entries.add(EnergonBlocks.DARK_ENERGON_STAIRS);
                     entries.add(EnergonBlocks.DARK_ENERGON_SLAB);
@@ -194,6 +197,9 @@ public class ModGroups {
                     entries.add(BlockRegistry.COMPACTER_BLOCK);
                     entries.add(BlockRegistry.CHIP_REFINERY_BLOCK);
                     entries.add(BlockRegistry.FORCE_FIELD_BLOCK);
+                    entries.add(ModFluids.RAW_ENERGON_BUCKET);
+                    entries.add(ModFluids.RAW_DARK_ENERGON_BUCKET);
+                    entries.add(ModFluids.OIL_BUCKET);
                 }).build());
     }
 
