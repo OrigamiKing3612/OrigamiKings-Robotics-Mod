@@ -10,6 +10,7 @@ import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
 import net.origamiking.mcmods.orm.blocks.transformium_alloy.TransformiumAlloyBlocks;
+import net.origamiking.mcmods.orm.fluid.ModFluids;
 import net.origamiking.mcmods.orm.items.energon.EnergonItems;
 import net.origamiking.mcmods.orm.items.ore13.Ore13Items;
 import net.origamiking.mcmods.orm.items.transformium.TransformiumItems;
@@ -36,6 +37,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(BlockRegistry.FORCE_FIELD_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(EnergonBlocks.RAW_ENERGON_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(EnergonBlocks.RAW_DARK_ENERGON_BLOCK);
     }
 
     @Override
@@ -46,5 +49,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(TransformiumItems.TRANSFORMIUM, Models.GENERATED);
         itemModelGenerator.register(TransformiumAlloyItems.TRANSFORMIUM_ALLOY, Models.GENERATED);
         itemModelGenerator.register(TransformiumAlloyItems.TRANSFORMIUM_ALLOY_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModFluids.OIL_BUCKET, Models.GENERATED);
+        itemModelGenerator.register(ModFluids.RAW_ENERGON_BUCKET, Models.GENERATED);
+        itemModelGenerator.register(ModFluids.RAW_DARK_ENERGON_BUCKET, Models.GENERATED);
     }
 }

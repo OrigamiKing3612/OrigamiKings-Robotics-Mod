@@ -29,7 +29,9 @@
     "orm:transformium_alloy_bricks_block",
     "orm:transformium_alloy_bricks_stairs",
     "orm:transformium_alloy_bricks_slab",
-    "orm:force_field_block"
+    "orm:force_field_block",
+    "orm:raw_energon_block",
+    "orm:raw_dark_energon_block"
 
   ]
 }

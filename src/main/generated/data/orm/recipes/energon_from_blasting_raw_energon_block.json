@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 180,
+  "experience": 5.0,
+  "group": "raw_energon_blasting",
+  "ingredient": {
+    "item": "orm:raw_energon_block"
+  },
+  "result": "orm:energon"
+}

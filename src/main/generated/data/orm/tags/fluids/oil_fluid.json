@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "orm:still_oil",
+    "orm:flowing_oil"
+  ]
+}

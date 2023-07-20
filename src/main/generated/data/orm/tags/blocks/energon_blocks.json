@@ -11,6 +11,8 @@
     "orm:energon_stairs",
     "orm:energon_slab",
     "orm:dark_energon_stairs",
-    "orm:dark_energon_slab"
+    "orm:dark_energon_slab",
+    "orm:raw_energon_block",
+    "orm:raw_dark_energon_block"
   ]
 }
