@@ -187,12 +187,15 @@ public class ModGroups {
                     entries.add(TransformiumBlocks.TRANSFORMIUM_BLOCK);
                     entries.add(TransformiumBlocks.TRANSFORMIUM_STAIRS);
                     entries.add(TransformiumBlocks.TRANSFORMIUM_SLAB);
+                    entries.add(TransformiumBlocks.TRANSFORMIUM_WALL);
                     entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BLOCK);
                     entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_STAIRS);
                     entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_SLAB);
+                    entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_WALL);
                     entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_BLOCK);
                     entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_STAIRS);
                     entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_SLAB);
+                    entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_WALL);
                     entries.add(BlockRegistry.REFINERY_BLOCK);
                     entries.add(BlockRegistry.COMPACTER_BLOCK);
                     entries.add(BlockRegistry.CHIP_REFINERY_BLOCK);

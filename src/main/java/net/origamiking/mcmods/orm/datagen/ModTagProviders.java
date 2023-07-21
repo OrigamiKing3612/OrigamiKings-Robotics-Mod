@@ -66,14 +66,18 @@ public class ModTagProviders {
             );
             getOrCreateTagBuilder(ModBlockTags.TRANSFORMIUM_BLOCKS).add(
                     TransformiumBlocks.TRANSFORMIUM_BLOCK,
+                    TransformiumBlocks.TRANSFORMIUM_SLAB,
                     TransformiumBlocks.TRANSFORMIUM_STAIRS,
+                    TransformiumBlocks.TRANSFORMIUM_WALL,
                     TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_SLAB,
                     TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BLOCK,
                     TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_STAIRS,
                     TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_SLAB,
+                    TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_WALL,
                     TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_BLOCK,
                     TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_STAIRS,
-                    TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_SLAB
+                    TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_SLAB,
+                    TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_WALL
             );
             getOrCreateTagBuilder(ModBlockTags.ENERGON_BLOCKS).add(
                     EnergonBlocks.ENERGON_BLOCK,
@@ -90,8 +94,6 @@ public class ModTagProviders {
                     EnergonBlocks.RAW_ENERGON_BLOCK,
                     EnergonBlocks.RAW_DARK_ENERGON_BLOCK
 
-
-
             );
             getOrCreateTagBuilder(ModBlockTags.ORE_13_BLOCKS).add(
                     Ore13Blocks.ORE_13_BLOCK,
@@ -100,6 +102,7 @@ public class ModTagProviders {
             );
             getOrCreateTagBuilder(ModBlockTags.ENERGON_ORES).add(EnergonBlocks.ENERGON_ORE, EnergonBlocks.DEEPSLATE_ENERGON_ORE, EnergonBlocks.DARK_ENERGON_ORE, EnergonBlocks.DEEPSLATE_DARK_ENERGON_ORE);
             getOrCreateTagBuilder(ModBlockTags.ORE_13_ORES).add(Ore13Blocks.ORE_13_ORE, Ore13Blocks.DEEPSLATE_ORE_13_ORE);
+            getOrCreateTagBuilder(BlockTags.WALLS).add(TransformiumBlocks.TRANSFORMIUM_WALL).add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_WALL).add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_WALL);
         }
     }
 

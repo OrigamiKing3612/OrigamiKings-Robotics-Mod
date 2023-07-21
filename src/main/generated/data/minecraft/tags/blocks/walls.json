@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "orm:transformium_wall",
+    "orm:transformium_alloy_wall",
+    "orm:transformium_alloy_bricks_wall"
+  ]
+}

@@ -60,5 +60,11 @@ public class BlockRecipes {
         RecipeProvider.offerBlasting(exporter, List.of(EnergonBlocks.RAW_ENERGON_BLOCK), RecipeCategory.BUILDING_BLOCKS, EnergonItems.ENERGON, 5.0f, 180, "raw_energon_blasting");
         RecipeProvider.offerBlasting(exporter, List.of(EnergonBlocks.RAW_DARK_ENERGON_BLOCK), RecipeCategory.BUILDING_BLOCKS, EnergonItems.DARK_ENERGON, 5.0f, 180, "raw_dark_energon_blasting");
 
+        RecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, TransformiumBlocks.TRANSFORMIUM_WALL, TransformiumBlocks.TRANSFORMIUM_BLOCK);
+        RecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_WALL, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_WALL);
+        RecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_WALL, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_WALL);
+        RecipeProvider.offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, TransformiumBlocks.TRANSFORMIUM_WALL, TransformiumBlocks.TRANSFORMIUM_BLOCK);
+        RecipeProvider.offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_WALL, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_WALL);
+        RecipeProvider.offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_WALL, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_WALL);
     }
 }
