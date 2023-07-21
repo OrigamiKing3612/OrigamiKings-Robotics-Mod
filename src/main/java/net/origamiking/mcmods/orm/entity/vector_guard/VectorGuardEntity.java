@@ -39,7 +39,7 @@ public class VectorGuardEntity extends HostileEntity implements GeoEntity {
         this.goalSelector.add(4, new MeleeAttackGoal(this, 1.1, false));
         this.goalSelector.add(3, new WanderAroundFarGoal(this, 0.8D));
 //        this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
-        this.goalSelector.add(4, new LookAroundGoal(this));
+        this.goalSelector.add(1, new LookAroundGoal(this));
         this.targetSelector.add(6, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
     }
 
