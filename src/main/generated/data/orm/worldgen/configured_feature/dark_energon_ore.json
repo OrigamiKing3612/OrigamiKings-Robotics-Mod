@@ -15,7 +15,7 @@
       },
       {
         "state": {
-          "Name": "orm:deepslate_dark_energon_ore"
+          "Name": "orm:dark_energon_deepslate_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",

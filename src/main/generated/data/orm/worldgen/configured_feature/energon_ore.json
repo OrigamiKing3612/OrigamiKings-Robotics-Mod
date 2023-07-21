@@ -2,11 +2,11 @@
   "type": "minecraft:ore",
   "config": {
     "discard_chance_on_air_exposure": 0.0,
-    "size": 3,
+    "size": 7,
     "targets": [
       {
         "state": {
-          "Name": "orm:ore_13_ore"
+          "Name": "orm:energon_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
@@ -15,7 +15,7 @@
       },
       {
         "state": {
-          "Name": "orm:ore_13_deepslate_ore"
+          "Name": "orm:energon_deepslate_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",

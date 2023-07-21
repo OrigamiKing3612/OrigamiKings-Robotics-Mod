@@ -33,7 +33,6 @@ public class ModFluids extends FluidUtils {
     public static FlowableFluid FLOWING_OIL = registerFluid(OrmMain.MOD_ID, "flowing_oil", new OilFluid.Flowing());
     public static Item OIL_BUCKET = registerItem(OrmMain.MOD_ID, "oil_bucket", new BucketItem(ModFluids.STILL_OIL, new OrigamiItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
     public static Block OIL_BLOCK = registerBlockWithOutBlockItem(OrmMain.MOD_ID, "oil_fluid_block", new OrmFluidBlock(ModFluids.STILL_OIL, OrigamiBlockSettings.copyOf(Blocks.WATER).replaceable().liquid()));
-
     public static void register() {
 
     }

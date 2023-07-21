@@ -1,5 +1,5 @@
 {
-  "feature": "orm:ore_dark_energon",
+  "feature": "orm:dark_energon_ore",
   "placement": [
     {
       "type": "minecraft:count",
