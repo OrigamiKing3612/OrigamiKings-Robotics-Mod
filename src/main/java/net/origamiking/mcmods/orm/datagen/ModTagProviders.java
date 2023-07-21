@@ -23,6 +23,7 @@ import net.origamiking.mcmods.orm.items.chips.ratchet.RatchetChip;
 import net.origamiking.mcmods.orm.items.chips.rodimus_prime.RodimusPrimeChip;
 import net.origamiking.mcmods.orm.items.chips.scorpinok.ScorpinokChip;
 import net.origamiking.mcmods.orm.items.chips.shockwave.ShockwaveChip;
+import net.origamiking.mcmods.orm.items.chips.sideswipe.SideswipeChip;
 import net.origamiking.mcmods.orm.items.chips.skystrike.SkystrikeChip;
 import net.origamiking.mcmods.orm.items.chips.skywarp.SkywarpChip;
 import net.origamiking.mcmods.orm.items.chips.soundwave.SoundwaveChip;
@@ -129,7 +130,9 @@ public class ModTagProviders {
                     .add(ScorpinokChip.CHIP)
                     .add(SkywarpChip.CHIP)
                     .add(ShockwaveChip.CHIP)
-                    .add(RatchetChip.CHIP);
+                    .add(RatchetChip.CHIP)
+                    .add(SideswipeChip.CHIP)
+            ;
         }
     }
 

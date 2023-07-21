@@ -12,6 +12,7 @@ import net.origamiking.mcmods.orm.armor.ratchet.Ratchet;
 import net.origamiking.mcmods.orm.armor.rodimus_prime.RodimusPrime;
 import net.origamiking.mcmods.orm.armor.scorpinok.Scorpinok;
 import net.origamiking.mcmods.orm.armor.shockwave.Shockwave;
+import net.origamiking.mcmods.orm.armor.sideswipe.Sideswipe;
 import net.origamiking.mcmods.orm.armor.skystrike.Skystrike;
 import net.origamiking.mcmods.orm.armor.skywarp.Skywarp;
 import net.origamiking.mcmods.orm.armor.soundwave.Soundwave;
@@ -27,6 +28,7 @@ import net.origamiking.mcmods.orm.items.chips.ratchet.RatchetChip;
 import net.origamiking.mcmods.orm.items.chips.rodimus_prime.RodimusPrimeChip;
 import net.origamiking.mcmods.orm.items.chips.scorpinok.ScorpinokChip;
 import net.origamiking.mcmods.orm.items.chips.shockwave.ShockwaveChip;
+import net.origamiking.mcmods.orm.items.chips.sideswipe.SideswipeChip;
 import net.origamiking.mcmods.orm.items.chips.skystrike.SkystrikeChip;
 import net.origamiking.mcmods.orm.items.chips.skywarp.SkywarpChip;
 import net.origamiking.mcmods.orm.items.chips.soundwave.SoundwaveChip;
@@ -62,6 +64,7 @@ public class ArmorRecipes {
         transformerRecipes(exporter, Skywarp.HELMET, Skywarp.CHESTPLATE, Skywarp.LEGGINGS, Skywarp.BOOTS, Skywarp.JET, SkywarpChip.CHIP);
         transformerRecipes(exporter, Shockwave.HELMET, Shockwave.CHESTPLATE, Shockwave.LEGGINGS, Shockwave.BOOTS, ItemRegistry.SHOCKWAVE_TRANSFORMED, ShockwaveChip.CHIP);
         transformerRecipes(exporter, Ratchet.HELMET, Ratchet.CHESTPLATE, Ratchet.LEGGINGS, Ratchet.BOOTS, Ratchet.CAR, RatchetChip.CHIP);
+        transformerRecipes(exporter, Sideswipe.HELMET, Sideswipe.CHESTPLATE, Sideswipe.LEGGINGS, Sideswipe.BOOTS, Sideswipe.CAR, SideswipeChip.CHIP);
 
     }
 }

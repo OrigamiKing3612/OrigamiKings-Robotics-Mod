@@ -15,6 +15,7 @@
     "orm:scorpinok_chip",
     "orm:skywarp_chip",
     "orm:shockwave_chip",
-    "orm:ratchet_chip"
+    "orm:ratchet_chip",
+    "orm:sideswipe_chip"
   ]
 }

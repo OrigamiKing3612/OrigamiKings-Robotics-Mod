@@ -10,6 +10,7 @@ import net.origamiking.mcmods.orm.armor.ratchet.Ratchet;
 import net.origamiking.mcmods.orm.armor.rodimus_prime.RodimusPrime;
 import net.origamiking.mcmods.orm.armor.scorpinok.Scorpinok;
 import net.origamiking.mcmods.orm.armor.shockwave.Shockwave;
+import net.origamiking.mcmods.orm.armor.sideswipe.Sideswipe;
 import net.origamiking.mcmods.orm.armor.skystrike.Skystrike;
 import net.origamiking.mcmods.orm.armor.skywarp.Skywarp;
 import net.origamiking.mcmods.orm.armor.soundwave.Soundwave;
@@ -33,6 +34,7 @@ public class ModArmor {
         Skywarp.get();
         Shockwave.get();
         Ratchet.get();
+        Sideswipe.get();
 
         SetEffects.setEffects();
     }

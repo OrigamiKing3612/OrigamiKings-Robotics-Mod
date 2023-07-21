@@ -10,6 +10,7 @@ import net.origamiking.mcmods.orm.armor.ironhide.Ironhide;
 import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrime;
 import net.origamiking.mcmods.orm.armor.ratchet.Ratchet;
 import net.origamiking.mcmods.orm.armor.rodimus_prime.RodimusPrime;
+import net.origamiking.mcmods.orm.armor.sideswipe.Sideswipe;
 import net.origamiking.mcmods.orm.armor.skystrike.Skystrike;
 
 import java.util.function.Consumer;
@@ -120,5 +121,22 @@ public class AutobotAdvancements {
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Ratchet.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Ratchet.BOOTS))
                 .build(advancementConsumer, OrmMain.MOD_ID + "/autobots/ratchet");
+
+        Advancement sideswipe = Advancement.Builder.create().parent(optimus_prime)
+                .display(
+                        Sideswipe.HELMET, // icon
+                        Text.translatable(translatableTitle("sideswipe")), // title
+                        Text.translatable(translatableDescription("sideswipe")), // description
+                        null,
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .criterion("get_helmet", InventoryChangedCriterion.Conditions.items(Sideswipe.HELMET))
+                .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Sideswipe.CHESTPLATE))
+                .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Sideswipe.LEGGINGS))
+                .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Sideswipe.BOOTS))
+                .build(advancementConsumer, OrmMain.MOD_ID + "/autobots/sideswipe");
     }
 }

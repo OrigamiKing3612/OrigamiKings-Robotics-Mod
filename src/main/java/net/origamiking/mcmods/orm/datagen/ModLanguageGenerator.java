@@ -12,14 +12,14 @@ public class ModLanguageGenerator extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
-//        translationBuilder.add("advancement.orm.ratchet.description", "Get the Ratchet Armor set");
-//        translationBuilder.add("advancement.orm.ratchet.title", "Ratchet");
-//        translationBuilder.add(Ratchet.HELMET, "Ratchet Helmet");
-//        translationBuilder.add(Ratchet.CHESTPLATE, "Ratchet Chestplate");
-//        translationBuilder.add(Ratchet.LEGGINGS, "Ratchet Leggings");
-//        translationBuilder.add(Ratchet.BOOTS, "Ratchet Boots");
-//        translationBuilder.add(Ratchet.CAR, "Ratchet Transformed");
-//        translationBuilder.add(RatchetChip.CHIP, "Ratchet Chip");
+//        translationBuilder.add("advancement.orm.sideswipe.description", "Get the Sideswipe Armor set");
+//        translationBuilder.add("advancement.orm.sideswipe.title", "Sideswipe");
+//        translationBuilder.add(Sideswipe.HELMET, "Sideswipe Helmet");
+//        translationBuilder.add(Sideswipe.CHESTPLATE, "Sideswipe Chestplate");
+//        translationBuilder.add(Sideswipe.LEGGINGS, "Sideswipe Leggings");
+//        translationBuilder.add(Sideswipe.BOOTS, "Sideswipe Boots");
+//        translationBuilder.add(Sideswipe.CAR, "Sideswipe Car");
+//        translationBuilder.add(SideswipeChip.CHIP, "Sideswipe Chip");
 
 
         try {
