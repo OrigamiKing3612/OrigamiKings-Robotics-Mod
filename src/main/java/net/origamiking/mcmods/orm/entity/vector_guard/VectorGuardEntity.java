@@ -29,7 +29,7 @@ public class VectorGuardEntity extends HostileEntity implements GeoEntity {
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 10.0f)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 2.0f)
                 .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 10.0f)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.5f)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3f)
                 ;
     }
 
@@ -41,7 +41,6 @@ public class VectorGuardEntity extends HostileEntity implements GeoEntity {
 //        this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
         this.goalSelector.add(4, new LookAroundGoal(this));
         this.targetSelector.add(6, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
-        super.initGoals();
     }
 
     @Override
@@ -53,31 +52,20 @@ public class VectorGuardEntity extends HostileEntity implements GeoEntity {
     public EntityGroup getGroup() {
         return ModEntityGroup.ORM_NONE;
     }
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+        controllers.add(DefaultAnimations.genericWalkIdleController(this));
+        controllers.add(new AnimationController<>(this, "attackController",
+                0, this::attackPredicate));
+    }
 
-    //    @Override
-//    public ItemStack getProjectileType(ItemStack stack) {
-//        if (stack.getItem() instanceof RangedWeaponItem) {
-//            Predicate<ItemStack> predicate = ((RangedWeaponItem)stack.getItem()).getHeldProjectiles();
-//            ItemStack itemStack = RangedWeaponItem.getHeldProjectile(this, predicate);
-//            return itemStack.isEmpty() ? new ItemStack(Items.ARROW) : itemStack;
-//        }
-//        return ItemStack.EMPTY;
-//    }
-    private PlayState attackPredicate(AnimationState state) {
+    private PlayState attackPredicate(AnimationState<VectorGuardEntity> state) {
         if (this.handSwinging && state.getController().getAnimationState().equals(AnimationController.State.STOPPED)) {
             state.getController().forceAnimationReset();
             state.getController().setAnimation(RawAnimation.begin().then("animation.vector_guard.attack", Animation.LoopType.PLAY_ONCE));
             this.handSwinging = false;
         }
         return PlayState.CONTINUE;
-    }
-
-    @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(DefaultAnimations.genericWalkIdleController(this));
-//        controllers.add(DefaultAnimations.genericAttackAnimation(this, DefaultAnimations.ATTACK_STRIKE));
-        controllers.add(new AnimationController<>(this, "attackController",
-                0, this::attackPredicate));
     }
 
     @Override

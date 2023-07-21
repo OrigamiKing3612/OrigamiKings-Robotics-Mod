@@ -122,7 +122,7 @@
 				{
 					"name": "armorRightLeg",
 					"parent": "RightLeg",
-					"pivot": [2, 12, 0],
+					"pivot": [-6, 12, 0],
 					"cubes": [
 						{"origin": [-4, 11, -1], "size": [3, 6, 3], "uv": [65, 74]}
 					]
@@ -143,7 +143,7 @@
 				},
 				{
 					"name": "Head",
-					"pivot": [0, -1, 1]
+					"pivot": [0, 29, 1]
 				},
 				{
 					"name": "octagon",
