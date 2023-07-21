@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "orm:sideswipe_chip"
+    },
+    "D": {
+      "item": "minecraft:diamond_chestplate"
+    },
+    "E": {
+      "item": "orm:energon"
+    },
+    "S": {
+      "item": "orm:spark"
+    },
+    "T": {
+      "item": "orm:transformium"
+    }
+  },
+  "pattern": [
+    "TCT",
+    "ESE",
+    "TDT"
+  ],
+  "result": {
+    "item": "orm:sideswipe_chestplate"
+  },
+  "show_notification": true
+}

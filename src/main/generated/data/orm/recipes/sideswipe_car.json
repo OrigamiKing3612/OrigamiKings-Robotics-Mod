@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "orm:sideswipe_boots"
+    },
+    "C": {
+      "item": "orm:sideswipe_chestplate"
+    },
+    "H": {
+      "item": "orm:sideswipe_helmet"
+    },
+    "L": {
+      "item": "orm:sideswipe_leggings"
+    },
+    "O": {
+      "item": "orm:ore_13"
+    },
+    "T": {
+      "item": "orm:transformium"
+    }
+  },
+  "pattern": [
+    "HTC",
+    "TOT",
+    "LTB"
+  ],
+  "result": {
+    "item": "orm:sideswipe_car"
+  },
+  "show_notification": true
+}

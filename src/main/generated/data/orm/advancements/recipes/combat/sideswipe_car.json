@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sideswipe_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:sideswipe_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_sideswipe_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:sideswipe_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_sideswipe_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:sideswipe_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_sideswipe_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:sideswipe_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "orm:sideswipe_car"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_sideswipe_helmet",
+      "has_sideswipe_chestplate",
+      "has_sideswipe_leggings",
+      "has_sideswipe_boots",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "orm:sideswipe_car"
+    ]
+  },
+  "sends_telemetry_event": false
+}

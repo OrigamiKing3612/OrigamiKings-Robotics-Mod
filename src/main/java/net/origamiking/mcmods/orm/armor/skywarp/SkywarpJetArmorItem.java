@@ -6,7 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.skywarp.renderer.SkywarpJetArmorRenderer;
-import net.origamiking.mcmods.orm.utils.TransformerArmorItem;
+import net.origamiking.mcmods.orm.utils.TransformerTransformedArmorItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
@@ -17,7 +17,7 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 
-public final class SkywarpJetArmorItem extends TransformerArmorItem implements GeoItem {
+public final class SkywarpJetArmorItem extends TransformerTransformedArmorItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
 

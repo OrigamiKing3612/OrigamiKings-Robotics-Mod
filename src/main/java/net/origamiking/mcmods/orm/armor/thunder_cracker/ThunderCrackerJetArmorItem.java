@@ -6,14 +6,14 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.thunder_cracker.renderer.ThunderCrackerJetArmorRenderer;
-import net.origamiking.mcmods.orm.utils.TransformerArmorItem;
+import net.origamiking.mcmods.orm.utils.TransformerTransformedArmorItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 import java.util.function.Consumer;
 
-public final class ThunderCrackerJetArmorItem extends TransformerArmorItem implements GeoItem {
+public final class ThunderCrackerJetArmorItem extends TransformerTransformedArmorItem implements GeoItem {
     public ThunderCrackerJetArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
         super(armorMaterial, slot, properties);
     }
