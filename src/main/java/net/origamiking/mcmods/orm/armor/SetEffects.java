@@ -30,7 +30,7 @@ public class SetEffects {
         }));
 
     }
-
+    //todo move to oapi
     private static Item getChestplateItem(ServerPlayerEntity player) {
         return player.getEquippedStack(EquipmentSlot.CHEST).getItem();
     }
