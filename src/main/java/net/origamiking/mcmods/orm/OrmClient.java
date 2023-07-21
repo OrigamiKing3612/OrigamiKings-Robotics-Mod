@@ -43,7 +43,7 @@ public class OrmClient implements ClientModInitializer {
         getCutout(BlockRegistry.CHIP_REFINERY_BLOCK);
 
         getTranslucent(BlockRegistry.FORCE_FIELD_BLOCK);
-
+        //TODO move to oapi 0.1.21
         FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_RAW_ENERGON, ModFluids.FLOWING_RAW_ENERGON, new SimpleFluidRenderHandler(
                 new Identifier("minecraft:block/water_still"),
                 new Identifier("minecraft:block/water_flow"),

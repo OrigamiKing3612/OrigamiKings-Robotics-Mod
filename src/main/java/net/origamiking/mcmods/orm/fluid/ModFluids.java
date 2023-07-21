@@ -19,18 +19,18 @@ import static net.origamiking.mcmods.oapi.blocks.BlocksUtils.registerBlockWithOu
 import static net.origamiking.mcmods.oapi.items.ItemsUtils.registerItem;
 
 public class ModFluids extends FluidUtils {
-    public static FlowableFluid STILL_RAW_ENERGON = register(OrmMain.MOD_ID + ":still_raw_energon", new RawEnergonFluid.Still());
-    public static FlowableFluid FLOWING_RAW_ENERGON = register(OrmMain.MOD_ID + ":flowing_raw_energon", new RawEnergonFluid.Flowing());
+    public static FlowableFluid STILL_RAW_ENERGON = registerFluid(OrmMain.MOD_ID, "still_raw_energon", new RawEnergonFluid.Still());
+    public static FlowableFluid FLOWING_RAW_ENERGON = registerFluid(OrmMain.MOD_ID, "flowing_raw_energon", new RawEnergonFluid.Flowing());
     public static Item RAW_ENERGON_BUCKET = registerItem(OrmMain.MOD_ID, "raw_energon_bucket", new BucketItem(ModFluids.STILL_RAW_ENERGON, new OrigamiItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
     public static Block RAW_ENERGON_BLOCK = registerBlockWithOutBlockItem(OrmMain.MOD_ID, "raw_energon_fluid_block", new OrmFluidBlock(ModFluids.STILL_RAW_ENERGON, OrigamiBlockSettings.copyOf(Blocks.WATER).replaceable().liquid()));
 
-    public static FlowableFluid STILL_RAW_DARK_ENERGON = register(OrmMain.MOD_ID + ":still_raw_dark_energon", new RawDarkEnergonFluid.Still());
-    public static FlowableFluid FLOWING_RAW_DARK_ENERGON = register(OrmMain.MOD_ID + ":flowing_raw_dark_energon", new RawDarkEnergonFluid.Flowing());
+    public static FlowableFluid STILL_RAW_DARK_ENERGON = registerFluid(OrmMain.MOD_ID, "still_raw_dark_energon", new RawDarkEnergonFluid.Still());
+    public static FlowableFluid FLOWING_RAW_DARK_ENERGON = registerFluid(OrmMain.MOD_ID, ":flowing_raw_dark_energon", new RawDarkEnergonFluid.Flowing());
     public static Item RAW_DARK_ENERGON_BUCKET = registerItem(OrmMain.MOD_ID, "raw_dark_energon_bucket", new BucketItem(ModFluids.STILL_RAW_DARK_ENERGON, new OrigamiItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
     public static Block RAW_DARK_ENERGON_BLOCK = registerBlockWithOutBlockItem(OrmMain.MOD_ID, "raw_dark_energon_fluid_block", new OrmFluidBlock(ModFluids.STILL_RAW_DARK_ENERGON, OrigamiBlockSettings.copyOf(Blocks.WATER).replaceable().liquid()));
 
-    public static FlowableFluid STILL_OIL = register(OrmMain.MOD_ID + ":still_oil", new OilFluid.Still());
-    public static FlowableFluid FLOWING_OIL = register(OrmMain.MOD_ID + ":flowing_oil", new OilFluid.Flowing());
+    public static FlowableFluid STILL_OIL = registerFluid(OrmMain.MOD_ID, "still_oil", new OilFluid.Still());
+    public static FlowableFluid FLOWING_OIL = registerFluid(OrmMain.MOD_ID, "flowing_oil", new OilFluid.Flowing());
     public static Item OIL_BUCKET = registerItem(OrmMain.MOD_ID, "oil_bucket", new BucketItem(ModFluids.STILL_OIL, new OrigamiItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
     public static Block OIL_BLOCK = registerBlockWithOutBlockItem(OrmMain.MOD_ID, "oil_fluid_block", new OrmFluidBlock(ModFluids.STILL_OIL, OrigamiBlockSettings.copyOf(Blocks.WATER).replaceable().liquid()));
 

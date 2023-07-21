@@ -40,7 +40,7 @@
 			"file": "jars/fabric-api-0.86.0+1.20.1.jar"
 		},
 		{
-			"file": "jars/Origamikings-API-0.1.19-1.20.1.jar"
+			"file": "jars/Origamikings-API-0.1.20-1.20.1.jar"
 		}
 	],
 	"depends": {
