@@ -1,7 +1,6 @@
 package net.origamiking.mcmods.orm;
 
 import net.fabricmc.api.ModInitializer;
-import net.origamiking.mcmods.orm.advancements.ModAdvancements;
 import net.origamiking.mcmods.orm.armor.ModArmor;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
 import net.origamiking.mcmods.orm.blocks.ModBlocks;
@@ -28,7 +27,6 @@ public class OrmMain implements ModInitializer {
     public void onInitialize() {
         OrmMain.LOGGER.info("Starting ORM " + OrmMain.VERSION);
 
-        ModAdvancements.register();
         ModArmor.register();
         ModItems.register();
         ModBlocks.register();

@@ -1,14 +1,9 @@
 package net.origamiking.mcmods.orm;
 
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
-import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
-import net.minecraft.client.render.RenderLayer;
-import net.minecraft.util.Identifier;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
 import net.origamiking.mcmods.orm.blocks.custom.BlockRegistry;
 import net.origamiking.mcmods.orm.blocks.custom.compacter.renderer.CompacterBlockRenderer;
@@ -22,8 +17,7 @@ import net.origamiking.mcmods.orm.screen.chip_refinery.ChipRefineryScreen;
 import net.origamiking.mcmods.orm.screen.compacter.CompacterBlockScreen;
 import net.origamiking.mcmods.orm.screen.refinery.RefineryBlockScreen;
 
-import static net.origamiking.mcmods.oapi.client.ClientUtils.getCutout;
-import static net.origamiking.mcmods.oapi.client.ClientUtils.getTranslucent;
+import static net.origamiking.mcmods.oapi.client.ClientUtils.*;
 
 public class OrmClient implements ClientModInitializer {
 
@@ -43,29 +37,9 @@ public class OrmClient implements ClientModInitializer {
         getCutout(BlockRegistry.CHIP_REFINERY_BLOCK);
 
         getTranslucent(BlockRegistry.FORCE_FIELD_BLOCK);
-        //TODO move to oapi 0.1.21
-        FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_RAW_ENERGON, ModFluids.FLOWING_RAW_ENERGON, new SimpleFluidRenderHandler(
-                new Identifier("minecraft:block/water_still"),
-                new Identifier("minecraft:block/water_flow"),
-                0x149ed4
-        ));
 
-        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), ModFluids.STILL_RAW_ENERGON, ModFluids.FLOWING_RAW_ENERGON);
-
-        FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_RAW_DARK_ENERGON, ModFluids.FLOWING_RAW_DARK_ENERGON, new SimpleFluidRenderHandler(
-                new Identifier("minecraft:block/water_still"),
-                new Identifier("minecraft:block/water_flow"),
-                0x8c14d4
-        ));
-
-        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), ModFluids.STILL_RAW_DARK_ENERGON, ModFluids.FLOWING_RAW_DARK_ENERGON);
-
-        FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_OIL, ModFluids.FLOWING_OIL, new SimpleFluidRenderHandler(
-                new Identifier("minecraft:block/water_still"),
-                new Identifier("minecraft:block/water_flow"),
-                0x2e2301
-        ));
-
-        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), ModFluids.STILL_OIL, ModFluids.FLOWING_OIL);
+        fluidTextureRegistry(ModFluids.STILL_RAW_ENERGON, ModFluids.FLOWING_RAW_ENERGON, 0x149ed4);
+        fluidTextureRegistry(ModFluids.STILL_RAW_DARK_ENERGON, ModFluids.FLOWING_RAW_DARK_ENERGON, 0x8c14d4);
+        fluidTextureRegistry(ModFluids.STILL_OIL, ModFluids.FLOWING_OIL, 0x2e2301);
     }
 }

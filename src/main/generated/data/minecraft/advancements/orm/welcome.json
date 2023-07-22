@@ -2,7 +2,7 @@
   "criteria": {
     "welcome": {
       "conditions": {},
-      "trigger": "orm:welcome"
+      "trigger": "origamikings-api:welcome"
     }
   },
   "display": {
