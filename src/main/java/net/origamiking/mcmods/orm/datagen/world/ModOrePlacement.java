@@ -1,4 +1,4 @@
-package net.origamiking.mcmods.orm.world;
+package net.origamiking.mcmods.orm.datagen.world;
 
 import net.minecraft.world.gen.placementmodifier.*;
 

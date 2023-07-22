@@ -1,7 +1,7 @@
 package net.origamiking.mcmods.orm.world.generation;
 
 import net.origamiking.mcmods.oapi.biome.OrigamiBiomeModifications;
-import net.origamiking.mcmods.orm.world.ModPlacedFeatures;
+import net.origamiking.mcmods.orm.datagen.world.ModPlacedFeatures;
 
 public class ModOreGen {
     public static void get() {

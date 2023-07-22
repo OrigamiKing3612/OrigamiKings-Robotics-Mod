@@ -1,4 +1,4 @@
-package net.origamiking.mcmods.orm.world;
+package net.origamiking.mcmods.orm.datagen.world;
 
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;

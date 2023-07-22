@@ -4,8 +4,8 @@ import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
-import net.origamiking.mcmods.orm.world.ModConfiguredFeatures;
-import net.origamiking.mcmods.orm.world.ModPlacedFeatures;
+import net.origamiking.mcmods.orm.datagen.world.ModConfiguredFeatures;
+import net.origamiking.mcmods.orm.datagen.world.ModPlacedFeatures;
 
 public class ModDataGenerator implements DataGeneratorEntrypoint {
     @Override
