@@ -54,6 +54,11 @@
 		"origamikings-api": ">=0.1.21-1.20.1"
 	},
 	"suggests": {
+
+	},
+	"recommends": {
+		"rei": "*",
+		"emi": "*"
 	},
 	"custom": {
 		"modmenu": {
