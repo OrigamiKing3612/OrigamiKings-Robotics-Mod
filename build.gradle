@@ -2,6 +2,8 @@ plugins {
     id 'fabric-loom' version '1.2-SNAPSHOT'
     id 'maven-publish'
     id "com.modrinth.minotaur" version "2.+"
+    id 'com.matthewprenger.cursegradle' version '1.4.0'
+
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -131,4 +133,29 @@ modrinth {
     changelog = "${mod_version}: The \"Cybertron Update\" Version:\n" + "\n" +
             "Added EMI compact" + "\n" + "\n" +
             "Please report any bugs [here](https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod/issues)"
+}
+curseforge {
+    project {
+        apiKey = System.getenv("CURSEFORGE_TOKEN")
+        id = "893153"
+        releaseType = "release"
+        changelogType = 'text'
+//			changelog = file('changelog.txt')
+        addGameVersion("1.20.1")
+        addGameVersion("Fabric")
+        addGameVersion("Java 17")
+
+//			relations {
+//				requiredDependency 'fabric-api'
+//			}
+        mainArtifact(remapJar)
+
+        afterEvaluate {
+            uploadTask.dependsOn("remapJar")
+        }
+    }
+    options {
+//			debug = true
+        forgeGradleIntegration = false
+    }
 }
