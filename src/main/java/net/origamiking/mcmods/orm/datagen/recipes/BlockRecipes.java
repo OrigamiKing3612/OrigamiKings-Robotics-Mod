@@ -30,8 +30,8 @@ public class BlockRecipes {
         offerSlab(exporter, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_SLAB, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_BLOCK);
         RecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_STAIRS, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BLOCK);
         RecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_STAIRS, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_BLOCK);
-        RecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_SLAB, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BLOCK);
-        RecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_SLAB, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_BLOCK);
+        RecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_SLAB, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BLOCK, 2);
+        RecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_SLAB, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_BLOCK, 2);
         ModRecipeProvider.offer3x3CommpressandUncommpress(exporter, RecipeCategory.BUILDING_BLOCKS, EnergonBlocks.ENERGON_BLOCK, EnergonItems.ENERGON);
         ModRecipeProvider.offer3x3CommpressandUncommpress(exporter, RecipeCategory.BUILDING_BLOCKS, EnergonBlocks.DARK_ENERGON_BLOCK, EnergonItems.DARK_ENERGON);
         ModRecipeProvider.offer3x3CommpressandUncommpress(exporter, RecipeCategory.BUILDING_BLOCKS, Ore13Blocks.ORE_13_BLOCK, Ore13Items.ORE_13);

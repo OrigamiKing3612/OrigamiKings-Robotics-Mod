@@ -140,22 +140,15 @@ curseforge {
         id = "893153"
         releaseType = "release"
         changelogType = 'text'
-//			changelog = file('changelog.txt')
         addGameVersion("1.20.1")
         addGameVersion("Fabric")
         addGameVersion("Java 17")
-
-//			relations {
-//				requiredDependency 'fabric-api'
-//			}
         mainArtifact(remapJar)
-
         afterEvaluate {
             uploadTask.dependsOn("remapJar")
         }
     }
     options {
-//			debug = true
         forgeGradleIntegration = false
     }
 }
