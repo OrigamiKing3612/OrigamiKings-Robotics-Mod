@@ -3,16 +3,16 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:transformium_alloy_wall_from_transformium_alloy_wall_stonecutting"
+        "recipe": "orm:transformium_alloy_brick"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_transformium_alloy_wall": {
+    "has_transformium_alloy_bricks_block": {
       "conditions": {
         "items": [
           {
             "items": [
-              "orm:transformium_alloy_wall"
+              "orm:transformium_alloy_bricks_block"
             ]
           }
         ]
@@ -22,13 +22,13 @@
   },
   "requirements": [
     [
-      "has_transformium_alloy_wall",
+      "has_transformium_alloy_bricks_block",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:transformium_alloy_wall_from_transformium_alloy_wall_stonecutting"
+      "orm:transformium_alloy_brick"
     ]
   },
   "sends_telemetry_event": false

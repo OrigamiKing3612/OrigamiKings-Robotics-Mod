@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "orm:transformium_alloy_wall"
+      "item": "orm:transformium_alloy_block"
     }
   },
   "pattern": [

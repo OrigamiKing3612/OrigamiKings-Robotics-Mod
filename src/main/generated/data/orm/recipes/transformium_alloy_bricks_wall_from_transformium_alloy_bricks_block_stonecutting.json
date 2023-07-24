@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "count": 1,
   "ingredient": {
-    "item": "orm:transformium_alloy_bricks_wall"
+    "item": "orm:transformium_alloy_bricks_block"
   },
   "result": "orm:transformium_alloy_bricks_wall"
 }

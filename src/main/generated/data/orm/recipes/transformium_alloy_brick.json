@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "orm:transformium_alloy_bricks_block"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "orm:transformium_alloy_brick"
+  }
+}

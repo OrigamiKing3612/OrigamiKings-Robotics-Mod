@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "orm:transformium_alloy_wall"
+        "recipe": "minecraft:transformium_alloy_wall_from_transformium_alloy_block_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "orm:transformium_alloy_wall"
+      "minecraft:transformium_alloy_wall_from_transformium_alloy_block_stonecutting"
     ]
   },
   "sends_telemetry_event": false
