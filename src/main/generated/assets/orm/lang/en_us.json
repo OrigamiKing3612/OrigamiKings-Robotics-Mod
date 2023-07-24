@@ -83,6 +83,7 @@
   "block.orm.transformium_slab": "Transformium Slab",
   "block.orm.transformium_stairs": "Transformium Stairs",
   "block.orm.transformium_wall": "Transformium Wall",
+  "emi.category.orm.chip_refinery": "Chip Refinery",
   "entity.orm.photon": "Photon",
   "entity.orm.vector_guard": "Vector Guard",
   "group.orm.addons": "ORM Armor Addons",
@@ -214,5 +215,9 @@
   "screen.orm.refinery_block_title": "Refinery Block",
   "stat.orm.interact_with_chip_refinery": "Interactions with Chip Refinery",
   "stat.orm.interact_with_compacter": "Interactions with Compacter",
-  "stat.orm.interact_with_refinery": "Interactions with Refinery"
+  "stat.orm.interact_with_refinery": "Interactions with Refinery",
+  "tag.fluid.orm.dark_energon_fluid": "Dark Energon Fluid",
+  "tag.fluid.orm.energon_fluid": "Energon Fluid",
+  "tag.fluid.orm.oil_fluid": "Oil Fluid",
+  "tag.item.orm.chips": "Chips"
 }

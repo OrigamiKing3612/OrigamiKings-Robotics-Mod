@@ -16,6 +16,10 @@ repositories {
     maven { url 'https://maven.kyrptonaught.dev' }
     maven { url 'https://dl.cloudsmith.io/public/origamiking3612/origamikings-api/maven/' }
     maven { url "https://maven.shedaniel.me" }
+    maven {
+        name 'TerraformersMC'
+        url 'https://maven.terraformersmc.com/'
+    }
 }
 
 loom {
@@ -54,7 +58,11 @@ dependencies {
     modImplementation "software.bernie.geckolib:geckolib-fabric-1.20:${geckolib_version}"
 
     modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${rei_version}"
+    modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
+
+//    modLocalRuntime "dev.emi:emi-fabric:${emi_version}"
     modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${rei_version}"
+
 
     modImplementation "net.kyrptonaught:customportalapi:${portal_api_version}"
     include "net.kyrptonaught:customportalapi:${portal_api_version}"
@@ -117,9 +125,10 @@ modrinth {
         embedded.project "fabric-api"
         embedded.project "origamikings-api"
         optional.project "rei"
+        optional.project "emi"
 
     }
     changelog = "${mod_version}: The \"Cybertron Update\" Version:\n" + "\n" +
-            "Redid the armor invisiblty system, added Raw Energon, Raw Dark Energon and Oil Fluids. Added Transformium walls. Added Sideswipe" + "\n" + "\n" +
+            "Added EMI compact" + "\n" + "\n" +
             "Please report any bugs [here](https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod/issues)"
 }
