@@ -1,11 +1,15 @@
 package net.origamiking.mcmods.orm.datagen.recipes.providers;
 
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.recipe.*;
+import net.minecraft.data.server.recipe.CraftingRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeProvider;
+import net.minecraft.data.server.recipe.SingleItemRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.origamiking.mcmods.oapi.recipes.OrigamiShapedRecipeJsonBuilder;
 import net.origamiking.mcmods.orm.items.energon.EnergonItems;
 import net.origamiking.mcmods.orm.items.ore13.Ore13Items;
 import net.origamiking.mcmods.orm.items.random.RandomItems;
@@ -36,23 +40,23 @@ public class OrmRecipeProvider {
     }
 
     private static CraftingRecipeJsonBuilder createTransformerHelmet(ItemConvertible output, Ingredient chip) {
-        return ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output).input('T', TransformiumItems.TRANSFORMIUM).input('E', EnergonItems.ENERGON).input('C', chip).input('S', RandomItems.SPARK).input('D', Items.DIAMOND_HELMET).pattern("TCT").pattern("ESE").pattern("TDT");
+        return OrigamiShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output).input('T', TransformiumItems.TRANSFORMIUM).input('E', EnergonItems.ENERGON).input('C', chip).input('S', RandomItems.SPARK).input('D', Items.DIAMOND_HELMET).pattern("TCT").pattern("ESE").pattern("TDT");
     }
 
     private static CraftingRecipeJsonBuilder createTransformerChestplate(ItemConvertible output, Ingredient chip) {
-        return ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output).input('T', TransformiumItems.TRANSFORMIUM).input('E', EnergonItems.ENERGON).input('C', chip).input('S', RandomItems.SPARK).input('D', Items.DIAMOND_CHESTPLATE).pattern("TCT").pattern("ESE").pattern("TDT");
+        return OrigamiShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output).input('T', TransformiumItems.TRANSFORMIUM).input('E', EnergonItems.ENERGON).input('C', chip).input('S', RandomItems.SPARK).input('D', Items.DIAMOND_CHESTPLATE).pattern("TCT").pattern("ESE").pattern("TDT");
     }
 
     private static CraftingRecipeJsonBuilder createTransformerLeggings(ItemConvertible output, Ingredient chip) {
-        return ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output).input('T', TransformiumItems.TRANSFORMIUM).input('E', EnergonItems.ENERGON).input('C', chip).input('S', RandomItems.SPARK).input('D', Items.DIAMOND_LEGGINGS).pattern("TCT").pattern("ESE").pattern("TDT");
+        return OrigamiShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output).input('T', TransformiumItems.TRANSFORMIUM).input('E', EnergonItems.ENERGON).input('C', chip).input('S', RandomItems.SPARK).input('D', Items.DIAMOND_LEGGINGS).pattern("TCT").pattern("ESE").pattern("TDT");
     }
 
     private static CraftingRecipeJsonBuilder createTransformerBoots(ItemConvertible output, Ingredient chip) {
-        return ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output).input('T', TransformiumItems.TRANSFORMIUM).input('E', EnergonItems.ENERGON).input('C', chip).input('S', RandomItems.SPARK).input('D', Items.DIAMOND_BOOTS).pattern("TCT").pattern("ESE").pattern("TDT");
+        return OrigamiShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output).input('T', TransformiumItems.TRANSFORMIUM).input('E', EnergonItems.ENERGON).input('C', chip).input('S', RandomItems.SPARK).input('D', Items.DIAMOND_BOOTS).pattern("TCT").pattern("ESE").pattern("TDT");
     }
 
     private static CraftingRecipeJsonBuilder createTransformerCar(ItemConvertible car, Ingredient helmet, Ingredient chestplate, Ingredient leggings, Ingredient boots) {
-        return ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, car).input('H', helmet).input('C', chestplate).input('L', leggings).input('B', boots).input('T', TransformiumItems.TRANSFORMIUM).input('O', Ore13Items.ORE_13).pattern("HTC").pattern("TOT").pattern("LTB");
+        return OrigamiShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, car).input('H', helmet).input('C', chestplate).input('L', leggings).input('B', boots).input('T', TransformiumItems.TRANSFORMIUM).input('O', Ore13Items.ORE_13).pattern("HTC").pattern("TOT").pattern("LTB");
     }
 
     private static SingleItemRecipeJsonBuilder createChipRefining(Ingredient input, RecipeCategory category, ItemConvertible output, int count) {

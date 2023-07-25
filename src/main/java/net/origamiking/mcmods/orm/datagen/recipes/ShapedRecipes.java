@@ -35,7 +35,7 @@ public class ShapedRecipes {
                 .pattern("O").pattern("O").pattern("O")
                 .inputWithCriterion('O', Ore13Items.ORE_13)
                 .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(ItemRegistry.PHOTON_ITEM)));
-        //compacter.json
+        //compacter
         OrigamiShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.COMPACTER_BLOCK, 1)
                 .pattern("TRT").pattern("TIT").pattern("SES")
                 .inputWithCriterion('I', Blocks.IRON_BLOCK).inputWithCriterion('S', Blocks.SMOOTH_STONE).inputWithCriterion('E', EnergonItems.ENERGON).inputWithCriterion('R', Items.REDSTONE).inputWithCriterion('T', TransformiumItems.TRANSFORMIUM)

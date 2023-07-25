@@ -12,7 +12,7 @@ import net.origamiking.mcmods.orm.OrmMain;
 import net.origamiking.mcmods.orm.entity.photon.PhotonEntity;
 import net.origamiking.mcmods.orm.entity.vector_guard.VectorGuardEntity;
 
-import static net.origamiking.mcmods.oapi.entities.EntityUtils.registerEntity;
+import static net.origamiking.mcmods.oapi.entity.EntityUtils.registerEntity;
 
 public class ModEntities {
     public static final EntityType<VectorGuardEntity> VECTOR_GUARD = registerEntity(OrmMain.MOD_ID, "vector_guard", VectorGuardEntity::new, 1.0f, 2.2f, SpawnGroup.MONSTER);
