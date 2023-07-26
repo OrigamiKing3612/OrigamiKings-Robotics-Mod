@@ -6,9 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
 import net.origamiking.mcmods.orm.OrmMain;
 import net.origamiking.mcmods.orm.armor.astrotrain.Astrotrain;
 import net.origamiking.mcmods.orm.armor.bumblebee.Bumblebee;
@@ -59,12 +57,13 @@ import net.origamiking.mcmods.orm.items.spawnegg.ModSpawnEggs;
 import net.origamiking.mcmods.orm.items.transformium.TransformiumItems;
 import net.origamiking.mcmods.orm.items.transformium_alloy.TransformiumAlloyItems;
 
+import static net.origamiking.mcmods.oapi.groups.ItemGroupUtils.itemGroup;
+
 public class ModGroups {
-    //TODO oapi
-    public static final RegistryKey<ItemGroup> ORM_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(OrmMain.MOD_ID, "orm_group"));
-    public static final RegistryKey<ItemGroup> ORM_STUFF = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(OrmMain.MOD_ID, "orm_stuff"));
-    public static final RegistryKey<ItemGroup> ORM_ADDONS = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(OrmMain.MOD_ID, "orm_addons"));
-    public static final RegistryKey<ItemGroup> ORM_CHIPS = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(OrmMain.MOD_ID, "orm_chips"));
+    public static final RegistryKey<ItemGroup> ORM_GROUP = itemGroup(OrmMain.MOD_ID, "orm_group");
+    public static final RegistryKey<ItemGroup> ORM_STUFF = itemGroup(OrmMain.MOD_ID, "orm_stuff");
+    public static final RegistryKey<ItemGroup> ORM_ADDONS = itemGroup(OrmMain.MOD_ID, "orm_addons");
+    public static final RegistryKey<ItemGroup> ORM_CHIPS = itemGroup(OrmMain.MOD_ID, "orm_chips");
 
     public static void register() {
         armor();
