@@ -23,13 +23,14 @@ public class OrmClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        //todo oapi
         HandledScreens.register(ModScreenHandlers.REFINERY_BLOCK_SCREEN_HANDLER, RefineryBlockScreen::new);
         HandledScreens.register(ModScreenHandlers.COMPACTER_BLOCK_SCREEN_HANDLER, CompacterBlockScreen::new);
         HandledScreens.register(ModScreenHandlers.CHIP_REFINERY_SCREEN_HANDLER, ChipRefineryScreen::new);
-
+        //todo oapi
         BlockEntityRendererFactories.register(ModBlockEntities.REFINERY_BLOCK, context -> new RefineryBlockRenderer());
         BlockEntityRendererFactories.register(ModBlockEntities.COMPACTER_BLOCK, context -> new CompacterBlockRenderer());
-
+        //todo oapi
         EntityRendererRegistry.register(ModEntities.VECTOR_GUARD, VectorGuardEntityRenderer::new);
         EntityRendererRegistry.register(ModEntities.PhotonEntityType, PhotonEntityRenderer::new);
 
