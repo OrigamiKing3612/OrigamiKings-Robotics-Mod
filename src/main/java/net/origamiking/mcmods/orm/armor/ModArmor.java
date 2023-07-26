@@ -15,6 +15,7 @@ import net.origamiking.mcmods.orm.armor.skystrike.Skystrike;
 import net.origamiking.mcmods.orm.armor.skywarp.Skywarp;
 import net.origamiking.mcmods.orm.armor.soundwave.Soundwave;
 import net.origamiking.mcmods.orm.armor.starscream.Starscream;
+import net.origamiking.mcmods.orm.armor.sunstreaker.Sunstreaker;
 import net.origamiking.mcmods.orm.armor.thunder_cracker.ThunderCracker;
 
 public class ModArmor {
@@ -35,6 +36,7 @@ public class ModArmor {
         Shockwave.get();
         Ratchet.get();
         Sideswipe.get();
+        Sunstreaker.get();
 
         SetEffects.setEffects();
     }

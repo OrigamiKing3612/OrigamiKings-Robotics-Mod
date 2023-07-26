@@ -2,6 +2,8 @@ package net.origamiking.mcmods.orm.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
+import net.origamiking.mcmods.orm.armor.sunstreaker.Sunstreaker;
+import net.origamiking.mcmods.orm.items.chips.sunstreaker.SunstreakerChip;
 
 import java.nio.file.Path;
 
@@ -12,14 +14,14 @@ public class ModLanguageGenerator extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
-//        translationBuilder.add("advancement.orm.sideswipe.description", "Get the Sideswipe Armor set");
-//        translationBuilder.add("advancement.orm.sideswipe.title", "Sideswipe");
-//        translationBuilder.add(Sideswipe.HELMET, "Sideswipe Helmet");
-//        translationBuilder.add(Sideswipe.CHESTPLATE, "Sideswipe Chestplate");
-//        translationBuilder.add(Sideswipe.LEGGINGS, "Sideswipe Leggings");
-//        translationBuilder.add(Sideswipe.BOOTS, "Sideswipe Boots");
-//        translationBuilder.add(Sideswipe.CAR, "Sideswipe Car");
-//        translationBuilder.add(SideswipeChip.CHIP, "Sideswipe Chip");
+        translationBuilder.add("advancement.orm.sunstreaker.description", "Get the Sunstreaker Armor set");
+        translationBuilder.add("advancement.orm.sunstreaker.title", "Sunstreaker");
+        translationBuilder.add(Sunstreaker.HELMET, "Sunstreaker Helmet");
+        translationBuilder.add(Sunstreaker.CHESTPLATE, "Sunstreaker Chestplate");
+        translationBuilder.add(Sunstreaker.LEGGINGS, "Sunstreaker Leggings");
+        translationBuilder.add(Sunstreaker.BOOTS, "Sunstreaker Boots");
+        translationBuilder.add(Sunstreaker.CAR, "Sunstreaker Car");
+        translationBuilder.add(SunstreakerChip.CHIP, "Sunstreaker Chip");
 
 
         try {

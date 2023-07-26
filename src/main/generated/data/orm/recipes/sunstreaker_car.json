@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "orm:sunstreaker_boots"
+    },
+    "C": {
+      "item": "orm:sunstreaker_chestplate"
+    },
+    "H": {
+      "item": "orm:sunstreaker_helmet"
+    },
+    "L": {
+      "item": "orm:sunstreaker_leggings"
+    },
+    "O": {
+      "item": "orm:ore_13"
+    },
+    "T": {
+      "item": "orm:transformium"
+    }
+  },
+  "pattern": [
+    "HTC",
+    "TOT",
+    "LTB"
+  ],
+  "result": {
+    "item": "orm:sunstreaker_car"
+  },
+  "show_notification": true
+}

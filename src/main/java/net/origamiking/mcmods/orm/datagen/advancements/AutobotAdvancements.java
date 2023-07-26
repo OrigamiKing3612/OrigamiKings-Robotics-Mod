@@ -12,6 +12,7 @@ import net.origamiking.mcmods.orm.armor.ratchet.Ratchet;
 import net.origamiking.mcmods.orm.armor.rodimus_prime.RodimusPrime;
 import net.origamiking.mcmods.orm.armor.sideswipe.Sideswipe;
 import net.origamiking.mcmods.orm.armor.skystrike.Skystrike;
+import net.origamiking.mcmods.orm.armor.sunstreaker.Sunstreaker;
 
 import java.util.function.Consumer;
 
@@ -138,5 +139,22 @@ public class AutobotAdvancements {
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Sideswipe.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Sideswipe.BOOTS))
                 .build(advancementConsumer, OrmMain.MOD_ID + "/autobots/sideswipe");
+
+        Advancement sunstreaker = Advancement.Builder.create().parent(optimus_prime)
+                .display(
+                        Sunstreaker.HELMET, // icon
+                        Text.translatable(translatableTitle("sunstreaker")), // title
+                        Text.translatable(translatableDescription("sunstreaker")), // description
+                        null,
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .criterion("get_helmet", InventoryChangedCriterion.Conditions.items(Sunstreaker.HELMET))
+                .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Sunstreaker.CHESTPLATE))
+                .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Sunstreaker.LEGGINGS))
+                .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Sunstreaker.BOOTS))
+                .build(advancementConsumer, OrmMain.MOD_ID + "/autobots/sunstreaker");
     }
 }

@@ -25,6 +25,7 @@ import net.origamiking.mcmods.orm.armor.skystrike.Skystrike;
 import net.origamiking.mcmods.orm.armor.skywarp.Skywarp;
 import net.origamiking.mcmods.orm.armor.soundwave.Soundwave;
 import net.origamiking.mcmods.orm.armor.starscream.Starscream;
+import net.origamiking.mcmods.orm.armor.sunstreaker.Sunstreaker;
 import net.origamiking.mcmods.orm.armor.thunder_cracker.ThunderCracker;
 import net.origamiking.mcmods.orm.blocks.custom.BlockRegistry;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
@@ -47,6 +48,7 @@ import net.origamiking.mcmods.orm.items.chips.skystrike.SkystrikeChip;
 import net.origamiking.mcmods.orm.items.chips.skywarp.SkywarpChip;
 import net.origamiking.mcmods.orm.items.chips.soundwave.SoundwaveChip;
 import net.origamiking.mcmods.orm.items.chips.starscream.StarscreamChip;
+import net.origamiking.mcmods.orm.items.chips.sunstreaker.SunstreakerChip;
 import net.origamiking.mcmods.orm.items.chips.thunder_cracker.ThunderCrackerChip;
 import net.origamiking.mcmods.orm.items.custom.ItemRegistry;
 import net.origamiking.mcmods.orm.items.energon.EnergonItems;
@@ -110,6 +112,11 @@ public class ModGroups {
                     entries.add(Ratchet.LEGGINGS);
                     entries.add(Ratchet.BOOTS);
                     entries.add(Ratchet.CAR);
+                    entries.add(Sunstreaker.HELMET);
+                    entries.add(Sunstreaker.CHESTPLATE);
+                    entries.add(Sunstreaker.LEGGINGS);
+                    entries.add(Sunstreaker.BOOTS);
+                    entries.add(Sunstreaker.CAR);
                     entries.add(Sideswipe.HELMET);
                     entries.add(Sideswipe.CHESTPLATE);
                     entries.add(Sideswipe.LEGGINGS);
@@ -249,6 +256,7 @@ public class ModGroups {
                     entries.add(ShockwaveChip.CHIP);
                     entries.add(RatchetChip.CHIP);
                     entries.add(SideswipeChip.CHIP);
+                    entries.add(SunstreakerChip.CHIP);
                 }).build());
     }
 }

@@ -5,7 +5,6 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
-import net.origamiking.mcmods.orm.armor.thunder_cracker.ThunderCracker;
 import net.origamiking.mcmods.orm.blocks.custom.BlockRegistry;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
@@ -75,6 +74,5 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModFluids.OIL_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ModFluids.RAW_ENERGON_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ModFluids.RAW_DARK_ENERGON_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ThunderCracker.HELMET, Models.GENERATED);
     }
 }

@@ -28,6 +28,7 @@ import net.origamiking.mcmods.orm.items.chips.skystrike.SkystrikeChip;
 import net.origamiking.mcmods.orm.items.chips.skywarp.SkywarpChip;
 import net.origamiking.mcmods.orm.items.chips.soundwave.SoundwaveChip;
 import net.origamiking.mcmods.orm.items.chips.starscream.StarscreamChip;
+import net.origamiking.mcmods.orm.items.chips.sunstreaker.SunstreakerChip;
 import net.origamiking.mcmods.orm.items.chips.thunder_cracker.ThunderCrackerChip;
 import net.origamiking.mcmods.orm.items.custom.ItemRegistry;
 import net.origamiking.mcmods.orm.tag.ModBlockTags;
@@ -132,6 +133,7 @@ public class ModTagProviders {
                     .add(ShockwaveChip.CHIP)
                     .add(RatchetChip.CHIP)
                     .add(SideswipeChip.CHIP)
+                    .add(SunstreakerChip.CHIP)
             ;
         }
     }
