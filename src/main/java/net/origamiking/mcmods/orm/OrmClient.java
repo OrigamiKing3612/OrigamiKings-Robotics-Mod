@@ -1,9 +1,9 @@
 package net.origamiking.mcmods.orm;
 
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
 import net.origamiking.mcmods.orm.blocks.custom.BlockRegistry;
 import net.origamiking.mcmods.orm.blocks.custom.compacter.renderer.CompacterBlockRenderer;
@@ -22,14 +22,13 @@ import static net.origamiking.mcmods.oapi.client.ClientUtils.*;
 public class OrmClient implements ClientModInitializer {
 
     @Override
-    @SuppressWarnings("deprecation")
     public void onInitializeClient() {
         HandledScreens.register(ModScreenHandlers.REFINERY_BLOCK_SCREEN_HANDLER, RefineryBlockScreen::new);
         HandledScreens.register(ModScreenHandlers.COMPACTER_BLOCK_SCREEN_HANDLER, CompacterBlockScreen::new);
         HandledScreens.register(ModScreenHandlers.CHIP_REFINERY_SCREEN_HANDLER, ChipRefineryScreen::new);
 
-        BlockEntityRendererRegistry.register(ModBlockEntities.REFINERY_BLOCK, context -> new RefineryBlockRenderer());
-        BlockEntityRendererRegistry.register(ModBlockEntities.COMPACTER_BLOCK, context -> new CompacterBlockRenderer());
+        BlockEntityRendererFactories.register(ModBlockEntities.REFINERY_BLOCK, context -> new RefineryBlockRenderer());
+        BlockEntityRendererFactories.register(ModBlockEntities.COMPACTER_BLOCK, context -> new CompacterBlockRenderer());
 
         EntityRendererRegistry.register(ModEntities.VECTOR_GUARD, VectorGuardEntityRenderer::new);
         EntityRendererRegistry.register(ModEntities.PhotonEntityType, PhotonEntityRenderer::new);
