@@ -31,6 +31,10 @@
     "orm:transformium_alloy_bricks_wall",
     "orm:force_field_block",
     "orm:raw_energon_block",
-    "orm:raw_dark_energon_block"
+    "orm:raw_dark_energon_block",
+    "orm:polished_transformium_block",
+    "orm:polished_transformium_slab",
+    "orm:polished_transformium_stairs",
+    "orm:polished_transformium_wall"
   ]
 }

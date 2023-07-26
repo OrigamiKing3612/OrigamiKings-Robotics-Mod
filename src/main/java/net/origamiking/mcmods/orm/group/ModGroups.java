@@ -30,6 +30,7 @@ import net.origamiking.mcmods.orm.armor.thunder_cracker.ThunderCracker;
 import net.origamiking.mcmods.orm.blocks.custom.BlockRegistry;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
+import net.origamiking.mcmods.orm.blocks.polished_transformium.PolishedTransformiumBlocks;
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
 import net.origamiking.mcmods.orm.blocks.transformium_alloy.TransformiumAlloyBlocks;
 import net.origamiking.mcmods.orm.fluid.ModFluids;
@@ -203,6 +204,10 @@ public class ModGroups {
                     entries.add(TransformiumBlocks.TRANSFORMIUM_STAIRS);
                     entries.add(TransformiumBlocks.TRANSFORMIUM_SLAB);
                     entries.add(TransformiumBlocks.TRANSFORMIUM_WALL);
+                    entries.add(PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_BLOCK);
+                    entries.add(PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_STAIRS);
+                    entries.add(PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_SLAB);
+                    entries.add(PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_WALL);
                     entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BLOCK);
                     entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_STAIRS);
                     entries.add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_SLAB);

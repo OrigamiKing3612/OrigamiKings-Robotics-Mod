@@ -8,6 +8,7 @@ import net.minecraft.data.client.Models;
 import net.origamiking.mcmods.orm.blocks.custom.BlockRegistry;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
+import net.origamiking.mcmods.orm.blocks.polished_transformium.PolishedTransformiumBlocks;
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
 import net.origamiking.mcmods.orm.blocks.transformium_alloy.TransformiumAlloyBlocks;
 import net.origamiking.mcmods.orm.fluid.ModFluids;
@@ -27,6 +28,7 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool darkEnergonTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(EnergonBlocks.DARK_ENERGON_BLOCK);
         BlockStateModelGenerator.BlockTexturePool ore13TexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Ore13Blocks.ORE_13_BLOCK);
         BlockStateModelGenerator.BlockTexturePool transformiumTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(TransformiumBlocks.TRANSFORMIUM_BLOCK);
+        BlockStateModelGenerator.BlockTexturePool polishedTransformiumTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_BLOCK);
         BlockStateModelGenerator.BlockTexturePool transformiumAlloyTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BLOCK);
         BlockStateModelGenerator.BlockTexturePool transformiumAlloyBricksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_BLOCK);
 
@@ -53,6 +55,10 @@ public class ModModelProvider extends FabricModelProvider {
         transformiumAlloyTexturePool.stairs(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_STAIRS);
         transformiumAlloyTexturePool.slab(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_SLAB);
         transformiumAlloyTexturePool.wall(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_WALL);
+
+        polishedTransformiumTexturePool.stairs(PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_STAIRS);
+        polishedTransformiumTexturePool.slab(PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_SLAB);
+        polishedTransformiumTexturePool.wall(PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_WALL);
 
         transformiumAlloyBricksTexturePool.stairs(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_STAIRS);
         transformiumAlloyBricksTexturePool.slab(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_SLAB);

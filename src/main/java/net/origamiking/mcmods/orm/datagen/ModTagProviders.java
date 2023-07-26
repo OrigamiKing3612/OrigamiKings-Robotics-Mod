@@ -9,6 +9,7 @@ import net.minecraft.registry.tag.EntityTypeTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
+import net.origamiking.mcmods.orm.blocks.polished_transformium.PolishedTransformiumBlocks;
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
 import net.origamiking.mcmods.orm.blocks.transformium_alloy.TransformiumAlloyBlocks;
 import net.origamiking.mcmods.orm.entity.ModEntities;
@@ -54,6 +55,7 @@ public class ModTagProviders {
         protected void configure(RegistryWrapper.WrapperLookup registries) {
             getOrCreateTagBuilder(BlockTags.STAIRS).add(
                     TransformiumBlocks.TRANSFORMIUM_STAIRS,
+                    PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_STAIRS,
                     TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_STAIRS,
                     TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_STAIRS,
                     Ore13Blocks.ORE_13_STAIRS,
@@ -61,6 +63,7 @@ public class ModTagProviders {
             );
             getOrCreateTagBuilder(BlockTags.SLABS).add(
                     TransformiumBlocks.TRANSFORMIUM_SLAB,
+                    PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_SLAB,
                     TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_SLAB,
                     TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_SLAB,
                     Ore13Blocks.ORE_13_SLAB,
@@ -71,6 +74,10 @@ public class ModTagProviders {
                     TransformiumBlocks.TRANSFORMIUM_SLAB,
                     TransformiumBlocks.TRANSFORMIUM_STAIRS,
                     TransformiumBlocks.TRANSFORMIUM_WALL,
+                    PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_BLOCK,
+                    PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_SLAB,
+                    PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_STAIRS,
+                    PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_WALL,
                     TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_SLAB,
                     TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BLOCK,
                     TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_STAIRS,
@@ -104,7 +111,11 @@ public class ModTagProviders {
             );
             getOrCreateTagBuilder(ModBlockTags.ENERGON_ORES).add(EnergonBlocks.ENERGON_ORE, EnergonBlocks.DEEPSLATE_ENERGON_ORE, EnergonBlocks.DARK_ENERGON_ORE, EnergonBlocks.DEEPSLATE_DARK_ENERGON_ORE);
             getOrCreateTagBuilder(ModBlockTags.ORE_13_ORES).add(Ore13Blocks.ORE_13_ORE, Ore13Blocks.DEEPSLATE_ORE_13_ORE);
-            getOrCreateTagBuilder(BlockTags.WALLS).add(TransformiumBlocks.TRANSFORMIUM_WALL).add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_WALL).add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_WALL);
+            getOrCreateTagBuilder(BlockTags.WALLS)
+                    .add(TransformiumBlocks.TRANSFORMIUM_WALL)
+                    .add(PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_WALL)
+                    .add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_WALL)
+                    .add(TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_WALL);
         }
     }
 
@@ -149,6 +160,7 @@ public class ModTagProviders {
                     .add(ModEntities.PhotonEntityType);
         }
     }
+
     static class Fluid extends FabricTagProvider.FluidTagProvider {
 
         public Fluid(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {

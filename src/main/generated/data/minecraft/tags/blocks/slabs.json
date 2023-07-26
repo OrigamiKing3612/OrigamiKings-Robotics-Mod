@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "orm:transformium_slab",
+    "orm:polished_transformium_slab",
     "orm:transformium_alloy_bricks_slab",
     "orm:transformium_alloy_slab",
     "orm:ore_13_slab",

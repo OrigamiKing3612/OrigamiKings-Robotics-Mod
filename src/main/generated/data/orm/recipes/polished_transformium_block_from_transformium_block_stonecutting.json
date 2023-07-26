@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "orm:transformium_block"
+  },
+  "result": "orm:polished_transformium_block"
+}

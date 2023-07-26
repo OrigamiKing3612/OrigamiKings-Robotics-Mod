@@ -5,6 +5,7 @@ import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
+import net.origamiking.mcmods.orm.blocks.polished_transformium.PolishedTransformiumBlocks;
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
 import net.origamiking.mcmods.orm.blocks.transformium_alloy.TransformiumAlloyBlocks;
 import net.origamiking.mcmods.orm.items.energon.EnergonItems;
@@ -15,6 +16,7 @@ import net.origamiking.mcmods.orm.items.transformium_alloy.TransformiumAlloyItem
 import java.util.List;
 import java.util.function.Consumer;
 
+import static net.origamiking.mcmods.oapi.recipes.ModRecipeProvider.offer2x2Compress;
 import static net.origamiking.mcmods.oapi.recipes.ModRecipeProviders.offerBlockSet;
 
 public class BlockRecipes {
@@ -30,7 +32,10 @@ public class BlockRecipes {
         offerBlockSet(exporter, Ore13Blocks.ORE_13_BLOCK, Ore13Blocks.ORE_13_SLAB, Ore13Blocks.ORE_13_STAIRS, Ore13Items.ORE_13, false);
 
         offerBlockSet(exporter, TransformiumBlocks.TRANSFORMIUM_BLOCK, TransformiumBlocks.TRANSFORMIUM_SLAB, TransformiumBlocks.TRANSFORMIUM_STAIRS, TransformiumBlocks.TRANSFORMIUM_WALL, TransformiumItems.TRANSFORMIUM, false);
+        offerBlockSet(exporter, PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_BLOCK, PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_SLAB, PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_STAIRS, PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_WALL);
         offerBlockSet(exporter, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BLOCK, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_SLAB, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_STAIRS, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_WALL, TransformiumAlloyItems.TRANSFORMIUM_ALLOY, false);
         offerBlockSet(exporter, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_BLOCK, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_SLAB, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_STAIRS, TransformiumAlloyBlocks.TRANSFORMIUM_ALLOY_BRICK_WALL, TransformiumAlloyItems.TRANSFORMIUM_ALLOY_BRICK, true);
+        RecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_BLOCK, TransformiumBlocks.TRANSFORMIUM_BLOCK);
+        offer2x2Compress(exporter, PolishedTransformiumBlocks.POLISHED_TRANSFORMIUM_BLOCK, TransformiumBlocks.TRANSFORMIUM_BLOCK);
     }
 }

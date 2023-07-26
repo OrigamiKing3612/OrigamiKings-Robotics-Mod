@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "orm:block/polished_transformium_block"
+    }
+  }
+}
