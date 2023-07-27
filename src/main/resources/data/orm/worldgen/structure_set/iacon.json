@@ -1,14 +1,14 @@
 {
   "structures": [
     {
-      "structure": "orm:cybertron/cybertron_city",
+      "structure": "orm:cybertron/iacon",
       "weight": 1
     }
   ],
   "placement": {
     "type": "minecraft:random_spread",
-    "salt": 415337432,
-    "spacing": 3,
-    "separation": 2
+    "salt": 415837434,
+    "separation": 8,
+    "spacing": 24
   }
 }
