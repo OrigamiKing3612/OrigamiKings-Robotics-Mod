@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "orm:cybertron/cybertron_city",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 415337432,
+    "spacing": 3,
+    "separation": 2
+  }
+}
