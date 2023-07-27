@@ -130,8 +130,8 @@ modrinth {
         optional.project "emi"
 
     }
-    changelog = "${mod_version}: The \"Cybertron Update\" Version:\n" + "\n" +
-            "Added EMI compact" + "\n" + "\n" +
+    changelog = "${mod_version}: The \"Iacon and Unicron Update\" Version:\n" + "\n" +
+            "Added EMI compact, added Iacon" + "\n" + "\n" +
             "Please report any bugs [here](https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod/issues)"
 }
 curseforge {
