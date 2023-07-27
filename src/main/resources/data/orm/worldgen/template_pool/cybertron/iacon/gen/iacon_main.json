@@ -1,0 +1,15 @@
+{
+  "name": "orm:cybertron/iacon/gen/iacon_main",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "orm:cybertron/iacon/iacon_middle_2",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

@@ -9,5 +9,7 @@ import software.bernie.geckolib.renderer.GeoItemRenderer;
 public class EnergonAxeItemRenderer extends GeoItemRenderer<EnergonAxeItem> {
     public EnergonAxeItemRenderer() {
         super(new DefaultedItemGeoModel<>(new Identifier(OrmMain.MOD_ID, "energon_axe")));
+
+//        addRenderLayer(new AutoGlowingGeoLayer<>(this));
     }
 }
