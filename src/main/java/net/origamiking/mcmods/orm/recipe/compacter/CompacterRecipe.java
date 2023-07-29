@@ -14,7 +14,7 @@ import net.minecraft.world.World;
 
 public class CompacterRecipe implements Recipe<SimpleInventory> {
     private final Identifier id;
-    public final ItemStack output;
+    private final ItemStack output;
     private final DefaultedList<Ingredient> recipeItems;
 
     public CompacterRecipe(Identifier id, ItemStack output, DefaultedList<Ingredient> recipeItems) {
@@ -89,9 +89,7 @@ public class CompacterRecipe implements Recipe<SimpleInventory> {
         public CompacterRecipe read(Identifier id, PacketByteBuf buf) {
             DefaultedList<Ingredient> inputs = DefaultedList.ofSize(buf.readInt(), Ingredient.EMPTY);
 
-            for (int i = 0; i < inputs.size(); i++) {
-                inputs.set(i, Ingredient.fromPacket(buf));
-            }
+            inputs.replaceAll(ignored -> Ingredient.fromPacket(buf));
 
             ItemStack output = buf.readItemStack();
             return new CompacterRecipe(id, output, inputs);
@@ -103,7 +101,7 @@ public class CompacterRecipe implements Recipe<SimpleInventory> {
             for (Ingredient ing : recipe.getIngredients()) {
                 ing.write(buf);
             }
-            buf.writeItemStack(recipe.output);
+            buf.writeItemStack(recipe.getOutput(null));
         }
     }
 }

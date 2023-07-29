@@ -14,7 +14,7 @@ import net.minecraft.world.World;
 
 public class RefineryRecipe implements Recipe<SimpleInventory> {
     private final Identifier id;
-    public final ItemStack output;
+    private final ItemStack output;
     public final DefaultedList<Ingredient> recipeItems;
 
     public RefineryRecipe(Identifier id, ItemStack output, DefaultedList<Ingredient> recipeItems) {

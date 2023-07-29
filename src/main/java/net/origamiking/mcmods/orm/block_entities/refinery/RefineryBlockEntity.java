@@ -183,7 +183,7 @@ public class RefineryBlockEntity extends BlockEntity implements NamedScreenHandl
             entity.removeStack(1, 1);
             entity.removeStack(0, 1);
 
-            entity.setStack(2, new ItemStack(recipe.get().output.copy().getItem(), entity.getStack(2).getCount() + 1));
+            entity.setStack(2, new ItemStack(recipe.get().getOutput(null).getItem(), entity.getStack(2).getCount() + 1));
             entity.resetProgress();
         }
     }
@@ -199,7 +199,7 @@ public class RefineryBlockEntity extends BlockEntity implements NamedScreenHandl
 
         boolean hasEnergonInFuelSlot = entity.getStack(0).getItem() == EnergonItems.ENERGON; // Fuel
 
-        return match.isPresent() && hasEnergonInFuelSlot && canInsertAmountIntoOutputSlot(inventory) && canInsertItemIntoOutputSlot(inventory, match.get().output.copy().getItem()/*Finished product*/);
+        return match.isPresent() && hasEnergonInFuelSlot && canInsertAmountIntoOutputSlot(inventory) && canInsertItemIntoOutputSlot(inventory, match.get().getOutput(null).getItem()/*Finished product*/);
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, Item output) {
