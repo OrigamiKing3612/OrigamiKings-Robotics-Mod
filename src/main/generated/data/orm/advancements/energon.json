@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:orm/welcome",
+  "parent": "orm:welcome",
   "criteria": {
     "get_energon": {
       "conditions": {

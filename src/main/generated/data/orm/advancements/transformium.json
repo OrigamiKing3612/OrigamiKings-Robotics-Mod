@@ -1,12 +1,12 @@
 {
-  "parent": "minecraft:orm/energon",
+  "parent": "orm:ore_13",
   "criteria": {
-    "get_dark_energon": {
+    "get_transformium": {
       "conditions": {
         "items": [
           {
             "items": [
-              "orm:dark_energon"
+              "orm:transformium"
             ]
           }
         ]
@@ -17,21 +17,21 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.orm.dark_energon.description"
+      "translate": "advancement.orm.transformium.description"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "orm:dark_energon"
+      "item": "orm:transformium"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.orm.dark_energon.title"
+      "translate": "advancement.orm.transformium.title"
     }
   },
   "requirements": [
     [
-      "get_dark_energon"
+      "get_transformium"
     ]
   ],
   "sends_telemetry_event": true

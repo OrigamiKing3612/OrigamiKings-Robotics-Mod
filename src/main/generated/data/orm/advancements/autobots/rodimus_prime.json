@@ -1,12 +1,12 @@
 {
-  "parent": "minecraft:orm/decepticons/megatron",
+  "parent": "orm:autobots/optimus_prime",
   "criteria": {
     "get_boots": {
       "conditions": {
         "items": [
           {
             "items": [
-              "orm:soundwave_boots"
+              "orm:rodimus_prime_boots"
             ]
           }
         ]
@@ -18,7 +18,7 @@
         "items": [
           {
             "items": [
-              "orm:soundwave_chestplate"
+              "orm:rodimus_prime_chestplate"
             ]
           }
         ]
@@ -30,7 +30,7 @@
         "items": [
           {
             "items": [
-              "orm:soundwave_helmet"
+              "orm:rodimus_prime_helmet"
             ]
           }
         ]
@@ -42,7 +42,7 @@
         "items": [
           {
             "items": [
-              "orm:soundwave_leggings"
+              "orm:rodimus_prime_leggings"
             ]
           }
         ]
@@ -53,17 +53,17 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.orm.soundwave.description"
+      "translate": "advancement.orm.rodimus_prime.description"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "orm:soundwave_helmet",
+      "item": "orm:rodimus_prime_helmet",
       "nbt": "{Damage:0}"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.orm.soundwave.title"
+      "translate": "advancement.orm.rodimus_prime.title"
     }
   },
   "requirements": [

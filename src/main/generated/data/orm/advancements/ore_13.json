@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:orm/energon",
+  "parent": "orm:energon",
   "criteria": {
     "get_ore_13": {
       "conditions": {

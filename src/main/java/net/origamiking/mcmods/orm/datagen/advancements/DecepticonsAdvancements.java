@@ -37,7 +37,7 @@ public class DecepticonsAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Megatron.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Megatron.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Megatron.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + "/decepticons/megatron");
+                .build(advancementConsumer, OrmMain.MOD_ID + ":decepticons/megatron");
 
         Advancement astrotrain = Advancement.Builder.create().parent(megatron)
                 .display(
@@ -54,7 +54,7 @@ public class DecepticonsAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Astrotrain.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Astrotrain.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Astrotrain.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + "/autobots/astrotrain");
+                .build(advancementConsumer, OrmMain.MOD_ID + ":decepticons/astrotrain");
 
         Advancement galvatron = Advancement.Builder.create().parent(megatron)
                 .display(
@@ -71,7 +71,7 @@ public class DecepticonsAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Galvatron.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Galvatron.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Galvatron.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + "/decepticons/galvatron");
+                .build(advancementConsumer, OrmMain.MOD_ID + ":decepticons/galvatron");
 
         Advancement scorpinok = Advancement.Builder.create().parent(megatron)
                 .display(
@@ -88,7 +88,7 @@ public class DecepticonsAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Scorpinok.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Scorpinok.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Scorpinok.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + "/decepticons/scorpinok");
+                .build(advancementConsumer, OrmMain.MOD_ID + ":decepticons/scorpinok");
 
         Advancement soundwave = Advancement.Builder.create().parent(megatron)
                 .display(
@@ -105,7 +105,7 @@ public class DecepticonsAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Soundwave.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Soundwave.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Soundwave.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + "/decepticons/soundwave");
+                .build(advancementConsumer, OrmMain.MOD_ID + ":decepticons/soundwave");
 
         Advancement starscream = Advancement.Builder.create().parent(megatron)
                 .display(
@@ -122,7 +122,7 @@ public class DecepticonsAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Starscream.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Starscream.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Starscream.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + "/decepticons/starscream");
+                .build(advancementConsumer, OrmMain.MOD_ID + ":decepticons/starscream");
 
         Advancement thunder_cracker = Advancement.Builder.create().parent(megatron)
                 .display(
@@ -139,7 +139,7 @@ public class DecepticonsAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(ThunderCracker.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(ThunderCracker.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(ThunderCracker.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + "/decepticons/thunder_cracker");
+                .build(advancementConsumer, OrmMain.MOD_ID + ":decepticons/thunder_cracker");
 
         Advancement skywarp = Advancement.Builder.create().parent(megatron)
                 .display(
@@ -156,7 +156,7 @@ public class DecepticonsAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Skywarp.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Skywarp.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Skywarp.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + "/decepticons/skywarp");
+                .build(advancementConsumer, OrmMain.MOD_ID + ":decepticons/skywarp");
 
         Advancement shockwave = Advancement.Builder.create().parent(megatron)
                 .display(
@@ -173,7 +173,7 @@ public class DecepticonsAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Shockwave.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Shockwave.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Shockwave.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + "/decepticons/shockwave");
+                .build(advancementConsumer, OrmMain.MOD_ID + ":decepticons/shockwave");
 
     }
 }

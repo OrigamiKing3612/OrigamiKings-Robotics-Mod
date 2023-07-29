@@ -1,12 +1,12 @@
 {
-  "parent": "minecraft:orm/autobots/optimus_prime",
+  "parent": "orm:decepticons/megatron",
   "criteria": {
     "get_boots": {
       "conditions": {
         "items": [
           {
             "items": [
-              "orm:rodimus_prime_boots"
+              "orm:galvatron_boots"
             ]
           }
         ]
@@ -18,7 +18,7 @@
         "items": [
           {
             "items": [
-              "orm:rodimus_prime_chestplate"
+              "orm:galvatron_chestplate"
             ]
           }
         ]
@@ -30,7 +30,7 @@
         "items": [
           {
             "items": [
-              "orm:rodimus_prime_helmet"
+              "orm:galvatron_helmet"
             ]
           }
         ]
@@ -42,7 +42,7 @@
         "items": [
           {
             "items": [
-              "orm:rodimus_prime_leggings"
+              "orm:galvatron_leggings"
             ]
           }
         ]
@@ -53,17 +53,17 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.orm.rodimus_prime.description"
+      "translate": "advancement.orm.galvatron.description"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "orm:rodimus_prime_helmet",
+      "item": "orm:galvatron_helmet",
       "nbt": "{Damage:0}"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.orm.rodimus_prime.title"
+      "translate": "advancement.orm.galvatron.title"
     }
   },
   "requirements": [

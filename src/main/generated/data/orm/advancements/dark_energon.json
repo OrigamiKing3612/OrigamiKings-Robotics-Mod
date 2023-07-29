@@ -1,12 +1,12 @@
 {
-  "parent": "minecraft:orm/energon",
+  "parent": "orm:energon",
   "criteria": {
-    "get_spark": {
+    "get_dark_energon": {
       "conditions": {
         "items": [
           {
             "items": [
-              "orm:spark"
+              "orm:dark_energon"
             ]
           }
         ]
@@ -17,21 +17,21 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.orm.spark.description"
+      "translate": "advancement.orm.dark_energon.description"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "orm:spark"
+      "item": "orm:dark_energon"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.orm.spark.title"
+      "translate": "advancement.orm.dark_energon.title"
     }
   },
   "requirements": [
     [
-      "get_spark"
+      "get_dark_energon"
     ]
   ],
   "sends_telemetry_event": true

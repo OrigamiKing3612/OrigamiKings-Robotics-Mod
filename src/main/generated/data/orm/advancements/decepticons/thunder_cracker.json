@@ -1,12 +1,12 @@
 {
-  "parent": "minecraft:orm/autobots/optimus_prime",
+  "parent": "orm:decepticons/megatron",
   "criteria": {
     "get_boots": {
       "conditions": {
         "items": [
           {
             "items": [
-              "orm:sunstreaker_boots"
+              "orm:thunder_cracker_boots"
             ]
           }
         ]
@@ -18,7 +18,7 @@
         "items": [
           {
             "items": [
-              "orm:sunstreaker_chestplate"
+              "orm:thunder_cracker_chestplate"
             ]
           }
         ]
@@ -30,7 +30,7 @@
         "items": [
           {
             "items": [
-              "orm:sunstreaker_helmet"
+              "orm:thunder_cracker_helmet"
             ]
           }
         ]
@@ -42,7 +42,7 @@
         "items": [
           {
             "items": [
-              "orm:sunstreaker_leggings"
+              "orm:thunder_cracker_leggings"
             ]
           }
         ]
@@ -53,17 +53,17 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.orm.sunstreaker.description"
+      "translate": "advancement.orm.thunder_cracker.description"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "orm:sunstreaker_helmet",
+      "item": "orm:thunder_cracker_helmet",
       "nbt": "{Damage:0}"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.orm.sunstreaker.title"
+      "translate": "advancement.orm.thunder_cracker.title"
     }
   },
   "requirements": [

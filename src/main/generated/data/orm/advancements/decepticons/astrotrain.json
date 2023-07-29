@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:orm/decepticons/megatron",
+  "parent": "orm:decepticons/megatron",
   "criteria": {
     "get_boots": {
       "conditions": {

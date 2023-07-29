@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:orm/autobots/optimus_prime",
+  "parent": "orm:autobots/optimus_prime",
   "criteria": {
     "get_boots": {
       "conditions": {

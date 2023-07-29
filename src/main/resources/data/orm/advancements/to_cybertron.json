@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:orm/transformium",
+  "parent": "orm:transformium",
   "criteria": {
     "to_cybertron": {
       "conditions": {

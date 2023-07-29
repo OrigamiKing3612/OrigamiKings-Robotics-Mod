@@ -1,12 +1,12 @@
 {
-  "parent": "minecraft:orm/autobots/optimus_prime",
+  "parent": "orm:decepticons/megatron",
   "criteria": {
     "get_boots": {
       "conditions": {
         "items": [
           {
             "items": [
-              "orm:ratchet_boots"
+              "orm:scorpinok_boots"
             ]
           }
         ]
@@ -18,7 +18,7 @@
         "items": [
           {
             "items": [
-              "orm:ratchet_chestplate"
+              "orm:scorpinok_chestplate"
             ]
           }
         ]
@@ -30,7 +30,7 @@
         "items": [
           {
             "items": [
-              "orm:ratchet_helmet"
+              "orm:scorpinok_helmet"
             ]
           }
         ]
@@ -42,7 +42,7 @@
         "items": [
           {
             "items": [
-              "orm:ratchet_leggings"
+              "orm:scorpinok_leggings"
             ]
           }
         ]
@@ -53,17 +53,17 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.orm.ratchet.description"
+      "translate": "advancement.orm.scorpinok.description"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "orm:ratchet_helmet",
+      "item": "orm:scorpinok_helmet",
       "nbt": "{Damage:0}"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.orm.ratchet.title"
+      "translate": "advancement.orm.scorpinok.title"
     }
   },
   "requirements": [

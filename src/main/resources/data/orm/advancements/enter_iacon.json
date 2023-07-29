@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:orm/to_cybertron",
+  "parent": "orm:to_cybertron",
   "criteria": {
     "in_iacon": {
       "conditions": {

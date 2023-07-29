@@ -1,12 +1,12 @@
 {
-  "parent": "minecraft:orm/spark",
+  "parent": "orm:decepticons/megatron",
   "criteria": {
     "get_boots": {
       "conditions": {
         "items": [
           {
             "items": [
-              "orm:megatron_boots"
+              "orm:starscream_boots"
             ]
           }
         ]
@@ -18,7 +18,7 @@
         "items": [
           {
             "items": [
-              "orm:megatron_chestplate"
+              "orm:starscream_chestplate"
             ]
           }
         ]
@@ -30,7 +30,7 @@
         "items": [
           {
             "items": [
-              "orm:megatron_helmet"
+              "orm:starscream_helmet"
             ]
           }
         ]
@@ -42,7 +42,7 @@
         "items": [
           {
             "items": [
-              "orm:megatron_leggings"
+              "orm:starscream_leggings"
             ]
           }
         ]
@@ -53,17 +53,17 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.orm.megatron.description"
+      "translate": "advancement.orm.starscream.description"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "orm:megatron_helmet",
+      "item": "orm:starscream_helmet",
       "nbt": "{Damage:0}"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.orm.megatron.title"
+      "translate": "advancement.orm.starscream.title"
     }
   },
   "requirements": [

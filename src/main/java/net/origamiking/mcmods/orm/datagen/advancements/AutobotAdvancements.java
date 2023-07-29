@@ -36,7 +36,7 @@ public class AutobotAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(OptimusPrime.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(OptimusPrime.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(OptimusPrime.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + "/autobots/optimus_prime");
+                .build(advancementConsumer, OrmMain.MOD_ID + ":autobots/optimus_prime");
 
         Advancement bumblebee = Advancement.Builder.create().parent(optimus_prime)
                 .display(
@@ -53,7 +53,7 @@ public class AutobotAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Bumblebee.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Bumblebee.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Bumblebee.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + "/autobots/bumblebee");
+                .build(advancementConsumer, OrmMain.MOD_ID + ":autobots/bumblebee");
 
         Advancement ironhide = Advancement.Builder.create().parent(optimus_prime)
                 .display(
@@ -70,7 +70,7 @@ public class AutobotAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Ironhide.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Ironhide.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Ironhide.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + "/autobots/ironhide");
+                .build(advancementConsumer, OrmMain.MOD_ID + ":autobots/ironhide");
 
         Advancement rodimus_prime = Advancement.Builder.create().parent(optimus_prime)
                 .display(
@@ -87,7 +87,7 @@ public class AutobotAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(RodimusPrime.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(RodimusPrime.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(RodimusPrime.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + "/autobots/rodimus_prime");
+                .build(advancementConsumer, OrmMain.MOD_ID + ":autobots/rodimus_prime");
 
         Advancement skystrike = Advancement.Builder.create().parent(optimus_prime)
                 .display(
@@ -104,7 +104,7 @@ public class AutobotAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Skystrike.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Skystrike.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Skystrike.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + "/autobots/skystrike");
+                .build(advancementConsumer, OrmMain.MOD_ID + ":autobots/skystrike");
 
         Advancement ratchet = Advancement.Builder.create().parent(optimus_prime)
                 .display(
@@ -121,7 +121,7 @@ public class AutobotAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Ratchet.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Ratchet.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Ratchet.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + "/autobots/ratchet");
+                .build(advancementConsumer, OrmMain.MOD_ID + ":autobots/ratchet");
 
         Advancement sideswipe = Advancement.Builder.create().parent(optimus_prime)
                 .display(
@@ -138,7 +138,7 @@ public class AutobotAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Sideswipe.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Sideswipe.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Sideswipe.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + "/autobots/sideswipe");
+                .build(advancementConsumer, OrmMain.MOD_ID + ":autobots/sideswipe");
 
         Advancement sunstreaker = Advancement.Builder.create().parent(optimus_prime)
                 .display(
@@ -155,6 +155,6 @@ public class AutobotAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Sunstreaker.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Sunstreaker.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Sunstreaker.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + "/autobots/sunstreaker");
+                .build(advancementConsumer, OrmMain.MOD_ID + ":autobots/sunstreaker");
     }
 }

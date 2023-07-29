@@ -1,12 +1,12 @@
 {
-  "parent": "minecraft:orm/ore_13",
+  "parent": "orm:energon",
   "criteria": {
-    "get_transformium": {
+    "get_spark": {
       "conditions": {
         "items": [
           {
             "items": [
-              "orm:transformium"
+              "orm:spark"
             ]
           }
         ]
@@ -17,21 +17,21 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.orm.transformium.description"
+      "translate": "advancement.orm.spark.description"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "orm:transformium"
+      "item": "orm:spark"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.orm.transformium.title"
+      "translate": "advancement.orm.spark.title"
     }
   },
   "requirements": [
     [
-      "get_transformium"
+      "get_spark"
     ]
   ],
   "sends_telemetry_event": true

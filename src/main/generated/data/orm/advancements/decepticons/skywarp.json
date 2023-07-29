@@ -1,12 +1,12 @@
 {
-  "parent": "minecraft:orm/autobots/optimus_prime",
+  "parent": "orm:decepticons/megatron",
   "criteria": {
     "get_boots": {
       "conditions": {
         "items": [
           {
             "items": [
-              "orm:sideswipe_boots"
+              "orm:skywarp_boots"
             ]
           }
         ]
@@ -18,7 +18,7 @@
         "items": [
           {
             "items": [
-              "orm:sideswipe_chestplate"
+              "orm:skywarp_chestplate"
             ]
           }
         ]
@@ -30,7 +30,7 @@
         "items": [
           {
             "items": [
-              "orm:sideswipe_helmet"
+              "orm:skywarp_helmet"
             ]
           }
         ]
@@ -42,7 +42,7 @@
         "items": [
           {
             "items": [
-              "orm:sideswipe_leggings"
+              "orm:skywarp_leggings"
             ]
           }
         ]
@@ -53,17 +53,17 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.orm.sideswipe.description"
+      "translate": "advancement.orm.skywarp.description"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "orm:sideswipe_helmet",
+      "item": "orm:skywarp_helmet",
       "nbt": "{Damage:0}"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.orm.sideswipe.title"
+      "translate": "advancement.orm.skywarp.title"
     }
   },
   "requirements": [

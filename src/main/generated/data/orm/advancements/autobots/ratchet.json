@@ -1,12 +1,12 @@
 {
-  "parent": "minecraft:orm/autobots/optimus_prime",
+  "parent": "orm:autobots/optimus_prime",
   "criteria": {
     "get_boots": {
       "conditions": {
         "items": [
           {
             "items": [
-              "orm:skystrike_armor_boots"
+              "orm:ratchet_boots"
             ]
           }
         ]
@@ -18,7 +18,7 @@
         "items": [
           {
             "items": [
-              "orm:skystrike_armor_chestplate"
+              "orm:ratchet_chestplate"
             ]
           }
         ]
@@ -30,7 +30,7 @@
         "items": [
           {
             "items": [
-              "orm:skystrike_armor_helmet"
+              "orm:ratchet_helmet"
             ]
           }
         ]
@@ -42,7 +42,7 @@
         "items": [
           {
             "items": [
-              "orm:skystrike_armor_leggings"
+              "orm:ratchet_leggings"
             ]
           }
         ]
@@ -53,17 +53,17 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.orm.skystrike.description"
+      "translate": "advancement.orm.ratchet.description"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "orm:skystrike_armor_helmet",
+      "item": "orm:ratchet_helmet",
       "nbt": "{Damage:0}"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.orm.skystrike.title"
+      "translate": "advancement.orm.ratchet.title"
     }
   },
   "requirements": [
