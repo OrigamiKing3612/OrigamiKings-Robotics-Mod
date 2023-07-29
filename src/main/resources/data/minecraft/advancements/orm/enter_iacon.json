@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:orm/to_cybertron",
+  "criteria": {
+    "in_iacon": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "orm:cybertron/iacon"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.orm.enter_iacon.description"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "orm:transformium_alloy_bricks_block"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.orm.enter_iacon.title"
+    }
+  },
+  "requirements": [
+    [
+      "in_iacon"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

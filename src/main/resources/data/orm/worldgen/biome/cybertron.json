@@ -13,8 +13,8 @@
       {
         "type": "orm:vector_guard",
         "weight": 1,
-        "minCount": 5,
-        "maxCount": 12
+        "minCount": 3,
+        "maxCount": 6
       }
     ]
   },
