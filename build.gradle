@@ -1,9 +1,8 @@
 plugins {
-    id 'fabric-loom' version '1.2-SNAPSHOT'
+    id 'fabric-loom' version '1.3-SNAPSHOT'
     id 'maven-publish'
     id "com.modrinth.minotaur" version "2.+"
     id 'com.matthewprenger.cursegradle' version '1.4.0'
-
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -31,7 +30,7 @@ loom {
             name "Data Generation"
             vmArg "-Dfabric-api.datagen"
             vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
-            vmArg "-Dfabric-api.datagen.modid=orm"
+            vmArg "-Dfabric-api.datagen.modid=${mod_id}"
 
             runDir "build/datagen"
         }
@@ -52,8 +51,6 @@ dependencies {
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    // Uncomment the following line to enable the deprecated Fabric API modules.
-    // These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
     // modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
 
     modImplementation "net.origamiking:Origamikings-API:${origamikings_api}"
@@ -75,7 +72,13 @@ processResources {
     inputs.property "version", project.version
 
     filesMatching("fabric.mod.json") {
-        expand "version": project.version
+        expand "version": project.version,
+                "origamikings_api": origamikings_api,
+                "loader_version": loader_version,
+                "geckolib_version": geckolib_version,
+                "minecraft_version": minecraft_version,
+                "fabric_version": fabric_version,
+                "mod_id": mod_id
     }
 }
 
@@ -105,15 +108,19 @@ publishing {
             name = "cloudsmith"
             url = "https://maven.cloudsmith.io/origamiking3612/origamikings-robotics-mod/"
             credentials {
-                username = System.getenv("CLOUDSMITH_USERNAME")
-                password = System.getenv("CLOUDSMITH_PASSWORD")
+                username = System.getenv "CLOUDSMITH_USERNAME"
+                password = System.getenv "CLOUDSMITH_PASSWORD"
             }
         }
     }
 }
+def modChangelog = "${mod_version}: The \"Iacon and Unicron Update\" Version:\n" + "\n" +
+        "Added EMI compact, added Iacon" + "\n" + "\n" +
+        "Please report any bugs [here](https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod/issues)"
+
 modrinth {
 //		debugMode = true
-    token = System.getenv("MODRINTH_TOKEN")
+    token = System.getenv "MODRINTH_TOKEN"
     projectId = "${project_id}"
     versionNumber = "${mod_version}"
     versionType = "${version_type}"
@@ -130,17 +137,17 @@ modrinth {
         optional.project "emi"
 
     }
-    changelog = "${mod_version}: The \"Iacon and Unicron Update\" Version:\n" + "\n" +
-            "Added EMI compact, added Iacon" + "\n" + "\n" +
-            "Please report any bugs [here](https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod/issues)"
+    changelog = modChangelog
 }
+
 curseforge {
     project {
-        apiKey = System.getenv("CURSEFORGE_TOKEN")
+        apiKey = System.getenv "CURSEFORGE_TOKEN"
         id = "893153"
         releaseType = "release"
-        changelogType = 'text'
-        addGameVersion("1.20.1")
+        changelogType = 'markdown'
+        changelog = modChangelog
+        addGameVersion("${minecraft_version}")
         addGameVersion("Fabric")
         addGameVersion("Java 17")
         mainArtifact(remapJar)

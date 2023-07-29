@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "orm",
+	"id": "${mod_id}",
 	"version": "${version}",
 	"name": "OrigamiKings Robotics Armor Mod",
 	"description": "A mod that adds armor styled as Transformers",
@@ -33,20 +33,20 @@
 		]
 	},
 	"mixins": [
-		"orm.mixins.json"
+		"${mod_id}.mixins.json"
 	],
 	"jars": [
 		{
-			"file": "jars/Origamikings-API-0.1.25-1.20.1.jar"
+			"file": "jars/Origamikings-API-${origamikings_api}.jar"
 		}
 	],
 	"depends": {
-		"fabricloader": ">=0.14.21",
-		"minecraft": ">=1.20",
+		"fabricloader": ">=${loader_version}",
+		"minecraft": ">=${minecraft_version}",
 		"java": ">=17",
-		"fabric-api": "*",
-		"geckolib": ">=4.2",
-		"origamikings-api": ">=0.1.25-1.20.1"
+		"fabric-api": ">=${fabric_version}",
+		"geckolib": ">=${geckolib_version}",
+		"origamikings-api": ">=${origamikings_api}"
 	},
 	"suggests": {
 		"rei": "*",
