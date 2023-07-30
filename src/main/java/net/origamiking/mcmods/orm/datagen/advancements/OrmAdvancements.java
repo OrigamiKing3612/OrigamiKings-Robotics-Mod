@@ -31,6 +31,7 @@ public class OrmAdvancements implements Consumer<Consumer<Advancement>> {
 
         AutobotAdvancements.get(advancementConsumer, spark);
         DecepticonsAdvancements.get(advancementConsumer, spark);
+        InsecticonAdvancements.get(advancementConsumer, spark);
     }
 
     public static String translatableTitle(String advancementName) {
