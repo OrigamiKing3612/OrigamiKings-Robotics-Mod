@@ -59,9 +59,13 @@ public class DownloadAddonsCommands {
                 dispatcher.register(CommandManager.literal("orm-download-addon-" + addonKey)
                         .requires(source -> source.hasPermissionLevel(2))
                         .executes((context) -> {
-                            (context.getSource()).sendMessage(Text.of("Downloading " + addonName + " addon..."));
-                            DownloadAddon.downloadAddon(context.getSource(), url, modName);
-                            (context.getSource()).sendMessage(Text.translatable("orm.download_addon.successful"));
+                            if (OrmMain.getOrmConfig().enableDownloadAddonsCommands) {
+                                (context.getSource()).sendMessage(Text.of("Downloading " + addonName + " addon..."));
+                                DownloadAddon.downloadAddon(context.getSource(), url, modName);
+                                (context.getSource()).sendMessage(Text.translatable("orm.download_addon.successful"));
+                            } else {
+                                (context.getSource()).sendMessage(Text.translatable("orm.download_addon.not_enabled"));
+                            }
                             return 1;
                         }))
         );

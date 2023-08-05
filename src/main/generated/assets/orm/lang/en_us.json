@@ -233,6 +233,7 @@
   "option.orm.transformerLeggingsBaseDurability": "Durability of the Transformer Leggings",
   "option.orm.transformerLeggingsProtectionValue": "Protection Value of the Transformer Leggings",
   "orm.download_addon.error": "There was an error while downloading addon; check your game log.",
+  "orm.download_addon.not_enabled": "This command is not enabled change this in Config.",
   "orm.download_addon.successful": "Download Successful! Please restart your game to use the addon.",
   "screen.orm.chip_refinery_block_title": "Chip Refinery",
   "screen.orm.compacter_block_title": "Compacter Block",
