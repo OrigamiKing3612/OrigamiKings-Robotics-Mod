@@ -10,6 +10,7 @@
 	],
 	"contact": {
 		"homepage": "https://mods.origamiking.net",
+		"issues": "https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod/issues",
 		"sources": "https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod"
 	},
 	"license": "Apache-2.0",
