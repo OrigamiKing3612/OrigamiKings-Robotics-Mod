@@ -91,6 +91,7 @@
   "block.orm.transformium_slab": "Transformium Slab",
   "block.orm.transformium_stairs": "Transformium Stairs",
   "block.orm.transformium_wall": "Transformium Wall",
+  "category.orm.general": "Orm general",
   "emi.category.orm.chip_refinery": "Chip Refinery",
   "entity.orm.photon": "Photon",
   "entity.orm.vector_guard": "Vector Guard",
@@ -222,7 +223,17 @@
   "item.orm.transformium_alloy": "Transformium Alloy",
   "item.orm.transformium_alloy_brick": "Transformium Alloy Brick",
   "item.orm.vector_guard_spawn_egg": "Vector Guard Spawn Egg",
+  "option.orm.enableDownloadAddonsCommands": "Enable Download Addon Commands",
+  "option.orm.transformerBootsBaseDurability": "Durability of the Transformer Boots",
+  "option.orm.transformerBootsProtectionValue": "Protection Value of the Transformer Boots",
+  "option.orm.transformerChestplateBaseDurability": "Durability of the Transformer Chestplates",
+  "option.orm.transformerChestplateProtectionValue": "Protection Value of the Transformer Chestplates",
+  "option.orm.transformerHelmetBaseDurability": "Durability of the Transformer Helmets",
+  "option.orm.transformerHelmetProtectionValue": "Protection Value of the Transformer Helmets",
+  "option.orm.transformerLeggingsBaseDurability": "Durability of the Transformer Leggings",
+  "option.orm.transformerLeggingsProtectionValue": "Protection Value of the Transformer Leggings",
   "orm.download_addon.error": "There was an error while downloading addon; check your game log.",
+  "orm.download_addon.not_enabled": "This command is not enabled change this in Config.",
   "orm.download_addon.successful": "Download Successful! Please restart your game to use the addon.",
   "screen.orm.chip_refinery_block_title": "Chip Refinery",
   "screen.orm.compacter_block_title": "Compacter Block",
@@ -233,5 +244,6 @@
   "tag.fluid.orm.dark_energon_fluid": "Dark Energon Fluid",
   "tag.fluid.orm.energon_fluid": "Energon Fluid",
   "tag.fluid.orm.oil_fluid": "Oil Fluid",
-  "tag.item.orm.chips": "Chips"
+  "tag.item.orm.chips": "Chips",
+  "title.orm.config": "Orm Config"
 }
