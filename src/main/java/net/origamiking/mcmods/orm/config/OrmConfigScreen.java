@@ -65,6 +65,11 @@ public class OrmConfigScreen {
                 .setSaveConsumer(newValue -> getOrmConfig().transformerBootsProtectionValue = newValue)
                 .build());
 
+        general.addEntry(entryBuilder.startIntField(Text.translatable("option." + OrmMain.MOD_ID + ".transformerArmorEnchantability"), getOrmConfig().transformerArmorEnchantability)
+                .setDefaultValue(ConfigDefaultValues.defaultTransformerArmorEnchantability)
+                .setSaveConsumer(newValue -> getOrmConfig().transformerArmorEnchantability = newValue)
+                .build());
+
         return builder.build();
     }
 }

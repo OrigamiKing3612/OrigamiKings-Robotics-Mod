@@ -224,6 +224,7 @@
   "item.orm.transformium_alloy_brick": "Transformium Alloy Brick",
   "item.orm.vector_guard_spawn_egg": "Vector Guard Spawn Egg",
   "option.orm.enableDownloadAddonsCommands": "Enable Download Addon Commands",
+  "option.orm.transformerArmorEnchantability": "Transformer Armor Enchantability",
   "option.orm.transformerBootsBaseDurability": "Durability of the Transformer Boots",
   "option.orm.transformerBootsProtectionValue": "Protection Value of the Transformer Boots",
   "option.orm.transformerChestplateBaseDurability": "Durability of the Transformer Chestplates",
