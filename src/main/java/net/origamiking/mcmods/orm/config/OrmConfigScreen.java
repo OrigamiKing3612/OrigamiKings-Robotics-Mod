@@ -5,6 +5,7 @@ import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 import net.origamiking.mcmods.orm.OrmMain;
 
 import static net.origamiking.mcmods.orm.OrmMain.getOrmConfig;
@@ -17,7 +18,7 @@ public class OrmConfigScreen {
         ConfigCategory general = builder.getOrCreateCategory(Text.translatable("category." + OrmMain.MOD_ID + ".general"));
 
         builder.setSavingRunnable(OrmConfig::save);
-
+        builder.setDefaultBackgroundTexture(new Identifier(OrmMain.MOD_ID, "textures/block/energon_block.png"));
         ConfigEntryBuilder entryBuilder = builder.entryBuilder();
 
         general.addEntry(entryBuilder.startBooleanToggle(Text.translatable("option." + OrmMain.MOD_ID + ".enableDownloadAddonsCommands"), getOrmConfig().enableDownloadAddonsCommands)
