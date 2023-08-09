@@ -25,8 +25,6 @@ public class OrmMain implements ModInitializer {
     public static final int CONFIG_VERSION = 1;
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     public static OrmConfigHandler ORM_CONFIG;
-    //TODO cybertron characters (look in BumblebeeCarArmorItem line: 50) Update 1.3.0
-
 
 
     @Override
@@ -47,7 +45,6 @@ public class OrmMain implements ModInitializer {
         ModTags.register();
         ModStats.register();
         ModFluids.register();
-
 
     }
 

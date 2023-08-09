@@ -2,6 +2,7 @@ package net.origamiking.mcmods.orm.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
+import net.origamiking.mcmods.orm.OrmMain;
 
 import java.nio.file.Path;
 
@@ -20,6 +21,8 @@ public class ModLanguageGenerator extends FabricLanguageProvider {
 //        translationBuilder.add(Sunstreaker.BOOTS, "Sunstreaker Boots");
 //        translationBuilder.add(Sunstreaker.CAR, "Sunstreaker Car");
 //        translationBuilder.add(SunstreakerChip.CHIP, "Sunstreaker Chip");
+        translationBuilder.add("category." + OrmMain.MOD_ID + ".orm", "OrigamiKings Robotics Mod");
+        translationBuilder.add("key." + OrmMain.MOD_ID + ".transform", "Transform");
 
 
         try {
