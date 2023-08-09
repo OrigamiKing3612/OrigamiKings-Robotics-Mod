@@ -17,4 +17,5 @@ public class OrmConfigHandler {
     public int transformerLeggingsProtectionValue = defaultTransformerLeggingsProtectionValue;
     public int transformerBootsProtectionValue = defaultTransformerBootsProtectionValue;
     public int transformerArmorEnchantability = defaultTransformerArmorEnchantability;
+    public boolean enableTransforming = defaultEnableTransforming;
 }

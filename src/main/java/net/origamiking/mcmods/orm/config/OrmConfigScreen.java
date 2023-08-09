@@ -71,6 +71,11 @@ public class OrmConfigScreen {
                 .setSaveConsumer(newValue -> getOrmConfig().transformerArmorEnchantability = newValue)
                 .build());
 
+        general.addEntry(entryBuilder.startBooleanToggle(Text.translatable("option." + OrmMain.MOD_ID + ".enableTransforming"), getOrmConfig().enableTransforming)
+                .setDefaultValue(ConfigDefaultValues.defaultEnableTransforming)
+                .setSaveConsumer(newValue -> getOrmConfig().enableTransforming = newValue)
+                .build());
+
         return builder.build();
     }
 }

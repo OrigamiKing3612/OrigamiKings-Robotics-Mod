@@ -1,11 +1,14 @@
 package net.origamiking.mcmods.orm.utils;
 
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.text.Text;
+import net.origamiking.mcmods.orm.OrmMain;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.constant.DefaultAnimations;
@@ -60,6 +63,12 @@ public abstract class TransformerArmorItem extends ArmorItem implements GeoItem 
         return this.cache;
     }
     public static void transform() {
-        useTransformedRenderer = !useTransformedRenderer;
+        if (OrmMain.getOrmConfig().enableTransforming) {
+            useTransformedRenderer = !useTransformedRenderer;
+        } else {
+            OrmMain.LOGGER.info("Transforming is not enabled in config.");
+            MinecraftClient.getInstance().player.sendMessage(Text.translatable("message." + OrmMain.MOD_ID + "transform_not_enabled"));
+            useTransformedRenderer = false;
+        }
     }
 }
