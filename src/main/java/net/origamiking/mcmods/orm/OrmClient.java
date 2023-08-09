@@ -1,13 +1,17 @@
 package net.origamiking.mcmods.orm;
 
+import io.netty.buffer.Unpooled;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.Item;
+import net.minecraft.network.PacketByteBuf;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
 import net.origamiking.mcmods.orm.blocks.custom.BlockRegistry;
 import net.origamiking.mcmods.orm.blocks.custom.compacter.renderer.CompacterBlockRenderer;
@@ -17,6 +21,7 @@ import net.origamiking.mcmods.orm.entity.photon.renderer.PhotonEntityRenderer;
 import net.origamiking.mcmods.orm.entity.vector_guard.renderer.VectorGuardEntityRenderer;
 import net.origamiking.mcmods.orm.fluid.ModFluids;
 import net.origamiking.mcmods.orm.keybind.ModKeybindings;
+import net.origamiking.mcmods.orm.networking.ModMessages;
 import net.origamiking.mcmods.orm.screen.ModScreenHandlers;
 import net.origamiking.mcmods.orm.screen.chip_refinery.ChipRefineryScreen;
 import net.origamiking.mcmods.orm.screen.compacter.CompacterBlockScreen;
@@ -57,7 +62,10 @@ public class OrmClient implements ClientModInitializer {
                         getBootsItem(client.player) instanceof TransformerArmorItem;
 
                 if (ModKeybindings.TRANSFORM_KEYBIND.wasPressed() && hasCompleteSet) {
-                    TransformerArmorItem.transform();
+                    if (!MinecraftClient.getInstance().world.isClient) {
+                        TransformerArmorItem.transform();
+                    }
+                    ClientPlayNetworking.send(ModMessages.TRANSFORM_ARMOR_PACKET_ID, new PacketByteBuf(Unpooled.buffer()));
                 }
 
                 if (!hasCompleteSet) {

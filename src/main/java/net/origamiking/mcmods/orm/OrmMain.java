@@ -11,6 +11,7 @@ import net.origamiking.mcmods.orm.entity.ModEntities;
 import net.origamiking.mcmods.orm.fluid.ModFluids;
 import net.origamiking.mcmods.orm.group.ModGroups;
 import net.origamiking.mcmods.orm.items.ModItems;
+import net.origamiking.mcmods.orm.networking.ModMessages;
 import net.origamiking.mcmods.orm.recipe.ModRecipeType;
 import net.origamiking.mcmods.orm.screen.ModScreenHandlers;
 import net.origamiking.mcmods.orm.stats.ModStats;
@@ -45,7 +46,8 @@ public class OrmMain implements ModInitializer {
         ModTags.register();
         ModStats.register();
         ModFluids.register();
-
+        ModMessages.registerC2SPackets();
+        ModMessages.registerS2CPackets();
 //        ServerTickEvents.END_SERVER_TICK.register(server -> server.getPlayerManager().getPlayerList().forEach(player -> {
 //            boolean hasCompleteSet = getHelmetItem(player) instanceof TransformerArmorItem &&
 //                    getChestplateItem(player) instanceof TransformerArmorItem &&
