@@ -14,5 +14,6 @@ public class ModKeybindings {
             "category." + OrmMain.MOD_ID + ".orm"
     ));
 
-    public static void register() {}
+    public static void register() {
+    }
 }

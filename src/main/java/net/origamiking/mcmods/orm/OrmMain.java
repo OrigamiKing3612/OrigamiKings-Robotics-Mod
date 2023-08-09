@@ -46,6 +46,19 @@ public class OrmMain implements ModInitializer {
         ModStats.register();
         ModFluids.register();
 
+//        ServerTickEvents.END_SERVER_TICK.register(server -> server.getPlayerManager().getPlayerList().forEach(player -> {
+//            boolean hasCompleteSet = getHelmetItem(player) instanceof TransformerArmorItem &&
+//                    getChestplateItem(player) instanceof TransformerArmorItem &&
+//                    getLeggingsItem(player) instanceof TransformerArmorItem &&
+//                    getBootsItem(player) instanceof TransformerArmorItem;
+//
+//            if (ModKeybindings.TRANSFORM_KEYBIND.wasPressed() && hasCompleteSet) {
+//                TransformerArmorItem.transform();
+//            }
+//            if (!hasCompleteSet) {
+//                TransformerArmorItem.useTransformedRenderer = false;
+//            }
+//        }));
     }
 
     public static OrmConfigHandler getOrmConfig() {
