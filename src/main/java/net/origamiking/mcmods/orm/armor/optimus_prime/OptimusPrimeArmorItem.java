@@ -6,6 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.optimus_prime.renderer.OptimusPrimeArmorRenderer;
+import net.origamiking.mcmods.orm.armor.optimus_prime.renderer.OptimusPrimeCarArmorRenderer;
 import net.origamiking.mcmods.orm.utils.TransformerArmorItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
@@ -26,8 +27,15 @@ public final class OptimusPrimeArmorItem extends TransformerArmorItem implements
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
-                if (this.renderer == null)
-                    this.renderer = new OptimusPrimeArmorRenderer();
+                if (useTransformedRenderer) {
+                    if (renderer == null || !(renderer instanceof OptimusPrimeCarArmorRenderer)) {
+                        renderer = new OptimusPrimeCarArmorRenderer();
+                    }
+                } else {
+                    if (renderer == null || !(renderer instanceof OptimusPrimeArmorRenderer)) {
+                        renderer = new OptimusPrimeArmorRenderer();
+                    }
+                }
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
 

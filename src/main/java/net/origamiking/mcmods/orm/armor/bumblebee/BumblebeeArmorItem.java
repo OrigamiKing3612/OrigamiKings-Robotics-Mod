@@ -6,6 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.bumblebee.renderer.BumblebeeArmorRenderer;
+import net.origamiking.mcmods.orm.armor.bumblebee.renderer.BumblebeeCarArmorRenderer;
 import net.origamiking.mcmods.orm.utils.TransformerArmorItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
@@ -27,8 +28,15 @@ public final class BumblebeeArmorItem extends TransformerArmorItem implements Ge
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
-                if (this.renderer == null)
-                    this.renderer = new BumblebeeArmorRenderer();
+                if (useTransformedRenderer) {
+                    if (renderer == null || !(renderer instanceof BumblebeeCarArmorRenderer)) {
+                        renderer = new BumblebeeCarArmorRenderer();
+                    }
+                } else {
+                    if (renderer == null || !(renderer instanceof BumblebeeArmorRenderer)) {
+                        renderer = new BumblebeeArmorRenderer();
+                    }
+                }
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
 
@@ -36,7 +44,6 @@ public final class BumblebeeArmorItem extends TransformerArmorItem implements Ge
             }
         });
     }
-
 //    @Override
 //    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
 //        controllers.add(new AnimationController<>(this, 20, state -> {
@@ -63,5 +70,4 @@ public final class BumblebeeArmorItem extends TransformerArmorItem implements Ge
 //            return PlayState.STOP;
 //        }));
 //    }
-
 }

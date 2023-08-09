@@ -27,6 +27,8 @@ public class OrmMain implements ModInitializer {
     public static OrmConfigHandler ORM_CONFIG;
     //TODO cybertron characters (look in BumblebeeCarArmorItem line: 50) Update 1.3.0
 
+
+
     @Override
     public void onInitialize() {
         OrmMain.LOGGER.info("Starting ORM " + OrmMain.VERSION);
@@ -45,6 +47,8 @@ public class OrmMain implements ModInitializer {
         ModTags.register();
         ModStats.register();
         ModFluids.register();
+
+
     }
 
     public static OrmConfigHandler getOrmConfig() {

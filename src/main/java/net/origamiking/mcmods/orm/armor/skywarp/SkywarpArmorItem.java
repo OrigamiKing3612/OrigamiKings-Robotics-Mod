@@ -6,6 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.skywarp.renderer.SkywarpArmorRenderer;
+import net.origamiking.mcmods.orm.armor.skywarp.renderer.SkywarpJetArmorRenderer;
 import net.origamiking.mcmods.orm.utils.TransformerArmorItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
@@ -26,8 +27,15 @@ public final class SkywarpArmorItem extends TransformerArmorItem implements GeoI
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
-                if (this.renderer == null)
-                    this.renderer = new SkywarpArmorRenderer();
+                if (useTransformedRenderer) {
+                    if (renderer == null || !(renderer instanceof SkywarpJetArmorRenderer)) {
+                        renderer = new SkywarpJetArmorRenderer();
+                    }
+                } else {
+                    if (renderer == null || !(renderer instanceof SkywarpArmorRenderer)) {
+                        renderer = new SkywarpArmorRenderer();
+                    }
+                }
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
 

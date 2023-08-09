@@ -6,6 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.starscream.renderer.StarscreamArmorRenderer;
+import net.origamiking.mcmods.orm.armor.starscream.renderer.StarscreamJetArmorRenderer;
 import net.origamiking.mcmods.orm.utils.TransformerArmorItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
@@ -26,8 +27,15 @@ public final class StarscreamArmorItem extends TransformerArmorItem implements G
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
-                if (this.renderer == null)
-                    this.renderer = new StarscreamArmorRenderer();
+                if (useTransformedRenderer) {
+                    if (renderer == null || !(renderer instanceof StarscreamJetArmorRenderer)) {
+                        renderer = new StarscreamJetArmorRenderer();
+                    }
+                } else {
+                    if (renderer == null || !(renderer instanceof StarscreamArmorRenderer)) {
+                        renderer = new StarscreamArmorRenderer();
+                    }
+                }
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
 

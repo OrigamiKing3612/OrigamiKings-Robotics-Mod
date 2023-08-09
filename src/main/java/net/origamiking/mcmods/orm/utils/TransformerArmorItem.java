@@ -20,6 +20,7 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public abstract class TransformerArmorItem extends ArmorItem implements GeoItem {
+    public static boolean useTransformedRenderer = false;
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
     public TransformerArmorItem(ArmorMaterial material, Type type, Settings settings) {
@@ -57,5 +58,8 @@ public abstract class TransformerArmorItem extends ArmorItem implements GeoItem 
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
+    }
+    public static void transform() {
+        useTransformedRenderer = !useTransformedRenderer;
     }
 }

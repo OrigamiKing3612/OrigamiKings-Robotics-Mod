@@ -6,6 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.soundwave.renderer.SoundwaveArmorRenderer;
+import net.origamiking.mcmods.orm.armor.soundwave.renderer.SoundwaveRecorderArmorRenderer;
 import net.origamiking.mcmods.orm.utils.TransformerArmorItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
@@ -19,7 +20,6 @@ public final class SoundwaveArmorItem extends TransformerArmorItem implements Ge
         super(armorMaterial, slot, properties);
     }
 
-    // Create our armor model/renderer for Fabric and return it
     @Override
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
@@ -27,8 +27,15 @@ public final class SoundwaveArmorItem extends TransformerArmorItem implements Ge
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
-                if (this.renderer == null)
-                    this.renderer = new SoundwaveArmorRenderer();
+                if (useTransformedRenderer) {
+                    if (renderer == null || !(renderer instanceof SoundwaveRecorderArmorRenderer)) {
+                        renderer = new SoundwaveRecorderArmorRenderer();
+                    }
+                } else {
+                    if (renderer == null || !(renderer instanceof SoundwaveArmorRenderer)) {
+                        renderer = new SoundwaveArmorRenderer();
+                    }
+                }
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
 

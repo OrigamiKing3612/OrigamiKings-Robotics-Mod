@@ -6,6 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.galvatron.renderer.GalvatronArmorRenderer;
+import net.origamiking.mcmods.orm.armor.galvatron.renderer.GalvatronGunArmorRenderer;
 import net.origamiking.mcmods.orm.utils.TransformerArmorItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
@@ -27,8 +28,15 @@ public final class GalvatronArmorItem extends TransformerArmorItem implements Ge
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
-                if (this.renderer == null)
-                    this.renderer = new GalvatronArmorRenderer();
+                if (useTransformedRenderer) {
+                    if (renderer == null || !(renderer instanceof GalvatronGunArmorRenderer)) {
+                        renderer = new GalvatronGunArmorRenderer();
+                    }
+                } else {
+                    if (renderer == null || !(renderer instanceof GalvatronArmorRenderer)) {
+                        renderer = new GalvatronArmorRenderer();
+                    }
+                }
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
 
