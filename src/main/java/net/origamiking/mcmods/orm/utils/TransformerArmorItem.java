@@ -26,6 +26,7 @@ public abstract class TransformerArmorItem extends ArmorItem implements GeoItem 
     public static boolean useTransformedRenderer = false;
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
+
     public TransformerArmorItem(ArmorMaterial material, Type type, Settings settings) {
         super(material, type, settings);
     }
@@ -57,11 +58,11 @@ public abstract class TransformerArmorItem extends ArmorItem implements GeoItem 
             return PlayState.STOP;
         }));
     }
-
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
     }
+
     public static void transform() {
         if (OrmMain.getOrmConfig().enableTransforming) {
             useTransformedRenderer = !useTransformedRenderer;
