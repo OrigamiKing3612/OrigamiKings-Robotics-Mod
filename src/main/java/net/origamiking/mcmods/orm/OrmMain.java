@@ -47,8 +47,9 @@ public class OrmMain implements ModInitializer {
         ModStats.register();
         ModFluids.register();
         ModMessages.registerC2SPackets();
-        ModMessages.registerS2CPackets();
 
+
+//        ServerTickEvents.START_SERVER_TICK.register(new PlayerTickHandler());
     }
 
     public static OrmConfigHandler getOrmConfig() {

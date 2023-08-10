@@ -1,17 +1,16 @@
 package net.origamiking.mcmods.orm;
 
-import io.netty.buffer.Unpooled;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.Item;
-import net.minecraft.network.PacketByteBuf;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
 import net.origamiking.mcmods.orm.blocks.custom.BlockRegistry;
 import net.origamiking.mcmods.orm.blocks.custom.compacter.renderer.CompacterBlockRenderer;
@@ -35,6 +34,7 @@ public class OrmClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ModKeybindings.register();
+        ModMessages.registerS2CPackets();
         //todo oapi
         HandledScreens.register(ModScreenHandlers.REFINERY_BLOCK_SCREEN_HANDLER, RefineryBlockScreen::new);
         HandledScreens.register(ModScreenHandlers.COMPACTER_BLOCK_SCREEN_HANDLER, CompacterBlockScreen::new);
@@ -65,7 +65,8 @@ public class OrmClient implements ClientModInitializer {
                     if (!MinecraftClient.getInstance().world.isClient) {
                         TransformerArmorItem.transform();
                     }
-                    ClientPlayNetworking.send(ModMessages.TRANSFORM_ARMOR_PACKET_ID, new PacketByteBuf(Unpooled.buffer()));
+                    ClientPlayNetworking.send(ModMessages.TRANSFORM_PACKET_ID, PacketByteBufs.create());
+//                    ClientPlayNetworking.send(ModMessages.TRANSFORM_PACKET_ID, new PacketByteBuf(Unpooled.buffer()));
                 }
 
                 if (!hasCompleteSet) {
