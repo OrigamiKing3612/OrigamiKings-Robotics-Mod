@@ -35,6 +35,16 @@ public final class MegatronArmorItem extends TransformerArmorItem implements Geo
             }
         });
     }
+
+    @Override
+    public String transformerName() {
+        return "Megatron";
+    }
+
+    @Override
+    public String transformerId() {
+        return "megatron";
+    }
 //    @Override
 //    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
 //        controllers.add(new AnimationController<>(this, 20, state -> {

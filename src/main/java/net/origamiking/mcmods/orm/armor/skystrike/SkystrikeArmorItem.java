@@ -43,29 +43,14 @@ public final class SkystrikeArmorItem extends TransformerArmorItem implements Ge
             }
         });
     }
-//    @Override
-//    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-//        controllers.add(new AnimationController<>(this, 20, state -> {
-//            state.getController().setAnimation(DefaultAnimations.IDLE);
-//
-//            Entity entity = state.getData(DataTickets.ENTITY);
-//
-//            Set<Item> wornArmor = new ObjectOpenHashSet<>();
-//
-//            for (ItemStack stack : entity.getArmorItems()) {
-//                if (stack.isEmpty())
-//                    return PlayState.STOP;
-//
-//                wornArmor.add(stack.getItem());
-//            }
-//
-//            boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-//                    Skystrike.HELMET,
-//                    Skystrike.CHESTPLATE,
-//                    Skystrike.LEGGINGS,
-//                    Skystrike.BOOTS));
-//
-//            return PlayState.STOP;
-//        }));
-//    }
+
+    @Override
+    public String transformerName() {
+        return "Skystrike";
+    }
+
+    @Override
+    public String transformerId() {
+        return "skystrike";
+    }
 }

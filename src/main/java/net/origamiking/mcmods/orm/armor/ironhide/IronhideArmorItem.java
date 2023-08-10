@@ -44,6 +44,16 @@ public final class IronhideArmorItem extends TransformerArmorItem implements Geo
         });
     }
 
+    @Override
+    public String transformerName() {
+        return "Ironhide";
+    }
+
+    @Override
+    public String transformerId() {
+        return "ironhide";
+    }
+
 //    @Override
 //    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
 //        controllers.add(new AnimationController<>(this, 20, state -> {

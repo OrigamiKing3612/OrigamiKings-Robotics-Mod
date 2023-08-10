@@ -44,6 +44,16 @@ public final class GalvatronArmorItem extends TransformerArmorItem implements Ge
             }
         });
     }
+
+    @Override
+    public String transformerName() {
+        return "Galvatron";
+    }
+
+    @Override
+    public String transformerId() {
+        return "galvatron";
+    }
 //    @Override
 //    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
 //        controllers.add(new AnimationController<>(this, 20, state -> {

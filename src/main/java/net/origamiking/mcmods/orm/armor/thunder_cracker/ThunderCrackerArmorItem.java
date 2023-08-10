@@ -19,10 +19,12 @@ public final class ThunderCrackerArmorItem extends TransformerArmorItem implemen
     public ThunderCrackerArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
         super(armorMaterial, slot, properties);
     }
+
     @Override
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
             private GeoArmorRenderer<?> renderer;
+
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
                 if (useTransformedRenderer) {
@@ -41,29 +43,14 @@ public final class ThunderCrackerArmorItem extends TransformerArmorItem implemen
             }
         });
     }
-//    @Override
-//    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-//        controllers.add(new AnimationController<>(this, 20, state -> {
-//            state.getController().setAnimation(DefaultAnimations.IDLE);
-//
-//            Entity entity = state.getData(DataTickets.ENTITY);
-//
-//            Set<Item> wornArmor = new ObjectOpenHashSet<>();
-//
-//            for (ItemStack stack : entity.getArmorItems()) {
-//                if (stack.isEmpty())
-//                    return PlayState.STOP;
-//
-//                wornArmor.add(stack.getItem());
-//            }
-//
-//            boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-//                    ThunderCracker.HELMET,
-//                    ThunderCracker.CHESTPLATE,
-//                    ThunderCracker.LEGGINGS,
-//                    ThunderCracker.BOOTS));
-//
-//            return PlayState.STOP;
-//        }));
-//    }
+
+    @Override
+    public String transformerName() {
+        return "Thunder Cracker";
+    }
+
+    @Override
+    public String transformerId() {
+        return "thunder_cracker";
+    }
 }

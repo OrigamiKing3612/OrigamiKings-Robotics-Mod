@@ -22,7 +22,7 @@ import java.util.Set;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public abstract class TransformerArmorItem extends ArmorItem implements GeoItem {
+public abstract class TransformerArmorItem extends ArmorItem implements GeoItem, Transformer {
     public static boolean useTransformedRenderer = false;
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
@@ -58,17 +58,19 @@ public abstract class TransformerArmorItem extends ArmorItem implements GeoItem 
             return PlayState.STOP;
         }));
     }
+
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
     }
 
     public static void transform() {
+        MinecraftClient client = MinecraftClient.getInstance();
         if (OrmMain.getOrmConfig().enableTransforming) {
             useTransformedRenderer = !useTransformedRenderer;
         } else {
             OrmMain.LOGGER.info("Transforming is not enabled in config.");
-            MinecraftClient.getInstance().player.sendMessage(Text.translatable("message." + OrmMain.MOD_ID + "transform_not_enabled"));
+            if (client.player != null) client.player.sendMessage(Text.translatable("message." + OrmMain.MOD_ID + "transform_not_enabled"));
             useTransformedRenderer = false;
         }
     }

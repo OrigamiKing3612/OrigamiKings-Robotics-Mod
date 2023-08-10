@@ -44,6 +44,16 @@ public final class RodimusPrimeArmorItem extends TransformerArmorItem implements
         });
     }
 
+    @Override
+    public String transformerName() {
+        return "Rodimus Prime";
+    }
+
+    @Override
+    public String transformerId() {
+        return "rodimus_prime";
+    }
+
 //    @Override
 //    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
 //        controllers.add(new AnimationController<>(this, 20, state -> {

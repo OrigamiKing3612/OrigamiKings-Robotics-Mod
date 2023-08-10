@@ -44,4 +44,14 @@ public final class SideswipeArmorItem extends TransformerArmorItem implements Ge
             }
         });
     }
+
+    @Override
+    public String transformerName() {
+        return "Sideswipe";
+    }
+
+    @Override
+    public String transformerId() {
+        return "sideswipe";
+    }
 }

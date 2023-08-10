@@ -34,6 +34,14 @@ public final class AstrotrainArmorItem extends TransformerArmorItem implements G
             }
         });
     }
+    @Override
+    public String transformerName() {
+        return "Astrotrain";
+    }
+    @Override
+    public String transformerId() {
+        return "astrotrain";
+    }
 
 //    @Override
 //    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {

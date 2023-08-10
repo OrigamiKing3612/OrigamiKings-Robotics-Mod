@@ -43,28 +43,14 @@ public final class StarscreamArmorItem extends TransformerArmorItem implements G
             }
         });
     }
-//    @Override
-//    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-//        controllers.add(new AnimationController<>(this, 20, state -> {
-//            state.getController().setAnimation(DefaultAnimations.IDLE);
-//            Entity entity = state.getData(DataTickets.ENTITY);
-//
-//            Set<Item> wornArmor = new ObjectOpenHashSet<>();
-//
-//            for (ItemStack stack : entity.getArmorItems()) {
-//                if (stack.isEmpty())
-//                    return PlayState.STOP;
-//
-//                wornArmor.add(stack.getItem());
-//            }
-//
-//            boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-//                    Starscream.HELMET,
-//                    Starscream.CHESTPLATE,
-//                    Starscream.LEGGINGS,
-//                    Starscream.BOOTS));
-//
-//            return PlayState.STOP;
-//        }));
-//    }
+
+    @Override
+    public String transformerName() {
+        return "Starscream";
+    }
+
+    @Override
+    public String transformerId() {
+        return "starscream";
+    }
 }

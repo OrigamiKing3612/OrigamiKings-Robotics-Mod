@@ -43,6 +43,16 @@ public final class RatchetArmorItem extends TransformerArmorItem implements GeoI
             }
         });
     }
+
+    @Override
+    public String transformerName() {
+        return "Ratchet";
+    }
+
+    @Override
+    public String transformerId() {
+        return "ratchet";
+    }
 //    @Override
 //    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
 //        controllers.add(new AnimationController<>(this, 20, state -> {

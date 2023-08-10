@@ -44,6 +44,16 @@ public final class BumblebeeArmorItem extends TransformerArmorItem implements Ge
             }
         });
     }
+
+    @Override
+    public String transformerName() {
+        return "Bumblebee";
+    }
+
+    @Override
+    public String transformerId() {
+        return "bumblebee";
+    }
 //    @Override
 //    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
 //        controllers.add(new AnimationController<>(this, 20, state -> {
