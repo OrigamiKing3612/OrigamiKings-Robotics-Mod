@@ -45,12 +45,25 @@ public final class OptimusPrimeArmorItem extends TransformerArmorItem implements
     }
 
     @Override
-    public String transformerName() {
+    public String armorName() {
         return "Optimus Prime";
     }
 
     @Override
-    public String transformerId() {
+    public String armorId() {
         return "optimus_prime";
+    }
+
+    public static String armorItemName() {
+        return "Optimus Prime";
+    }
+
+    public static String armorItemId() {
+        return "optimus_prime";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return true;
     }
 }

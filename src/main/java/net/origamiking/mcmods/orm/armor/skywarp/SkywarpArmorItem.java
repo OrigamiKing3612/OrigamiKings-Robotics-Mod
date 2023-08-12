@@ -45,12 +45,25 @@ public final class SkywarpArmorItem extends TransformerArmorItem implements GeoI
     }
 
     @Override
-    public String transformerName() {
+    public String armorName() {
         return "Skywarp";
     }
 
     @Override
-    public String transformerId() {
+    public String armorId() {
         return "skywarp";
+    }
+
+    public static String armorItemName() {
+        return "Skywarp";
+    }
+
+    public static String armorItemId() {
+        return "skywarp";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return false;
     }
 }

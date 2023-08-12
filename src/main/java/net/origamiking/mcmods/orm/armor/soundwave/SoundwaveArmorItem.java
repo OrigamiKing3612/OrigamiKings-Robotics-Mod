@@ -45,12 +45,25 @@ public final class SoundwaveArmorItem extends TransformerArmorItem implements Ge
     }
 
     @Override
-    public String transformerName() {
+    public String armorName() {
         return "Soundwave";
     }
 
     @Override
-    public String transformerId() {
+    public String armorId() {
         return "soundwave";
+    }
+
+    public static String armorItemName() {
+        return "Soundwave";
+    }
+
+    public static String armorItemId() {
+        return "soundwave";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return false;
     }
 }

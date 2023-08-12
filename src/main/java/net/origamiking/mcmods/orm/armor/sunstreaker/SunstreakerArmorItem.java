@@ -45,12 +45,25 @@ public final class SunstreakerArmorItem extends TransformerArmorItem implements 
     }
 
     @Override
-    public String transformerName() {
+    public String armorName() {
         return "Sunstreaker";
     }
 
     @Override
-    public String transformerId() {
+    public String armorId() {
         return "sunstreaker";
+    }
+
+    public static String armorItemName() {
+        return "Sunstreaker";
+    }
+
+    public static String armorItemId() {
+        return "sunstreaker";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return true;
     }
 }

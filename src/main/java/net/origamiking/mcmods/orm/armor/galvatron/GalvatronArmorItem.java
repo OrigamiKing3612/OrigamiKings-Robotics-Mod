@@ -46,38 +46,25 @@ public final class GalvatronArmorItem extends TransformerArmorItem implements Ge
     }
 
     @Override
-    public String transformerName() {
+    public String armorName() {
         return "Galvatron";
     }
 
     @Override
-    public String transformerId() {
+    public String armorId() {
         return "galvatron";
     }
-//    @Override
-//    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-//        controllers.add(new AnimationController<>(this, 20, state -> {
-//
-//            state.getController().setAnimation(DefaultAnimations.IDLE);
-//
-//            Entity entity = state.getData(DataTickets.ENTITY);
-//
-//            Set<Item> wornArmor = new ObjectOpenHashSet<>();
-//
-//            for (ItemStack stack : entity.getArmorItems()) {
-//                if (stack.isEmpty())
-//                    return PlayState.STOP;
-//
-//                wornArmor.add(stack.getItem());
-//            }
-//
-//            boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-//                    Galvatron.HELMET,
-//                    Galvatron.CHESTPLATE,
-//                    Galvatron.LEGGINGS,
-//                    Galvatron.BOOTS));
-//
-//            return PlayState.STOP;
-//        }));
-//    }
+
+    public static String armorItemName() {
+        return "Galvatron";
+    }
+
+    public static String armorItemId() {
+        return "galvatron";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return false;
+    }
 }

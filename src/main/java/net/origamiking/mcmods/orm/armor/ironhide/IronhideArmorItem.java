@@ -45,39 +45,24 @@ public final class IronhideArmorItem extends TransformerArmorItem implements Geo
     }
 
     @Override
-    public String transformerName() {
+    public String armorName() {
         return "Ironhide";
     }
 
     @Override
-    public String transformerId() {
+    public String armorId() {
         return "ironhide";
     }
 
-//    @Override
-//    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-//        controllers.add(new AnimationController<>(this, 20, state -> {
-//
-//            state.getController().setAnimation(DefaultAnimations.IDLE);
-//
-//            Entity entity = state.getData(DataTickets.ENTITY);
-//
-//            Set<Item> wornArmor = new ObjectOpenHashSet<>();
-//
-//            for (ItemStack stack : entity.getArmorItems()) {
-//                if (stack.isEmpty())
-//                    return PlayState.STOP;
-//
-//                wornArmor.add(stack.getItem());
-//            }
-//
-//            boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-//                    Ironhide.HELMET,
-//                    Ironhide.CHESTPLATE,
-//                    Ironhide.LEGGINGS,
-//                    Ironhide.BOOTS));
-//
-//            return PlayState.STOP;
-//        }));
-//    }
+    public static String armorItemName() {
+        return "Ironhide";
+    }
+
+    public static String armorItemId() {
+        return "ironhide";
+    }
+    @Override
+    public boolean isAutobot() {
+        return true;
+    }
 }

@@ -46,38 +46,23 @@ public final class BumblebeeArmorItem extends TransformerArmorItem implements Ge
     }
 
     @Override
-    public String transformerName() {
+    public String armorName() {
         return "Bumblebee";
     }
 
     @Override
-    public String transformerId() {
+    public String armorId() {
         return "bumblebee";
     }
-//    @Override
-//    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-//        controllers.add(new AnimationController<>(this, 20, state -> {
-//
-//            state.getController().setAnimation(DefaultAnimations.IDLE);
-//
-//            Entity entity = state.getData(DataTickets.ENTITY);
-//
-//            Set<Item> wornArmor = new ObjectOpenHashSet<>();
-//
-//            for (ItemStack stack : entity.getArmorItems()) {
-//                if (stack.isEmpty())
-//                    return PlayState.STOP;
-//
-//                wornArmor.add(stack.getItem());
-//            }
-//
-//            boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-//                    Bumblebee.HELMET,
-//                    Bumblebee.CHESTPLATE,
-//                    Bumblebee.LEGGINGS,
-//                    Bumblebee.BOOTS));
-//
-//            return PlayState.STOP;
-//        }));
-//    }
+    public static String armorItemName() {
+        return "Bumblebee";
+    }
+
+    public static String armorItemId() {
+        return "bumblebee";
+    }
+    @Override
+    public boolean isAutobot() {
+        return true;
+    }
 }

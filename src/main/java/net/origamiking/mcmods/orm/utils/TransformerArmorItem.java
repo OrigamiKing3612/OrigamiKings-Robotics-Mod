@@ -8,6 +8,8 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
+import net.origamiking.mcmods.oapi.armor.IOrigamiArmorItem;
+import net.origamiking.mcmods.oapi.armor.OrigamiArmorItem;
 import net.origamiking.mcmods.orm.OrmMain;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.constant.DataTickets;
@@ -22,12 +24,12 @@ import java.util.Set;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public abstract class TransformerArmorItem extends ArmorItem implements GeoItem, Transformer {
+public abstract class TransformerArmorItem extends OrigamiArmorItem implements GeoItem, IOrigamiArmorItem, Transformer {
     public static boolean useTransformedRenderer = false;
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
 
-    public TransformerArmorItem(ArmorMaterial material, Type type, Settings settings) {
+    protected TransformerArmorItem(ArmorMaterial material, ArmorItem.Type type, Settings settings) {
         super(material, type, settings);
     }
 
@@ -73,5 +75,12 @@ public abstract class TransformerArmorItem extends ArmorItem implements GeoItem,
             if (client.player != null) client.player.sendMessage(Text.translatable("message." + OrmMain.MOD_ID + "transform_not_enabled"));
             useTransformedRenderer = false;
         }
+    }
+    public static String armorItemName() {
+        return "TransformerArmorItem";
+    }
+
+    public static String armorItemId() {
+        return "transformer_armor_item";
     }
 }

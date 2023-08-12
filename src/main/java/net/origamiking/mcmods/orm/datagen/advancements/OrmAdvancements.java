@@ -41,4 +41,12 @@ public class OrmAdvancements implements Consumer<Consumer<Advancement>> {
     public static String translatableDescription(String advancementName) {
         return "advancement." + OrmMain.MOD_ID + "." + advancementName.toLowerCase() + ".description";
     }
+
+    public static String isAutobot(boolean isAutobot) {
+        return isAutobot ? "autobots" : "decepticons";
+    }
+
+    public static String getAdvancementPath(boolean isAutobot, String id) {
+        return OrmMain.MOD_ID + ":" + isAutobot(isAutobot) + "/" + id;
+    }
 }

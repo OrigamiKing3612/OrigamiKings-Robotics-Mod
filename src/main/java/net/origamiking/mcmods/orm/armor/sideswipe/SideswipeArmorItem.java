@@ -46,12 +46,25 @@ public final class SideswipeArmorItem extends TransformerArmorItem implements Ge
     }
 
     @Override
-    public String transformerName() {
+    public String armorName() {
         return "Sideswipe";
     }
 
     @Override
-    public String transformerId() {
+    public String armorId() {
         return "sideswipe";
+    }
+
+    public static String armorItemName() {
+        return "Sideswipe";
+    }
+
+    public static String armorItemId() {
+        return "sideswipe";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return true;
     }
 }

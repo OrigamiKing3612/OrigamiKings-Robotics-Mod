@@ -37,12 +37,25 @@ public final class ShockwaveArmorItem extends TransformerArmorItem implements Ge
     }
 
     @Override
-    public String transformerName() {
+    public String armorName() {
         return "Shockwave";
     }
 
     @Override
-    public String transformerId() {
+    public String armorId() {
         return "shockwave";
+    }
+
+    public static String armorItemName() {
+        return "Shockwave";
+    }
+
+    public static String armorItemId() {
+        return "shockwave";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return false;
     }
 }

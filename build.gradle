@@ -120,8 +120,16 @@ publishing {
         }
     }
 }
+
+tasks.register('publishAll') {
+    dependsOn publish, curseforge, modrinth
+    doLast {
+        println "All publish tasks completed!"
+    }
+}
+
 def modChangelog = "${mod_version}: The \"Iacon and Unicron Update\" Version:\n" + "\n" +
-        "Added EMI compact, added Iacon, added config" + "\n" + "\n" +
+        "Added EMI compact, added Iacon, added config, made the armors transform" + "\n" + "\n" +
         "Please report any bugs [here](https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod/issues)"
 
 modrinth {

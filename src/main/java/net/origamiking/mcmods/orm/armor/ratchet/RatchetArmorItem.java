@@ -45,35 +45,25 @@ public final class RatchetArmorItem extends TransformerArmorItem implements GeoI
     }
 
     @Override
-    public String transformerName() {
+    public String armorName() {
         return "Ratchet";
     }
 
     @Override
-    public String transformerId() {
+    public String armorId() {
         return "ratchet";
     }
-//    @Override
-//    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-//        controllers.add(new AnimationController<>(this, 20, state -> {
-//            state.getController().setAnimation(DefaultAnimations.IDLE);
-//            Entity entity = state.getData(DataTickets.ENTITY);
-//            Set<Item> wornArmor = new ObjectOpenHashSet<>();
-//
-//            for (ItemStack stack : entity.getArmorItems()) {
-//                if (stack.isEmpty())
-//                    return PlayState.STOP;
-//
-//                wornArmor.add(stack.getItem());
-//            }
-//
-//            boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-//                    Ratchet.HELMET,
-//                    Ratchet.CHESTPLATE,
-//                    Ratchet.LEGGINGS,
-//                    Ratchet.BOOTS));
-//
-//            return PlayState.STOP;
-//        }));
-//    }
+
+    public static String armorItemName() {
+        return "Ratchet";
+    }
+
+    public static String armorItemId() {
+        return "ratchet";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return true;
+    }
 }

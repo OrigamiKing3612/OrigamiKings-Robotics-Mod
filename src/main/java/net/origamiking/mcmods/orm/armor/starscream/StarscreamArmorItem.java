@@ -45,12 +45,25 @@ public final class StarscreamArmorItem extends TransformerArmorItem implements G
     }
 
     @Override
-    public String transformerName() {
+    public String armorName() {
         return "Starscream";
     }
 
     @Override
-    public String transformerId() {
+    public String armorId() {
         return "starscream";
+    }
+
+    public static String armorItemName() {
+        return "Starscream";
+    }
+
+    public static String armorItemId() {
+        return "starscream";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return false;
     }
 }

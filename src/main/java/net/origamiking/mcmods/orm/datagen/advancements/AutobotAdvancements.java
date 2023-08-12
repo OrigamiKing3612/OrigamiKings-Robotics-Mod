@@ -4,15 +4,22 @@ import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementFrame;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.text.Text;
-import net.origamiking.mcmods.orm.OrmMain;
 import net.origamiking.mcmods.orm.armor.bumblebee.Bumblebee;
+import net.origamiking.mcmods.orm.armor.bumblebee.BumblebeeArmorItem;
 import net.origamiking.mcmods.orm.armor.ironhide.Ironhide;
+import net.origamiking.mcmods.orm.armor.ironhide.IronhideArmorItem;
 import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrime;
+import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrimeArmorItem;
 import net.origamiking.mcmods.orm.armor.ratchet.Ratchet;
+import net.origamiking.mcmods.orm.armor.ratchet.RatchetArmorItem;
 import net.origamiking.mcmods.orm.armor.rodimus_prime.RodimusPrime;
+import net.origamiking.mcmods.orm.armor.rodimus_prime.RodimusPrimeArmorItem;
 import net.origamiking.mcmods.orm.armor.sideswipe.Sideswipe;
+import net.origamiking.mcmods.orm.armor.sideswipe.SideswipeArmorItem;
 import net.origamiking.mcmods.orm.armor.skystrike.Skystrike;
+import net.origamiking.mcmods.orm.armor.skystrike.SkystrikeArmorItem;
 import net.origamiking.mcmods.orm.armor.sunstreaker.Sunstreaker;
+import net.origamiking.mcmods.orm.armor.sunstreaker.SunstreakerArmorItem;
 
 import java.util.function.Consumer;
 
@@ -24,8 +31,8 @@ public class AutobotAdvancements {
         Advancement optimus_prime = Advancement.Builder.create().parent(mainParent)
                 .display(
                         OptimusPrime.HELMET, // icon
-                        Text.translatable(translatableTitle("optimus_prime")), // title
-                        Text.translatable(translatableDescription("optimus_prime")), // description
+                        Text.translatable(translatableTitle(OptimusPrimeArmorItem.armorItemId())), // title
+                        Text.translatable(translatableDescription(OptimusPrimeArmorItem.armorItemId())), // description
                         null,
                         AdvancementFrame.TASK,
                         true,
@@ -36,13 +43,13 @@ public class AutobotAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(OptimusPrime.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(OptimusPrime.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(OptimusPrime.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + ":autobots/optimus_prime");
+                .build(advancementConsumer, OrmAdvancements.getAdvancementPath(true, OptimusPrimeArmorItem.armorItemId()));
 
         Advancement bumblebee = Advancement.Builder.create().parent(optimus_prime)
                 .display(
                         Bumblebee.HELMET, // icon
-                        Text.translatable(translatableTitle("bumblebee")), // title
-                        Text.translatable(translatableDescription("bumblebee")), // description
+                        Text.translatable(translatableTitle(BumblebeeArmorItem.armorItemId())), // title
+                        Text.translatable(translatableDescription(BumblebeeArmorItem.armorItemId())), // description
                         null,
                         AdvancementFrame.TASK,
                         true,
@@ -53,13 +60,13 @@ public class AutobotAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Bumblebee.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Bumblebee.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Bumblebee.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + ":autobots/bumblebee");
+                .build(advancementConsumer, OrmAdvancements.getAdvancementPath(true, BumblebeeArmorItem.armorItemId()));
 
         Advancement ironhide = Advancement.Builder.create().parent(optimus_prime)
                 .display(
                         Ironhide.HELMET, // icon
-                        Text.translatable(translatableTitle("ironhide")), // title
-                        Text.translatable(translatableDescription("ironhide")), // description
+                        Text.translatable(translatableTitle(IronhideArmorItem.armorItemId())), // title
+                        Text.translatable(translatableDescription(IronhideArmorItem.armorItemId())), // description
                         null,
                         AdvancementFrame.TASK,
                         true,
@@ -70,13 +77,13 @@ public class AutobotAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Ironhide.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Ironhide.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Ironhide.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + ":autobots/ironhide");
+                .build(advancementConsumer, OrmAdvancements.getAdvancementPath(true, IronhideArmorItem.armorItemId()));
 
         Advancement rodimus_prime = Advancement.Builder.create().parent(optimus_prime)
                 .display(
                         RodimusPrime.HELMET, // icon
-                        Text.translatable(translatableTitle("rodimus_prime")), // title
-                        Text.translatable(translatableDescription("rodimus_prime")), // description
+                        Text.translatable(translatableTitle(RodimusPrimeArmorItem.armorItemId())), // title
+                        Text.translatable(translatableDescription(RodimusPrimeArmorItem.armorItemId())), // description
                         null,
                         AdvancementFrame.TASK,
                         true,
@@ -87,13 +94,13 @@ public class AutobotAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(RodimusPrime.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(RodimusPrime.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(RodimusPrime.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + ":autobots/rodimus_prime");
+                .build(advancementConsumer, OrmAdvancements.getAdvancementPath(true, RodimusPrimeArmorItem.armorItemId()));
 
         Advancement skystrike = Advancement.Builder.create().parent(optimus_prime)
                 .display(
                         Skystrike.HELMET, // icon
-                        Text.translatable(translatableTitle("skystrike")), // title
-                        Text.translatable(translatableDescription("skystrike")), // description
+                        Text.translatable(translatableTitle(SkystrikeArmorItem.armorItemId())), // title
+                        Text.translatable(translatableDescription(SkystrikeArmorItem.armorItemId())), // description
                         null,
                         AdvancementFrame.TASK,
                         true,
@@ -104,7 +111,7 @@ public class AutobotAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Skystrike.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Skystrike.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Skystrike.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + ":autobots/skystrike");
+                .build(advancementConsumer, OrmAdvancements.getAdvancementPath(true, SkystrikeArmorItem.armorItemId()));
 
         Advancement ratchet = Advancement.Builder.create().parent(optimus_prime)
                 .display(
@@ -121,13 +128,13 @@ public class AutobotAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Ratchet.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Ratchet.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Ratchet.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + ":autobots/ratchet");
+                .build(advancementConsumer, OrmAdvancements.getAdvancementPath(true, RatchetArmorItem.armorItemId()));
 
         Advancement sideswipe = Advancement.Builder.create().parent(optimus_prime)
                 .display(
                         Sideswipe.HELMET, // icon
-                        Text.translatable(translatableTitle("sideswipe")), // title
-                        Text.translatable(translatableDescription("sideswipe")), // description
+                        Text.translatable(translatableTitle(SideswipeArmorItem.armorItemId())), // title
+                        Text.translatable(translatableDescription(SideswipeArmorItem.armorItemId())), // description
                         null,
                         AdvancementFrame.TASK,
                         true,
@@ -138,13 +145,13 @@ public class AutobotAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Sideswipe.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Sideswipe.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Sideswipe.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + ":autobots/sideswipe");
+                .build(advancementConsumer, OrmAdvancements.getAdvancementPath(true, SideswipeArmorItem.armorItemId()));
 
         Advancement sunstreaker = Advancement.Builder.create().parent(optimus_prime)
                 .display(
                         Sunstreaker.HELMET, // icon
-                        Text.translatable(translatableTitle("sunstreaker")), // title
-                        Text.translatable(translatableDescription("sunstreaker")), // description
+                        Text.translatable(translatableTitle(SunstreakerArmorItem.armorItemId())), // title
+                        Text.translatable(translatableDescription(SunstreakerArmorItem.armorItemId())), // description
                         null,
                         AdvancementFrame.TASK,
                         true,
@@ -155,6 +162,6 @@ public class AutobotAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Sunstreaker.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Sunstreaker.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Sunstreaker.BOOTS))
-                .build(advancementConsumer, OrmMain.MOD_ID + ":autobots/sunstreaker");
+                .build(advancementConsumer, OrmAdvancements.getAdvancementPath(true, SunstreakerArmorItem.armorItemId()));
     }
 }

@@ -45,12 +45,24 @@ public final class ThunderCrackerArmorItem extends TransformerArmorItem implemen
     }
 
     @Override
-    public String transformerName() {
+    public String armorName() {
         return "Thunder Cracker";
     }
 
     @Override
-    public String transformerId() {
+    public String armorId() {
         return "thunder_cracker";
+    }
+    public static String armorItemName() {
+        return "Thunder Cracker";
+    }
+
+    public static String armorItemId() {
+        return "thunder_cracker";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return false;
     }
 }

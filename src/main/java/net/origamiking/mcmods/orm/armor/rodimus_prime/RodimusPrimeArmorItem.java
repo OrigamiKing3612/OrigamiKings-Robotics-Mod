@@ -45,38 +45,25 @@ public final class RodimusPrimeArmorItem extends TransformerArmorItem implements
     }
 
     @Override
-    public String transformerName() {
+    public String armorName() {
         return "Rodimus Prime";
     }
 
     @Override
-    public String transformerId() {
+    public String armorId() {
         return "rodimus_prime";
     }
 
-//    @Override
-//    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-//        controllers.add(new AnimationController<>(this, 20, state -> {
-//            state.getController().setAnimation(DefaultAnimations.IDLE);
-//
-//            Entity entity = state.getData(DataTickets.ENTITY);
-//
-//            Set<Item> wornArmor = new ObjectOpenHashSet<>();
-//
-//            for (ItemStack stack : entity.getArmorItems()) {
-//                if (stack.isEmpty())
-//                    return PlayState.STOP;
-//
-//                wornArmor.add(stack.getItem());
-//            }
-//
-//            boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-//                    RodimusPrime.HELMET,
-//                    RodimusPrime.CHESTPLATE,
-//                    RodimusPrime.LEGGINGS,
-//                    RodimusPrime.BOOTS));
-//
-//            return PlayState.STOP;
-//        }));
-//    }
+    public static String armorItemName() {
+        return "Rodimus Prime";
+    }
+
+    public static String armorItemId() {
+        return "rodimus_prime";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return true;
+    }
 }

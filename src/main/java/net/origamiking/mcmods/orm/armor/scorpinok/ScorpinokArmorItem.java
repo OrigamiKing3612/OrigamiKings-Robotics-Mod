@@ -45,12 +45,25 @@ public final class ScorpinokArmorItem extends TransformerArmorItem implements Ge
     }
 
     @Override
-    public String transformerName() {
+    public String armorName() {
         return "Scorpinok";
     }
 
     @Override
-    public String transformerId() {
+    public String armorId() {
         return "scorpinok";
+    }
+
+    public static String armorItemName() {
+        return "Scorpinok";
+    }
+
+    public static String armorItemId() {
+        return "scorpinok";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return false;
     }
 }

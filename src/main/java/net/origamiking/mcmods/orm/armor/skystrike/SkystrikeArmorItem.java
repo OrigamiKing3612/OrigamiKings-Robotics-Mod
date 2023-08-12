@@ -45,12 +45,25 @@ public final class SkystrikeArmorItem extends TransformerArmorItem implements Ge
     }
 
     @Override
-    public String transformerName() {
+    public String armorName() {
         return "Skystrike";
     }
 
     @Override
-    public String transformerId() {
+    public String armorId() {
         return "skystrike";
+    }
+
+    public static String armorItemName() {
+        return "Skystrike";
+    }
+
+    public static String armorItemId() {
+        return "skystrike";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return true;
     }
 }

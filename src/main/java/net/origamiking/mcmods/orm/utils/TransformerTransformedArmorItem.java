@@ -6,6 +6,8 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.origamiking.mcmods.oapi.armor.IOrigamiArmorItem;
+import net.origamiking.mcmods.oapi.armor.OrigamiArmorItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.constant.DefaultAnimations;
@@ -19,10 +21,10 @@ import java.util.Set;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public abstract class TransformerTransformedArmorItem extends ArmorItem implements GeoItem {
+public abstract class TransformerTransformedArmorItem extends OrigamiArmorItem implements GeoItem, IOrigamiArmorItem, Transformer {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
-    public TransformerTransformedArmorItem(ArmorMaterial material, Type type, Settings settings) {
+    public TransformerTransformedArmorItem(ArmorMaterial material, ArmorItem.Type type, Settings settings) {
         super(material, type, settings);
     }
 
