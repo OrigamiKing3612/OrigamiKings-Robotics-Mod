@@ -58,7 +58,6 @@ public class OrmClient implements ClientModInitializer {
                         TransformerArmorItem.transform();
                     }
                     ClientPlayNetworking.send(ModMessages.TRANSFORM_PACKET_ID, PacketByteBufs.create());
-//                    ClientPlayNetworking.send(ModMessages.TRANSFORM_PACKET_ID, new PacketByteBuf(Unpooled.buffer()));
                 }
 
                 if (!hasCompleteSet) {
