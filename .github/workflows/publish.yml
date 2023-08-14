@@ -30,12 +30,5 @@ jobs:
         if: ${{ runner.os != 'Windows' }}
         run: chmod +x ./gradlew
 
-      - name: publish
-        run: ./gradlew publish
-
-      - name: modrinth
-        run: ./gradlew modrinth
-
-      - name: curseforge
-        run: ./gradlew curseforge
-
+      - name: publishAll
+        run: ./gradlew publishAll
