@@ -30,9 +30,6 @@ jobs:
         if: ${{ runner.os != 'Windows' }}
         run: chmod +x ./gradlew
 
-      - name: Build
-        run: ./gradlew clean build
-
       - name: publish
         run: ./gradlew publish
 
