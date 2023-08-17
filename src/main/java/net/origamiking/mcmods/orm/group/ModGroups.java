@@ -179,6 +179,7 @@ public class ModGroups {
                     entries.add(TransformiumAlloyItems.TRANSFORMIUM_ALLOY_BRICK);
                     entries.add(RandomItems.SPARK);
                     entries.add(RandomItems.ENERGY_CONDUCTOR);
+                    entries.add(ItemRegistry.ENERGY_CELL);
                     entries.add(ModSpawnEggs.VECTOR_GUARD_SPAWN_EGG);
                     entries.add(ItemRegistry.PHOTON_ITEM);
                     entries.add(EnergonBlocks.RAW_ENERGON_BLOCK);

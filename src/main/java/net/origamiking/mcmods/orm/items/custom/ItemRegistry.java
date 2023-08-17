@@ -5,6 +5,7 @@ import net.origamiking.mcmods.oapi.items.OrigamiItemSettings;
 import net.origamiking.mcmods.orm.OrmMain;
 import net.origamiking.mcmods.orm.items.custom.blaster.BlasterItem;
 import net.origamiking.mcmods.orm.items.custom.energon_axe.EnergonAxeItem;
+import net.origamiking.mcmods.orm.items.custom.energy_cell.EnergyCellItem;
 import net.origamiking.mcmods.orm.items.custom.megatron_transformed.MegatronTransformedItem;
 import net.origamiking.mcmods.orm.items.custom.optimus_primes_ion_cannon.OptimusPrimesIonCannon;
 import net.origamiking.mcmods.orm.items.custom.photon.PhotonItem;
@@ -25,6 +26,7 @@ public class ItemRegistry {
     public static final BlasterItem BLASTER = registerItem(OrmMain.MOD_ID, "blaster", new BlasterItem(new OrigamiItemSettings().maxCount(1)));
     public static final PulseRifleItem PULSE_RIFLE = registerItem(OrmMain.MOD_ID, "pulse_rifle", new PulseRifleItem(new OrigamiItemSettings().maxCount(1)));
     public static final EnergonAxeItem ENERGON_AXE = registerItem(OrmMain.MOD_ID, "energon_axe", new EnergonAxeItem(new OrigamiItemSettings().maxCount(1)));
+    public static final EnergyCellItem ENERGY_CELL = registerItem(OrmMain.MOD_ID, "energy_cell", new EnergyCellItem(new OrigamiItemSettings()));
 
     public static void register() {
     }
