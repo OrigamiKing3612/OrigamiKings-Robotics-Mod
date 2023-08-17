@@ -19,7 +19,7 @@ public class EnergyCellsHudOverlay implements HudRenderCallback {
     @Override
     public void onHudRender(DrawContext drawContext, float tickDelta) {
         ClientPlayerEntity player = MinecraftClient.getInstance().player;
-        if (ArmorUtils.isArmorSetOfType(player, TransformerArmorItem.class) && !player.isSpectator() && !player.isCreative()) {
+        if (ArmorUtils.isArmorSetOfType(player, TransformerArmorItem.class) && !player.isSpectator() && !player.getAbilities().creativeMode) {
             int x = 0;
             int y = 0;
             MinecraftClient client = MinecraftClient.getInstance();
@@ -30,19 +30,20 @@ public class EnergyCellsHudOverlay implements HudRenderCallback {
                 x = width / 2;
                 y = height;
             }
+            int texture_size = 12;
+            int number_of_cells = 10;
 
             RenderSystem.setShader(GameRenderer::getPositionTexProgram);
             RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
             RenderSystem.setShaderTexture(0, EMPTY_ENERGY_CELL);
-            int NUMBER_OF_CELLS = 10;
-            for (int i = 0; i < NUMBER_OF_CELLS; i++) {
-                drawContext.drawTexture(EMPTY_ENERGY_CELL, x + 95 + (i * NUMBER_OF_CELLS - 1), y - 18, 0, 0, 12, 12, 12, 12);
+            for (int e = 0; e < number_of_cells; e++) {
+                drawContext.drawTexture(EMPTY_ENERGY_CELL, x + 95 + (e * number_of_cells - 1), y - 18, 0, 0, texture_size, texture_size, texture_size, texture_size);
             }
 
             RenderSystem.setShaderTexture(0, FILLED_ENERGY_CELL);
-            for (int i = 0; i < NUMBER_OF_CELLS; i++) {
-                if (((IEntityEnergyCellsDataSaver) MinecraftClient.getInstance().player).getPersistentData().getInt("energy_cells") > i) {
-                    drawContext.drawTexture(FILLED_ENERGY_CELL, x + 95 + (i * NUMBER_OF_CELLS - 1), y - 18, 0, 0, 12, 12, 12, 12);
+            for (int f = 0; f < number_of_cells; f++) {
+                if (((IEntityEnergyCellsDataSaver) player).getPersistentData().getInt("energy_cells") > f) {
+                    drawContext.drawTexture(FILLED_ENERGY_CELL, x + 95 + (f * number_of_cells - 1), y - 18, 0, 0, texture_size, texture_size, texture_size, texture_size);
                 } else {
                     break;
                 }
