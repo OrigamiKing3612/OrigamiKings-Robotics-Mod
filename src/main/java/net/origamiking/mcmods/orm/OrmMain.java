@@ -9,7 +9,7 @@ import net.origamiking.mcmods.orm.commands.ModCommands;
 import net.origamiking.mcmods.orm.config.OrmConfig;
 import net.origamiking.mcmods.orm.config.OrmConfigHandler;
 import net.origamiking.mcmods.orm.entity.ModEntities;
-import net.origamiking.mcmods.orm.event.PlayerTickHandler;
+import net.origamiking.mcmods.orm.event.ServerPlayerTickHandler;
 import net.origamiking.mcmods.orm.fluid.ModFluids;
 import net.origamiking.mcmods.orm.group.ModGroups;
 import net.origamiking.mcmods.orm.items.ModItems;
@@ -50,7 +50,7 @@ public class OrmMain implements ModInitializer {
         ModFluids.register();
         ModMessages.registerC2SPackets();
 
-        ServerTickEvents.START_SERVER_TICK.register(new PlayerTickHandler());
+        ServerTickEvents.START_SERVER_TICK.register(new ServerPlayerTickHandler());
     }
 
     public static OrmConfigHandler getOrmConfig() {
