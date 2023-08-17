@@ -34,16 +34,15 @@ public class EnergyCellsHudOverlay implements HudRenderCallback {
             RenderSystem.setShader(GameRenderer::getPositionTexProgram);
             RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
             RenderSystem.setShaderTexture(0, EMPTY_ENERGY_CELL);
-            for (int i = 0; i < 10; i++) {
-                drawContext.drawTexture(EMPTY_ENERGY_CELL, x - 0 + (i * 9), y - 54, 0, 0, 12, 12,
-                        12, 12);
+            int NUMBER_OF_CELLS = 10;
+            for (int i = 0; i < NUMBER_OF_CELLS; i++) {
+                drawContext.drawTexture(EMPTY_ENERGY_CELL, x + 95 + (i * NUMBER_OF_CELLS - 1), y - 18, 0, 0, 12, 12, 12, 12);
             }
 
             RenderSystem.setShaderTexture(0, FILLED_ENERGY_CELL);
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < NUMBER_OF_CELLS; i++) {
                 if (((IEntityEnergyCellsDataSaver) MinecraftClient.getInstance().player).getPersistentData().getInt("energy_cells") > i) {
-                    drawContext.drawTexture(FILLED_ENERGY_CELL, x - 0 + (i * 9), y - 54, 0, 0, 12, 12,
-                            12, 12);
+                    drawContext.drawTexture(FILLED_ENERGY_CELL, x + 95 + (i * NUMBER_OF_CELLS - 1), y - 18, 0, 0, 12, 12, 12, 12);
                 } else {
                     break;
                 }

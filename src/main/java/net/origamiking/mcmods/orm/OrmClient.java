@@ -15,6 +15,7 @@ import net.origamiking.mcmods.orm.client.EnergyCellsHudOverlay;
 import net.origamiking.mcmods.orm.entity.ModEntities;
 import net.origamiking.mcmods.orm.entity.photon.renderer.PhotonEntityRenderer;
 import net.origamiking.mcmods.orm.entity.vector_guard.renderer.VectorGuardEntityRenderer;
+import net.origamiking.mcmods.orm.event.ClientPlayerTickHandler;
 import net.origamiking.mcmods.orm.fluid.ModFluids;
 import net.origamiking.mcmods.orm.keybind.ModKeybindings;
 import net.origamiking.mcmods.orm.networking.ModMessages;
@@ -33,6 +34,7 @@ public class OrmClient implements ClientModInitializer {
         ModKeybindings.register();
         ModMessages.registerS2CPackets();
         HudRenderCallback.EVENT.register(new EnergyCellsHudOverlay());
+        ClientTickEvents.START_CLIENT_TICK.register(new ClientPlayerTickHandler());
 
         registerHandledScreen(ModScreenHandlers.REFINERY_BLOCK_SCREEN_HANDLER, RefineryBlockScreen::new);
         registerHandledScreen(ModScreenHandlers.COMPACTER_BLOCK_SCREEN_HANDLER, CompacterBlockScreen::new);

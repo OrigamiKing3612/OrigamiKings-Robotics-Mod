@@ -13,6 +13,7 @@ public class ModMessages {
     public static final Identifier TRANSFORM_PACKET_ID = new Identifier(OrmMain.MOD_ID, "transform");
     public static final Identifier TRANSFORM_SYNC_ID = new Identifier(OrmMain.MOD_ID, "transform_sync");
     public static final Identifier ENERGY_CELLS_ID = new Identifier(OrmMain.MOD_ID, "energy_cells");
+    public static final Identifier BREAK_ARMOR_ID = new Identifier(OrmMain.MOD_ID, "break_armor");
     public static final Identifier ENERGY_CELLS_SYNC_ID = new Identifier(OrmMain.MOD_ID, "energy_cells_sync");
 
     public static void registerC2SPackets() {

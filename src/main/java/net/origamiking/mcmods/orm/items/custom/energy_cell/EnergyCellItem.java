@@ -21,8 +21,8 @@ public class EnergyCellItem extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
-        //on Client
-        ClientPlayNetworking.send(ModMessages.ENERGY_CELLS_ID, PacketByteBufs.create());
+        //on both Client and Server
+        if (world.isClient()) ClientPlayNetworking.send(ModMessages.ENERGY_CELLS_ID, PacketByteBufs.create());
         return TypedActionResult.pass(player.getStackInHand(hand));
     }
 
