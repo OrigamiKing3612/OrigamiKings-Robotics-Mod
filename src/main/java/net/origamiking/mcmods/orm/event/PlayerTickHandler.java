@@ -17,7 +17,7 @@ public class PlayerTickHandler implements ServerTickEvents.StartTick {
         for (ServerPlayerEntity serverPlayerEntity : server.getPlayerManager().getPlayerList()) {
             IEntityEnergyCellsDataSaver dataPlayer = ((IEntityEnergyCellsDataSaver) serverPlayerEntity);
             if (ArmorUtils.isArmorSetOfType(serverPlayerEntity, TransformerArmorItem.class)) {
-                if (new Random().nextFloat() < 0.050000f) {
+                if (new Random().nextFloat() < 0.000005f) {
                     EnergyCellsData.removeEnergyCells(dataPlayer, 1);
                 }
                 if (dataPlayer.getPersistentData().getInt("energy_cells") <= 0) {
