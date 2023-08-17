@@ -4,6 +4,7 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
+import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.util.Identifier;
 import net.origamiking.mcmods.oapi.armor.ArmorUtils;
@@ -17,7 +18,8 @@ public class EnergyCellsHudOverlay implements HudRenderCallback {
 
     @Override
     public void onHudRender(DrawContext drawContext, float tickDelta) {
-        if (ArmorUtils.isArmorSetOfType(MinecraftClient.getInstance().player, TransformerArmorItem.class) && !MinecraftClient.getInstance().player.isSpectator() && !MinecraftClient.getInstance().player.isCreative()) {
+        ClientPlayerEntity player = MinecraftClient.getInstance().player;
+        if (ArmorUtils.isArmorSetOfType(player, TransformerArmorItem.class) && !player.isSpectator() && !player.isCreative()) {
             int x = 0;
             int y = 0;
             MinecraftClient client = MinecraftClient.getInstance();

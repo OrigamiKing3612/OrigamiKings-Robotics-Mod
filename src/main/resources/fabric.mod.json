@@ -39,6 +39,7 @@
 	"mixins": [
 		"orm.mixins.json"
 	],
+	"accessWidener": "orm.accesswidener",
 	"jars": [
 		{
 			"file": "jars/Origamikings-API-0.1.27-1.20.1.jar"
