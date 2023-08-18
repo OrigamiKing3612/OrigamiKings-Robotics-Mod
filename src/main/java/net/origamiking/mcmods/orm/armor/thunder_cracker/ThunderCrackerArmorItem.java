@@ -6,6 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.thunder_cracker.renderer.ThunderCrackerArmorRenderer;
+import net.origamiking.mcmods.orm.armor.thunder_cracker.renderer.ThunderCrackerJetArmorRenderer;
 import net.origamiking.mcmods.orm.utils.TransformerArmorItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
@@ -18,14 +19,23 @@ public final class ThunderCrackerArmorItem extends TransformerArmorItem implemen
     public ThunderCrackerArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
         super(armorMaterial, slot, properties);
     }
+
     @Override
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
             private GeoArmorRenderer<?> renderer;
+
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
-                if (this.renderer == null)
-                    this.renderer = new ThunderCrackerArmorRenderer();
+                if (useTransformedRenderer) {
+                    if (renderer == null || !(renderer instanceof ThunderCrackerJetArmorRenderer)) {
+                        renderer = new ThunderCrackerJetArmorRenderer();
+                    }
+                } else {
+                    if (renderer == null || !(renderer instanceof ThunderCrackerArmorRenderer)) {
+                        renderer = new ThunderCrackerArmorRenderer();
+                    }
+                }
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
 
@@ -33,29 +43,26 @@ public final class ThunderCrackerArmorItem extends TransformerArmorItem implemen
             }
         });
     }
-//    @Override
-//    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-//        controllers.add(new AnimationController<>(this, 20, state -> {
-//            state.getController().setAnimation(DefaultAnimations.IDLE);
-//
-//            Entity entity = state.getData(DataTickets.ENTITY);
-//
-//            Set<Item> wornArmor = new ObjectOpenHashSet<>();
-//
-//            for (ItemStack stack : entity.getArmorItems()) {
-//                if (stack.isEmpty())
-//                    return PlayState.STOP;
-//
-//                wornArmor.add(stack.getItem());
-//            }
-//
-//            boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-//                    ThunderCracker.HELMET,
-//                    ThunderCracker.CHESTPLATE,
-//                    ThunderCracker.LEGGINGS,
-//                    ThunderCracker.BOOTS));
-//
-//            return PlayState.STOP;
-//        }));
-//    }
+
+    @Override
+    public String armorName() {
+        return "Thunder Cracker";
+    }
+
+    @Override
+    public String armorId() {
+        return "thunder_cracker";
+    }
+    public static String armorItemName() {
+        return "Thunder Cracker";
+    }
+
+    public static String armorItemId() {
+        return "thunder_cracker";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return false;
+    }
 }

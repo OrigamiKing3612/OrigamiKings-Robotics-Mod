@@ -6,6 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.skystrike.renderer.SkystrikeArmorRenderer;
+import net.origamiking.mcmods.orm.armor.skystrike.renderer.SkystrikeCarArmorRenderer;
 import net.origamiking.mcmods.orm.utils.TransformerArmorItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
@@ -26,8 +27,15 @@ public final class SkystrikeArmorItem extends TransformerArmorItem implements Ge
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
-                if (this.renderer == null)
-                    this.renderer = new SkystrikeArmorRenderer();
+                if (useTransformedRenderer) {
+                    if (renderer == null || !(renderer instanceof SkystrikeCarArmorRenderer)) {
+                        renderer = new SkystrikeCarArmorRenderer();
+                    }
+                } else {
+                    if (renderer == null || !(renderer instanceof SkystrikeArmorRenderer)) {
+                        renderer = new SkystrikeArmorRenderer();
+                    }
+                }
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
 
@@ -35,29 +43,27 @@ public final class SkystrikeArmorItem extends TransformerArmorItem implements Ge
             }
         });
     }
-//    @Override
-//    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-//        controllers.add(new AnimationController<>(this, 20, state -> {
-//            state.getController().setAnimation(DefaultAnimations.IDLE);
-//
-//            Entity entity = state.getData(DataTickets.ENTITY);
-//
-//            Set<Item> wornArmor = new ObjectOpenHashSet<>();
-//
-//            for (ItemStack stack : entity.getArmorItems()) {
-//                if (stack.isEmpty())
-//                    return PlayState.STOP;
-//
-//                wornArmor.add(stack.getItem());
-//            }
-//
-//            boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-//                    Skystrike.HELMET,
-//                    Skystrike.CHESTPLATE,
-//                    Skystrike.LEGGINGS,
-//                    Skystrike.BOOTS));
-//
-//            return PlayState.STOP;
-//        }));
-//    }
+
+    @Override
+    public String armorName() {
+        return "Skystrike";
+    }
+
+    @Override
+    public String armorId() {
+        return "skystrike";
+    }
+
+    public static String armorItemName() {
+        return "Skystrike";
+    }
+
+    public static String armorItemId() {
+        return "skystrike";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return true;
+    }
 }

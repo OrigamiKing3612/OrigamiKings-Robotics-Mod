@@ -35,4 +35,9 @@ public final class SideswipeCarArmorItem extends TransformerTransformedArmorItem
             }
         });
     }
+
+    @Override
+    public boolean isAutobot() {
+        return true;
+    }
 }

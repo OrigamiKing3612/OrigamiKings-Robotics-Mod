@@ -5,12 +5,12 @@ plugins {
     id 'com.matthewprenger.cursegradle' version '1.4.0'
 }
 
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
-
-archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
 
 repositories {
     maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
@@ -66,7 +66,7 @@ dependencies {
     modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
 
 //    modLocalRuntime "dev.emi:emi-fabric:${emi_version}"
-//    modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${rei_version}"
+    modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${rei_version}"
 
 
     modImplementation "net.kyrptonaught:customportalapi:${portal_api_version}"
@@ -78,13 +78,7 @@ processResources {
     inputs.property "version", project.version
 
     filesMatching("fabric.mod.json") {
-        expand "version": project.version,
-                "origamikings_api": origamikings_api,
-                "loader_version": loader_version,
-                "geckolib_version": geckolib_version,
-                "minecraft_version": minecraft_version,
-                "fabric_version": fabric_version,
-                "mod_id": mod_id
+        expand "version": project.version
     }
 }
 
@@ -94,11 +88,14 @@ tasks.withType(JavaCompile).configureEach {
 
 java {
     withSourcesJar()
+
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 jar {
     from("LICENSE") {
-        rename { "${it}_${project.archivesBaseName}" }
+        rename { "${it}_${project.base.archivesName.get()}" }
     }
 }
 
@@ -129,7 +126,7 @@ tasks.register('publishAll') {
 }
 
 def modChangelog = "${mod_version}: The \"Iacon and Unicron Update\" Version:\n" + "\n" +
-        "Added EMI compact, added Iacon, added config" + "\n" + "\n" +
+        "Added EMI compact, added Iacon, added config, made the armors transform" + "\n" + "\n" +
         "Please report any bugs [here](https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod/issues)"
 
 modrinth {

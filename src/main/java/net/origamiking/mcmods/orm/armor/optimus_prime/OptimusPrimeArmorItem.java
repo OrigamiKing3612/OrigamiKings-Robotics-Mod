@@ -6,6 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.optimus_prime.renderer.OptimusPrimeArmorRenderer;
+import net.origamiking.mcmods.orm.armor.optimus_prime.renderer.OptimusPrimeCarArmorRenderer;
 import net.origamiking.mcmods.orm.utils.TransformerArmorItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
@@ -26,8 +27,15 @@ public final class OptimusPrimeArmorItem extends TransformerArmorItem implements
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
-                if (this.renderer == null)
-                    this.renderer = new OptimusPrimeArmorRenderer();
+                if (useTransformedRenderer) {
+                    if (renderer == null || !(renderer instanceof OptimusPrimeCarArmorRenderer)) {
+                        renderer = new OptimusPrimeCarArmorRenderer();
+                    }
+                } else {
+                    if (renderer == null || !(renderer instanceof OptimusPrimeArmorRenderer)) {
+                        renderer = new OptimusPrimeArmorRenderer();
+                    }
+                }
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
 
@@ -35,29 +43,27 @@ public final class OptimusPrimeArmorItem extends TransformerArmorItem implements
             }
         });
     }
-//    @Override
-//    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-//        controllers.add(new AnimationController<>(this, 20, state -> {
-//            state.getController().setAnimation(DefaultAnimations.IDLE);
-//
-//            Entity entity = state.getData(DataTickets.ENTITY);
-//
-//            Set<Item> wornArmor = new ObjectOpenHashSet<>();
-//
-//            for (ItemStack stack : entity.getArmorItems()) {
-//                if (stack.isEmpty())
-//                    return PlayState.STOP;
-//
-//                wornArmor.add(stack.getItem());
-//            }
-//
-//            boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-//                    OptimusPrime.HELMET,
-//                    OptimusPrime.CHESTPLATE,
-//                    OptimusPrime.LEGGINGS,
-//                    OptimusPrime.BOOTS));
-//
-//            return PlayState.STOP;
-//        }));
-//    }
+
+    @Override
+    public String armorName() {
+        return "Optimus Prime";
+    }
+
+    @Override
+    public String armorId() {
+        return "optimus_prime";
+    }
+
+    public static String armorItemName() {
+        return "Optimus Prime";
+    }
+
+    public static String armorItemId() {
+        return "optimus_prime";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return true;
+    }
 }

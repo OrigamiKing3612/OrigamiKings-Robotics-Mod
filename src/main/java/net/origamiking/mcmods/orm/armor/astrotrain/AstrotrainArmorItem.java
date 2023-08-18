@@ -34,29 +34,23 @@ public final class AstrotrainArmorItem extends TransformerArmorItem implements G
             }
         });
     }
+    @Override
+    public String armorName() {
+        return "Astrotrain";
+    }
+    @Override
+    public String armorId() {
+        return "astrotrain";
+    }
+    public static String armorItemName() {
+        return "Astrotrain";
+    }
 
-//    @Override
-//    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-//        controllers.add(new AnimationController<>(this, 20, state -> {
-//            state.getController().setAnimation(DefaultAnimations.IDLE);
-//
-//            Entity entity = state.getData(DataTickets.ENTITY);
-//            Set<Item> wornArmor = new ObjectOpenHashSet<>();
-//
-//            for (ItemStack stack : entity.getArmorItems()) {
-//                if (stack.isEmpty())
-//                    return PlayState.STOP;
-//
-//                wornArmor.add(stack.getItem());
-//            }
-//
-//            boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-//                    Astrotrain.HELMET,
-//                    Astrotrain.CHESTPLATE,
-//                    Astrotrain.LEGGINGS,
-//                    Astrotrain.BOOTS));
-//
-//            return PlayState.STOP;
-//        }));
-//    }
+    public static String armorItemId() {
+        return "astrotrain";
+    }
+    @Override
+    public boolean isAutobot() {
+        return false;
+    }
 }

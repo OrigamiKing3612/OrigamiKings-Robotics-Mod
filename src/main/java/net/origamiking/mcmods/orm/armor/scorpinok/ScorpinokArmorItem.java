@@ -6,6 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.scorpinok.renderer.ScorpinokArmorRenderer;
+import net.origamiking.mcmods.orm.armor.scorpinok.renderer.ScorpinokCarArmorRenderer;
 import net.origamiking.mcmods.orm.utils.TransformerArmorItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
@@ -19,7 +20,6 @@ public final class ScorpinokArmorItem extends TransformerArmorItem implements Ge
         super(armorMaterial, slot, properties);
     }
 
-    // Create our armor model/renderer for Fabric and return it
     @Override
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
@@ -27,8 +27,15 @@ public final class ScorpinokArmorItem extends TransformerArmorItem implements Ge
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
-                if (this.renderer == null)
-                    this.renderer = new ScorpinokArmorRenderer();
+                if (useTransformedRenderer) {
+                    if (renderer == null || !(renderer instanceof ScorpinokCarArmorRenderer)) {
+                        renderer = new ScorpinokCarArmorRenderer();
+                    }
+                } else {
+                    if (renderer == null || !(renderer instanceof ScorpinokArmorRenderer)) {
+                        renderer = new ScorpinokArmorRenderer();
+                    }
+                }
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
 
@@ -36,30 +43,27 @@ public final class ScorpinokArmorItem extends TransformerArmorItem implements Ge
             }
         });
     }
-//    @Override
-//    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-//        controllers.add(new AnimationController<>(this, 20, state -> {
-//
-//            state.getController().setAnimation(DefaultAnimations.IDLE);
-//
-//            Entity entity = state.getData(DataTickets.ENTITY);
-//
-//            Set<Item> wornArmor = new ObjectOpenHashSet<>();
-//
-//            for (ItemStack stack : entity.getArmorItems()) {
-//                if (stack.isEmpty())
-//                    return PlayState.STOP;
-//
-//                wornArmor.add(stack.getItem());
-//            }
-//
-//            boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-//                    Scorpinok.HELMET,
-//                    Scorpinok.CHESTPLATE,
-//                    Scorpinok.LEGGINGS,
-//                    Scorpinok.BOOTS));
-//
-//            return PlayState.STOP;
-//        }));
-//    }
+
+    @Override
+    public String armorName() {
+        return "Scorpinok";
+    }
+
+    @Override
+    public String armorId() {
+        return "scorpinok";
+    }
+
+    public static String armorItemName() {
+        return "Scorpinok";
+    }
+
+    public static String armorItemId() {
+        return "scorpinok";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return false;
+    }
 }

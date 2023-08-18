@@ -16,4 +16,5 @@ public class ConfigDefaultValues {
     protected static int defaultTransformerLeggingsProtectionValue = 8;
     protected static int defaultTransformerBootsProtectionValue = 3;
     protected static int defaultTransformerArmorEnchantability = 20;
+    protected static boolean defaultEnableTransforming = true;
 }

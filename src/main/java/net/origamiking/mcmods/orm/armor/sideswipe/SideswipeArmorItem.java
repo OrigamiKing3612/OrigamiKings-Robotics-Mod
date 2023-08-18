@@ -6,6 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.sideswipe.renderer.SideswipeArmorRenderer;
+import net.origamiking.mcmods.orm.armor.sideswipe.renderer.SideswipeCarArmorRenderer;
 import net.origamiking.mcmods.orm.utils.TransformerArmorItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
@@ -26,13 +27,44 @@ public final class SideswipeArmorItem extends TransformerArmorItem implements Ge
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
-                if (this.renderer == null)
-                    this.renderer = new SideswipeArmorRenderer();
+                if (useTransformedRenderer) {
+                    if (renderer == null || !(renderer instanceof SideswipeCarArmorRenderer)) {
+                        renderer = new SideswipeCarArmorRenderer();
+                    }
+                } else {
+                    if (renderer == null || !(renderer instanceof SideswipeArmorRenderer)) {
+                        renderer = new SideswipeArmorRenderer();
+                    }
+                }
+
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
 
                 return this.renderer;
             }
         });
+    }
+
+    @Override
+    public String armorName() {
+        return "Sideswipe";
+    }
+
+    @Override
+    public String armorId() {
+        return "sideswipe";
+    }
+
+    public static String armorItemName() {
+        return "Sideswipe";
+    }
+
+    public static String armorItemId() {
+        return "sideswipe";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return true;
     }
 }

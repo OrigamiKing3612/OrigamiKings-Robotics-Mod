@@ -35,28 +35,27 @@ public final class MegatronArmorItem extends TransformerArmorItem implements Geo
             }
         });
     }
-//    @Override
-//    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-//        controllers.add(new AnimationController<>(this, 20, state -> {
-//            state.getController().setAnimation(DefaultAnimations.IDLE);
-//
-//            Entity entity = state.getData(DataTickets.ENTITY);
-//            Set<Item> wornArmor = new ObjectOpenHashSet<>();
-//
-//            for (ItemStack stack : entity.getArmorItems()) {
-//                if (stack.isEmpty())
-//                    return PlayState.STOP;
-//
-//                wornArmor.add(stack.getItem());
-//            }
-//
-//            boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-//                    Megatron.HELMET,
-//                    Megatron.CHESTPLATE,
-//                    Megatron.LEGGINGS,
-//                    Megatron.BOOTS));
-//
-//            return PlayState.STOP;
-//        }));
-//    }
+
+    @Override
+    public String armorName() {
+        return "Megatron";
+    }
+
+    @Override
+    public String armorId() {
+        return "megatron";
+    }
+
+    public static String armorItemName() {
+        return "Megatron";
+    }
+
+    public static String armorItemId() {
+        return "megatron";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return false;
+    }
 }

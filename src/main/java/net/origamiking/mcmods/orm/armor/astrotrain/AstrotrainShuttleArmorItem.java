@@ -36,35 +36,8 @@ public final class AstrotrainShuttleArmorItem extends TransformerTransformedArmo
         });
     }
 
-//    @Override
-//    public Supplier<Object> getRenderProvider() {
-//        return this.renderProvider;
-//    }
-//
-//    @Override
-//    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-//        controllers.add(new AnimationController<>(this, 20, state -> {
-//            state.getController().setAnimation(DefaultAnimations.IDLE);
-//
-//            Entity entity = state.getData(DataTickets.ENTITY);
-//            Set<Item> wornArmor = new ObjectOpenHashSet<>();
-//
-//            for (ItemStack stack : entity.getArmorItems()) {
-//                if (stack.isEmpty())
-//                    return PlayState.STOP;
-//
-//                wornArmor.add(stack.getItem());
-//            }
-//
-//            boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-//                    Astrotrain.SHUTTLE));
-//
-//            return PlayState.STOP;
-//        }));
-//    }
-//
-//    @Override
-//    public AnimatableInstanceCache getAnimatableInstanceCache() {
-//        return this.cache;
-//    }
+    @Override
+    public boolean isAutobot() {
+        return false;
+    }
 }

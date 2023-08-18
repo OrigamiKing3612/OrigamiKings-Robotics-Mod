@@ -6,6 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.ratchet.renderer.RatchetArmorRenderer;
+import net.origamiking.mcmods.orm.armor.ratchet.renderer.RatchetCarArmorRenderer;
 import net.origamiking.mcmods.orm.utils.TransformerArmorItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
@@ -26,8 +27,15 @@ public final class RatchetArmorItem extends TransformerArmorItem implements GeoI
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
-                if (this.renderer == null)
-                    this.renderer = new RatchetArmorRenderer();
+                if (useTransformedRenderer) {
+                    if (renderer == null || !(renderer instanceof RatchetCarArmorRenderer)) {
+                        renderer = new RatchetCarArmorRenderer();
+                    }
+                } else {
+                    if (renderer == null || !(renderer instanceof RatchetArmorRenderer)) {
+                        renderer = new RatchetArmorRenderer();
+                    }
+                }
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
 
@@ -35,27 +43,27 @@ public final class RatchetArmorItem extends TransformerArmorItem implements GeoI
             }
         });
     }
-//    @Override
-//    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-//        controllers.add(new AnimationController<>(this, 20, state -> {
-//            state.getController().setAnimation(DefaultAnimations.IDLE);
-//            Entity entity = state.getData(DataTickets.ENTITY);
-//            Set<Item> wornArmor = new ObjectOpenHashSet<>();
-//
-//            for (ItemStack stack : entity.getArmorItems()) {
-//                if (stack.isEmpty())
-//                    return PlayState.STOP;
-//
-//                wornArmor.add(stack.getItem());
-//            }
-//
-//            boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-//                    Ratchet.HELMET,
-//                    Ratchet.CHESTPLATE,
-//                    Ratchet.LEGGINGS,
-//                    Ratchet.BOOTS));
-//
-//            return PlayState.STOP;
-//        }));
-//    }
+
+    @Override
+    public String armorName() {
+        return "Ratchet";
+    }
+
+    @Override
+    public String armorId() {
+        return "ratchet";
+    }
+
+    public static String armorItemName() {
+        return "Ratchet";
+    }
+
+    public static String armorItemId() {
+        return "ratchet";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return true;
+    }
 }

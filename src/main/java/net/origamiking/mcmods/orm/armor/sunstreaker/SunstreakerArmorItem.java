@@ -6,6 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.sunstreaker.renderer.SunstreakerArmorRenderer;
+import net.origamiking.mcmods.orm.armor.sunstreaker.renderer.SunstreakerCarArmorRenderer;
 import net.origamiking.mcmods.orm.utils.TransformerArmorItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
@@ -26,8 +27,15 @@ public final class SunstreakerArmorItem extends TransformerArmorItem implements 
 
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
-                if (this.renderer == null)
-                    this.renderer = new SunstreakerArmorRenderer();
+                if (useTransformedRenderer) {
+                    if (renderer == null || !(renderer instanceof SunstreakerCarArmorRenderer)) {
+                        renderer = new SunstreakerCarArmorRenderer();
+                    }
+                } else {
+                    if (renderer == null || !(renderer instanceof SunstreakerArmorRenderer)) {
+                        renderer = new SunstreakerArmorRenderer();
+                    }
+                }
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
 
@@ -35,28 +43,27 @@ public final class SunstreakerArmorItem extends TransformerArmorItem implements 
             }
         });
     }
-//    @Override
-//    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-//        controllers.add(new AnimationController<>(this, 20, state -> {
-//            state.getController().setAnimation(DefaultAnimations.IDLE);
-//            Entity entity = state.getData(DataTickets.ENTITY);
-//
-//            Set<Item> wornArmor = new ObjectOpenHashSet<>();
-//
-//            for (ItemStack stack : entity.getArmorItems()) {
-//                if (stack.isEmpty())
-//                    return PlayState.STOP;
-//
-//                wornArmor.add(stack.getItem());
-//            }
-//
-//            boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-//                    Sunstreaker.HELMET,
-//                    Sunstreaker.CHESTPLATE,
-//                    Sunstreaker.LEGGINGS,
-//                    Sunstreaker.BOOTS));
-//
-//            return PlayState.STOP;
-//        }));
-//    }
+
+    @Override
+    public String armorName() {
+        return "Sunstreaker";
+    }
+
+    @Override
+    public String armorId() {
+        return "sunstreaker";
+    }
+
+    public static String armorItemName() {
+        return "Sunstreaker";
+    }
+
+    public static String armorItemId() {
+        return "sunstreaker";
+    }
+
+    @Override
+    public boolean isAutobot() {
+        return true;
+    }
 }

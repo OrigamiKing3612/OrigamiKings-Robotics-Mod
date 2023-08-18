@@ -11,6 +11,7 @@ import net.origamiking.mcmods.orm.entity.ModEntities;
 import net.origamiking.mcmods.orm.fluid.ModFluids;
 import net.origamiking.mcmods.orm.group.ModGroups;
 import net.origamiking.mcmods.orm.items.ModItems;
+import net.origamiking.mcmods.orm.networking.ModMessages;
 import net.origamiking.mcmods.orm.recipe.ModRecipeType;
 import net.origamiking.mcmods.orm.screen.ModScreenHandlers;
 import net.origamiking.mcmods.orm.stats.ModStats;
@@ -25,7 +26,7 @@ public class OrmMain implements ModInitializer {
     public static final int CONFIG_VERSION = 1;
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     public static OrmConfigHandler ORM_CONFIG;
-    //TODO cybertron characters (look in BumblebeeCarArmorItem line: 50) Update 1.3.0
+
 
     @Override
     public void onInitialize() {
@@ -45,6 +46,10 @@ public class OrmMain implements ModInitializer {
         ModTags.register();
         ModStats.register();
         ModFluids.register();
+        ModMessages.registerC2SPackets();
+
+
+//        ServerTickEvents.START_SERVER_TICK.register(new PlayerTickHandler());
     }
 
     public static OrmConfigHandler getOrmConfig() {
