@@ -19,6 +19,7 @@ import net.origamiking.mcmods.orm.screen.ModScreenHandlers;
 import net.origamiking.mcmods.orm.screen.chip_refinery.ChipRefineryScreen;
 import net.origamiking.mcmods.orm.screen.compacter.CompacterBlockScreen;
 import net.origamiking.mcmods.orm.screen.refinery.RefineryBlockScreen;
+import net.origamiking.mcmods.orm.utils.TransformerArmorItem;
 
 import static net.origamiking.mcmods.oapi.client.ClientUtils.*;
 
@@ -48,5 +49,22 @@ public class OrmClient implements ClientModInitializer {
         fluidTextureRegistry(ModFluids.STILL_RAW_ENERGON, ModFluids.FLOWING_RAW_ENERGON, 0x37bbef);
         fluidTextureRegistry(ModFluids.STILL_RAW_DARK_ENERGON, ModFluids.FLOWING_RAW_DARK_ENERGON, 0x8c14d4);
         fluidTextureRegistry(ModFluids.STILL_OIL, ModFluids.FLOWING_OIL, 0x2e2301);
+
+        ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            if (client.player != null) {
+                boolean hasCompleteSet = ArmorUtils.isArmorSetOfType(client.player, TransformerArmorItem.class);
+
+                if (ModKeybindings.TRANSFORM_KEYBIND.wasPressed() && hasCompleteSet) {
+                    if (!MinecraftClient.getInstance().world.isClient) {
+                        TransformerArmorItem.transform();
+                    }
+                    ClientPlayNetworking.send(ModMessages.TRANSFORM_PACKET_ID, PacketByteBufs.create());
+                }
+
+                if (!hasCompleteSet) {
+                    TransformerArmorItem.useTransformedRenderer = false;
+                }
+            }
+        });
     }
 }

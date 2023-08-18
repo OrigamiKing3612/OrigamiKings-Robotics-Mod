@@ -19,5 +19,4 @@ public class ConfigDefaultValues {
     protected static boolean defaultEnableTransforming = true;
     protected static boolean defaultEnergyCells = false;
     public static float defaultChanceToRemoveEnergyCell = 0.000005f;
-
 }
