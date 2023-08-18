@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "E": {
+      "item": "orm:energon"
+    },
+    "R": {
+      "item": "orm:raw_energon_bucket"
+    },
+    "T": {
+      "item": "orm:transformium"
+    }
+  },
+  "pattern": [
+    "TET",
+    "ERE",
+    "TET"
+  ],
+  "result": {
+    "item": "orm:energy_cell"
+  },
+  "show_notification": true
+}

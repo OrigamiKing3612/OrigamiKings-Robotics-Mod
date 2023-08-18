@@ -76,6 +76,16 @@ public class OrmConfigScreen {
                 .setSaveConsumer(newValue -> getOrmConfig().enableTransforming = newValue)
                 .build());
 
+        general.addEntry(entryBuilder.startBooleanToggle(Text.translatable("option." + OrmMain.MOD_ID + ".disableEnergyCells"), getOrmConfig().disableEnergyCells)
+                .setDefaultValue(ConfigDefaultValues.defaultEnergyCells)
+                .setSaveConsumer(newValue -> getOrmConfig().disableEnergyCells = newValue)
+                .build());
+
+        general.addEntry(entryBuilder.startFloatField(Text.translatable("option." + OrmMain.MOD_ID + ".chanceToRemoveEnergyCell"), getOrmConfig().chanceToRemoveEnergyCell)
+                .setDefaultValue(ConfigDefaultValues.defaultChanceToRemoveEnergyCell)
+                .setSaveConsumer(newValue -> getOrmConfig().chanceToRemoveEnergyCell = newValue)
+                .build());
+
         return builder.build();
     }
 }

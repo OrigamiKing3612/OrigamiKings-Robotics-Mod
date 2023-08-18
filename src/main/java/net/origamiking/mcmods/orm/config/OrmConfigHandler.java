@@ -18,4 +18,6 @@ public class OrmConfigHandler {
     public int transformerBootsProtectionValue = defaultTransformerBootsProtectionValue;
     public int transformerArmorEnchantability = defaultTransformerArmorEnchantability;
     public boolean enableTransforming = defaultEnableTransforming;
+    public boolean disableEnergyCells = defaultEnergyCells;
+    public float chanceToRemoveEnergyCell = defaultChanceToRemoveEnergyCell;
 }

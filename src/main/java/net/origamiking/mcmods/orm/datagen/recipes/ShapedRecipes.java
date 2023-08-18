@@ -10,6 +10,7 @@ import net.origamiking.mcmods.oapi.recipes.OrigamiShapedRecipeJsonBuilder;
 import net.origamiking.mcmods.orm.blocks.custom.BlockRegistry;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
+import net.origamiking.mcmods.orm.fluid.ModFluids;
 import net.origamiking.mcmods.orm.items.custom.ItemRegistry;
 import net.origamiking.mcmods.orm.items.energon.EnergonItems;
 import net.origamiking.mcmods.orm.items.ore13.Ore13Items;
@@ -86,5 +87,14 @@ public class ShapedRecipes {
                 .inputWithCriterion('G', Blocks.GLASS)
                 .inputWithCriterion('E', EnergonItems.ENERGON)
                 .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(BlockRegistry.FORCE_FIELD_BLOCK)));
+        //energy cell
+        OrigamiShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ItemRegistry.ENERGY_CELL, 1)
+                .pattern("TET")
+                .pattern("ERE")
+                .pattern("TET")
+                .inputWithCriterion('R', ModFluids.RAW_ENERGON_BUCKET)
+                .inputWithCriterion('E', EnergonItems.ENERGON)
+                .inputWithCriterion('T', TransformiumItems.TRANSFORMIUM)
+                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(ItemRegistry.ENERGY_CELL)));
     }
 }

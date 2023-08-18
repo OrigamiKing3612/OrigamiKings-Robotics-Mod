@@ -15,7 +15,7 @@ public class TransformerArmorMaterial implements ArmorMaterial {
 
     @Override
     public int getDurability(ArmorItem.Type type) {
-        return BASE_DURABILITY[type.ordinal()] * 35;
+        return BASE_DURABILITY[type.ordinal()] * 50;
     }
 
     @Override
@@ -50,6 +50,6 @@ public class TransformerArmorMaterial implements ArmorMaterial {
 
     @Override
     public float getKnockbackResistance() {
-        return 0.0F;
+        return 0.2F;
     }
 }

@@ -12,6 +12,7 @@ import net.origamiking.mcmods.orm.blocks.polished_transformium.PolishedTransform
 import net.origamiking.mcmods.orm.blocks.transformium.TransformiumBlocks;
 import net.origamiking.mcmods.orm.blocks.transformium_alloy.TransformiumAlloyBlocks;
 import net.origamiking.mcmods.orm.fluid.ModFluids;
+import net.origamiking.mcmods.orm.items.custom.ItemRegistry;
 import net.origamiking.mcmods.orm.items.energon.EnergonItems;
 import net.origamiking.mcmods.orm.items.ore13.Ore13Items;
 import net.origamiking.mcmods.orm.items.transformium.TransformiumItems;
@@ -80,5 +81,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModFluids.OIL_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ModFluids.RAW_ENERGON_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ModFluids.RAW_DARK_ENERGON_BUCKET, Models.GENERATED);
+        itemModelGenerator.register(ItemRegistry.ENERGY_CELL, Models.GENERATED);
     }
 }

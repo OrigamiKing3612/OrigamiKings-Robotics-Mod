@@ -82,6 +82,10 @@ processResources {
     }
 }
 
+loom {
+    accessWidenerPath = file("src/main/resources/orm.accesswidener")
+}
+
 tasks.withType(JavaCompile).configureEach {
     it.options.release = 17
 }
