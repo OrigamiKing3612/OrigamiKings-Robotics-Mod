@@ -55,7 +55,7 @@ dependencies {
     // modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
 
     modImplementation "net.origamiking:Origamikings-API:${origamikings_api}"
-    modImplementation "software.bernie.geckolib:geckolib-fabric-1.20:${geckolib_version}"
+    modImplementation "software.bernie.geckolib:geckolib-fabric-1.20.1:${geckolib_version}"
 
     modApi("me.shedaniel.cloth:cloth-config-fabric:${cloth_config_verison}") {
         exclude group: "net.fabricmc.fabric-api"
@@ -130,7 +130,7 @@ tasks.register('publishAll') {
 }
 
 def modChangelog = "${mod_version}: The \"Iacon and Unicron Update\" Version:\n" + "\n" +
-        "Added EMI compact, added Iacon, added config, made the armors transform" + "\n" + "\n" +
+        "Added EMI compact, added Iacon, added config, made the armors transform, added energy cell system" + "\n" + "\n" +
         "Please report any bugs [here](https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod/issues)"
 
 modrinth {
