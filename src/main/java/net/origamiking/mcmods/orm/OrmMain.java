@@ -2,6 +2,7 @@ package net.origamiking.mcmods.orm;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.origamiking.mcmods.orm.addon.OrmAddon;
 import net.origamiking.mcmods.orm.armor.ModArmor;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
 import net.origamiking.mcmods.orm.blocks.ModBlocks;
@@ -49,6 +50,8 @@ public class OrmMain implements ModInitializer {
         ModStats.register();
         ModFluids.register();
         ModMessages.registerC2SPackets();
+
+        OrmAddon.loadAddons();
 
         ServerTickEvents.START_SERVER_TICK.register(new ServerPlayerTickHandler());
     }
