@@ -4,6 +4,7 @@ import net.origamiking.mcmods.orm.armor.astrotrain.Astrotrain;
 import net.origamiking.mcmods.orm.armor.bumblebee.Bumblebee;
 import net.origamiking.mcmods.orm.armor.galvatron.Galvatron;
 import net.origamiking.mcmods.orm.armor.ironhide.Ironhide;
+import net.origamiking.mcmods.orm.armor.kickback.Kickback;
 import net.origamiking.mcmods.orm.armor.megatron.Megatron;
 import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrime;
 import net.origamiking.mcmods.orm.armor.ratchet.Ratchet;
@@ -37,6 +38,7 @@ public class ModArmor {
         Ratchet.get();
         Sideswipe.get();
         Sunstreaker.get();
+        Kickback.get();
 
         SetEffects.setEffects();
     }

@@ -6,6 +6,7 @@ import net.origamiking.mcmods.orm.armor.astrotrain.Astrotrain;
 import net.origamiking.mcmods.orm.armor.bumblebee.Bumblebee;
 import net.origamiking.mcmods.orm.armor.galvatron.Galvatron;
 import net.origamiking.mcmods.orm.armor.ironhide.Ironhide;
+import net.origamiking.mcmods.orm.armor.kickback.Kickback;
 import net.origamiking.mcmods.orm.armor.megatron.Megatron;
 import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrime;
 import net.origamiking.mcmods.orm.armor.ratchet.Ratchet;
@@ -23,6 +24,7 @@ import net.origamiking.mcmods.orm.items.chips.astrotrain.AstrotrainChip;
 import net.origamiking.mcmods.orm.items.chips.bumblebee.BumblebeeChip;
 import net.origamiking.mcmods.orm.items.chips.galvatron.GalvatronChip;
 import net.origamiking.mcmods.orm.items.chips.ironhide.IronhideChip;
+import net.origamiking.mcmods.orm.items.chips.kickback.KickbackChip;
 import net.origamiking.mcmods.orm.items.chips.megatron.MegatronChip;
 import net.origamiking.mcmods.orm.items.chips.optimus_prime.OptimusPrimeChip;
 import net.origamiking.mcmods.orm.items.chips.ratchet.RatchetChip;
@@ -68,6 +70,7 @@ public class ArmorRecipes {
         transformerRecipes(exporter, Ratchet.HELMET, Ratchet.CHESTPLATE, Ratchet.LEGGINGS, Ratchet.BOOTS, Ratchet.CAR, RatchetChip.CHIP);
         transformerRecipes(exporter, Sideswipe.HELMET, Sideswipe.CHESTPLATE, Sideswipe.LEGGINGS, Sideswipe.BOOTS, Sideswipe.CAR, SideswipeChip.CHIP);
         transformerRecipes(exporter, Sunstreaker.HELMET, Sunstreaker.CHESTPLATE, Sunstreaker.LEGGINGS, Sunstreaker.BOOTS, Sunstreaker.CAR, SunstreakerChip.CHIP);
+        transformerRecipes(exporter, Kickback.HELMET, Kickback.CHESTPLATE, Kickback.LEGGINGS, Kickback.BOOTS, Kickback.BUG, KickbackChip.CHIP);
 
     }
 }

@@ -1,0 +1,84 @@
+{
+  "parent": "orm:spark",
+  "criteria": {
+    "get_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:kickback_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:kickback_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:kickback_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:kickback_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.orm.kickback.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "orm:kickback_helmet",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.orm.kickback.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_helmet"
+    ],
+    [
+      "get_chestplate"
+    ],
+    [
+      "get_leggings"
+    ],
+    [
+      "get_boots"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

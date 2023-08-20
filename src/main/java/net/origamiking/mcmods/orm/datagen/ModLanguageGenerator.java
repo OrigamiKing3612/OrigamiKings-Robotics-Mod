@@ -5,6 +5,8 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
+import net.origamiking.mcmods.orm.armor.kickback.Kickback;
+import net.origamiking.mcmods.orm.items.chips.kickback.KickbackChip;
 
 import java.nio.file.Path;
 
@@ -16,15 +18,14 @@ public class ModLanguageGenerator extends FabricLanguageProvider {
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
         //todo update with OrigamiLanguageProvider
-//        translationBuilder.add("advancement.orm.sunstreaker.description", "Get the Sunstreaker Armor set");
-//        translationBuilder.add("advancement.orm.sunstreaker.title", "Sunstreaker");
-//        translationBuilder.add(Sunstreaker.HELMET, "Sunstreaker Helmet");
-//        translationBuilder.add(Sunstreaker.CHESTPLATE, "Sunstreaker Chestplate");
-//        translationBuilder.add(Sunstreaker.LEGGINGS, "Sunstreaker Leggings");
-//        translationBuilder.add(Sunstreaker.BOOTS, "Sunstreaker Boots");
-//        translationBuilder.add(Sunstreaker.CAR, "Sunstreaker Car");
-//        translationBuilder.add(SunstreakerChip.CHIP, "Sunstreaker Chip");
-//        translationBuilder.add(SunstreakerChip.CHIP, getName(SunstreakerChip.CHIP));
+        translationBuilder.add("advancement.orm.kickback.description", "Get the Kickback Armor set");
+        translationBuilder.add("advancement.orm.kickback.title", "Kickback");
+        translationBuilder.add(Kickback.HELMET, "Kickback Helmet");
+        translationBuilder.add(Kickback.CHESTPLATE, "Kickback Chestplate");
+        translationBuilder.add(Kickback.LEGGINGS, "Kickback Leggings");
+        translationBuilder.add(Kickback.BOOTS, "Kickback Boots");
+        translationBuilder.add(Kickback.BUG, "Kickback Car");
+        translationBuilder.add(KickbackChip.CHIP, "Kickback Chip");
 
 
         try {
