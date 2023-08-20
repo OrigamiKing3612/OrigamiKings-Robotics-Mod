@@ -29,10 +29,10 @@ public class ModCommands {
                                 context.getSource().sendMessage(Text.of("You are on " + OrmMain.VERSION + " of ORM"));
                                 return 1;
                             }));
-                    dispatcher.register(command);
+                    DownloadAddonsCommands.register(command);
 
+                    dispatcher.register(command);
                 }
         );
-        DownloadAddonsCommands.register();
     }
 }
