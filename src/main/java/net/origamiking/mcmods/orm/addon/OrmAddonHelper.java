@@ -5,7 +5,7 @@ import net.minecraft.item.Item;
 import net.origamiking.mcmods.orm.group.ModGroups;
 
 public class OrmAddonHelper {
-    protected OrmAddonHelper() {
+    OrmAddonHelper() {
     }
 
     public void addChipToGroup(Item chip) {
@@ -31,4 +31,5 @@ public class OrmAddonHelper {
             }
         });
     }
+
 }
