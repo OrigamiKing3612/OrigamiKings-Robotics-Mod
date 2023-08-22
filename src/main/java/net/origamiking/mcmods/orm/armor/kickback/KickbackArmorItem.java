@@ -3,7 +3,6 @@ package net.origamiking.mcmods.orm.armor.kickback;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.kickback.renderer.KickbackArmorRenderer;
 import net.origamiking.mcmods.orm.armor.kickback.renderer.KickbackBugArmorRenderer;
@@ -16,8 +15,8 @@ import java.util.function.Consumer;
 
 
 public final class KickbackArmorItem extends TransformerArmorItem implements GeoItem {
-    public KickbackArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
-        super(armorMaterial, slot, properties);
+    public KickbackArmorItem(Type slot) {
+        super(slot);
     }
 
     @Override
