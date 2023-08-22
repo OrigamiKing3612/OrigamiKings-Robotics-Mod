@@ -3,7 +3,6 @@ package net.origamiking.mcmods.orm.armor.bumblebee;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.bumblebee.renderer.BumblebeeCarArmorRenderer;
 import net.origamiking.mcmods.orm.utils.TransformerTransformedArmorItem;
@@ -15,8 +14,8 @@ import java.util.function.Consumer;
 
 
 public final class BumblebeeCarArmorItem extends TransformerTransformedArmorItem implements GeoItem {
-    public BumblebeeCarArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
-        super(armorMaterial, slot, properties);
+    public BumblebeeCarArmorItem(Type slot) {
+        super(slot);
     }
 
     @Override

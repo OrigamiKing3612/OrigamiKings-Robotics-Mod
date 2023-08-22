@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.origamiking.mcmods.oapi.armor.IOrigamiArmorItem;
 import net.origamiking.mcmods.oapi.armor.OrigamiArmorItem;
+import net.origamiking.mcmods.oapi.items.OrigamiItemSettings;
 import net.origamiking.mcmods.orm.OrmMain;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.constant.DataTickets;
@@ -29,8 +30,17 @@ public abstract class TransformerArmorItem extends OrigamiArmorItem implements G
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
 
-    protected TransformerArmorItem(ArmorMaterial material, ArmorItem.Type type, Settings settings) {
-        super(material, type, settings);
+    protected TransformerArmorItem(ArmorItem.Type type, Settings settings) {
+        super(ModArmorMaterials.TRANSFORMER, type, settings);
+    }
+    protected TransformerArmorItem(ArmorMaterial armorMaterial, ArmorItem.Type type, Settings settings) {
+        super(armorMaterial, type, settings);
+    }
+    protected TransformerArmorItem(ArmorItem.Type type) {
+        super(ModArmorMaterials.TRANSFORMER, type, new OrigamiItemSettings());
+    }
+    protected TransformerArmorItem(ArmorMaterial armorMaterial, ArmorItem.Type type) {
+        super(armorMaterial, type, new OrigamiItemSettings());
     }
 
     @Override

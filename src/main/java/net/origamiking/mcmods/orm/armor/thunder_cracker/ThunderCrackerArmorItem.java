@@ -3,7 +3,6 @@ package net.origamiking.mcmods.orm.armor.thunder_cracker;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.thunder_cracker.renderer.ThunderCrackerArmorRenderer;
 import net.origamiking.mcmods.orm.armor.thunder_cracker.renderer.ThunderCrackerJetArmorRenderer;
@@ -16,8 +15,8 @@ import java.util.function.Consumer;
 
 
 public final class ThunderCrackerArmorItem extends TransformerArmorItem implements GeoItem {
-    public ThunderCrackerArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
-        super(armorMaterial, slot, properties);
+    public ThunderCrackerArmorItem(Type slot) {
+        super(slot);
     }
 
     @Override

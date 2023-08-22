@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.EntityTypeTags;
+import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
 import net.origamiking.mcmods.orm.blocks.ore13.Ore13Blocks;
@@ -182,6 +183,11 @@ public class ModTagProviders {
             getOrCreateTagBuilder(ModFluidTags.RAW_DARK_ENERGON)
                     .add(ModFluids.STILL_RAW_DARK_ENERGON)
                     .add(ModFluids.FLOWING_RAW_DARK_ENERGON);
+
+            getOrCreateTagBuilder(FluidTags.WATER)
+                    .forceAddTag(ModFluidTags.OIL)
+                    .forceAddTag(ModFluidTags.RAW_ENERGON)
+                    .forceAddTag(ModFluidTags.RAW_DARK_ENERGON);
         }
     }
 }

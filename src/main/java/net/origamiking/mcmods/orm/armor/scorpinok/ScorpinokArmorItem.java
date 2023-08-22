@@ -3,7 +3,6 @@ package net.origamiking.mcmods.orm.armor.scorpinok;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.scorpinok.renderer.ScorpinokArmorRenderer;
 import net.origamiking.mcmods.orm.armor.scorpinok.renderer.ScorpinokCarArmorRenderer;
@@ -16,8 +15,8 @@ import java.util.function.Consumer;
 
 
 public final class ScorpinokArmorItem extends TransformerArmorItem implements GeoItem {
-    public ScorpinokArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
-        super(armorMaterial, slot, properties);
+    public ScorpinokArmorItem(Type slot) {
+        super(slot);
     }
 
     @Override

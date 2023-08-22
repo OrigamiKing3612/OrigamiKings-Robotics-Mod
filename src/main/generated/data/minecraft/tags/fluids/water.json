@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#orm:oil_fluid",
+    "#orm:energon_fluid",
+    "#orm:dark_energon_fluid"
+  ]
+}

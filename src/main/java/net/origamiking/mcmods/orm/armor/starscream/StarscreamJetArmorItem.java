@@ -3,7 +3,6 @@ package net.origamiking.mcmods.orm.armor.starscream;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.starscream.renderer.StarscreamJetArmorRenderer;
 import net.origamiking.mcmods.orm.utils.TransformerTransformedArmorItem;
@@ -15,8 +14,8 @@ import java.util.function.Consumer;
 
 
 public final class StarscreamJetArmorItem extends TransformerTransformedArmorItem implements GeoItem {
-    public StarscreamJetArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
-        super(armorMaterial, slot, properties);
+    public StarscreamJetArmorItem(Type slot) {
+        super(slot);
     }
 
     @Override

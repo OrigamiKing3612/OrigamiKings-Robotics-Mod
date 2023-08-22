@@ -3,7 +3,6 @@ package net.origamiking.mcmods.orm.armor.ratchet;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.ratchet.renderer.RatchetArmorRenderer;
 import net.origamiking.mcmods.orm.armor.ratchet.renderer.RatchetCarArmorRenderer;
@@ -16,8 +15,8 @@ import java.util.function.Consumer;
 
 
 public final class RatchetArmorItem extends TransformerArmorItem implements GeoItem {
-    public RatchetArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
-        super(armorMaterial, slot, properties);
+    public RatchetArmorItem(Type slot) {
+        super(slot);
     }
 
     @Override

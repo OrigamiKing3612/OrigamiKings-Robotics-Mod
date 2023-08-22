@@ -4,8 +4,9 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
+import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import net.minecraft.server.command.CommandManager;
+import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.Text;
 import net.origamiking.mcmods.orm.OrmMain;
 import org.jetbrains.annotations.NotNull;
@@ -18,7 +19,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class DownloadAddonsCommands {
-    public static void register() {
+    public static void register(LiteralArgumentBuilder<ServerCommandSource> command) {
         try {
             JsonObject jsonObject = getJsonObject();
 
@@ -29,7 +30,7 @@ public class DownloadAddonsCommands {
                 String addonName = addonArray.get(0).getAsString();
                 String addonUrl = addonArray.get(1).getAsString();
                 String addonModName = addonArray.get(2).getAsString();
-                downloadAddonCommand(addonKey, addonName, addonUrl, addonModName);
+                downloadAddonCommand(command, addonKey, addonName, addonUrl, addonModName);
             }
         } catch (IOException e) {
             OrmMain.LOGGER.error(String.valueOf(e));
@@ -54,20 +55,19 @@ public class DownloadAddonsCommands {
         return gson.fromJson(jsonData, JsonObject.class);
     }
 
-    public static void downloadAddonCommand(String addonKey, String addonName, String url, String modName) {
-        CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) ->
-                dispatcher.register(CommandManager.literal("orm-download-addon-" + addonKey)
-                        .requires(source -> source.hasPermissionLevel(2))
-                        .executes((context) -> {
-                            if (OrmMain.getOrmConfig().enableDownloadAddonsCommands) {
-                                (context.getSource()).sendMessage(Text.of("Downloading " + addonName + " addon..."));
-                                DownloadAddon.downloadAddon(context.getSource(), url, modName);
-                                (context.getSource()).sendMessage(Text.translatable("orm.download_addon.successful"));
-                            } else {
-                                (context.getSource()).sendMessage(Text.translatable("orm.download_addon.not_enabled"));
-                            }
-                            return 1;
-                        }))
+    public static void downloadAddonCommand(LiteralArgumentBuilder<ServerCommandSource> command, String addonKey, String addonName, String url, String modName) {
+                command.then(CommandManager.literal("download-addon-" + addonKey)
+                .requires(source -> source.hasPermissionLevel(2))
+                .executes((context) -> {
+                    if (OrmMain.getOrmConfig().enableDownloadAddonsCommands) {
+                        (context.getSource()).sendMessage(Text.of("Downloading " + addonName + " addon..."));
+                        DownloadAddon.downloadAddon(context.getSource(), url, modName);
+                        (context.getSource()).sendMessage(Text.translatable("orm.download_addon.successful"));
+                    } else {
+                        (context.getSource()).sendMessage(Text.translatable("orm.download_addon.not_enabled"));
+                    }
+                    return 1;
+                })
         );
     }
 }

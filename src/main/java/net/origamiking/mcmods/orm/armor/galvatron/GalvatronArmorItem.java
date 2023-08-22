@@ -3,7 +3,6 @@ package net.origamiking.mcmods.orm.armor.galvatron;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.galvatron.renderer.GalvatronArmorRenderer;
 import net.origamiking.mcmods.orm.armor.galvatron.renderer.GalvatronGunArmorRenderer;
@@ -17,8 +16,8 @@ import java.util.function.Consumer;
 
 public final class GalvatronArmorItem extends TransformerArmorItem implements GeoItem {
 
-    public GalvatronArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
-        super(armorMaterial, slot, properties);
+    public GalvatronArmorItem(Type slot) {
+        super(slot);
     }
 
     @Override

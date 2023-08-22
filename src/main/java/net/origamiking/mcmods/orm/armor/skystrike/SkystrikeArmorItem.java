@@ -3,7 +3,6 @@ package net.origamiking.mcmods.orm.armor.skystrike;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.skystrike.renderer.SkystrikeArmorRenderer;
 import net.origamiking.mcmods.orm.armor.skystrike.renderer.SkystrikeCarArmorRenderer;
@@ -16,8 +15,8 @@ import java.util.function.Consumer;
 
 
 public final class SkystrikeArmorItem extends TransformerArmorItem implements GeoItem {
-    public SkystrikeArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
-        super(armorMaterial, slot, properties);
+    public SkystrikeArmorItem(Type slot) {
+        super(slot);
     }
 
     @Override

@@ -3,7 +3,6 @@ package net.origamiking.mcmods.orm.armor.optimus_prime;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.optimus_prime.renderer.OptimusPrimeCarArmorRenderer;
 import net.origamiking.mcmods.orm.utils.TransformerTransformedArmorItem;
@@ -15,8 +14,8 @@ import java.util.function.Consumer;
 
 
 public final class OptimusPrimeCarArmorItem extends TransformerTransformedArmorItem implements GeoItem {
-    public OptimusPrimeCarArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
-        super(armorMaterial, slot, properties);
+    public OptimusPrimeCarArmorItem(Type slot) {
+        super(slot);
     }
 
     @Override

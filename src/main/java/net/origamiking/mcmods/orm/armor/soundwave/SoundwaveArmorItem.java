@@ -3,7 +3,6 @@ package net.origamiking.mcmods.orm.armor.soundwave;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.soundwave.renderer.SoundwaveArmorRenderer;
 import net.origamiking.mcmods.orm.armor.soundwave.renderer.SoundwaveRecorderArmorRenderer;
@@ -16,8 +15,8 @@ import java.util.function.Consumer;
 
 
 public final class SoundwaveArmorItem extends TransformerArmorItem implements GeoItem {
-    public SoundwaveArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
-        super(armorMaterial, slot, properties);
+    public SoundwaveArmorItem(Type slot) {
+        super(slot);
     }
 
     @Override

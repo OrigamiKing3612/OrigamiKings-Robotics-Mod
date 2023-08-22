@@ -26,49 +26,34 @@ public class OrmConfigScreen {
                 .setSaveConsumer(newValue -> getOrmConfig().enableDownloadAddonsCommands = newValue)
                 .build());
 
-        general.addEntry(entryBuilder.startIntField(Text.translatable("option." + OrmMain.MOD_ID + ".transformerHelmetBaseDurability"), getOrmConfig().transformerHelmetBaseDurability)
-                .setDefaultValue(ConfigDefaultValues.defaultTransformerHelmetBaseDurability)
-                .setSaveConsumer(newValue -> getOrmConfig().transformerHelmetBaseDurability = newValue)
+        general.addEntry(entryBuilder.startIntField(Text.translatable("option." + OrmMain.MOD_ID + ".transformerDurabilityMultiplier"), getOrmConfig().transformerArmorConfig.transformerDurabilityMultiplier)
+                .setDefaultValue(ConfigDefaultValues.defaultTransformerDurabilityMultiplier)
+                .setSaveConsumer(newValue -> getOrmConfig().transformerArmorConfig.transformerDurabilityMultiplier = newValue)
                 .build());
 
-        general.addEntry(entryBuilder.startIntField(Text.translatable("option." + OrmMain.MOD_ID + ".transformerChestplateBaseDurability"), getOrmConfig().transformerChestplateBaseDurability)
-                .setDefaultValue(ConfigDefaultValues.defaultTransformerChestplateBaseDurability)
-                .setSaveConsumer(newValue -> getOrmConfig().transformerChestplateBaseDurability = newValue)
-                .build());
-
-        general.addEntry(entryBuilder.startIntField(Text.translatable("option." + OrmMain.MOD_ID + ".transformerLeggingsBaseDurability"), getOrmConfig().transformerLeggingsBaseDurability)
-                .setDefaultValue(ConfigDefaultValues.defaultTransformerLeggingsBaseDurability)
-                .setSaveConsumer(newValue -> getOrmConfig().transformerLeggingsBaseDurability = newValue)
-                .build());
-
-        general.addEntry(entryBuilder.startIntField(Text.translatable("option." + OrmMain.MOD_ID + ".transformerBootsBaseDurability"), getOrmConfig().transformerBootsBaseDurability)
-                .setDefaultValue(ConfigDefaultValues.defaultTransformerBootsBaseDurability)
-                .setSaveConsumer(newValue -> getOrmConfig().transformerBootsBaseDurability = newValue)
-                .build());
-
-        general.addEntry(entryBuilder.startIntField(Text.translatable("option." + OrmMain.MOD_ID + ".transformerHelmetProtectionValue"), getOrmConfig().transformerHelmetProtectionValue)
+        general.addEntry(entryBuilder.startIntField(Text.translatable("option." + OrmMain.MOD_ID + ".transformerHelmetProtectionValue"), getOrmConfig().transformerArmorConfig.transformerHelmetProtectionValue)
                 .setDefaultValue(ConfigDefaultValues.defaultTransformerHelmetProtectionValue)
-                .setSaveConsumer(newValue -> getOrmConfig().transformerHelmetProtectionValue = newValue)
+                .setSaveConsumer(newValue -> getOrmConfig().transformerArmorConfig.transformerHelmetProtectionValue = newValue)
                 .build());
 
-        general.addEntry(entryBuilder.startIntField(Text.translatable("option." + OrmMain.MOD_ID + ".transformerChestplateProtectionValue"), getOrmConfig().transformerChestplateProtectionValue)
+        general.addEntry(entryBuilder.startIntField(Text.translatable("option." + OrmMain.MOD_ID + ".transformerChestplateProtectionValue"), getOrmConfig().transformerArmorConfig.transformerChestplateProtectionValue)
                 .setDefaultValue(ConfigDefaultValues.defaultTransformerChestplateProtectionValue)
-                .setSaveConsumer(newValue -> getOrmConfig().transformerChestplateProtectionValue = newValue)
+                .setSaveConsumer(newValue -> getOrmConfig().transformerArmorConfig.transformerChestplateProtectionValue = newValue)
                 .build());
 
-        general.addEntry(entryBuilder.startIntField(Text.translatable("option." + OrmMain.MOD_ID + ".transformerLeggingsProtectionValue"), getOrmConfig().transformerLeggingsProtectionValue)
+        general.addEntry(entryBuilder.startIntField(Text.translatable("option." + OrmMain.MOD_ID + ".transformerLeggingsProtectionValue"), getOrmConfig().transformerArmorConfig.transformerLeggingsProtectionValue)
                 .setDefaultValue(ConfigDefaultValues.defaultTransformerLeggingsProtectionValue)
-                .setSaveConsumer(newValue -> getOrmConfig().transformerLeggingsProtectionValue = newValue)
+                .setSaveConsumer(newValue -> getOrmConfig().transformerArmorConfig.transformerLeggingsProtectionValue = newValue)
                 .build());
 
-        general.addEntry(entryBuilder.startIntField(Text.translatable("option." + OrmMain.MOD_ID + ".transformerBootsProtectionValue"), getOrmConfig().transformerBootsProtectionValue)
+        general.addEntry(entryBuilder.startIntField(Text.translatable("option." + OrmMain.MOD_ID + ".transformerBootsProtectionValue"), getOrmConfig().transformerArmorConfig.transformerBootsProtectionValue)
                 .setDefaultValue(ConfigDefaultValues.defaultTransformerBootsProtectionValue)
-                .setSaveConsumer(newValue -> getOrmConfig().transformerBootsProtectionValue = newValue)
+                .setSaveConsumer(newValue -> getOrmConfig().transformerArmorConfig.transformerBootsProtectionValue = newValue)
                 .build());
 
-        general.addEntry(entryBuilder.startIntField(Text.translatable("option." + OrmMain.MOD_ID + ".transformerArmorEnchantability"), getOrmConfig().transformerArmorEnchantability)
+        general.addEntry(entryBuilder.startIntField(Text.translatable("option." + OrmMain.MOD_ID + ".transformerArmorEnchantability"), getOrmConfig().transformerArmorConfig.transformerArmorEnchantability)
                 .setDefaultValue(ConfigDefaultValues.defaultTransformerArmorEnchantability)
-                .setSaveConsumer(newValue -> getOrmConfig().transformerArmorEnchantability = newValue)
+                .setSaveConsumer(newValue -> getOrmConfig().transformerArmorConfig.transformerArmorEnchantability = newValue)
                 .build());
 
         general.addEntry(entryBuilder.startBooleanToggle(Text.translatable("option." + OrmMain.MOD_ID + ".enableTransforming"), getOrmConfig().enableTransforming)
