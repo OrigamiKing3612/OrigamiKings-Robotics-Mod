@@ -10,6 +10,7 @@ import net.minecraft.text.Text;
 import net.origamiking.mcmods.orm.OrmMain;
 import net.origamiking.mcmods.orm.commands.download_addons.DownloadAddonsCommands;
 import net.origamiking.mcmods.orm.commands.energy_cell_commands.EnergyCellCommands;
+import net.origamiking.mcmods.orm.commands.transform.TransformCommand;
 
 import static net.minecraft.server.command.CommandManager.literal;
 
@@ -18,6 +19,7 @@ public class ModCommands {
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
             LiteralArgumentBuilder<ServerCommandSource> command = LiteralArgumentBuilder.literal("orm");
             EnergyCellCommands.register(command);
+            TransformCommand.register(command);
 
             linkReturnCommand(command, "wiki", "https://wiki.origamiking.net/orm/ORM.html", "Orm Wiki (Click me!)");
             versionCommand(command, OrmMain.VERSION, OrmMain.MOD_ID);
