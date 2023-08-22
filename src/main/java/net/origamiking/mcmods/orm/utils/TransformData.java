@@ -16,6 +16,14 @@ public class TransformData {
         syncTransform(transform, (ServerPlayerEntity) player);
         return transform;
     }
+
+    public static boolean transform(IEntityDataSaver player, boolean transformed) {
+        NbtCompound nbt = player.getPersistentData();
+        nbt.putBoolean(OrmMain.MOD_ID + ".is_transformed", transformed);
+        syncTransform(transformed, (ServerPlayerEntity) player);
+        return transformed;
+    }
+
     public static void syncTransform(boolean transform, ServerPlayerEntity player) {
         PacketByteBuf buffer = PacketByteBufs.create();
         buffer.writeBoolean(transform);
