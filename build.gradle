@@ -119,7 +119,7 @@ publishing {
 }
 
 tasks.register('publishAll') {
-    dependsOn publish, curseforge, modrinth
+    dependsOn 'publish', 'curseforge', 'modrinth'
     doLast {
         println "All publish tasks completed!"
     }
