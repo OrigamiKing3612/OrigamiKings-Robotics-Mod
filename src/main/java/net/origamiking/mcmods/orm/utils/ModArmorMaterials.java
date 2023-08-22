@@ -15,7 +15,7 @@ import java.util.EnumMap;
 import java.util.function.Supplier;
 
 import static net.origamiking.mcmods.orm.OrmMain.getOrmConfig;
-
+@SuppressWarnings({"unchecked", "deprecation"})
 public enum ModArmorMaterials implements StringIdentifiable, ArmorMaterial {
     TRANSFORMER("transformer", getOrmConfig().transformerArmorConfig.transformerDurabilityMultiplier, Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, getOrmConfig().transformerArmorConfig.transformerBootsProtectionValue);
