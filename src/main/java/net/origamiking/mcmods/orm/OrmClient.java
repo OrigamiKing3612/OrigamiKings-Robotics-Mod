@@ -3,6 +3,7 @@ package net.origamiking.mcmods.orm;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
+import net.origamiking.mcmods.orm.addon.OrmAddon;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
 import net.origamiking.mcmods.orm.blocks.custom.BlockRegistry;
 import net.origamiking.mcmods.orm.blocks.custom.compacter.renderer.CompacterBlockRenderer;
@@ -48,5 +49,7 @@ public class OrmClient implements ClientModInitializer {
         fluidTextureRegistry(ModFluids.STILL_RAW_ENERGON, ModFluids.FLOWING_RAW_ENERGON, 0x37bbef);
         fluidTextureRegistry(ModFluids.STILL_RAW_DARK_ENERGON, ModFluids.FLOWING_RAW_DARK_ENERGON, 0x8c14d4);
         fluidTextureRegistry(ModFluids.STILL_OIL, ModFluids.FLOWING_OIL, 0x2e2301);
+
+        OrmAddon.loadClientAddons();
     }
 }

@@ -34,6 +34,10 @@
 		],
 		"modmenu": [
 			"net.origamiking.mcmods.orm.compact.modmenu.OrmModMenuCompact"
+		],
+		"orm-addon": [
+		],
+		"orm-client-addon": [
 		]
 	},
 	"mixins": [
