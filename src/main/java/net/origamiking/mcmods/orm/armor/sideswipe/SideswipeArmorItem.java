@@ -3,7 +3,6 @@ package net.origamiking.mcmods.orm.armor.sideswipe;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.sideswipe.renderer.SideswipeArmorRenderer;
 import net.origamiking.mcmods.orm.armor.sideswipe.renderer.SideswipeCarArmorRenderer;
@@ -16,8 +15,8 @@ import java.util.function.Consumer;
 
 
 public final class SideswipeArmorItem extends TransformerArmorItem implements GeoItem {
-    public SideswipeArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
-        super(armorMaterial, slot, properties);
+    public SideswipeArmorItem(Type slot) {
+        super(slot);
     }
 
     @Override

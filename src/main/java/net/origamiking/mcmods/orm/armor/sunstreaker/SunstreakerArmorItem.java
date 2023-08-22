@@ -3,7 +3,6 @@ package net.origamiking.mcmods.orm.armor.sunstreaker;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.sunstreaker.renderer.SunstreakerArmorRenderer;
 import net.origamiking.mcmods.orm.armor.sunstreaker.renderer.SunstreakerCarArmorRenderer;
@@ -16,8 +15,8 @@ import java.util.function.Consumer;
 
 
 public final class SunstreakerArmorItem extends TransformerArmorItem implements GeoItem {
-    public SunstreakerArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
-        super(armorMaterial, slot, properties);
+    public SunstreakerArmorItem(Type slot) {
+        super(slot);
     }
 
     @Override

@@ -3,7 +3,6 @@ package net.origamiking.mcmods.orm.armor.skywarp;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.skywarp.renderer.SkywarpArmorRenderer;
 import net.origamiking.mcmods.orm.armor.skywarp.renderer.SkywarpJetArmorRenderer;
@@ -16,8 +15,8 @@ import java.util.function.Consumer;
 
 
 public final class SkywarpArmorItem extends TransformerArmorItem implements GeoItem {
-    public SkywarpArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
-        super(armorMaterial, slot, properties);
+    public SkywarpArmorItem(Type slot) {
+        super(slot);
     }
 
     @Override

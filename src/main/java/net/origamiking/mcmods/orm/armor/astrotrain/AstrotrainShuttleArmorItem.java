@@ -3,7 +3,6 @@ package net.origamiking.mcmods.orm.armor.astrotrain;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.astrotrain.renderer.AstrotrainShuttleArmorRenderer;
 import net.origamiking.mcmods.orm.utils.TransformerTransformedArmorItem;
@@ -15,8 +14,8 @@ import java.util.function.Consumer;
 
 
 public final class AstrotrainShuttleArmorItem extends TransformerTransformedArmorItem implements GeoItem {
-    public AstrotrainShuttleArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
-        super(armorMaterial, slot, properties);
+    public AstrotrainShuttleArmorItem(Type slot) {
+        super(slot);
     }
 
     @Override

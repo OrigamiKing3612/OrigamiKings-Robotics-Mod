@@ -3,7 +3,6 @@ package net.origamiking.mcmods.orm.armor.rodimus_prime;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.origamiking.mcmods.orm.armor.rodimus_prime.renderer.RodimusPrimeArmorRenderer;
 import net.origamiking.mcmods.orm.armor.rodimus_prime.renderer.RodimusPrimeCarArmorRenderer;
@@ -16,8 +15,8 @@ import java.util.function.Consumer;
 
 
 public final class RodimusPrimeArmorItem extends TransformerArmorItem implements GeoItem {
-    public RodimusPrimeArmorItem(ArmorMaterial armorMaterial, Type slot, Settings properties) {
-        super(armorMaterial, slot, properties);
+    public RodimusPrimeArmorItem(Type slot) {
+        super(slot);
     }
 
     @Override
