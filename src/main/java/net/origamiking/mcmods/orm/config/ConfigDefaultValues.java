@@ -15,5 +15,5 @@ public class ConfigDefaultValues {
     protected static int defaultTransformerArmorEnchantability = 20;
     protected static boolean defaultEnableTransforming = true;
     protected static boolean defaultEnergyCells = false;
-    public static float defaultChanceToRemoveEnergyCell = 0.000005f;
+    public static float defaultChanceToRemoveEnergyCell = 0.0005f;
 }

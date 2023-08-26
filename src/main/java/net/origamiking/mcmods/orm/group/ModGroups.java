@@ -61,8 +61,8 @@ import net.origamiking.mcmods.orm.items.transformium_alloy.TransformiumAlloyItem
 import static net.origamiking.mcmods.oapi.groups.ItemGroupUtils.itemGroup;
 
 public class ModGroups {
-    public static final RegistryKey<ItemGroup> ORM_GROUP = itemGroup(OrmMain.MOD_ID, "orm_group");
-    public static final RegistryKey<ItemGroup> ORM_STUFF = itemGroup(OrmMain.MOD_ID, "orm_stuff");
+    private static final RegistryKey<ItemGroup> ORM_GROUP = itemGroup(OrmMain.MOD_ID, "orm_group");
+    private static final RegistryKey<ItemGroup> ORM_STUFF = itemGroup(OrmMain.MOD_ID, "orm_stuff");
     public static final RegistryKey<ItemGroup> ORM_ADDONS = itemGroup(OrmMain.MOD_ID, "orm_addons");
     public static final RegistryKey<ItemGroup> ORM_CHIPS = itemGroup(OrmMain.MOD_ID, "orm_chips");
 

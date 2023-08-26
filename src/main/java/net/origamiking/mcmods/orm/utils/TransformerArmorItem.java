@@ -82,7 +82,7 @@ public abstract class TransformerArmorItem extends OrigamiArmorItem implements G
             useTransformedRenderer = !useTransformedRenderer;
         } else {
             OrmMain.LOGGER.info("Transforming is not enabled in config.");
-            if (client.player != null) client.player.sendMessage(Text.translatable("message." + OrmMain.MOD_ID + "transform_not_enabled"));
+            if (client.player != null) client.player.sendMessage(Text.translatable("message." + OrmMain.MOD_ID + ".transform_not_enabled"));
             useTransformedRenderer = false;
         }
     }

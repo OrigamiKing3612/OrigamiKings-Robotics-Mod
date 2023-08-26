@@ -237,7 +237,7 @@
   "message.orm.added_energy_cell": "Added Energy Cell(s)",
   "message.orm.disabled_energy_cell": "The Energy Cell System is disabled please enable it in config.",
   "message.orm.removed_energy_cell": "Removed Energy Cell(s)",
-  "message.ormtransform_not_enabled": "Transforming is not enabled in config.",
+  "message.orm.transform_not_enabled": "Transforming is not enabled in config.",
   "option.orm.chanceToRemoveEnergyCell": "Chance to Remove Energy Cell",
   "option.orm.disableEnergyCells": "Disable Energy Cell System",
   "option.orm.enableDownloadAddonsCommands": "Enable Download Addon Commands",
