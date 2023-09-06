@@ -18,7 +18,6 @@ public class ModWorldGeneration extends FabricDynamicRegistryProvider {
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.CONFIGURED_FEATURE));
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.PLACED_FEATURE));
     }
-
     @Override
     public String getName() {
         return "World Gen";

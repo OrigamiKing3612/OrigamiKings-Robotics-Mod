@@ -22,8 +22,8 @@
   },
   "requirements": [
     [
-      "has_starscream_chip",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_starscream_chip"
     ]
   ],
   "rewards": {

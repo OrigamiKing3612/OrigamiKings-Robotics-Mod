@@ -58,11 +58,11 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_ironhide_helmet",
       "has_ironhide_chestplate",
       "has_ironhide_leggings",
-      "has_ironhide_boots",
-      "has_the_recipe"
+      "has_ironhide_boots"
     ]
   ],
   "rewards": {

@@ -58,11 +58,11 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_skywarp_helmet",
       "has_skywarp_chestplate",
       "has_skywarp_leggings",
-      "has_skywarp_boots",
-      "has_the_recipe"
+      "has_skywarp_boots"
     ]
   ],
   "rewards": {

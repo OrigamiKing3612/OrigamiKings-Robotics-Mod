@@ -58,11 +58,11 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_rodimus_prime_helmet",
       "has_rodimus_prime_chestplate",
       "has_rodimus_prime_leggings",
-      "has_rodimus_prime_boots",
-      "has_the_recipe"
+      "has_rodimus_prime_boots"
     ]
   ],
   "rewards": {

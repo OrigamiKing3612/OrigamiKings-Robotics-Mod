@@ -22,8 +22,8 @@
   },
   "requirements": [
     [
-      "has_transformium_block",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_transformium_block"
     ]
   ],
   "rewards": {

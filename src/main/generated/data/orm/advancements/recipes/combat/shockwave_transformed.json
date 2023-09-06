@@ -58,11 +58,11 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_shockwave_helmet",
       "has_shockwave_chestplate",
       "has_shockwave_leggings",
-      "has_shockwave_boots",
-      "has_the_recipe"
+      "has_shockwave_boots"
     ]
   ],
   "rewards": {

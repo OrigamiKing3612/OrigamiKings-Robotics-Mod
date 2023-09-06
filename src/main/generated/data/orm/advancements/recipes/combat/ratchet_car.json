@@ -58,11 +58,11 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_ratchet_helmet",
       "has_ratchet_chestplate",
       "has_ratchet_leggings",
-      "has_ratchet_boots",
-      "has_the_recipe"
+      "has_ratchet_boots"
     ]
   ],
   "rewards": {

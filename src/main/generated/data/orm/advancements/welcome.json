@@ -1,8 +1,10 @@
 {
   "criteria": {
     "welcome": {
-      "conditions": {},
-      "trigger": "origamikings-api:welcome"
+      "conditions": {
+        "to": "minecraft:overworld"
+      },
+      "trigger": "minecraft:changed_dimension"
     }
   },
   "display": {

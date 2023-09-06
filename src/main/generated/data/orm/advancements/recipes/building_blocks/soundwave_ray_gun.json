@@ -25,6 +25,18 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_energon": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:energon"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_iron_ingot": {
       "conditions": {
         "items": [
@@ -46,10 +58,11 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_blue_concrete",
       "has_dark_energon",
-      "has_iron_ingot",
-      "has_the_recipe"
+      "has_energon",
+      "has_iron_ingot"
     ]
   ],
   "rewards": {

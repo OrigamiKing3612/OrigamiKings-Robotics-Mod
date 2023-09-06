@@ -98,6 +98,6 @@ public class RefineryBlock extends BlockWithEntity implements BlockEntityProvide
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return checkType(type, ModBlockEntities.REFINERY_BLOCK, RefineryBlockEntity::tick);
+        return validateTicker(type, ModBlockEntities.REFINERY_BLOCK, RefineryBlockEntity::tick);
     }
 }

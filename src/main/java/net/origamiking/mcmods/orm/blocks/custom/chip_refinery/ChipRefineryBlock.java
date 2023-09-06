@@ -29,7 +29,7 @@ public class ChipRefineryBlock extends Block {
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     protected static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 9.0, 16.0);
 
-    public ChipRefineryBlock(AbstractBlock.Settings settings) {
+    public ChipRefineryBlock(Settings settings) {
         super(settings);
         this.setDefaultState((BlockState) ((BlockState) this.stateManager.getDefaultState()).with(FACING, Direction.NORTH));
 

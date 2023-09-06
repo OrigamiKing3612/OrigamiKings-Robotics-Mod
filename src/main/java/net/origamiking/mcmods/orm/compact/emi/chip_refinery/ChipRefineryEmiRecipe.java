@@ -14,14 +14,15 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class ChipRefineryEmiRecipe implements EmiRecipe {
-    private final Identifier id;
+    //todo update
+//    private final Identifier id;
     private final List<EmiIngredient> input;
     private final List<EmiStack> output;
 
     public ChipRefineryEmiRecipe(ChipRefineryRecipe recipe) {
-        this.id = recipe.getId();
+//        this.id = recipe.getId();
         this.input = List.of(EmiIngredient.of(recipe.getIngredients().get(0)));
-        this.output = List.of(EmiStack.of(recipe.getOutput(null)));
+        this.output = List.of(EmiStack.of(recipe.getResult(null)));
     }
 
     @Override
@@ -31,7 +32,7 @@ public class ChipRefineryEmiRecipe implements EmiRecipe {
 
     @Override
     public @Nullable Identifier getId() {
-        return id;
+        return null;
     }
 
     @Override

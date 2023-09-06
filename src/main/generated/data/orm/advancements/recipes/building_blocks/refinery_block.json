@@ -13,18 +13,6 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_ore_13": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "orm:ore_13"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_smooth_stone": {
       "conditions": {
         "items": [
@@ -46,10 +34,9 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_smooth_stone",
-      "has_iron_ingot",
-      "has_ore_13",
-      "has_the_recipe"
+      "has_iron_ingot"
     ]
   ],
   "rewards": {

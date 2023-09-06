@@ -1,11 +1,11 @@
 package net.origamiking.mcmods.orm.datagen.advancements;
 
-import net.minecraft.advancement.Advancement;
+import net.minecraft.advancement.AdvancementEntry;
 
 import java.util.function.Consumer;
 
 public class InsecticonAdvancements {
-    public static void get(Consumer<Advancement> advancementConsumer, Advancement mainParent) {
+    public static void get(Consumer<AdvancementEntry> advancementConsumer, AdvancementEntry mainParent) {
 
     }
 }

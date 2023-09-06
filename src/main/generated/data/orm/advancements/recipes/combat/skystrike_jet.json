@@ -58,11 +58,11 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_skystrike_armor_helmet",
       "has_skystrike_armor_chestplate",
       "has_skystrike_armor_leggings",
-      "has_skystrike_armor_boots",
-      "has_the_recipe"
+      "has_skystrike_armor_boots"
     ]
   ],
   "rewards": {

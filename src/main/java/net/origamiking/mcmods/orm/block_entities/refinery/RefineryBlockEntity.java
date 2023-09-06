@@ -9,6 +9,7 @@ import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
@@ -176,14 +177,14 @@ public class RefineryBlockEntity extends BlockEntity implements NamedScreenHandl
             inventory.setStack(i, entity.getStack(i));
         }
 
-        Optional<RefineryRecipe> recipe = entity.getWorld().getRecipeManager()
+        Optional<RecipeEntry<RefineryRecipe>> recipe = entity.getWorld().getRecipeManager()
                 .getFirstMatch(RefineryRecipe.Type.INSTANCE, inventory, entity.getWorld());
 
         if (hasRecipe(entity)) {
             entity.removeStack(1, 1);
             entity.removeStack(0, 1);
 
-            entity.setStack(2, new ItemStack(recipe.get().getOutput(null).getItem(), entity.getStack(2).getCount() + 1));
+            entity.setStack(2, new ItemStack(recipe.get().value().getResult(null).getItem(), entity.getStack(2).getCount() + 1));
             entity.resetProgress();
         }
     }
@@ -194,12 +195,11 @@ public class RefineryBlockEntity extends BlockEntity implements NamedScreenHandl
             inventory.setStack(i, entity.getStack(i));
         }
 
-        Optional<RefineryRecipe> match = entity.getWorld().getRecipeManager()
-                .getFirstMatch(RefineryRecipe.Type.INSTANCE, inventory, entity.getWorld());
+        Optional<RecipeEntry<RefineryRecipe>> match = entity.getWorld().getRecipeManager().getFirstMatch(RefineryRecipe.Type.INSTANCE, inventory, entity.getWorld());
 
         boolean hasEnergonInFuelSlot = entity.getStack(0).getItem() == EnergonItems.ENERGON; // Fuel
 
-        return match.isPresent() && hasEnergonInFuelSlot && canInsertAmountIntoOutputSlot(inventory) && canInsertItemIntoOutputSlot(inventory, match.get().getOutput(null).getItem()/*Finished product*/);
+        return match.isPresent() && hasEnergonInFuelSlot && canInsertAmountIntoOutputSlot(inventory) && canInsertItemIntoOutputSlot(inventory, match.get().value().getResult(null).getItem()/*Finished product*/);
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, Item output) {

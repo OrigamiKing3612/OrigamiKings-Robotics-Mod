@@ -1,6 +1,6 @@
 package net.origamiking.mcmods.orm.datagen.recipes;
 
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.origamiking.mcmods.orm.blocks.energon.EnergonBlocks;
@@ -14,13 +14,12 @@ import net.origamiking.mcmods.orm.items.transformium.TransformiumItems;
 import net.origamiking.mcmods.orm.items.transformium_alloy.TransformiumAlloyItems;
 
 import java.util.List;
-import java.util.function.Consumer;
 
 import static net.origamiking.mcmods.oapi.recipes.ModRecipeProvider.offer2x2Compress;
 import static net.origamiking.mcmods.oapi.recipes.ModRecipeProviders.offerBlockSet;
 
 public class BlockRecipes {
-    public static void get(Consumer<RecipeJsonProvider> exporter) {
+    public static void get(RecipeExporter exporter) {
         RecipeProvider.offerSmelting(exporter, List.of(TransformiumAlloyItems.TRANSFORMIUM_ALLOY), RecipeCategory.BUILDING_BLOCKS, TransformiumAlloyItems.TRANSFORMIUM_ALLOY_BRICK, 1.0f, 200, "transformium_alloy_smelting");
         RecipeProvider.offerBlasting(exporter, List.of(TransformiumAlloyItems.TRANSFORMIUM_ALLOY), RecipeCategory.BUILDING_BLOCKS, TransformiumAlloyItems.TRANSFORMIUM_ALLOY_BRICK, 1.0f, 100, "transformium_alloy_blasting");
 

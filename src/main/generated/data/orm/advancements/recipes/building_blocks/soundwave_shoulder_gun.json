@@ -46,10 +46,10 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_blue_concrete",
       "has_ore_13",
-      "has_transformium",
-      "has_the_recipe"
+      "has_transformium"
     ]
   ],
   "rewards": {

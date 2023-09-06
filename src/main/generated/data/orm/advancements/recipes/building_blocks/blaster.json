@@ -34,9 +34,9 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_transformium",
-      "has_ore_13",
-      "has_the_recipe"
+      "has_ore_13"
     ]
   ],
   "rewards": {

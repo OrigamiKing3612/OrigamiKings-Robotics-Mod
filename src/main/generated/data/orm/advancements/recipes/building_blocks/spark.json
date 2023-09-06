@@ -46,10 +46,10 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_compact_energon_block",
       "has_ore_13",
-      "has_diamond_block",
-      "has_the_recipe"
+      "has_diamond_block"
     ]
   ],
   "rewards": {

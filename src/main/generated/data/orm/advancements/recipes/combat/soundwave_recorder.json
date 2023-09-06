@@ -58,11 +58,11 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_soundwave_helmet",
       "has_soundwave_chestplate",
       "has_soundwave_leggings",
-      "has_soundwave_boots",
-      "has_the_recipe"
+      "has_soundwave_boots"
     ]
   ],
   "rewards": {

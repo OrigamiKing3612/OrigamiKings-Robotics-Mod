@@ -58,11 +58,11 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_astrotrain_helmet",
       "has_astrotrain_chestplate",
       "has_astrotrain_leggings",
-      "has_astrotrain_boots",
-      "has_the_recipe"
+      "has_astrotrain_boots"
     ]
   ],
   "rewards": {

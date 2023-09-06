@@ -58,11 +58,11 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_optimus_prime_armor_helmet",
       "has_optimus_prime_armor_chestplate",
       "has_optimus_prime_armor_leggings",
-      "has_optimus_prime_armor_boots",
-      "has_the_recipe"
+      "has_optimus_prime_armor_boots"
     ]
   ],
   "rewards": {

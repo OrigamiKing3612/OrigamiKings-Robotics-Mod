@@ -58,11 +58,11 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_scorpinok_helmet",
       "has_scorpinok_chestplate",
       "has_scorpinok_leggings",
-      "has_scorpinok_boots",
-      "has_the_recipe"
+      "has_scorpinok_boots"
     ]
   ],
   "rewards": {

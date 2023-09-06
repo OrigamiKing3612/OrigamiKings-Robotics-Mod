@@ -46,10 +46,10 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_raw_energon_bucket",
       "has_energon",
-      "has_transformium",
-      "has_the_recipe"
+      "has_transformium"
     ]
   ],
   "rewards": {

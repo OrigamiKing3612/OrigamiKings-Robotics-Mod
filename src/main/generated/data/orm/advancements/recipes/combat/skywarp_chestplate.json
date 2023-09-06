@@ -22,8 +22,8 @@
   },
   "requirements": [
     [
-      "has_skywarp_chip",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_skywarp_chip"
     ]
   ],
   "rewards": {

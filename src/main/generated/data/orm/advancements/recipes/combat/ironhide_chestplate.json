@@ -22,8 +22,8 @@
   },
   "requirements": [
     [
-      "has_ironhide_chip",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_ironhide_chip"
     ]
   ],
   "rewards": {

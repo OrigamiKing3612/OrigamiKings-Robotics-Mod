@@ -58,11 +58,11 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_sunstreaker_helmet",
       "has_sunstreaker_chestplate",
       "has_sunstreaker_leggings",
-      "has_sunstreaker_boots",
-      "has_the_recipe"
+      "has_sunstreaker_boots"
     ]
   ],
   "rewards": {

@@ -58,11 +58,11 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_bumblebee_helmet",
       "has_bumblebee_chestplate",
       "has_bumblebee_leggings",
-      "has_bumblebee_boots",
-      "has_the_recipe"
+      "has_bumblebee_boots"
     ]
   ],
   "rewards": {

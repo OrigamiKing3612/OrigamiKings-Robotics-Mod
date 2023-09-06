@@ -58,11 +58,11 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_sideswipe_helmet",
       "has_sideswipe_chestplate",
       "has_sideswipe_leggings",
-      "has_sideswipe_boots",
-      "has_the_recipe"
+      "has_sideswipe_boots"
     ]
   ],
   "rewards": {

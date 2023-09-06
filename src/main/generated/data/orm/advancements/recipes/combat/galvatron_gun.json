@@ -58,11 +58,11 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_galvatron_helmet",
       "has_galvatron_chestplate",
       "has_galvatron_leggings",
-      "has_galvatron_boots",
-      "has_the_recipe"
+      "has_galvatron_boots"
     ]
   ],
   "rewards": {

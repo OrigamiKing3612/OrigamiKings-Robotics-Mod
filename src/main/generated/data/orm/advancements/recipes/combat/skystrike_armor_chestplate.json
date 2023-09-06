@@ -22,8 +22,8 @@
   },
   "requirements": [
     [
-      "has_skystrike_chip",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_skystrike_chip"
     ]
   ],
   "rewards": {

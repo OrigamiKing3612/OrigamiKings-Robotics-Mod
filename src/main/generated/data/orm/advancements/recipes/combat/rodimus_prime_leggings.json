@@ -22,8 +22,8 @@
   },
   "requirements": [
     [
-      "has_rodimus_prime_chip",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_rodimus_prime_chip"
     ]
   ],
   "rewards": {

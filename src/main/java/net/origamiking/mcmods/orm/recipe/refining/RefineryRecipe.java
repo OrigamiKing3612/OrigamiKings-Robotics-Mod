@@ -1,31 +1,29 @@
 package net.origamiking.mcmods.orm.recipe.refining;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
+import com.mojang.serialization.Codec;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
-import net.minecraft.recipe.*;
+import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.Recipe;
+import net.minecraft.recipe.RecipeSerializer;
+import net.minecraft.recipe.RecipeType;
 import net.minecraft.registry.DynamicRegistryManager;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.JsonHelper;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 
 public class RefineryRecipe implements Recipe<SimpleInventory> {
-    private final Identifier id;
     private final ItemStack output;
     public final DefaultedList<Ingredient> recipeItems;
 
-    public RefineryRecipe(Identifier id, ItemStack output, DefaultedList<Ingredient> recipeItems) {
-        this.id = id;
+    public RefineryRecipe(ItemStack output, DefaultedList<Ingredient> recipeItems) {
         this.output = output;
         this.recipeItems = recipeItems;
     }
 
     @Override
     public boolean matches(SimpleInventory inventory, World world) {
-        if(world.isClient()) {
+        if (world.isClient()) {
             return false;
         }
 
@@ -43,13 +41,8 @@ public class RefineryRecipe implements Recipe<SimpleInventory> {
     }
 
     @Override
-    public ItemStack getOutput(DynamicRegistryManager registryManager) {
+    public ItemStack getResult(DynamicRegistryManager registryManager) {
         return output.copy();
-    }
-
-    @Override
-    public Identifier getId() {
-        return id;
     }
 
     @Override
@@ -61,39 +54,58 @@ public class RefineryRecipe implements Recipe<SimpleInventory> {
     public RecipeType<?> getType() {
         return Type.INSTANCE;
     }
+
     public static class Type implements RecipeType<RefineryRecipe> {
-        private Type() {}
-        public static final Type INSTANCE = new Type() {};
+        private Type() {
+        }
+
+        public static final Type INSTANCE = new Type() {
+        };
         public static final String ID = "refining";
     }
+
     public static class Serializer implements RecipeSerializer<RefineryRecipe> {
         public static final Serializer INSTANCE = new Serializer();
         public static final String ID = "refining";
+//        @Override
+//        public RefineryRecipe read(Identifier id, JsonObject json) {
+//            ItemStack output = ShapedRecipe.outputFromJson(JsonHelper.getObject(json, "output"));
+//
+//            JsonArray ingredients = JsonHelper.getArray(json, "ingredients");
+//            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(1, Ingredient.EMPTY);
+//
+//            for (int i = 0; i < inputs.size(); i++) {
+//                inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
+//            }
+//
+//            return new RefineryRecipe(id, output, inputs);
+//        }
+
+//        @Override
+//        public RefineryRecipe read(Identifier id, PacketByteBuf buf) {
+//            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(buf.readInt(), Ingredient.EMPTY);
+//
+//            for (int i = 0; i < inputs.size(); i++) {
+//                inputs.set(i, Ingredient.fromPacket(buf));
+//            }
+//
+//            ItemStack output = buf.readItemStack();
+//            return new RefineryRecipe(id, output, inputs);
+//        }
 
         @Override
-        public RefineryRecipe read(Identifier id, JsonObject json) {
-            ItemStack output = ShapedRecipe.outputFromJson(JsonHelper.getObject(json, "output"));
+        public RefineryRecipe read(PacketByteBuf buf) {
+            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(buf.readInt(), Ingredient.EMPTY);
 
-            JsonArray ingredients = JsonHelper.getArray(json, "ingredients");
-            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(1, Ingredient.EMPTY);
+            inputs.replaceAll(ignored -> Ingredient.fromPacket(buf));
 
-            for (int i = 0; i < inputs.size(); i++) {
-                inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
-            }
-
-            return new RefineryRecipe(id, output, inputs);
+            ItemStack output = buf.readItemStack();
+            return new RefineryRecipe(output, inputs);
         }
 
         @Override
-        public RefineryRecipe read(Identifier id, PacketByteBuf buf) {
-            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(buf.readInt(), Ingredient.EMPTY);
-
-            for (int i = 0; i < inputs.size(); i++) {
-                inputs.set(i, Ingredient.fromPacket(buf));
-            }
-
-            ItemStack output = buf.readItemStack();
-            return new RefineryRecipe(id, output, inputs);
+        public Codec<RefineryRecipe> codec() {
+            return CODEC;
         }
 
         @Override

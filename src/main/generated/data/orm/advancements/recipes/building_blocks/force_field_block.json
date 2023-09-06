@@ -34,9 +34,9 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_glass",
-      "has_energon",
-      "has_the_recipe"
+      "has_energon"
     ]
   ],
   "rewards": {

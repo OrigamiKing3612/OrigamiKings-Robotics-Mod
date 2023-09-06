@@ -58,11 +58,11 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_megatron_helmet",
       "has_megatron_chestplate",
       "has_megatron_leggings",
-      "has_megatron_boots",
-      "has_the_recipe"
+      "has_megatron_boots"
     ]
   ],
   "rewards": {

@@ -58,11 +58,11 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_thunder_cracker_helmet",
       "has_thunder_cracker_chestplate",
       "has_thunder_cracker_leggings",
-      "has_thunder_cracker_boots",
-      "has_the_recipe"
+      "has_thunder_cracker_boots"
     ]
   ],
   "rewards": {

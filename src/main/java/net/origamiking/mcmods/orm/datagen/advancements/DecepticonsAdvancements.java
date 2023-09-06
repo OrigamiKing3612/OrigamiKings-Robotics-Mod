@@ -1,6 +1,7 @@
 package net.origamiking.mcmods.orm.datagen.advancements;
 
 import net.minecraft.advancement.Advancement;
+import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.advancement.AdvancementFrame;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.text.Text;
@@ -29,8 +30,8 @@ import static net.origamiking.mcmods.orm.datagen.advancements.OrmAdvancements.tr
 import static net.origamiking.mcmods.orm.datagen.advancements.OrmAdvancements.translatableTitle;
 
 public class DecepticonsAdvancements {
-    public static void get(Consumer<Advancement> advancementConsumer, Advancement mainParent) {
-        Advancement megatron = Advancement.Builder.create().parent(mainParent)
+    public static void get(Consumer<AdvancementEntry> advancementConsumer, AdvancementEntry mainParent) {
+        AdvancementEntry megatron = Advancement.Builder.create().parent(mainParent)
                 .display(
                         Megatron.HELMET, // icon
                         Text.translatable(translatableTitle(MegatronArmorItem.armorItemId())), // title
@@ -47,7 +48,7 @@ public class DecepticonsAdvancements {
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Megatron.BOOTS))
                 .build(advancementConsumer, OrmAdvancements.getAdvancementPath(false, MegatronArmorItem.armorItemId()));
 
-        Advancement astrotrain = Advancement.Builder.create().parent(megatron)
+        AdvancementEntry astrotrain = Advancement.Builder.create().parent(megatron)
                 .display(
                         Astrotrain.HELMET, // icon
                         Text.translatable(translatableTitle(AstrotrainArmorItem.armorItemId())), // title
@@ -64,7 +65,7 @@ public class DecepticonsAdvancements {
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Astrotrain.BOOTS))
                 .build(advancementConsumer,  OrmAdvancements.getAdvancementPath(false, AstrotrainArmorItem.armorItemId()));
 
-        Advancement galvatron = Advancement.Builder.create().parent(megatron)
+        AdvancementEntry galvatron = Advancement.Builder.create().parent(megatron)
                 .display(
                         Galvatron.HELMET, // icon
                         Text.translatable(translatableTitle(GalvatronArmorItem.armorItemId())), // title
@@ -81,7 +82,7 @@ public class DecepticonsAdvancements {
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Galvatron.BOOTS))
                 .build(advancementConsumer, OrmAdvancements.getAdvancementPath(false, GalvatronArmorItem.armorItemId()));
 
-        Advancement scorpinok = Advancement.Builder.create().parent(megatron)
+        AdvancementEntry scorpinok = Advancement.Builder.create().parent(megatron)
                 .display(
                         Scorpinok.HELMET, // icon
                         Text.translatable(translatableTitle(ScorpinokArmorItem.armorItemId())), // title
@@ -98,7 +99,7 @@ public class DecepticonsAdvancements {
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Scorpinok.BOOTS))
                 .build(advancementConsumer, OrmAdvancements.getAdvancementPath(false, ScorpinokArmorItem.armorItemId()));
 
-        Advancement soundwave = Advancement.Builder.create().parent(megatron)
+        AdvancementEntry soundwave = Advancement.Builder.create().parent(megatron)
                 .display(
                         Soundwave.HELMET, // icon
                         Text.translatable(translatableTitle(SoundwaveArmorItem.armorItemId())), // title
@@ -115,7 +116,7 @@ public class DecepticonsAdvancements {
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Soundwave.BOOTS))
                 .build(advancementConsumer, OrmAdvancements.getAdvancementPath(false, SoundwaveArmorItem.armorItemId()));
 
-        Advancement starscream = Advancement.Builder.create().parent(megatron)
+        AdvancementEntry starscream = Advancement.Builder.create().parent(megatron)
                 .display(
                         Starscream.HELMET, // icon
                         Text.translatable(translatableTitle(StarscreamArmorItem.armorItemId())), // title
@@ -132,7 +133,7 @@ public class DecepticonsAdvancements {
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Starscream.BOOTS))
                 .build(advancementConsumer, OrmAdvancements.getAdvancementPath(false, StarscreamArmorItem.armorItemId()));
 
-        Advancement thunder_cracker = Advancement.Builder.create().parent(megatron)
+        AdvancementEntry thunder_cracker = Advancement.Builder.create().parent(megatron)
                 .display(
                         ThunderCracker.HELMET, // icon
                         Text.translatable(translatableTitle(ThunderCrackerArmorItem.armorItemId())), // title
@@ -149,7 +150,7 @@ public class DecepticonsAdvancements {
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(ThunderCracker.BOOTS))
                 .build(advancementConsumer, OrmAdvancements.getAdvancementPath(false, ThunderCrackerArmorItem.armorItemId()));
 
-        Advancement skywarp = Advancement.Builder.create().parent(megatron)
+        AdvancementEntry skywarp = Advancement.Builder.create().parent(megatron)
                 .display(
                         Skywarp.HELMET, // icon
                         Text.translatable(translatableTitle(SkywarpArmorItem.armorItemId())), // title
@@ -166,7 +167,7 @@ public class DecepticonsAdvancements {
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Skywarp.BOOTS))
                 .build(advancementConsumer, OrmAdvancements.getAdvancementPath(false, SkywarpArmorItem.armorItemId()));
 
-        Advancement shockwave = Advancement.Builder.create().parent(megatron)
+        AdvancementEntry shockwave = Advancement.Builder.create().parent(megatron)
                 .display(
                         Shockwave.HELMET, // icon
                         Text.translatable(translatableTitle(ShockwaveArmorItem.armorItemId())), // title

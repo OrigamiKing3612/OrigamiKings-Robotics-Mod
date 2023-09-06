@@ -58,11 +58,11 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_starscream_helmet",
       "has_starscream_chestplate",
       "has_starscream_leggings",
-      "has_starscream_boots",
-      "has_the_recipe"
+      "has_starscream_boots"
     ]
   ],
   "rewards": {

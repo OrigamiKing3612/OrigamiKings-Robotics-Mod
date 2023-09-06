@@ -22,8 +22,8 @@
   },
   "requirements": [
     [
-      "has_ore_13",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_ore_13"
     ]
   ],
   "rewards": {

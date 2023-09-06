@@ -17,7 +17,7 @@ public class RefineryDisplay extends BasicDisplay {
     }
 
     public RefineryDisplay(RefineryRecipe recipe) {
-        super(getInputList(recipe), List.of(EntryIngredient.of(EntryStacks.of(recipe.getOutput(null)))));
+        super(getInputList(recipe), List.of(EntryIngredient.of(EntryStacks.of(recipe.getResult(null)))));
     }
 
     private static List<EntryIngredient> getInputList(RefineryRecipe recipe) {

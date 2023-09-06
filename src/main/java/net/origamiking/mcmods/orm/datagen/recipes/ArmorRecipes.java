@@ -1,6 +1,6 @@
 package net.origamiking.mcmods.orm.datagen.recipes;
 
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.origamiking.mcmods.orm.armor.astrotrain.Astrotrain;
 import net.origamiking.mcmods.orm.armor.bumblebee.Bumblebee;
@@ -38,12 +38,10 @@ import net.origamiking.mcmods.orm.items.chips.sunstreaker.SunstreakerChip;
 import net.origamiking.mcmods.orm.items.chips.thunder_cracker.ThunderCrackerChip;
 import net.origamiking.mcmods.orm.items.custom.ItemRegistry;
 
-import java.util.function.Consumer;
-
 import static net.origamiking.mcmods.orm.datagen.recipes.providers.OrmRecipeProvider.*;
 
 public class ArmorRecipes {
-    public static void get(Consumer<RecipeJsonProvider> exporter) {
+    public static void get(RecipeExporter exporter) {
         offerTransformerHelmet(exporter, Astrotrain.HELMET, AstrotrainChip.CHIP);
         offerTransformerChestplate(exporter, Astrotrain.CHESTPLATE, AstrotrainChip.CHIP);
         offerTransformerLeggings(exporter, Astrotrain.LEGGINGS, AstrotrainChip.CHIP);
