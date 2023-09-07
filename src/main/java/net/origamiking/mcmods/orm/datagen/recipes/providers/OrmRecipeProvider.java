@@ -10,7 +10,7 @@ import net.origamiking.mcmods.orm.items.energon.EnergonItems;
 import net.origamiking.mcmods.orm.items.ore13.Ore13Items;
 import net.origamiking.mcmods.orm.items.random.RandomItems;
 import net.origamiking.mcmods.orm.items.transformium.TransformiumItems;
-import net.origamiking.mcmods.orm.recipe.chip_refining.ChipRefineryRecipe;
+import net.origamiking.mcmods.orm.recipe.ModRecipeSerializers;
 
 public class OrmRecipeProvider {
     public static void offerTransformerHelmet(RecipeExporter exporter, ItemConvertible output, ItemConvertible chip) {
@@ -54,7 +54,7 @@ public class OrmRecipeProvider {
     }
 
     private static SingleItemRecipeJsonBuilder createChipRefining(Ingredient input, RecipeCategory category, ItemConvertible output, int count) {
-        return new SingleItemRecipeJsonBuilder(category, ChipRefineryRecipe.Serializer.INSTANCE, input, output, count);
+        return new SingleItemRecipeJsonBuilder(category, ModRecipeSerializers.CHIP_REFINING, input, output, count);
     }
 
     public static void offerChipRefiningRecipe(RecipeExporter exporter, RecipeCategory category, ItemConvertible output) {

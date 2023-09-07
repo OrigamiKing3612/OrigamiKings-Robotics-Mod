@@ -13,6 +13,7 @@ import net.origamiking.mcmods.orm.compact.rei.compacter.CompacterCategory;
 import net.origamiking.mcmods.orm.compact.rei.compacter.CompacterDisplay;
 import net.origamiking.mcmods.orm.compact.rei.refinery.RefineryCategory;
 import net.origamiking.mcmods.orm.compact.rei.refinery.RefineryDisplay;
+import net.origamiking.mcmods.orm.recipe.ModRecipeType;
 import net.origamiking.mcmods.orm.recipe.chip_refining.ChipRefineryRecipe;
 import net.origamiking.mcmods.orm.recipe.compacter.CompacterRecipe;
 import net.origamiking.mcmods.orm.recipe.refining.RefineryRecipe;
@@ -34,7 +35,7 @@ public class OrmREIClientPlugin implements REIClientPlugin {
 
     @Override
     public void registerDisplays(DisplayRegistry registry) {
-        registry.registerRecipeFiller(ChipRefineryRecipe.class, ChipRefineryRecipe.Type.INSTANCE,
+        registry.registerRecipeFiller(ChipRefineryRecipe.class, ModRecipeType.CHIP_REFINERY_RECIPE,
                 ChipRefineryDisplay::new);
 
         registry.registerRecipeFiller(RefineryRecipe.class, RefineryRecipe.Type.INSTANCE,

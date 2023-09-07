@@ -30,7 +30,11 @@ public class OrmMain implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     public static OrmConfigHandler ORM_CONFIG;
 
-
+    /* todo check
+        recipes in (Chip) Refinery, and compacter
+        rei, emi
+        recipes, advancements armor items
+     */
     @Override
     public void onInitialize() {
         OrmMain.LOGGER.info("Starting ORM " + OrmMain.VERSION);
