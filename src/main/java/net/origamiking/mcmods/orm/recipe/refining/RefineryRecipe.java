@@ -33,9 +33,11 @@ public class RefineryRecipe implements Recipe<Inventory> {
         this.ingredient = ingredient;
         this.result = result;
     }
+
     public RefineryRecipe(String group, Ingredient ingredient, Item result, int count) {
         this(group, ingredient, new ItemStack(result, count));
     }
+
     @Override
     public RecipeType<?> getType() {
         return this.type;
@@ -77,39 +79,26 @@ public class RefineryRecipe implements Recipe<Inventory> {
     public boolean matches(Inventory inventory, World world) {
         return this.ingredient.test(inventory.getStack(0));
     }
+
     @Override
     public ItemStack createIcon() {
         return new ItemStack(BlockRegistry.REFINERY_BLOCK);
     }
+
     public static class Serializer implements RecipeSerializer<RefineryRecipe> {
-        public static final String ID = "refining";
         final RecipeFactory recipeFactory;
         private final Codec<RefineryRecipe> codec;
 
         public Serializer(RecipeFactory recipeFactory) {
             this.recipeFactory = recipeFactory;
             this.codec = RecordCodecBuilder.create(instance -> instance
-                    .group(Codecs.createStrictOptionalFieldCodec(Codec.STRING, "group", "")
-                            .forGetter(recipe -> recipe.group), (Ingredient.DISALLOW_EMPTY_CODEC.fieldOf("ingredients"))
-                            .forGetter(recipe -> recipe.ingredient), (Registries.ITEM.getCodec().fieldOf("output"))
-                            .forGetter(recipe -> recipe.result.getItem()), (Codec.INT.fieldOf("count"))
-                            .forGetter(recipe -> recipe.result.getCount()))
-                    .apply(/*(Applicative<ChipRefineryRecipe, ?>)*/instance, recipeFactory::create));
+                    .group(Codecs.createStrictOptionalFieldCodec(Codec.STRING, "group", "").forGetter(recipe -> recipe.group),
+                            (Ingredient.DISALLOW_EMPTY_CODEC.fieldOf("ingredients")).forGetter(recipe -> recipe.ingredient),
+                            (Registries.ITEM.getCodec().fieldOf("result")).forGetter(recipe -> recipe.result.getItem()),
+                            (Codec.INT.fieldOf("count")).forGetter(recipe -> recipe.result.getCount()))
+                    .apply(instance, recipeFactory::create));
         }
 
-//        @Override
-//        public RefineryRecipe read(Identifier id, JsonObject json) {
-//            ItemStack output = ShapedRecipe.outputFromJson(JsonHelper.getObject(json, "output"));
-//
-//            JsonArray ingredients = JsonHelper.getArray(json, "ingredients");
-//            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(1, Ingredient.EMPTY);
-//
-//            for (int i = 0; i < inputs.size(); i++) {
-//                inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
-//            }
-//
-//            return new RefineryRecipe(id, output, inputs);
-//        }
         @Override
         public Codec<RefineryRecipe> codec() {
             return this.codec;
@@ -125,9 +114,9 @@ public class RefineryRecipe implements Recipe<Inventory> {
 
         @Override
         public void write(PacketByteBuf packetByteBuf, RefineryRecipe chipRefineryRecipe) {
-            packetByteBuf.writeString(((RefineryRecipe)chipRefineryRecipe).group);
-            ((RefineryRecipe)chipRefineryRecipe).ingredient.write(packetByteBuf);
-            packetByteBuf.writeItemStack(((RefineryRecipe)chipRefineryRecipe).result);
+            packetByteBuf.writeString(((RefineryRecipe) chipRefineryRecipe).group);
+            ((RefineryRecipe) chipRefineryRecipe).ingredient.write(packetByteBuf);
+            packetByteBuf.writeItemStack(((RefineryRecipe) chipRefineryRecipe).result);
         }
 
         public static interface RecipeFactory {

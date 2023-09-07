@@ -65,8 +65,8 @@ dependencies {
 //    modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${rei_version}"
 
 
-    modImplementation "net.kyrptonaught:customportalapi:${portal_api_version}"
-    include "net.kyrptonaught:customportalapi:${portal_api_version}"
+//    modImplementation "net.kyrptonaught:customportalapi:${portal_api_version}"
+//    include "net.kyrptonaught:customportalapi:${portal_api_version}"
 
 }
 

@@ -1,6 +1,5 @@
 package net.origamiking.mcmods.orm.screen.chip_refinery;
 
-import com.mojang.blaze3d.systems.RenderSystem;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
@@ -19,7 +18,12 @@ import java.util.List;
 
 @Environment(value = EnvType.CLIENT)
 public class ChipRefineryScreen extends HandledScreen<ChipRefineryScreenHandler> {
+    private static final Identifier SCROLLER_TEXTURE = new Identifier("container/stonecutter/scroller");
+    private static final Identifier SCROLLER_DISABLED_TEXTURE = new Identifier("container/stonecutter/scroller_disabled");
+    private static final Identifier RECIPE_HIGHLIGHTED_TEXTURE = new Identifier("container/stonecutter/recipe_highlighted");
+    private static final Identifier RECIPE_TEXTURE = new Identifier("container/stonecutter/recipe");
     private static final Identifier TEXTURE = new Identifier("textures/gui/container/stonecutter.png");
+    private static final Identifier RECIPE_SELECTED_TEXTURE = new Identifier("container/stonecutter/recipe_selected");
     private float scrollAmount;
     private boolean mouseClicked;
     private int scrollOffset;
@@ -41,13 +45,13 @@ public class ChipRefineryScreen extends HandledScreen<ChipRefineryScreenHandler>
 
     @Override
     protected void drawBackground(DrawContext context, float delta, int mouseX, int mouseY) {
-        this.renderBackground(context, mouseX, mouseY, delta);
-        RenderSystem.setShaderTexture(0, TEXTURE);
+//        RenderSystem.setShaderTexture(0, TEXTURE);
         int i = this.x;
         int j = this.y;
         context.drawTexture(TEXTURE, i, j, 0, 0, this.backgroundWidth, this.backgroundHeight);
         int k = (int) (41.0f * this.scrollAmount);
-        context.drawTexture(TEXTURE, i + 119, j + 15 + k, 176 + (this.shouldScroll() ? 0 : 12), 0, 12, 15);
+        Identifier identifier = this.shouldScroll() ? SCROLLER_TEXTURE : SCROLLER_DISABLED_TEXTURE;
+        context.drawGuiTexture(identifier, i + 119, j + 15 + k, 12, 15);
         int l = this.x + 52;
         int m = this.y + 14;
         int n = this.scrollOffset + 12;
@@ -74,24 +78,19 @@ public class ChipRefineryScreen extends HandledScreen<ChipRefineryScreenHandler>
     }
 
     private void renderRecipeBackground(DrawContext context, int mouseX, int mouseY, int x, int y, int scrollOffset) {
-        for (int i = this.scrollOffset; i < scrollOffset && i < ((ChipRefineryScreenHandler) this.handler).getAvailableRecipeCount(); ++i) {
+        for (int i = this.scrollOffset; i < scrollOffset && i < ((ChipRefineryScreenHandler)this.handler).getAvailableRecipeCount(); ++i) {
             int j = i - this.scrollOffset;
             int k = x + j % 4 * 16;
             int l = j / 4;
             int m = y + l * 18 + 2;
-            int n = this.backgroundHeight;
-            if (i == ((ChipRefineryScreenHandler) this.handler).getSelectedRecipe()) {
-                n += 18;
-            } else if (mouseX >= k && mouseY >= m && mouseX < k + 16 && mouseY < m + 18) {
-                n += 36;
-            }
-            context.drawTexture(TEXTURE, k, m - 1, 0, n, 16, 18);
+            Identifier identifier = i == ((ChipRefineryScreenHandler)this.handler).getSelectedRecipe() ? RECIPE_SELECTED_TEXTURE : (mouseX >= k && mouseY >= m && mouseX < k + 16 && mouseY < m + 18 ? RECIPE_HIGHLIGHTED_TEXTURE : RECIPE_TEXTURE);
+            context.drawGuiTexture(identifier, k, m - 1, 16, 18);
         }
     }
 
     private void renderRecipeIcons(DrawContext context, int x, int y, int scrollOffset) {
-        List<RecipeEntry<ChipRefineryRecipe>> list = ((ChipRefineryScreenHandler) this.handler).getAvailableRecipes();
-        for (int i = this.scrollOffset; i < scrollOffset && i < ((ChipRefineryScreenHandler) this.handler).getAvailableRecipeCount(); ++i) {
+        List<RecipeEntry<ChipRefineryRecipe>> list = ((ChipRefineryScreenHandler)this.handler).getAvailableRecipes();
+        for (int i = this.scrollOffset; i < scrollOffset && i < ((ChipRefineryScreenHandler)this.handler).getAvailableRecipeCount(); ++i) {
             int j = i - this.scrollOffset;
             int k = x + j % 4 * 16;
             int l = j / 4;
@@ -109,17 +108,16 @@ public class ChipRefineryScreen extends HandledScreen<ChipRefineryScreenHandler>
             int k = this.scrollOffset + 12;
             for (int l = this.scrollOffset; l < k; ++l) {
                 int m = l - this.scrollOffset;
-                double d = mouseX - (double) (i + m % 4 * 16);
-                double e = mouseY - (double) (j + m / 4 * 18);
-                if (!(d >= 0.0) || !(e >= 0.0) || !(d < 16.0) || !(e < 18.0) || !((ChipRefineryScreenHandler) this.handler).onButtonClick(this.client.player, l))
-                    continue;
+                double d = mouseX - (double)(i + m % 4 * 16);
+                double e = mouseY - (double)(j + m / 4 * 18);
+                if (!(d >= 0.0) || !(e >= 0.0) || !(d < 16.0) || !(e < 18.0) || !((ChipRefineryScreenHandler)this.handler).onButtonClick(this.client.player, l)) continue;
                 MinecraftClient.getInstance().getSoundManager().play(PositionedSoundInstance.master(SoundEvents.UI_STONECUTTER_SELECT_RECIPE, 1.0f));
-                this.client.interactionManager.clickButton(((ChipRefineryScreenHandler) this.handler).syncId, l);
+                this.client.interactionManager.clickButton(((ChipRefineryScreenHandler)this.handler).syncId, l);
                 return true;
             }
             i = this.x + 119;
             j = this.y + 9;
-            if (mouseX >= (double) i && mouseX < (double) (i + 12) && mouseY >= (double) j && mouseY < (double) (j + 54)) {
+            if (mouseX >= (double)i && mouseX < (double)(i + 12) && mouseY >= (double)j && mouseY < (double)(j + 54)) {
                 this.mouseClicked = true;
             }
         }
@@ -131,9 +129,9 @@ public class ChipRefineryScreen extends HandledScreen<ChipRefineryScreenHandler>
         if (this.mouseClicked && this.shouldScroll()) {
             int i = this.y + 14;
             int j = i + 54;
-            this.scrollAmount = ((float) mouseY - (float) i - 7.5f) / ((float) (j - i) - 15.0f);
+            this.scrollAmount = ((float)mouseY - (float)i - 7.5f) / ((float)(j - i) - 15.0f);
             this.scrollAmount = MathHelper.clamp(this.scrollAmount, 0.0f, 1.0f);
-            this.scrollOffset = (int) ((double) (this.scrollAmount * (float) this.getMaxScroll()) + 0.5) * 4;
+            this.scrollOffset = (int)((double)(this.scrollAmount * (float)this.getMaxScroll()) + 0.5) * 4;
             return true;
         }
         return super.mouseDragged(mouseX, mouseY, button, deltaX, deltaY);
@@ -143,23 +141,23 @@ public class ChipRefineryScreen extends HandledScreen<ChipRefineryScreenHandler>
     public boolean mouseScrolled(double mouseX, double mouseY, double horizontalAmount, double verticalAmount) {
         if (this.shouldScroll()) {
             int i = this.getMaxScroll();
-            float f = (float) verticalAmount / (float) i;
+            float f = (float)verticalAmount / (float)i;
             this.scrollAmount = MathHelper.clamp(this.scrollAmount - f, 0.0f, 1.0f);
-            this.scrollOffset = (int) ((double) (this.scrollAmount * (float) i) + 0.5) * 4;
+            this.scrollOffset = (int)((double)(this.scrollAmount * (float)i) + 0.5) * 4;
         }
         return true;
     }
 
     private boolean shouldScroll() {
-        return this.canCraft && ((ChipRefineryScreenHandler) this.handler).getAvailableRecipeCount() > 12;
+        return this.canCraft && ((ChipRefineryScreenHandler)this.handler).getAvailableRecipeCount() > 12;
     }
 
     protected int getMaxScroll() {
-        return (((ChipRefineryScreenHandler) this.handler).getAvailableRecipeCount() + 4 - 1) / 4 - 3;
+        return (((ChipRefineryScreenHandler)this.handler).getAvailableRecipeCount() + 4 - 1) / 4 - 3;
     }
 
     private void onInventoryChange() {
-        this.canCraft = ((ChipRefineryScreenHandler) this.handler).canCraft();
+        this.canCraft = ((ChipRefineryScreenHandler)this.handler).canCraft();
         if (!this.canCraft) {
             this.scrollAmount = 0.0f;
             this.scrollOffset = 0;

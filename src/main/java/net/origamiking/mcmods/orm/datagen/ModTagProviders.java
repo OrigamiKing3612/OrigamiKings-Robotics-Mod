@@ -33,6 +33,7 @@ import net.origamiking.mcmods.orm.items.chips.starscream.StarscreamChip;
 import net.origamiking.mcmods.orm.items.chips.sunstreaker.SunstreakerChip;
 import net.origamiking.mcmods.orm.items.chips.thunder_cracker.ThunderCrackerChip;
 import net.origamiking.mcmods.orm.items.custom.ItemRegistry;
+import net.origamiking.mcmods.orm.items.energon.EnergonItems;
 import net.origamiking.mcmods.orm.tag.ModBlockTags;
 import net.origamiking.mcmods.orm.tag.ModFluidTags;
 import net.origamiking.mcmods.orm.tag.ModItemTags;
@@ -147,6 +148,7 @@ public class ModTagProviders {
                     .add(SideswipeChip.CHIP)
                     .add(SunstreakerChip.CHIP)
             ;
+            getOrCreateTagBuilder(ModItemTags.REFINERY_FUELS).add(EnergonItems.ENERGON);
         }
     }
 

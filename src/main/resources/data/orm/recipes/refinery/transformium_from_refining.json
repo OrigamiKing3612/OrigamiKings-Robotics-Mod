@@ -1,11 +1,8 @@
 {
   "type": "orm:refining",
-  "ingredients": [
-    {
+  "count": 1,
+  "ingredients": {
       "item": "orm:ore_13"
-    }
-  ],
-  "output": {
-    "item": "orm:transformium"
-  }
+    },
+  "result": "orm:transformium"
 }

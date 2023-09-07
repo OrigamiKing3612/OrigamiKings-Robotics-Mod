@@ -90,11 +90,10 @@ public class CompacterRecipe implements Recipe<Inventory> {
         public Serializer(RecipeFactory recipeFactory) {
             this.recipeFactory = recipeFactory;
             this.codec = RecordCodecBuilder.create(instance -> instance
-                    .group(Codecs.createStrictOptionalFieldCodec(Codec.STRING, "group", "")
-                            .forGetter(recipe -> recipe.group), (Ingredient.DISALLOW_EMPTY_CODEC.fieldOf("ingredients"))
-                            .forGetter(recipe -> recipe.ingredient), (Registries.ITEM.getCodec().fieldOf("output"))
-                            .forGetter(recipe -> recipe.result.getItem()), (Codec.INT.fieldOf("count"))
-                            .forGetter(recipe -> recipe.result.getCount()))
+                    .group(Codecs.createStrictOptionalFieldCodec(Codec.STRING, "group", "").forGetter(recipe -> recipe.group),
+                            (Ingredient.DISALLOW_EMPTY_CODEC.fieldOf("ingredients")).forGetter(recipe -> recipe.ingredient),
+                            (Registries.ITEM.getCodec().fieldOf("result")).forGetter(recipe -> recipe.result.getItem()),
+                            (Codec.INT.fieldOf("count")).forGetter(recipe -> recipe.result.getCount()))
                     .apply(/*(Applicative<ChipRefineryRecipe, ?>)*/instance, recipeFactory::create));
         }
         @Override

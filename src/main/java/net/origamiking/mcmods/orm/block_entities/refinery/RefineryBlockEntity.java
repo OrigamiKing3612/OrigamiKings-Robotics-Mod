@@ -21,10 +21,10 @@ import net.minecraft.world.World;
 import net.origamiking.mcmods.oapi.blocks.ImplementedInventory;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
 import net.origamiking.mcmods.orm.blocks.custom.refinery.RefineryBlock;
-import net.origamiking.mcmods.orm.items.energon.EnergonItems;
 import net.origamiking.mcmods.orm.recipe.ModRecipeType;
 import net.origamiking.mcmods.orm.recipe.refining.RefineryRecipe;
 import net.origamiking.mcmods.orm.screen.refinery.RefineryBlockScreenHandler;
+import net.origamiking.mcmods.orm.tag.ModItemTags;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoBlockEntity;
 import software.bernie.geckolib.constant.DefaultAnimations;
@@ -190,16 +190,17 @@ public class RefineryBlockEntity extends BlockEntity implements NamedScreenHandl
         }
     }
 
-    private static boolean hasRecipe(RefineryBlockEntity entity) {
-        SimpleInventory inventory = new SimpleInventory(entity.size());
-        for (int i = 0; i < entity.size(); i++) {
-            inventory.setStack(i, entity.getStack(i));
+    private static boolean hasRecipe(RefineryBlockEntity blockEntity) {
+        SimpleInventory inventory = new SimpleInventory(blockEntity.size());
+        for (int i = 0; i < blockEntity.size(); i++) {
+            inventory.setStack(i, blockEntity.getStack(i));
         }
 
-        Optional<RecipeEntry<RefineryRecipe>> match = entity.getWorld().getRecipeManager().getFirstMatch(ModRecipeType.REFINERY_RECIPE, inventory, entity.getWorld());
+        Optional<RecipeEntry<RefineryRecipe>> match = blockEntity.getWorld().getRecipeManager()
+                .getFirstMatch(ModRecipeType.REFINERY_RECIPE, inventory, blockEntity.getWorld());
 
-        boolean hasEnergonInFuelSlot = entity.getStack(0).getItem() == EnergonItems.ENERGON; // Fuel
 
+        boolean hasEnergonInFuelSlot = blockEntity.getStack(0).isIn(ModItemTags.REFINERY_FUELS); // Fuel
         return match.isPresent() && hasEnergonInFuelSlot && canInsertAmountIntoOutputSlot(inventory) && canInsertItemIntoOutputSlot(inventory, match.get().value().getResult(null).getItem()/*Finished product*/);
     }
 

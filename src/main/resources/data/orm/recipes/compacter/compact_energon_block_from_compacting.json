@@ -1,11 +1,8 @@
 {
   "type": "orm:compacting",
-  "ingredients": [
-    {
+  "count": 1,
+  "ingredients": {
       "item": "orm:energon_block"
-    }
-  ],
-  "output": {
-    "item": "orm:compact_energon_block"
-  }
+    },
+  "result": "orm:compact_energon_block"
 }
