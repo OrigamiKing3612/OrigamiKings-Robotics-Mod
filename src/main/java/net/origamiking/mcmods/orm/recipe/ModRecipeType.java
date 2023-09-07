@@ -15,10 +15,12 @@ public class ModRecipeType {
 
     public static final RecipeType<RefineryRecipe> REFINERY_RECIPE = register("refining");
     public static final RecipeType<CompacterRecipe> COMPACTER_RECIPE = register("compacting");
+
     public static void register() {
     }
+
     public static <T extends Recipe<?>> RecipeType<T> register(final String id) {
-        return Registry.register(Registries.RECIPE_TYPE, new Identifier(OrmMain.MOD_ID, id), new RecipeType<T>(){
+        return Registry.register(Registries.RECIPE_TYPE, new Identifier(OrmMain.MOD_ID, id), new RecipeType<T>() {
 
             public String toString() {
                 return id;

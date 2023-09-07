@@ -15,5 +15,6 @@ public class PolishedTransformiumBlocks extends BlocksUtils {
     public static final Block POLISHED_TRANSFORMIUM_SLAB = registerBlock(OrmMain.MOD_ID, "polished_transformium_slab", new SlabBlock(OrigamiBlockSettings.copyOf(POLISHED_TRANSFORMIUM_BLOCK)));
     public static final Block POLISHED_TRANSFORMIUM_WALL = registerBlock(OrmMain.MOD_ID, "polished_transformium_wall", new WallBlock(OrigamiBlockSettings.copyOf(POLISHED_TRANSFORMIUM_BLOCK)));
 
-    public static void get() {}
+    public static void get() {
+    }
 }

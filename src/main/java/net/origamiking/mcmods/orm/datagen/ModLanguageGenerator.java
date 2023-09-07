@@ -34,13 +34,16 @@ public class ModLanguageGenerator extends FabricLanguageProvider {
             throw new RuntimeException("Failed to add existing language file.", e);
         }
     }
+
     //todo oapi
     public static String getName(Identifier id) {
         return capitalize(id.getPath().replace("_", " "));
     }
+
     public static String getName(Item item) {
         return capitalize(Registries.ITEM.getId(item).getPath().replace("_", " "));
     }
+
     public static String capitalize(String s) {
         if (s.isEmpty()) return s;
 
@@ -63,6 +66,7 @@ public class ModLanguageGenerator extends FabricLanguageProvider {
 
         return ret.toString().trim();
     }
+
     public static String getName(String id) {
         return capitalize(id.replace("_", " "));
     }

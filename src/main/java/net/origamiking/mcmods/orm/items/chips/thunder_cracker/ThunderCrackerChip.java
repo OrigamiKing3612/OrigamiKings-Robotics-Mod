@@ -7,5 +7,7 @@ import net.origamiking.mcmods.orm.OrmMain;
 
 public class ThunderCrackerChip extends ItemsUtils {
     public static final Item CHIP = registerItem(OrmMain.MOD_ID, "thunder_cracker_chip", new Item(new OrigamiItemSettings()));
-    public static void get() {}
+
+    public static void get() {
+    }
 }

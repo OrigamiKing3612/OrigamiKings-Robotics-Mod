@@ -22,6 +22,7 @@ public final class AstrotrainArmorItem extends TransformerArmorItem implements G
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
             private GeoArmorRenderer<?> renderer;
+
             @Override
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
                 if (this.renderer == null)
@@ -33,14 +34,17 @@ public final class AstrotrainArmorItem extends TransformerArmorItem implements G
             }
         });
     }
+
     @Override
     public String armorName() {
         return "Astrotrain";
     }
+
     @Override
     public String armorId() {
         return "astrotrain";
     }
+
     public static String armorItemName() {
         return "Astrotrain";
     }
@@ -48,6 +52,7 @@ public final class AstrotrainArmorItem extends TransformerArmorItem implements G
     public static String armorItemId() {
         return "astrotrain";
     }
+
     @Override
     public boolean isAutobot() {
         return false;

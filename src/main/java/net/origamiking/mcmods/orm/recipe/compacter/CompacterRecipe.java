@@ -33,6 +33,7 @@ public class CompacterRecipe implements Recipe<Inventory> {
         this.ingredient = ingredient;
         this.result = result;
     }
+
     public CompacterRecipe(String group, Ingredient ingredient, Item result, int count) {
         this(group, ingredient, new ItemStack(result, count));
     }
@@ -78,10 +79,12 @@ public class CompacterRecipe implements Recipe<Inventory> {
     public boolean matches(Inventory inventory, World world) {
         return this.ingredient.test(inventory.getStack(0));
     }
+
     @Override
     public ItemStack createIcon() {
         return new ItemStack(BlockRegistry.COMPACTER_BLOCK);
     }
+
     //TODO make a count in json file and use in block entity
     public static class Serializer implements RecipeSerializer<CompacterRecipe> {
         final RecipeFactory recipeFactory;
@@ -96,6 +99,7 @@ public class CompacterRecipe implements Recipe<Inventory> {
                             (Codec.INT.fieldOf("count")).forGetter(recipe -> recipe.result.getCount()))
                     .apply(/*(Applicative<ChipRefineryRecipe, ?>)*/instance, recipeFactory::create));
         }
+
         @Override
         public Codec<CompacterRecipe> codec() {
             return this.codec;
@@ -124,10 +128,11 @@ public class CompacterRecipe implements Recipe<Inventory> {
 
         @Override
         public void write(PacketByteBuf packetByteBuf, CompacterRecipe chipRefineryRecipe) {
-            packetByteBuf.writeString(((CompacterRecipe)chipRefineryRecipe).group);
-            ((CompacterRecipe)chipRefineryRecipe).ingredient.write(packetByteBuf);
-            packetByteBuf.writeItemStack(((CompacterRecipe)chipRefineryRecipe).result);
+            packetByteBuf.writeString(((CompacterRecipe) chipRefineryRecipe).group);
+            ((CompacterRecipe) chipRefineryRecipe).ingredient.write(packetByteBuf);
+            packetByteBuf.writeItemStack(((CompacterRecipe) chipRefineryRecipe).result);
         }
+
         public static interface RecipeFactory {
             public CompacterRecipe create(String var1, Ingredient var2, Item var3, int var4);
         }

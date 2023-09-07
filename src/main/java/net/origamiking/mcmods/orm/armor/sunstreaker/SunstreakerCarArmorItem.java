@@ -34,6 +34,7 @@ public final class SunstreakerCarArmorItem extends TransformerTransformedArmorIt
             }
         });
     }
+
     @Override
     public boolean isAutobot() {
         return true;

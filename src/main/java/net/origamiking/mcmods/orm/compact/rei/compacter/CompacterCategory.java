@@ -22,6 +22,7 @@ import java.util.List;
 public class CompacterCategory implements DisplayCategory<BasicDisplay> {
     private static final Identifier TEXTURE = new Identifier(OrmMain.MOD_ID, "textures/gui/refinery_block_gui.png");
     public static final CategoryIdentifier<CompacterDisplay> COMPACTER = CategoryIdentifier.of(OrmMain.MOD_ID, "compacter.json");
+
     @Override
     public CategoryIdentifier<? extends BasicDisplay> getCategoryIdentifier() {
         return COMPACTER;

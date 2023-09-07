@@ -33,9 +33,11 @@ public class ChipRefineryRecipe implements Recipe<Inventory> {
         this.ingredient = ingredient;
         this.result = result;
     }
+
     public ChipRefineryRecipe(String group, Ingredient ingredient, Item result, int count) {
         this(group, ingredient, new ItemStack(result, count));
     }
+
     @Override
     public RecipeType<?> getType() {
         return this.type;
@@ -82,6 +84,7 @@ public class ChipRefineryRecipe implements Recipe<Inventory> {
     public ItemStack createIcon() {
         return new ItemStack(BlockRegistry.CHIP_REFINERY_BLOCK);
     }
+
     public static class Serializer implements RecipeSerializer<ChipRefineryRecipe> {
         final RecipeFactory recipeFactory;
         private final Codec<ChipRefineryRecipe> codec;
@@ -101,6 +104,7 @@ public class ChipRefineryRecipe implements Recipe<Inventory> {
         public Codec<ChipRefineryRecipe> codec() {
             return this.codec;
         }
+
         @Override
         public ChipRefineryRecipe read(PacketByteBuf packetByteBuf) {
             String string = packetByteBuf.readString();
@@ -111,9 +115,9 @@ public class ChipRefineryRecipe implements Recipe<Inventory> {
 
         @Override
         public void write(PacketByteBuf packetByteBuf, ChipRefineryRecipe chipRefineryRecipe) {
-            packetByteBuf.writeString(((ChipRefineryRecipe)chipRefineryRecipe).group);
-            ((ChipRefineryRecipe)chipRefineryRecipe).ingredient.write(packetByteBuf);
-            packetByteBuf.writeItemStack(((ChipRefineryRecipe)chipRefineryRecipe).result);
+            packetByteBuf.writeString(((ChipRefineryRecipe) chipRefineryRecipe).group);
+            ((ChipRefineryRecipe) chipRefineryRecipe).ingredient.write(packetByteBuf);
+            packetByteBuf.writeItemStack(((ChipRefineryRecipe) chipRefineryRecipe).result);
         }
 
         public static interface RecipeFactory {

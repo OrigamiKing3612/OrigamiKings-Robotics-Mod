@@ -7,5 +7,7 @@ import net.origamiking.mcmods.orm.OrmMain;
 
 public class SkywarpChip extends ItemsUtils {
     public static final Item CHIP = registerItem(OrmMain.MOD_ID, "skywarp_chip", new Item(new OrigamiItemSettings()));
-    public static void get() {}
+
+    public static void get() {
+    }
 }

@@ -34,6 +34,7 @@ public final class IronhideCarArmorItem extends TransformerTransformedArmorItem 
             }
         });
     }
+
     @Override
     public boolean isAutobot() {
         return true;

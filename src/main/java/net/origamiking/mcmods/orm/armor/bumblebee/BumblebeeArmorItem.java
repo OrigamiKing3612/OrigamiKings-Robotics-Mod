@@ -53,6 +53,7 @@ public final class BumblebeeArmorItem extends TransformerArmorItem implements Ge
     public String armorId() {
         return "bumblebee";
     }
+
     public static String armorItemName() {
         return "Bumblebee";
     }
@@ -60,6 +61,7 @@ public final class BumblebeeArmorItem extends TransformerArmorItem implements Ge
     public static String armorItemId() {
         return "bumblebee";
     }
+
     @Override
     public boolean isAutobot() {
         return true;

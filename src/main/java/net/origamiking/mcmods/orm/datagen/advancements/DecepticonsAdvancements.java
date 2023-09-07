@@ -63,7 +63,7 @@ public class DecepticonsAdvancements {
                 .criterion("get_chestplate", InventoryChangedCriterion.Conditions.items(Astrotrain.CHESTPLATE))
                 .criterion("get_leggings", InventoryChangedCriterion.Conditions.items(Astrotrain.LEGGINGS))
                 .criterion("get_boots", InventoryChangedCriterion.Conditions.items(Astrotrain.BOOTS))
-                .build(advancementConsumer,  OrmAdvancements.getAdvancementPath(false, AstrotrainArmorItem.armorItemId()));
+                .build(advancementConsumer, OrmAdvancements.getAdvancementPath(false, AstrotrainArmorItem.armorItemId()));
 
         AdvancementEntry galvatron = Advancement.Builder.create().parent(megatron)
                 .display(

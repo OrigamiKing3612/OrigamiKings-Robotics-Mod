@@ -9,6 +9,7 @@ import net.origamiking.mcmods.orm.OrmMain;
 public class EnergonItems extends ItemsUtils {
     public static final Item ENERGON = registerItem(OrmMain.MOD_ID, "energon", new Item(new OrigamiItemSettings().rarity(Rarity.RARE)));
     public static final Item DARK_ENERGON = registerItem(OrmMain.MOD_ID, "dark_energon", new Item(new OrigamiItemSettings().rarity(Rarity.RARE)));
+
     public static void get() {
     }
 }

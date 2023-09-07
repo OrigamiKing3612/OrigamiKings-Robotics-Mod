@@ -14,7 +14,7 @@ import java.util.function.Supplier;
 import static net.origamiking.mcmods.orm.OrmMain.getOrmConfig;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    TRANSFORMER("transformer", getOrmConfig().transformerArmorConfig.transformerDurabilityMultiplier, new int[]{getTransformerConfig().transformerBootsProtectionValue, getTransformerConfig().transformerLeggingsProtectionValue, getTransformerConfig().transformerChestplateProtectionValue, getTransformerConfig().transformerHelmetProtectionValue },
+    TRANSFORMER("transformer", getOrmConfig().transformerArmorConfig.transformerDurabilityMultiplier, new int[]{getTransformerConfig().transformerBootsProtectionValue, getTransformerConfig().transformerLeggingsProtectionValue, getTransformerConfig().transformerChestplateProtectionValue, getTransformerConfig().transformerHelmetProtectionValue},
             getTransformerConfig().transformerArmorEnchantability, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 2.0f, 0.2f, () -> Ingredient.ofItems(TransformiumItems.TRANSFORMIUM));
     private final String name;
     private final int durabilityMultiplier;
@@ -64,7 +64,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
 
     @Override
     public String getName() {
-        return OrmMain.MOD_ID +  ":" + this.name;
+        return OrmMain.MOD_ID + ":" + this.name;
     }
 
     @Override

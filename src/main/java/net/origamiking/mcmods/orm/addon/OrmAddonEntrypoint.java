@@ -6,6 +6,6 @@ package net.origamiking.mcmods.orm.addon;
  * <p>In {@code fabric.mod.json}, the entrypoint is defined with {@code orm-addon} key.</p>
  */
 @FunctionalInterface
-public interface OrmAddonEntrypoint{
+public interface OrmAddonEntrypoint {
     void onInitializeOrmAddon(OrmAddonHelper addonHelper);
 }

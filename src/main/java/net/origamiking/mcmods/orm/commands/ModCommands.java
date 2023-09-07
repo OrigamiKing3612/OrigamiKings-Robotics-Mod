@@ -28,6 +28,7 @@ public class ModCommands {
             dispatcher.register(command);
         });
     }
+
     //todo oapi
     public static void linkReturnCommand(LiteralArgumentBuilder<ServerCommandSource> command, String commandName, String link, String hoverText) {
         command.then(literal(commandName).executes(context -> {

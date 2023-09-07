@@ -10,6 +10,7 @@ public class ModStats {
     public static final Identifier INTERACT_WITH_CHIP_REFINERY = registerStat(OrmMain.MOD_ID, "interact_with_chip_refinery", StatFormatter.DEFAULT);
     public static final Identifier INTERACT_WITH_REFINERY = registerStat(OrmMain.MOD_ID, "interact_with_refinery", StatFormatter.DEFAULT);
     public static final Identifier INTERACT_WITH_COMPACTER = registerStat(OrmMain.MOD_ID, "interact_with_compacter", StatFormatter.DEFAULT);
+
     public static void register() {
 
     }

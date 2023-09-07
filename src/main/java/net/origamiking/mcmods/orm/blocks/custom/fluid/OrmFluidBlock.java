@@ -18,6 +18,7 @@ public class OrmFluidBlock extends FluidBlock {
     public OrmFluidBlock(FlowableFluid fluid, Settings settings) {
         super(fluid, settings);
     }
+
     @Override
     public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean notify) {
         if (this.receiveNeighborFluids(world, pos, state)) {
@@ -31,6 +32,7 @@ public class OrmFluidBlock extends FluidBlock {
             world.scheduleFluidTick(pos, state.getFluidState().getFluid(), this.fluid.getTickRate(world));
         }
     }
+
     private boolean receiveNeighborFluids(World world, BlockPos pos, BlockState state) {
         if (this.fluid.isIn(FluidTags.LAVA)) {
             boolean bl = world.getBlockState(pos.down()).isOf(Blocks.SOUL_SOIL);
@@ -83,6 +85,7 @@ public class OrmFluidBlock extends FluidBlock {
         }
         return true;
     }
+
     private void playExtinguishSound(WorldAccess world, BlockPos pos) {
         world.syncWorldEvent(WorldEvents.LAVA_EXTINGUISHED, pos, 0);
     }

@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+
 public class OrmConfig {
     public static void load() {
         File configFile = new File(FabricLoader.getInstance().getConfigDir().toFile(), OrmMain.MOD_ID + "_config.json");

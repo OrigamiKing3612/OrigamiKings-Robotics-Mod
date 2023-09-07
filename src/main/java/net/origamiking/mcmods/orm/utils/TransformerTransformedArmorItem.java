@@ -24,15 +24,19 @@ import java.util.function.Supplier;
 public abstract class TransformerTransformedArmorItem extends OrigamiArmorItem implements GeoItem, IOrigamiArmorItem, Transformer {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
+
     protected TransformerTransformedArmorItem(Type type, Settings settings) {
         super(ModArmorMaterials.TRANSFORMER, type, settings);
     }
+
     protected TransformerTransformedArmorItem(ArmorMaterial armorMaterial, Type type, Settings settings) {
         super(armorMaterial, type, settings);
     }
+
     protected TransformerTransformedArmorItem(Type type) {
         super(ModArmorMaterials.TRANSFORMER, type, new OrigamiItemSettings());
     }
+
     protected TransformerTransformedArmorItem(ArmorMaterial armorMaterial, Type type) {
         super(armorMaterial, type, new OrigamiItemSettings());
     }

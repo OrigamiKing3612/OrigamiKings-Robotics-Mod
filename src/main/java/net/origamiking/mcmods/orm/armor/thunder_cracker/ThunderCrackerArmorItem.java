@@ -52,6 +52,7 @@ public final class ThunderCrackerArmorItem extends TransformerArmorItem implemen
     public String armorId() {
         return "thunder_cracker";
     }
+
     public static String armorItemName() {
         return "Thunder Cracker";
     }

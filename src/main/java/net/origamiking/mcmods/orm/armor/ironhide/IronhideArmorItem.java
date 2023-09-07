@@ -60,6 +60,7 @@ public final class IronhideArmorItem extends TransformerArmorItem implements Geo
     public static String armorItemId() {
         return "ironhide";
     }
+
     @Override
     public boolean isAutobot() {
         return true;

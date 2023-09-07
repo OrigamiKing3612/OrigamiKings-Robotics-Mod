@@ -32,12 +32,15 @@ public abstract class TransformerArmorItem extends OrigamiArmorItem implements G
     protected TransformerArmorItem(Type type, Settings settings) {
         super(ModArmorMaterials.TRANSFORMER, type, settings);
     }
+
     protected TransformerArmorItem(ArmorMaterial armorMaterial, Type type, Settings settings) {
         super(armorMaterial, type, settings);
     }
+
     protected TransformerArmorItem(Type type) {
         super(ModArmorMaterials.TRANSFORMER, type, new OrigamiItemSettings());
     }
+
     protected TransformerArmorItem(ArmorMaterial armorMaterial, Type type) {
         super(armorMaterial, type, new OrigamiItemSettings());
     }
@@ -81,10 +84,12 @@ public abstract class TransformerArmorItem extends OrigamiArmorItem implements G
             useTransformedRenderer = !useTransformedRenderer;
         } else {
             OrmMain.LOGGER.info("Transforming is not enabled in config.");
-            if (client.player != null) client.player.sendMessage(Text.translatable("message." + OrmMain.MOD_ID + ".transform_not_enabled"));
+            if (client.player != null)
+                client.player.sendMessage(Text.translatable("message." + OrmMain.MOD_ID + ".transform_not_enabled"));
             useTransformedRenderer = false;
         }
     }
+
     public static String armorItemName() {
         return "TransformerArmorItem";
     }

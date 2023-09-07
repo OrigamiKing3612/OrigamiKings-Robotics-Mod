@@ -11,7 +11,7 @@ public class EnergyCellsData {
     public static int addEnergyCells(IEntityEnergyCellsDataSaver player, int amount) {
         NbtCompound nbt = player.getPersistentData();
         int energy_cells = nbt.getInt("energy_cells");
-        if(energy_cells + amount >= 10) {
+        if (energy_cells + amount >= 10) {
             energy_cells = 10;
         } else {
             energy_cells += amount;
@@ -26,7 +26,7 @@ public class EnergyCellsData {
     public static int removeEnergyCells(IEntityEnergyCellsDataSaver player, int amount) {
         NbtCompound nbt = player.getPersistentData();
         int energy_cells = nbt.getInt("energy_cells");
-        if(energy_cells - amount < 0) {
+        if (energy_cells - amount < 0) {
             energy_cells = 0;
         } else {
             energy_cells -= amount;

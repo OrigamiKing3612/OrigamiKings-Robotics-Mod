@@ -6,7 +6,7 @@ import net.origamiking.mcmods.oapi.tag.TagUtils;
 import net.origamiking.mcmods.orm.OrmMain;
 
 public class ModBlockTags extends TagUtils {
-    public static final TagKey<Block> ENERGON_BLOCKS = blockTagKey(OrmMain.MOD_ID,"energon_blocks");
+    public static final TagKey<Block> ENERGON_BLOCKS = blockTagKey(OrmMain.MOD_ID, "energon_blocks");
     public static final TagKey<Block> ORE_13_BLOCKS = blockTagKey(OrmMain.MOD_ID, "ore_13_blocks");
     public static final TagKey<Block> TRANSFORMIUM_BLOCKS = blockTagKey(OrmMain.MOD_ID, "transformium_blocks");
 

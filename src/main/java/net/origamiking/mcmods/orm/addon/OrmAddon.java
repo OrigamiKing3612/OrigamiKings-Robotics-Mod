@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 
 public class OrmAddon {
     public static final Logger LOGGER = LoggerFactory.getLogger(OrmMain.MOD_ID + "-addon-loader");
+
     public static void loadAddons() {
         FabricLoader.getInstance().getEntrypointContainers("orm-addon", OrmAddonEntrypoint.class).forEach(entrypoint -> {
             ModMetadata metadata = entrypoint.getProvider().getMetadata();
@@ -21,6 +22,7 @@ public class OrmAddon {
             }
         });
     }
+
     public static void loadClientAddons() {
         FabricLoader.getInstance().getEntrypointContainers("orm-client-addon", OrmClientAddonEntrypoint.class).forEach(entrypoint -> {
             ModMetadata metadata = entrypoint.getProvider().getMetadata();

@@ -25,6 +25,7 @@ public class ModEntities {
                     .trackRangeBlocks(4).trackedUpdateRate(10)
                     .build()
     );
+
     public static void register() {
         FabricDefaultAttributeRegistry.register(ModEntities.VECTOR_GUARD, VectorGuardEntity.setAttributes());
     }

@@ -21,7 +21,7 @@ public class ChipRefineryDisplay extends BasicDisplay {
     }
 
     private static List<EntryIngredient> getInputList(ChipRefineryRecipe recipe) {
-        if(recipe == null) return Collections.emptyList();
+        if (recipe == null) return Collections.emptyList();
         List<EntryIngredient> list = new ArrayList<>();
         list.add(EntryIngredients.ofIngredient(recipe.getIngredients().get(0)));
         return list;

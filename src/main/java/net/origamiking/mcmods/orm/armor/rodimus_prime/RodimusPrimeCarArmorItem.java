@@ -15,7 +15,7 @@ import java.util.function.Consumer;
 
 public final class RodimusPrimeCarArmorItem extends TransformerTransformedArmorItem implements GeoItem {
     public RodimusPrimeCarArmorItem(Type slot) {
-        super(slot  );
+        super(slot);
     }
 
     @Override

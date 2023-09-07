@@ -12,10 +12,10 @@ import net.origamiking.mcmods.orm.blocks.custom.BlockRegistry;
 public class ModBlockEntities {
     public static final BlockEntityType<RefineryBlockEntity> REFINERY_BLOCK = Registry.register(Registries.BLOCK_ENTITY_TYPE,
             OrmMain.MOD_ID + ":refinery_block",
-            FabricBlockEntityTypeBuilder.create(RefineryBlockEntity::new, BlockRegistry.REFINERY_BLOCK).build(null));
+            FabricBlockEntityTypeBuilder.create(RefineryBlockEntity::new, BlockRegistry.REFINERY_BLOCK).build());
     public static final BlockEntityType<CompacterBlockEntity> COMPACTER_BLOCK = Registry.register(Registries.BLOCK_ENTITY_TYPE,
             OrmMain.MOD_ID + ":compacter_block",
-            FabricBlockEntityTypeBuilder.create(CompacterBlockEntity::new, BlockRegistry.COMPACTER_BLOCK).build(null));
+            FabricBlockEntityTypeBuilder.create(CompacterBlockEntity::new, BlockRegistry.COMPACTER_BLOCK).build());
 
     public static void register() {
     }

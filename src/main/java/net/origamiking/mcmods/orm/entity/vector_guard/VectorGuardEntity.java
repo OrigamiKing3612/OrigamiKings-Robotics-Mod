@@ -52,6 +52,7 @@ public class VectorGuardEntity extends HostileEntity implements GeoEntity {
     public EntityGroup getGroup() {
         return ModEntityGroup.ORM_NONE;
     }
+
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         controllers.add(DefaultAnimations.genericWalkIdleController(this));

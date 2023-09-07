@@ -22,6 +22,7 @@ import java.util.List;
 public class RefineryCategory implements DisplayCategory<BasicDisplay> {
     private static final Identifier TEXTURE = new Identifier(OrmMain.MOD_ID, "textures/gui/refinery_block_gui.png");
     public static final CategoryIdentifier<RefineryDisplay> REFINING = CategoryIdentifier.of(OrmMain.MOD_ID, "refining");
+
     @Override
     public CategoryIdentifier<? extends BasicDisplay> getCategoryIdentifier() {
         return REFINING;

@@ -20,6 +20,7 @@ import java.util.List;
 public class ChipRefineryCategory implements DisplayCategory<BasicDisplay> {
     private static final Identifier TEXTURE = new Identifier("textures/gui/container/stonecutter.png");
     public static final CategoryIdentifier<ChipRefineryDisplay> CHIP_REFINING = CategoryIdentifier.of(OrmMain.MOD_ID, "chip_refining");
+
     @Override
     public CategoryIdentifier<? extends BasicDisplay> getCategoryIdentifier() {
         return CHIP_REFINING;

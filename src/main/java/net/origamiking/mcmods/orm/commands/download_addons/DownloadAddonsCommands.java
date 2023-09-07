@@ -56,7 +56,7 @@ public class DownloadAddonsCommands {
     }
 
     public static void downloadAddonCommand(LiteralArgumentBuilder<ServerCommandSource> command, String addonKey, String addonName, String url, String modName) {
-                command.then(CommandManager.literal("download-addon-" + addonKey)
+        command.then(CommandManager.literal("download-addon-" + addonKey)
                 .requires(source -> source.hasPermissionLevel(2))
                 .executes((context) -> {
                     if (OrmMain.getOrmConfig().enableDownloadAddonsCommands) {

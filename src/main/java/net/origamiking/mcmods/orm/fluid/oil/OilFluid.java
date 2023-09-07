@@ -94,6 +94,7 @@ public class OilFluid extends FlowableFluid {
     protected boolean isFlowBlocked(BlockView world, BlockPos pos, Direction direction) {
         return super.isFlowBlocked(world, pos, direction);
     }
+
     public static class Flowing extends OilFluid {
         @Override
         protected void appendProperties(StateManager.Builder<Fluid, FluidState> builder) {

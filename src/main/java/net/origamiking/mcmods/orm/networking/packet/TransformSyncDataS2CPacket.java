@@ -11,7 +11,7 @@ import net.origamiking.mcmods.orm.utils.TransformerArmorItem;
 public class TransformSyncDataS2CPacket {
     public static void receive(MinecraftClient client, ClientPlayNetworkHandler handler, PacketByteBuf buf, PacketSender responseSender) {
         //Only on client
-        ((IEntityDataSaver)client.player).getPersistentData().putBoolean(OrmMain.MOD_ID + ".is_transformed", buf.readBoolean());
+        ((IEntityDataSaver) client.player).getPersistentData().putBoolean(OrmMain.MOD_ID + ".is_transformed", buf.readBoolean());
         TransformerArmorItem.transform();
     }
 }

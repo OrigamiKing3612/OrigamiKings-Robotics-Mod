@@ -4,7 +4,7 @@ import net.minecraft.item.ArmorItem;
 import net.origamiking.mcmods.oapi.armor.ArmorUtils;
 import net.origamiking.mcmods.orm.OrmMain;
 
-public class  Astrotrain extends ArmorUtils {
+public class Astrotrain extends ArmorUtils {
     public static final AstrotrainTrainArmorItem TRAIN = registerArmor(OrmMain.MOD_ID, "astrotrain_train", new AstrotrainTrainArmorItem(ArmorItem.Type.CHESTPLATE));
     public static final AstrotrainShuttleArmorItem SHUTTLE = registerArmor(OrmMain.MOD_ID, "astrotrain_shuttle", new AstrotrainShuttleArmorItem(ArmorItem.Type.CHESTPLATE));
     public static final AstrotrainArmorItem HELMET = registerArmor(OrmMain.MOD_ID, "astrotrain_helmet", new AstrotrainArmorItem(ArmorItem.Type.HELMET));

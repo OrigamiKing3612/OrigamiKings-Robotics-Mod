@@ -20,6 +20,7 @@ public class ModMessages {
         ServerPlayNetworking.registerGlobalReceiver(TRANSFORM_PACKET_ID, TransformingC2SPacket::receive);
         ServerPlayNetworking.registerGlobalReceiver(ENERGY_CELLS_ID, EnergyCellsC2SPacket::receive);
     }
+
     public static void registerS2CPackets() {
         ClientPlayNetworking.registerGlobalReceiver(TRANSFORM_SYNC_ID, TransformSyncDataS2CPacket::receive);
         ClientPlayNetworking.registerGlobalReceiver(ENERGY_CELLS_SYNC_ID, EnergyCellsSyncDataS2CPacket::receive);

@@ -19,6 +19,7 @@ public class ModDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModWorldGeneration::new);
         ModTagProviders.getTags(pack);
     }
+
     @Override
     public void buildRegistry(RegistryBuilder registryBuilder) {
         registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
