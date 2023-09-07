@@ -13,18 +13,9 @@ import net.origamiking.mcmods.orm.recipe.refining.RefineryRecipe;
 public class ModRecipeType {
     public static final RecipeType<ChipRefineryRecipe> CHIP_REFINERY_RECIPE = register("chip_refining");
 
-    public static final RecipeType<RefineryRecipe> REFINERY_RECIPE = Registry.register(Registries.RECIPE_TYPE, new Identifier(OrmMain.MOD_ID,
-            RefineryRecipe.Type.ID), RefineryRecipe.Type.INSTANCE);
+    public static final RecipeType<RefineryRecipe> REFINERY_RECIPE = register("refining");
+    public static final RecipeType<CompacterRecipe> COMPACTER_RECIPE = register("compacting");
     public static void register() {
-        Registry.register(Registries.RECIPE_SERIALIZER, new Identifier(OrmMain.MOD_ID, RefineryRecipe.Serializer.ID),
-                RefineryRecipe.Serializer.INSTANCE);
-
-        Registry.register(Registries.RECIPE_SERIALIZER, new Identifier(OrmMain.MOD_ID, CompacterRecipe.Serializer.ID),
-                CompacterRecipe.Serializer.INSTANCE);
-
-        Registry.register(Registries.RECIPE_TYPE, new Identifier(OrmMain.MOD_ID, CompacterRecipe.Type.ID),
-                CompacterRecipe.Type.INSTANCE);
-        ModRecipeSerializers.register();
     }
     public static <T extends Recipe<?>> RecipeType<T> register(final String id) {
         return Registry.register(Registries.RECIPE_TYPE, new Identifier(OrmMain.MOD_ID, id), new RecipeType<T>(){

@@ -22,6 +22,7 @@ import net.origamiking.mcmods.oapi.blocks.ImplementedInventory;
 import net.origamiking.mcmods.orm.block_entities.ModBlockEntities;
 import net.origamiking.mcmods.orm.blocks.custom.refinery.RefineryBlock;
 import net.origamiking.mcmods.orm.items.energon.EnergonItems;
+import net.origamiking.mcmods.orm.recipe.ModRecipeType;
 import net.origamiking.mcmods.orm.recipe.refining.RefineryRecipe;
 import net.origamiking.mcmods.orm.screen.refinery.RefineryBlockScreenHandler;
 import org.jetbrains.annotations.Nullable;
@@ -178,7 +179,7 @@ public class RefineryBlockEntity extends BlockEntity implements NamedScreenHandl
         }
 
         Optional<RecipeEntry<RefineryRecipe>> recipe = entity.getWorld().getRecipeManager()
-                .getFirstMatch(RefineryRecipe.Type.INSTANCE, inventory, entity.getWorld());
+                .getFirstMatch(ModRecipeType.REFINERY_RECIPE, inventory, entity.getWorld());
 
         if (hasRecipe(entity)) {
             entity.removeStack(1, 1);
@@ -195,7 +196,7 @@ public class RefineryBlockEntity extends BlockEntity implements NamedScreenHandl
             inventory.setStack(i, entity.getStack(i));
         }
 
-        Optional<RecipeEntry<RefineryRecipe>> match = entity.getWorld().getRecipeManager().getFirstMatch(RefineryRecipe.Type.INSTANCE, inventory, entity.getWorld());
+        Optional<RecipeEntry<RefineryRecipe>> match = entity.getWorld().getRecipeManager().getFirstMatch(ModRecipeType.REFINERY_RECIPE, inventory, entity.getWorld());
 
         boolean hasEnergonInFuelSlot = entity.getStack(0).getItem() == EnergonItems.ENERGON; // Fuel
 

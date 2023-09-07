@@ -1,7 +1,9 @@
 package net.origamiking.mcmods.orm.recipe.compacter;
 
 import com.mojang.serialization.Codec;
-import net.minecraft.inventory.SimpleInventory;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.inventory.Inventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.Ingredient;
@@ -9,32 +11,57 @@ import net.minecraft.recipe.Recipe;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.RecipeType;
 import net.minecraft.registry.DynamicRegistryManager;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.collection.DefaultedList;
+import net.minecraft.util.dynamic.Codecs;
 import net.minecraft.world.World;
+import net.origamiking.mcmods.orm.blocks.custom.BlockRegistry;
+import net.origamiking.mcmods.orm.recipe.ModRecipeSerializers;
+import net.origamiking.mcmods.orm.recipe.ModRecipeType;
 
-public class CompacterRecipe implements Recipe<SimpleInventory> {
-//    private final Identifier id;
-    private final ItemStack output;
-    private final DefaultedList<Ingredient> recipeItems;
+public class CompacterRecipe implements Recipe<Inventory> {
+    protected final Ingredient ingredient;
+    protected final ItemStack result;
+    protected final RecipeType<?> type;
+    protected final RecipeSerializer<?> serializer;
+    protected final String group;
 
-    public CompacterRecipe(ItemStack output, DefaultedList<Ingredient> recipeItems) {
-//        this.id = id;
-        this.output = output;
-        this.recipeItems = recipeItems;
+    public CompacterRecipe(String group, Ingredient ingredient, ItemStack result) {
+        this.type = ModRecipeType.COMPACTER_RECIPE;
+        this.serializer = ModRecipeSerializers.COMPACTING;
+        this.group = group;
+        this.ingredient = ingredient;
+        this.result = result;
+    }
+    public CompacterRecipe(String group, Ingredient ingredient, Item result, int count) {
+        this(group, ingredient, new ItemStack(result, count));
     }
 
     @Override
-    public boolean matches(SimpleInventory inventory, World world) {
-        if(world.isClient()) {
-            return false;
-        }
-
-        return recipeItems.get(0).test(inventory.getStack(1));
+    public RecipeType<?> getType() {
+        return this.type;
     }
 
     @Override
-    public ItemStack craft(SimpleInventory inventory, DynamicRegistryManager registryManager) {
-        return output;
+    public RecipeSerializer<?> getSerializer() {
+        return this.serializer;
+    }
+
+    @Override
+    public String getGroup() {
+        return this.group;
+    }
+
+    @Override
+    public ItemStack getResult(DynamicRegistryManager registryManager) {
+        return this.result;
+    }
+
+    @Override
+    public DefaultedList<Ingredient> getIngredients() {
+        DefaultedList<Ingredient> defaultedList = DefaultedList.of();
+        defaultedList.add(this.ingredient);
+        return defaultedList;
     }
 
     @Override
@@ -43,34 +70,37 @@ public class CompacterRecipe implements Recipe<SimpleInventory> {
     }
 
     @Override
-    public ItemStack getResult(DynamicRegistryManager registryManager) {
-        return output.copy();
-    }
-
-//    @Override
-//    public Identifier getId() {
-//        return id;
-//    }
-
-    @Override
-    public RecipeSerializer<?> getSerializer() {
-        return Serializer.INSTANCE;
+    public ItemStack craft(Inventory inventory, DynamicRegistryManager registryManager) {
+        return this.result.copy();
     }
 
     @Override
-    public RecipeType<?> getType() {
-        return Type.INSTANCE;
+    public boolean matches(Inventory inventory, World world) {
+        return this.ingredient.test(inventory.getStack(0));
+    }
+    @Override
+    public ItemStack createIcon() {
+        return new ItemStack(BlockRegistry.COMPACTER_BLOCK);
     }
     //TODO make a count in json file and use in block entity
-    public static class Type implements RecipeType<CompacterRecipe> {
-        private Type() {}
-        public static final Type INSTANCE = new Type() {};
-        public static final String ID = "compacting";
-    }
     public static class Serializer implements RecipeSerializer<CompacterRecipe> {
-        public static final Serializer INSTANCE = new Serializer();
-        public static final String ID = "compacting";
+        final RecipeFactory recipeFactory;
+        private final Codec<CompacterRecipe> codec;
 
+        public Serializer(RecipeFactory recipeFactory) {
+            this.recipeFactory = recipeFactory;
+            this.codec = RecordCodecBuilder.create(instance -> instance
+                    .group(Codecs.createStrictOptionalFieldCodec(Codec.STRING, "group", "")
+                            .forGetter(recipe -> recipe.group), (Ingredient.DISALLOW_EMPTY_CODEC.fieldOf("ingredients"))
+                            .forGetter(recipe -> recipe.ingredient), (Registries.ITEM.getCodec().fieldOf("output"))
+                            .forGetter(recipe -> recipe.result.getItem()), (Codec.INT.fieldOf("count"))
+                            .forGetter(recipe -> recipe.result.getCount()))
+                    .apply(/*(Applicative<ChipRefineryRecipe, ?>)*/instance, recipeFactory::create));
+        }
+        @Override
+        public Codec<CompacterRecipe> codec() {
+            return this.codec;
+        }
 //        @Override
 //        public CompacterRecipe read(Identifier id, JsonObject json) {
 //            ItemStack output = ShapedRecipe.outputFromJson(JsonHelper.getObject(json, "output"));
@@ -86,27 +116,21 @@ public class CompacterRecipe implements Recipe<SimpleInventory> {
 //        }
 
         @Override
-        public Codec<CompacterRecipe> codec() {
-            return ;
+        public CompacterRecipe read(PacketByteBuf packetByteBuf) {
+            String string = packetByteBuf.readString();
+            Ingredient ingredient = Ingredient.fromPacket(packetByteBuf);
+            ItemStack itemStack = packetByteBuf.readItemStack();
+            return this.recipeFactory.create(string, ingredient, itemStack.getItem(), itemStack.getCount());
         }
 
         @Override
-        public CompacterRecipe read(PacketByteBuf buf) {
-            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(buf.readInt(), Ingredient.EMPTY);
-
-            inputs.replaceAll(ignored -> Ingredient.fromPacket(buf));
-
-            ItemStack output = buf.readItemStack();
-            return new CompacterRecipe(output, inputs);
+        public void write(PacketByteBuf packetByteBuf, CompacterRecipe chipRefineryRecipe) {
+            packetByteBuf.writeString(((CompacterRecipe)chipRefineryRecipe).group);
+            ((CompacterRecipe)chipRefineryRecipe).ingredient.write(packetByteBuf);
+            packetByteBuf.writeItemStack(((CompacterRecipe)chipRefineryRecipe).result);
         }
-
-        @Override
-        public void write(PacketByteBuf buf, CompacterRecipe recipe) {
-            buf.writeInt(recipe.getIngredients().size());
-            for (Ingredient ing : recipe.getIngredients()) {
-                ing.write(buf);
-            }
-            buf.writeItemStack(recipe.getResult(null));
+        public static interface RecipeFactory {
+            public CompacterRecipe create(String var1, Ingredient var2, Item var3, int var4);
         }
     }
 }

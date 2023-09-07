@@ -15,6 +15,7 @@ import net.origamiking.mcmods.orm.fluid.ModFluids;
 import net.origamiking.mcmods.orm.group.ModGroups;
 import net.origamiking.mcmods.orm.items.ModItems;
 import net.origamiking.mcmods.orm.networking.ModMessages;
+import net.origamiking.mcmods.orm.recipe.ModRecipeSerializers;
 import net.origamiking.mcmods.orm.recipe.ModRecipeType;
 import net.origamiking.mcmods.orm.screen.ModScreenHandlers;
 import net.origamiking.mcmods.orm.stats.ModStats;
@@ -49,6 +50,7 @@ public class OrmMain implements ModInitializer {
         ModCommands.register();
         ModWorld.register();
         ModRecipeType.register();
+        ModRecipeSerializers.register();
         ModEntities.register();
         ModTags.register();
         ModStats.register();

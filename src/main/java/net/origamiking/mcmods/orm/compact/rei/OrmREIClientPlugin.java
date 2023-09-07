@@ -38,10 +38,10 @@ public class OrmREIClientPlugin implements REIClientPlugin {
         registry.registerRecipeFiller(ChipRefineryRecipe.class, ModRecipeType.CHIP_REFINERY_RECIPE,
                 ChipRefineryDisplay::new);
 
-        registry.registerRecipeFiller(RefineryRecipe.class, RefineryRecipe.Type.INSTANCE,
+        registry.registerRecipeFiller(RefineryRecipe.class, ModRecipeType.REFINERY_RECIPE,
                 RefineryDisplay::new);
 
-        registry.registerRecipeFiller(CompacterRecipe.class, CompacterRecipe.Type.INSTANCE,
+        registry.registerRecipeFiller(CompacterRecipe.class, ModRecipeType.COMPACTER_RECIPE,
                 CompacterDisplay::new);
     }
 
