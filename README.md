@@ -1,3 +1,5 @@
+# I am kinda done with modding so this mod is archived. I may get back to it one day.
+
 ![ORM_Banner](https://github.com/OrigamiKing3612/OrigamiKings-Robotics-Mod/assets/115757805/73427454-be1f-4200-bec0-7258ab027659)
 # **OrigamiKings Robotics Mod**
 
