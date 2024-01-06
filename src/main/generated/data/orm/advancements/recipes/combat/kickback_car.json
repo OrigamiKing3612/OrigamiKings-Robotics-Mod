@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_kickback_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:kickback_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_kickback_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:kickback_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_kickback_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:kickback_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_kickback_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "orm:kickback_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "orm:kickback_car"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_kickback_helmet",
+      "has_kickback_chestplate",
+      "has_kickback_leggings",
+      "has_kickback_boots",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "orm:kickback_car"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "orm:kickback_boots"
+    },
+    "C": {
+      "item": "orm:kickback_chestplate"
+    },
+    "H": {
+      "item": "orm:kickback_helmet"
+    },
+    "L": {
+      "item": "orm:kickback_leggings"
+    },
+    "O": {
+      "item": "orm:ore_13"
+    },
+    "T": {
+      "item": "orm:transformium"
+    }
+  },
+  "pattern": [
+    "HTC",
+    "TOT",
+    "LTB"
+  ],
+  "result": {
+    "item": "orm:kickback_car"
+  },
+  "show_notification": true
+}

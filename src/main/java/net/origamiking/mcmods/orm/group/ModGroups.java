@@ -12,6 +12,7 @@ import net.origamiking.mcmods.orm.armor.astrotrain.Astrotrain;
 import net.origamiking.mcmods.orm.armor.bumblebee.Bumblebee;
 import net.origamiking.mcmods.orm.armor.galvatron.Galvatron;
 import net.origamiking.mcmods.orm.armor.ironhide.Ironhide;
+import net.origamiking.mcmods.orm.armor.kickback.Kickback;
 import net.origamiking.mcmods.orm.armor.megatron.Megatron;
 import net.origamiking.mcmods.orm.armor.optimus_prime.OptimusPrime;
 import net.origamiking.mcmods.orm.armor.ratchet.Ratchet;
@@ -163,6 +164,11 @@ public class ModGroups {
                     entries.add(Shockwave.LEGGINGS);
                     entries.add(Shockwave.BOOTS);
                     entries.add(ItemRegistry.SHOCKWAVE_TRANSFORMED);
+                    entries.add(Kickback.HELMET);
+                    entries.add(Kickback.CHESTPLATE);
+                    entries.add(Kickback.LEGGINGS);
+                    entries.add(Kickback.BOOTS);
+                    entries.add(Kickback.BUG);
                 }).build());
     }
 

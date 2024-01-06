@@ -19,6 +19,7 @@ import net.origamiking.mcmods.orm.items.chips.astrotrain.AstrotrainChip;
 import net.origamiking.mcmods.orm.items.chips.bumblebee.BumblebeeChip;
 import net.origamiking.mcmods.orm.items.chips.galvatron.GalvatronChip;
 import net.origamiking.mcmods.orm.items.chips.ironhide.IronhideChip;
+import net.origamiking.mcmods.orm.items.chips.kickback.KickbackChip;
 import net.origamiking.mcmods.orm.items.chips.megatron.MegatronChip;
 import net.origamiking.mcmods.orm.items.chips.optimus_prime.OptimusPrimeChip;
 import net.origamiking.mcmods.orm.items.chips.ratchet.RatchetChip;
@@ -146,6 +147,7 @@ public class ModTagProviders {
                     .add(RatchetChip.CHIP)
                     .add(SideswipeChip.CHIP)
                     .add(SunstreakerChip.CHIP)
+                    .add(KickbackChip.CHIP)
             ;
         }
     }

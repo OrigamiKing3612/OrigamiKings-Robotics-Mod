@@ -1,0 +1,6 @@
+{
+  "parent":"item/generated",
+  "textures":{
+    "layer0":"orm:item/chips/kickback/kickback_chip"
+  }
+}

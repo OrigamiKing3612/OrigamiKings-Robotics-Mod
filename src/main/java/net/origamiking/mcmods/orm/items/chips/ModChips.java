@@ -4,6 +4,7 @@ import net.origamiking.mcmods.orm.items.chips.astrotrain.AstrotrainChip;
 import net.origamiking.mcmods.orm.items.chips.bumblebee.BumblebeeChip;
 import net.origamiking.mcmods.orm.items.chips.galvatron.GalvatronChip;
 import net.origamiking.mcmods.orm.items.chips.ironhide.IronhideChip;
+import net.origamiking.mcmods.orm.items.chips.kickback.KickbackChip;
 import net.origamiking.mcmods.orm.items.chips.megatron.MegatronChip;
 import net.origamiking.mcmods.orm.items.chips.optimus_prime.OptimusPrimeChip;
 import net.origamiking.mcmods.orm.items.chips.ratchet.RatchetChip;
@@ -37,5 +38,6 @@ public class ModChips {
         RatchetChip.get();
         SideswipeChip.get();
         SunstreakerChip.get();
+        KickbackChip.get();
     }
 }
